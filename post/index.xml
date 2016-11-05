@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Post-rsses on alebaffa&#39;s</title>
+    <link>http://alessandrobaffa.com/post/index.xml</link>
+    <description>Recent content in Post-rsses on alebaffa&#39;s</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-EN</language>
+    <copyright>(c) 2015 Alessandro Baffa.</copyright>
+    <lastBuildDate>Sun, 09 Oct 2016 21:17:23 +0200</lastBuildDate>
+    <atom:link href="http://alessandrobaffa.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Dependency Injection VS Extract and Override Factory Method</title>
+      <link>http://alessandrobaffa.com/2016/10/09/dependency-injection-vs-extract-and-override-factory-method/</link>
+      <pubDate>Sun, 09 Oct 2016 21:17:23 +0200</pubDate>
+      
+      <guid>http://alessandrobaffa.com/2016/10/09/dependency-injection-vs-extract-and-override-factory-method/</guid>
+      <description>
+
+&lt;p&gt;The TextConverter exercise (in the &lt;em&gt;Racing&lt;/em&gt; &lt;em&gt;Car&lt;/em&gt; &lt;em&gt;kata&lt;/em&gt; suite) is a very interesting exercise for refactoring legacy code. As I am reading &lt;em&gt;Working Effectively with Legacy Code&lt;/em&gt; I found two ways of solving it.&lt;/p&gt;
+
+&lt;p&gt;Refactoring can only be done safely with unit tests and so I did, rigourously in TDD. Though, in this blog post I am not going to show you all the testing process, but only the two ways of decoupling the dependency.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-problem&#34;&gt;The problem&lt;/h2&gt;
+
+&lt;p&gt;The code comes with a classic dependency issue: a method that &lt;em&gt;secretly&lt;/em&gt; (from the point of view of the client) reads from an external file that is created using the filename passed in the constructor.
+So, no way for the client to know about this file before or to avoid its usage. Here the original code:&lt;/p&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://gist.github.com/f1f7e91dba6c6252d1237381da856645.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;As you can see, the filename &amp;ldquo;&lt;em&gt;fullFilenameWithPath&lt;/em&gt;&amp;rdquo; is passed in the constructor and then it&amp;rsquo;s used internally by &lt;em&gt;FileReader&lt;/em&gt;. This creates an annoying hidden dependency that prevents the testing of the method &lt;em&gt;convertToHtml()&lt;/em&gt;. If you try to call the method &lt;em&gt;convertToHtml()&lt;/em&gt; from your tests you will get a &amp;ldquo;&lt;em&gt;File Not Found Exception&lt;/em&gt;&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s leave aside that ugly mix of levels of abstractions in this method (&lt;em&gt;FileReader&lt;/em&gt;, &lt;em&gt;BufferedReader&lt;/em&gt;, &lt;em&gt;&amp;lt; br /&amp;gt;&lt;/em&gt;, static call to &lt;em&gt;escapeHtml()&lt;/em&gt; all together .. &lt;em&gt;blah&lt;/em&gt;). I found that this will be fixed almost &lt;em&gt;automagically&lt;/em&gt; once you figure out how to extract that dependency from there.&lt;/p&gt;
+
+&lt;p&gt;So, how to extract that dependency so that we can test it?&lt;/p&gt;
+
+&lt;h2 id=&#34;technique-1-dependency-injection&#34;&gt;Technique 1: Dependency Injection&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;An injection is the passing of a dependency to a dependent object (a client) that would use it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In this case the dependency is &lt;em&gt;FileReader&lt;/em&gt; and the dependent object is our &lt;em&gt;HtmlTextConverter&lt;/em&gt; class.&lt;/p&gt;
+
+&lt;p&gt;I want to pass the dependency from the constructor, but we can&amp;rsquo;t change the existing one. In &lt;em&gt;Working Effectively with Legacy Code&lt;/em&gt; this is called &lt;em&gt;Preserving Signature&lt;/em&gt;, but more easily we can&amp;rsquo;t change an API that is used by the clients.&lt;/p&gt;
+
+&lt;p&gt;So, I can refactor this class in 3 steps:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;I extract the &lt;em&gt;new FileReader&lt;/em&gt; from the method so that now it is created by a ReaderFactory (I am using the &lt;a href=&#34;https://sourcemaking.com/design_patterns/factory_method&#34;&gt;Factory Design Pattern&lt;/a&gt; here, so that I can create a FileReader, or more in general a Reader, with a method &lt;em&gt;createFactory()&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;I create a new constructor that takes a &lt;em&gt;ReaderFactory&lt;/em&gt; interface as input&lt;/li&gt;
+&lt;li&gt;I make the old constructor to call the new one passing the implementation of &lt;em&gt;ReaderFactory&lt;/em&gt; that does the same job of &lt;em&gt;new FileReader()&lt;/em&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The point 3 is called &lt;em&gt;Parametrize Constructor&lt;/em&gt; in &lt;em&gt;Working Effectively With Legacy Code&lt;/em&gt; and this is the result:&lt;/p&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://gist.github.com/b4e9323e3b692cb6de63efa1c08fa41d.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;The fact that I extracted the &lt;em&gt;FileReader&lt;/em&gt; from the method allowed me also to better define how I wanted to use it, so to get rid of &lt;em&gt;BufferedReader&lt;/em&gt;, now handled in HtmlFormatter class. This allowed me also to remove the global variable fullFilenameWithPath from HtmlTextConverter.
+ A simple refactoring that made me, at the same time, decouple the dependency and make the code cleaner by removing that ugly mix of levels of abstractions.&lt;/p&gt;
+
+&lt;p&gt;With this implementation I can now test the method just by creating a fake implementation of ReaderFactory in order to read from a String instead of a file:&lt;/p&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://gist.github.com/35267e8d83a380d4ec071faf95cc356c.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;h2 id=&#34;technique-2-extract-and-override-factory-method&#34;&gt;Technique 2: Extract and Override Factory Method&lt;/h2&gt;
+
+&lt;p&gt;In this technique you extract all the work involved in the creation of &lt;em&gt;FileReader&lt;/em&gt; in the constructor into another factory method. Then, you create a testing subclass and override the method. This is the result:&lt;/p&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://gist.github.com/f1e01dcfa82737091ff430fb40932d51.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;I have extracted the &lt;em&gt;new FileReader()&lt;/em&gt; into another method called &lt;em&gt;getReader()&lt;/em&gt;, so now I can override it in a subclass called &lt;em&gt;FakeHtmlTextConverter&lt;/em&gt; as follows:&lt;/p&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://gist.github.com/b823ce0137a2b01b60873741fe19b68c.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;This technique allows me to not change the constructor, but instead using a fake implementation in the tests, like so:&lt;/p&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://gist.github.com/73fa748312c3cda72fad659d698d1203.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Working Effectively With Legacy Code&lt;/em&gt; is an illuminating book and i strongly recommend it to read. It&amp;rsquo;s pretty dense with content, but reading it along with small exercise like this one it&amp;rsquo;s a great way to absorb it faster and make it yours.&lt;/p&gt;
+
+&lt;p&gt;This exercise is interesting and puts you a bit uncomfortable since the refactoring is becomes pretty big very quickly and it&amp;rsquo;s difficult to do it in small steps. You stay in the red zone (&lt;em&gt;test don&amp;rsquo;t pass&lt;/em&gt;) for long, at least the first time you do it and mostly if you&amp;rsquo;re not familiar with design patterns or any refactoring strategy in particular.&lt;/p&gt;
+
+&lt;p&gt;Regarding the techniques, the 2. is strongly linked to the programming language used. You can&amp;rsquo;t use it in C/C++. The 1. is more clean. Both are two great ones.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Transformation Priority Premise: overcome the fear of new tests</title>
+      <link>http://alessandrobaffa.com/2016/07/05/transformation-priority-premise-overcome-the-fear-of-new-tests/</link>
+      <pubDate>Tue, 05 Jul 2016 21:29:11 +0200</pubDate>
+      
+      <guid>http://alessandrobaffa.com/2016/07/05/transformation-priority-premise-overcome-the-fear-of-new-tests/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://blog.8thlight.com/uncle-bob/2013/05/27/TheTransformationPriorityPremise.html&#34;&gt;The Transformation Priority Premise&lt;/a&gt; (TPP) is a great empirical list of transformations that you can apply in your code when you’re working in TDD:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../../../../img/tpp.png&#34;/&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;when-do-you-need-it&#34;&gt;When do you need it?&lt;/h2&gt;
+
+&lt;p&gt;Practicing with TDD I realized that sometimes I reach a point when I get stuck: I am almost scared to add a new particular test because I already know it’s going to force me to completely rewrite the structure of the code.
+The problem is that the more particular tests you add, the more generic your code has to become to handle all of them.&lt;/p&gt;
+
+&lt;p&gt;TPP comes in handy at this point. When you feel you’re stuck, take a look at your code and start from the top of this list to see if there are some transformations that you can apply.&lt;/p&gt;
+
+&lt;p&gt;Apply them even if you don’t see clearly how they will unblock you: the code itself will light up the path to follow.&lt;/p&gt;
+
+&lt;h2 id=&#34;an-example-the-roman-numeral-kata&#34;&gt;An example: the Roman Numeral Kata&lt;/h2&gt;
+
+&lt;p&gt;Inspired by the solution published by Codurance, I tried to practice with TPP using the same kata in Java. I made it several times and every time taking a look to the TPP list in order to see how I could use it.&lt;/p&gt;
+
+&lt;p&gt;In few occasions I got stuck with the algorithm and just by applying one of the items in the list, the code itself suggested me how to proceed.
+Let’s see few examples.&lt;/p&gt;
+
+&lt;p&gt;At this point the code was handling only the case for 1, 2 and 3.
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://gist.github.com/6944a3e84f7672505e11f3aa43dcd040.js&#34;&gt;&lt;/script&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Now I wanted to add the new test to handle 4. So, in TDD you start by doing the easiest thing, so I added a new element “IV” in the array. Tests pass.
+At this point you clearly see the duplication of the string “I” and so I said “_OK, time to refactor_”. Well, how?&lt;/p&gt;
+
+&lt;p&gt;So, I took the TPP list and the transformation 8) is (array -&amp;gt; container). So, I transformed the array to a collection that could be used as a dictionary:
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://gist.github.com/440d85e947fef253405fe45a6b144992.js&#34;&gt;&lt;/script&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Now let’s keep only “I” and “IV” from the collection and let’s see if there’s another transformation I can use.
+Uhm, my method has only a return, so the transformation 9) (statement -&amp;gt; recursion) looks promising. I have now a collection that may have some useful methods I can take advantage from…let’s try:
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://gist.github.com/a692a3e1608c69c9a52db39db988a7b5.js&#34;&gt;&lt;/script&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Nice. Having a collection helped me to find an option that I wasn’t considering before.&lt;/p&gt;
+
+&lt;h2 id=&#34;another-example&#34;&gt;Another example&lt;/h2&gt;
+
+&lt;p&gt;At some point I had a lot of if statements:
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://gist.github.com/6fd459d1f2049fa70fc0f7db9b8fc717.js&#34;&gt;&lt;/script&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The TPP(10) says (if -&amp;gt; while). So, I changed the code accordingly:
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://gist.github.com/ecb93847173129f279ff5de6ca8677dd.js&#34;&gt;&lt;/script&gt;
+&lt;/p&gt;
+
+&lt;p&gt;At this point the repetition is really visible. A lot of while statements doing the same things with a decreasing value in the condition. It looks like something that begs to be refactored again using recursion, and so here it is:
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://gist.github.com/a9111713ec0e3b6f6647e5ab6af6d4f1.js&#34;&gt;&lt;/script&gt;
+&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;The Transformation Priority Premise is really helpful. It’s a handy list of changes that you can apply easily and with no damage every time you are stuck or you don’t know how to make your code more generic.&lt;/p&gt;
+
+&lt;h1 id=&#34;title&#34;&gt;Title&lt;/h1&gt;
+
+&lt;p&gt;I am going to do again some code kata I already done using this technique.&lt;/p&gt;
+
+&lt;p&gt;If you’re curious, you can see all the steps I’ve done in my implementation on &lt;a href=&#34;https://github.com/alebaffa/codekata/commits/master/src&#34;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Practicing TDD: FizzBuzz kata in Golang</title>
+      <link>http://alessandrobaffa.com/2016/06/19/practicing-tdd-fizzbuzz-kata-in-golang/</link>
+      <pubDate>Sun, 19 Jun 2016 21:28:49 +0200</pubDate>
+      
+      <guid>http://alessandrobaffa.com/2016/06/19/practicing-tdd-fizzbuzz-kata-in-golang/</guid>
+      <description>&lt;p&gt;My implementation:&lt;/p&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://gist.github.com/4c32900a8ac8bd9793f44ddeaa3f3ce1.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;and here the list of all the steps that I’ve done to implement it in TDD on &lt;a href=&#34;https://github.com/alebaffa/codekata/commits/master/fizzbuzz&#34;&gt;my github account&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A Community of Professionals - SoCraTes UK</title>
+      <link>http://alessandrobaffa.com/2016/06/19/a-community-of-professionals---socrates-uk/</link>
+      <pubDate>Sun, 19 Jun 2016 21:28:33 +0200</pubDate>
+      
+      <guid>http://alessandrobaffa.com/2016/06/19/a-community-of-professionals---socrates-uk/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;../../../../img/socrates.png&#34; alt=&#34;socrates place&#34; style=&#34;width: 300px; margin-right: 15px;&#34; align=&#34;left&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;A couple of weeks ago I participated for the first time to a SoCraTes event, one of the Software Craftsmanship international gatherings.
+SoCraTes (Software Craftsmanship and Testing) is an self-organized conference where the people from the international Software Craftsmanship Community meet and spend 3 days organizing themselves activities and talks around everything related to software craftsmanship: from the technical to the human aspects of it.
+There are few events of this kind every year (Italy, France, Germany, Belgium, Switzerland, Romania, Finland, Canaries) and I participated to the one in UK.&lt;/p&gt;
+
+&lt;h2&gt;Location&lt;/h2&gt;
+
+&lt;p&gt;The location was in Dorking, not far from Gatwick airport. A stunning place!
+&lt;img src=&#34;../../../../img/socrates-out-1.jpeg&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Organization — The Open Space&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s a self-organizing conference because the agenda is created every day by the participants through an Open Space. These were the market places of the two days (the third and last day was dedicated more to relax, chat and walk until people left).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../../../../img/open-space-1.jpeg&#34; style=&#34;width: 400px; margin-right: 2px;&#34; align=&#34;left&#34; /&gt;
+&lt;img src=&#34;../../../../img/open-space-2.jpeg&#34; style=&#34;width: 400px;&#34; align=&#34;left&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h2&gt;Personal experience&lt;/h2&gt;
+It’s been maybe one of the most stimulating experiences I’ve ever participated to.&lt;/p&gt;
+
+&lt;p&gt;Through the sessions in the event I really understood the meaning of Software Craftsmanship. I attended technical sessions about refactoring legacy code, TDD and functional programming, as well as other sessions related more to the human aspects of software development like Agile, technical coaching, Community of Practice, communication techniques and interesting comparisons between sport and development.&lt;/p&gt;
+
+&lt;p&gt;Differently from a traditional conference, in the SoCraTes events the session are fully interactive and once they start they may also never really end: if people are interested they continue to work on it during the evening and the other days. The sessions organized during the event may also continue after the event itself, so starting cool open source projects that the entire community will one day benefit from. And it will happen very often, as far as I understood. And it’s so cool.&lt;/p&gt;
+
+&lt;p&gt;The Software Craftsmanship international community is really awesome: friendly, open and welcoming people who meet in these events to share their passion, to discuss and challenge themselves and to help others to learn how to craft their careers and their skills.&lt;/p&gt;
+
+&lt;p&gt;&lt;h2&gt;What I learned&lt;/h2&gt;
+The biggest lesson for me that I learned from SoCraTes UK is to realize that software is about people and that too often our industry forgets about it.&lt;/p&gt;
+
+&lt;p&gt;It’s not that I’ve never thought about empathy, diversity, inclusion and all these stuff, but meeting with a community of passionate people who put these things before the technicalities of software development (when they could fully do it considered their high technical skills) made me realize that maybe I’ve never put the right amount of focus on them.&lt;/p&gt;
+
+&lt;p&gt;Software Craftsmanship is care about our industry and this includes everything, from the techniques it is based on to the people who work in it.&lt;/p&gt;
+
+&lt;p&gt;It’s been my first SoCraTes event ever, but I will surely participate to the other ones as often as I can. The one in France is not so far from my house so I will surely go there!&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;If you want to get a glimpse of what SoCraTes UK was, register to the &lt;a href=&#34;https://scnewsletter.firebaseapp.com/&#34;&gt;Software Craftsmanship Newsletter&lt;/a&gt; that I created: the next issue will be fully dedicated to this events.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>First try with concurrency in Go</title>
+      <link>http://alessandrobaffa.com/2016/05/16/first-try-with-concurrency-in-go/</link>
+      <pubDate>Mon, 16 May 2016 21:04:53 +0200</pubDate>
+      
+      <guid>http://alessandrobaffa.com/2016/05/16/first-try-with-concurrency-in-go/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s been a while I&amp;rsquo;m practicing with Go, but I had still never tried its concurrency features so far. My bad.&lt;/p&gt;
+
+&lt;p&gt;Fortunately &lt;a href=&#34;http://exercism.io&#34;&gt;exercism.io&lt;/a&gt; has just introduced me to this topic with the exercise &lt;a href=&#34;http://exercism.io/exercises/go/parallel-letter-frequency/readme&#34;&gt;&amp;ldquo;Parallel Letter Frequency&amp;rdquo; exercise&amp;rdquo;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The core of my solution is here (I let you read the comments).&lt;/p&gt;
+
+&lt;p&gt;Basically the exercise asks you to count the frequency of the letters in 3 different strings. They provide you with already a function that counts the frequency, but you are asked to call that function with 3 calls in parallel (one call for each string) and to collect the result (the total frequencies from all the 3 strings).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func Frequency(s string) map[rune]int {
+  //DO SOMETHING
+}
+func ConcurrentFrequency(words []string) map[rune]int {
+  // (buffered)channel if type map[run]int with capacity of the lenght of the input (3)
+	channel := make(chan map[rune]int, len(words))
+
+	for _, value := range words {
+		// anonymous function that calls Frequency() 3 times in parallel
+		// and puts the three different results in the channel of capacity 3
+		go func(v string){
+			channel &amp;lt;- Frequency(v)
+		}(value)
+	}
+
+  // Now use the values inside the channel.
+  frequency := map[rune]int
+	// loops 3 times because channel of size 3
+	for range words {
+		for key, value := range &amp;lt;-channel {
+			frequency[key] += value
+		}
+	}
+  return frequency
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In this solution I am basically looping over the array of strings in input and call the Frequency() function on every iteration. The interesting thing is here:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;go func(v string){
+  channel &amp;lt;- Frequency(v)
+}(value)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here I&amp;rsquo;m starting a &lt;strong&gt;goroutine&lt;/strong&gt; on an &lt;strong&gt;anonymous function&lt;/strong&gt; (the &lt;em&gt;go&lt;/em&gt; prefix before &lt;em&gt;func&lt;/em&gt;) inside of which I call Frequency(). The Frequency function sends its returned value in a &lt;strong&gt;channel&lt;/strong&gt; (of the same type returned from the function). The channel is the way goroutines communicates with each other and so it&amp;rsquo;s also the way to send values back.&lt;/p&gt;
+
+&lt;p&gt;Once the channel contains the returned values, you can loop over the channel itself (not sure here if it&amp;rsquo;s because it&amp;rsquo;s a &lt;em&gt;buffered channel&lt;/em&gt; and so with a specified capacity or I can do this every time, I still have to understand this).
+The channel is of type &lt;em&gt;map[rune]int&lt;/em&gt; and so I can fetch &lt;key, value&gt; from it, like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;for range words {
+  for key, value := range &amp;lt;-channel {
+    frequency[key] += value
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Working with channels is very simple and powerful. There are plenty of things that I still have to learn, but this was a good start. &lt;strong&gt;Thanks Exercism.io&lt;/strong&gt;!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Paradox Of Choice In Learning to Code</title>
+      <link>http://alessandrobaffa.com/2016/05/16/the-paradox-of-choice-in-learning-to-code/</link>
+      <pubDate>Mon, 16 May 2016 15:37:25 +0200</pubDate>
+      
+      <guid>http://alessandrobaffa.com/2016/05/16/the-paradox-of-choice-in-learning-to-code/</guid>
+      <description>
+
+&lt;p&gt;I was talking with a guy some days ago and it went like this:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;he told me &amp;ldquo;&lt;em&gt;I really would like to start improving myself and I need a pet project..&lt;/em&gt;&amp;ldquo;&lt;/li&gt;
+&lt;li&gt;I said &amp;ldquo;&lt;em&gt;great idea! But where do you want to improve?&lt;/em&gt;&amp;ldquo;&lt;/li&gt;
+&lt;li&gt;he said &amp;ldquo;&lt;em&gt;..that&amp;rsquo;s the problem: I still don&amp;rsquo;t know what I want to use. There are so many things out there that I would like to learn &amp;hellip; and I don&amp;rsquo;t know where to start&amp;hellip;&lt;/em&gt;&amp;ldquo;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This made me think about a book I read some time ago called &amp;ldquo;&lt;a href=&#34;http://www.amazon.com/Paradox-Choice-Why-More-Less/dp/149151423X&#34;&gt;The Paradox of Choice: Why More Is Less&lt;/a&gt;&amp;rdquo; (the author gave also an awesome &lt;a href=&#34;https://www.ted.com/talks/barry_schwartz_on_the_paradox_of_choice?language=en&#34;&gt;TED Talk&lt;/a&gt; about it). Basically the book talks about the relationship between the huge amount of choices we have nowadays with our happiness and freedom. People tend to think that having more choices (e.g.: more jeans in the shop to choose from, more books in the library, more courses on a learning platform, etc..) means that we have more &lt;em&gt;freedom&lt;/em&gt;, you are free to choose the thing that is more appropriate for you. The more the things we can choose from, the more free we are.&lt;br /&gt;
+The author debunks this myth showing that the fact to have so many different choices doesn&amp;rsquo;t lead people to &lt;em&gt;feel more free&lt;/em&gt;, but instead it leads them to a &lt;em&gt;paralysis&lt;/em&gt; (in their mental choice process) and to a constant feeling of regret: you buy a book and you soon regret to not have bought the other one in your wish list (&amp;rdquo;&lt;em&gt;perhaps it was better&lt;/em&gt;&amp;rdquo;).&lt;br /&gt;
+Constant dissatisfaction instead of happiness.&lt;/p&gt;
+
+&lt;p&gt;The same thing is happening nowadays with technology and, more specifically, with programming. There are so many choices out there to choose from that people, like the guy I was talking to, don&amp;rsquo;t know &lt;em&gt;where to start&lt;/em&gt;. Javascript? Well, good luck. AngularJS? Oh wait, which one? &lt;em&gt;Angular 2 is coming&lt;/em&gt;. Java 8? Wait wait, Java 9 is scheduled for next year. Machine Learning? No no, the next &lt;em&gt;big-thing-I-am-sure&lt;/em&gt; will be Server-less architecture. Go, Haskell, Scala, Kotlin, Rust &amp;hellip; and if you want to pick just one platform to learn you can choose among Coursera, HackerRank, TopCoder, EggHead, CodeAcademy, CodeSchool, Udemy, Udacity &amp;hellip;.&lt;br /&gt;
+&lt;strong&gt;UNLIMITED-OPTIONS-AVAILABLE&lt;/strong&gt;! The consequence is that people don&amp;rsquo;t know where to start if they try to follow this entropy. &lt;br /&gt;
+The bad news is that Software Engineering is a field that changes so rapidly that all these things listed above will change in a couple of years. Again. So, it&amp;rsquo;s time to stop your mental chaos. How?&lt;/p&gt;
+
+&lt;h2 id=&#34;stop-choosing&#34;&gt;Stop choosing&lt;/h2&gt;
+
+&lt;p&gt;The book provides a simple solution to this paralysis: stop choosing. Do not spend mental energy regretting your choice because &lt;em&gt;maybe&lt;/em&gt; the other one could have been better. If the difference is not so relevant (in terms of price, time, etc..) stop feeling bad and start to fully enjoy what you already have. There will be always something absolutely better out there, but what you have is already good enough.&lt;br /&gt;
+What does it mean for developers?&lt;/p&gt;
+
+&lt;h2 id=&#34;ask-yourself-the-right-question&#34;&gt;Ask yourself the right question&lt;/h2&gt;
+
+&lt;p&gt;There&amp;rsquo;s only one way to face the increasing entropy: a solid knowledge of the basics of Software Engineering. Stop choosing the next programming language or technology to learn. The question you should ask yourself should not be &amp;ldquo;&lt;em&gt;should I choose between X and Y?&lt;/em&gt;&amp;rdquo;, but instead it should be &amp;ldquo;&lt;em&gt;What I want to become? A professional developer or a simple coder?&lt;/em&gt;&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Ask yourself how well do you know things like design patterns, software design, cohesion, coupling, data structures, algorithms&amp;hellip;are you able to have a discussion about these things with other technical people? Do you think to have enough knowledge to decide the good strategies to write clean and testable code?&lt;br /&gt;
+If your answer is &lt;em&gt;no&lt;/em&gt; or you&amp;rsquo;re not sure, well you&amp;rsquo;ve narrowed your options. Do a step back, that&amp;rsquo;s where you have to improve. &lt;br /&gt;
+Welcome to the 2nd stage of the &lt;a href=&#34;https://en.wikipedia.org/wiki/Four_stages_of_competence&#34;&gt;Four Stages of Competence&lt;/a&gt;: &lt;em&gt;conscious incompetence&lt;/em&gt; (you&amp;rsquo;re not alone, I&amp;rsquo;m there with you!).&lt;/p&gt;
+
+&lt;p&gt;Technologies change every time. Having strong knowledge foundations is what makes the difference between a professional developer and a simple coder.&lt;/p&gt;
+
+&lt;p&gt;Choose one of them.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bowling kata in Go</title>
+      <link>http://alessandrobaffa.com/2016/05/16/bowling-kata-in-go/</link>
+      <pubDate>Mon, 16 May 2016 12:10:33 +0200</pubDate>
+      
+      <guid>http://alessandrobaffa.com/2016/05/16/bowling-kata-in-go/</guid>
+      <description>&lt;p&gt;This is my solution for the Bowling Kata, written in Go.&lt;/p&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://gist.github.com/c3a6b863f905f1cc073d6611d3baafe2.js&#34;&gt;&lt;/script&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Be careful with slice</title>
+      <link>http://alessandrobaffa.com/2016/03/31/be-careful-with-slice/</link>
+      <pubDate>Thu, 31 Mar 2016 06:56:10 +0200</pubDate>
+      
+      <guid>http://alessandrobaffa.com/2016/03/31/be-careful-with-slice/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://blog.golang.org/slices&#34;&gt;Slices&lt;/a&gt; are a great tool in Go, but sometimes they can be confused with arrays.
+A small reminder: slices are a pointer into an underline array. Let&amp;rsquo;s take this example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;array := []int{1, 2, 3, 4, 5, 6}
+slice := array[1:3]
+
+// let&#39;s print both
+fmt.Println(&amp;quot;array: &amp;quot;, array)
+fmt.Println(&amp;quot;slice: &amp;quot;, slice)
+
+// array:  [1 2 3 4 5 6]
+// slice: [2 3]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Since the slice is only a pointer to the underline array, if you do some operations with the elements of the array you are also changing the elements of the slice. Like this example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;// let&#39;s double the first element of the array
+array[1] *= 2
+
+// let&#39;s print the array and the slice
+fmt.Println(&amp;quot;array: &amp;quot;, array)
+fmt.Println(&amp;quot;slice: &amp;quot;, slice)
+
+// array:  [1 4 3 4 5 6]
+// slice: [4 3]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A slice have two important properties:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;fmt.Println(&amp;quot;length of the slice: &amp;quot;, len(slice))
+fmt.Println(&amp;quot;capacity of the slice: &amp;quot;, cap(slice))
+
+// length of the slice: :  2
+// capacity of the slice: 5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The length is the number of elements that the slice contains, while the capacity is the max number of elements it can contain.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s important to take care of what happens when the slice fulfills its capacity. Let&amp;rsquo;s continue the example by adding new things in the slice (and so in the array):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;middle = append(slice, 100)
+middle = append(slice, 101)
+middle = append(slice, 102)
+middle = append(slice, 103)
+
+// slice:  [4 3 99 100 101 102 103]
+// array:  [1 4 3 99 100 101]
+// capacity of slice:  10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The array has reached its length (6 elements), but the slice has been extended. It is actually been copied and moved and it became a new slice with double capacity (10. It was 5 before).&lt;/p&gt;
+
+&lt;p&gt;At this point the slice is not pointing anymore to that array. So, now if you do some operations to the underline array, the elements of the slice won&amp;rsquo;t change anymore. Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;// let&#39;s double the first element of the array
+array[1] *= 2
+
+// let&#39;s print the array and the slice now:
+fmt.Println(&amp;quot;array: &amp;quot;, array)
+fmt.Println(&amp;quot;slice: &amp;quot;, slice)
+
+//array:  [1 8 3 99 100 101]
+//slice:  [4 3 99 100 101 102 103]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As you can see, the &lt;em&gt;array[1] = 8&lt;/em&gt;, but the corresponding element in the slice is still 4.&lt;/p&gt;
+
+&lt;p&gt;This is an important thing to take care of when you&amp;rsquo;re using slices. It can be really confusing. Always take care of the capacity in case your program is managing a lot of elements.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Surrounding yourself with the right people</title>
+      <link>http://alessandrobaffa.com/2016/02/23/surrounding-yourself-with-the-right-people/</link>
+      <pubDate>Tue, 23 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://alessandrobaffa.com/2016/02/23/surrounding-yourself-with-the-right-people/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;../../../../img/cerini.jpeg&#34; alt=&#34;alt text&#34; title=&#34;passion&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I was 8 years old when I started playing guitar. It was not my choice, though, but my parents’ who forced me to start taking some lessons. I hated it at the beginning: hours of solfège, and I wasn’t even able to play the most stupid song. No chords, nothing at all.&lt;/p&gt;
+
+&lt;p&gt;Nevertheless I had some natural talent for music (I’m gifted with the so called musical ear. And so my brother and sister are - the Force is strong in my family), and maybe my parents knew that and that’s why they persisted so much with me.&lt;/p&gt;
+
+&lt;p&gt;Time passed and I learned chords and arpeggios. I actually became so good until the point where my teacher told me that I was his most successful student ever, and he didn’t have anything more to teach me. He suggested me to go to the conservatory, but it was too much of an engagement both for me and for my parents and so I quite taking lessons.
+I remember I felt relieved. No more lessons, no more waste of my precious time (1 hour / week &amp;hellip;). I could spend that hour playing football with my friends. So I quit playing guitar in general.
+I was 11.&lt;/p&gt;
+
+&lt;p&gt;I didn’t touch my guitar for about 7 years, until a summer when I made a new friend. He was (he still is) an extraordinary guitarist, and he was able to reproduce all the songs he knew just listening to them for few minutes. He was always the coolest guy of the party. And he was/is also an extremely nice and funny guy. I loved the way he played his guitar, and his passion was so contagious that he made me willing to take mine and start playing again. During those few weeks my passion came back with all its strength. I started to learn new chords, find new ones and I soon realized that I was not so bad.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;My passion was driving me to a new level of consciousness&lt;/strong&gt; and I found some things to be easier than I thought years before. &lt;strong&gt;My friend’s passion has triggered mine&lt;/strong&gt;. I’ve been playing guitar no-stop for years since then, and I improved so much. I own two guitars now.&lt;/p&gt;
+
+&lt;p&gt;I also love photography. I started to take photos when I first came here in south of France from Italy. The scenery was beautiful and so I thought to buy my first DSLR (a Nikon D70s). When I started using it I was very bad, I wasn’t even able to take a good photo in normal conditions and all those gears were difficult to manage. After some months with no improvements I gave up. I didn’t use my Nikon for about a year until I registered to an &lt;a href=&#34;http://kelbyone.com/&#34;&gt;online course&lt;/a&gt; where I discovered the post-processing. I was hooked. I discovered a new entire world of possibilities and so I started to improve my photos in order to apply all those cools things I was looking on the web. Then I tried &lt;a href=&#34;http://strobist.blogspot.fr/2011/01/introducing-strobist-lighting-in-layers.html&#34;&gt;another one&lt;/a&gt;, and in one year I hugely improved my skills and now &lt;a href=&#34;https://www.flickr.com/photos/alebaffa/&#34;&gt;I’m not so bad&lt;/a&gt;. Again, something that has brought my passion back to me.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Surrounding yourself with passion and optimism is one of the best things you can do to improve yourself and your environment.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It’s the reason why I started to go to conferences: once back home you’re so full of enthusiasm that you restart whatever you do with a new energy.
+It’s the reason why I started to co-organize a &lt;a href=&#34;http://www.meetup.com/French-Riviera-Software-Craftsmanship-Community/&#34;&gt;local Meetup&lt;/a&gt;.
+It’s also the reason why I like being a developer advocate, because I meet and work with so many passionate people who trigger my passion and pro-activity.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Being surrounded by passionate people can speed up your learning process by giving you that amount of motivation that you sometime may lose on your way.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Things to consider before open sourcing your project written in go</title>
+      <link>http://alessandrobaffa.com/2015/11/26/things-to-consider-before-open-sourcing-your-project-written-in-go/</link>
+      <pubDate>Thu, 26 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://alessandrobaffa.com/2015/11/26/things-to-consider-before-open-sourcing-your-project-written-in-go/</guid>
+      <description>
+
+&lt;p&gt;so, you want to finally release your &lt;em&gt;preciousss&lt;/em&gt; written in Go to the open source community. Great! And thank you.
+Though, there are few things you may want to consider before doing the big step. Things that you may have missed perhaps because you are not yet 100% comfortable with Go (but “_I will improve later. Now let me just put this gem on Github._”).
+You have to know that the Go community can be quite strict when it comes to its idioms and conventions. And they are right, in my opinion. So, in order to avoid hundred of issues and pull requests on Github focused mainly on code style and best practices, and not on the real core of your project, check these following few things before pushing your code.&lt;/p&gt;
+
+&lt;h2 id=&#34;be-sure-you-read-effective-go&#34;&gt;Be sure you read Effective Go&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://golang.org/doc/effective_go.html&#34;&gt;Effective Go&lt;/a&gt; contains all the tips you need to know in order to write clear and idiomatic Go code. You will learn all the best practices and the conventions used and followed by the Go community.
+Effective Go is essential not only for newbies programmers, but also (and foremost) for those coming from other programming languages.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A straightforward translation of a C++ or Java program into Go is unlikely to produce a satisfactory result — Java programs are written in Java, not Go.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;avoid-common-mistakes&#34;&gt;Avoid common mistakes&lt;/h2&gt;
+
+&lt;p&gt;The Go community over the years has identified some common mistakes made in Go projects, and so common comments in the code reviews. These comments are now collected in the &lt;a href=&#34;https://github.com/golang/go/wiki/CodeReviewComments&#34;&gt;Go Code Review Comments&lt;/a&gt; page.
+Be sure not to make these common mistakes yourself, so give a read to that page.&lt;/p&gt;
+
+&lt;h2 id=&#34;use-all-the-tools&#34;&gt;Use all the tools&lt;/h2&gt;
+
+&lt;p&gt;Go comes with some amazing tools that allow you to write idiomatic Go with less effort. Be sure to check all your code with, at least, these few ones:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://golang.org/cmd/gofmt/&#34;&gt;gofmt&lt;/a&gt;: to automatically formats Go source code.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/golang/lint&#34;&gt;golint&lt;/a&gt;: to print out code style mistakes.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://golang.org/cmd/vet/&#34;&gt;govet&lt;/a&gt;: to examine the code and report suspicious constructs.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Only by using at least these 3 tools you can manage to write clear and idiomatic Go code and avoid a lot of issues and pull requests. And they also help you to learn Go in the proper way :) .
+&lt;strong&gt;Good news&lt;/strong&gt;. The Go community is so good that there are plugins for the most used IDE: &lt;a href=&#34;https://github.com/DisposaBoy/GoSublime&#34;&gt;GoSublime&lt;/a&gt; and the &lt;a href=&#34;https://forum.golangbridge.org/t/beta-testers-wanted-sublimetext-go/1282&#34;&gt;official Google plugin&lt;/a&gt; (in test) for SublimeText, &lt;a href=&#34;https://atom.io/packages/go-plus&#34;&gt;GoPlus&lt;/a&gt; for Atom, &lt;a href=&#34;https://github.com/fatih/vim-go&#34;&gt;vim-go&lt;/a&gt; for Vim and, incredibly enough, VisualStudio has a lot of good reviews for Go.
+There are a lot of other IDE, but these ones, apparently, are the most used ones by the community.&lt;/p&gt;
+
+&lt;h2 id=&#34;stay-up-to-date-with-the-go-development&#34;&gt;Stay up-to-date with the Go development&lt;/h2&gt;
+
+&lt;p&gt;If you are open sourcing a Go project chances are that you may be impacted by changes in the Go libraries, or whatever can happen with the development of Go in general. It’s better to stay up-to-date with what happens and follow the discussions on these Google Groups:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://groups.google.com/forum/#!forum/golang-dev&#34;&gt;golang-dev&lt;/a&gt;: discussions of the development of the Go project.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://groups.google.com/forum/#!forum/golang-nuts&#34;&gt;golang-nuts&lt;/a&gt;: general discussion list for the Go Programming Language.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;be-part-of-the-community&#34;&gt;Be part of the community&lt;/h2&gt;
+
+&lt;p&gt;The Go community is super active. Just go &lt;a href=&#34;https://github.com/golang/go/wiki#the-go-community&#34;&gt;here&lt;/a&gt; to choose how you want to follow it. It’s important to follow the discussions if you’re seriously working with Go, you may discover useful things, or you could get to know important developments or projects that can impact your work.
+And don’t forget the &lt;a href=&#34;https://golang.org/conduct&#34;&gt;Code of Conduct&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Good! Now that you know what to check .. just to do it and let us know when your preciousss will be available for us to enjoy! :)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Back from dotgo 2015</title>
+      <link>http://alessandrobaffa.com/2015/11/10/back-from-dotgo-2015/</link>
+      <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://alessandrobaffa.com/2015/11/10/back-from-dotgo-2015/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;../../../../img/dotgo.jpeg&#34; alt=&#34;alt text&#34; title=&#34;dotgo2015&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Today I’ve been at the dotGo conference in Paris, the European conference about the Go programming language. Quick summary: &lt;strong&gt;fantastic!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s the second time I participate (I’ve been there also last year, 2014) and I found exactly the same impeccable organization, a beautiful location (with lots of food..), a great ambiance, and the talks, as usual, have been extremely interesting, inspiring and cool. Some of them (not in the same order of the conference):&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
