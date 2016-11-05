@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>alebaffa&#39;s</title>
-    <link>http://alessandrobaffa.com/tags/code-kata/index.xml</link>
+    <link>https://alebaffa.github.io/tags/code-kata/index.xml</link>
     <description>Recent content on alebaffa&#39;s</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-EN</language>
     <copyright>(c) 2015 Alessandro Baffa.</copyright>
-    <atom:link href="http://alessandrobaffa.com/tags/code-kata/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://alebaffa.github.io/tags/code-kata/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Practicing TDD: FizzBuzz kata in Golang</title>
-      <link>http://alessandrobaffa.com/2016/06/19/practicing-tdd-fizzbuzz-kata-in-golang/</link>
+      <link>https://alebaffa.github.io/2016/06/19/practicing-tdd-fizzbuzz-kata-in-golang/</link>
       <pubDate>Sun, 19 Jun 2016 21:28:49 +0200</pubDate>
       
-      <guid>http://alessandrobaffa.com/2016/06/19/practicing-tdd-fizzbuzz-kata-in-golang/</guid>
+      <guid>https://alebaffa.github.io/2016/06/19/practicing-tdd-fizzbuzz-kata-in-golang/</guid>
       <description>&lt;p&gt;My implementation:&lt;/p&gt;
 
 &lt;script type=&#34;text/javascript&#34; src=&#34;http://gist.github.com/4c32900a8ac8bd9793f44ddeaa3f3ce1.js&#34;&gt;&lt;/script&gt;

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>alebaffa&#39;s</title>
-    <link>http://alessandrobaffa.com/index.xml</link>
+    <link>https://alebaffa.github.io/index.xml</link>
     <description>Recent content on alebaffa&#39;s</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-EN</language>
     <copyright>(c) 2015 Alessandro Baffa.</copyright>
     <lastBuildDate>Sun, 09 Oct 2016 21:17:23 +0200</lastBuildDate>
-    <atom:link href="http://alessandrobaffa.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://alebaffa.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Dependency Injection VS Extract and Override Factory Method</title>
-      <link>http://alessandrobaffa.com/2016/10/09/dependency-injection-vs-extract-and-override-factory-method/</link>
+      <link>https://alebaffa.github.io/2016/10/09/dependency-injection-vs-extract-and-override-factory-method/</link>
       <pubDate>Sun, 09 Oct 2016 21:17:23 +0200</pubDate>
       
-      <guid>http://alessandrobaffa.com/2016/10/09/dependency-injection-vs-extract-and-override-factory-method/</guid>
+      <guid>https://alebaffa.github.io/2016/10/09/dependency-injection-vs-extract-and-override-factory-method/</guid>
       <description>
 
 &lt;p&gt;The TextConverter exercise (in the &lt;em&gt;Racing&lt;/em&gt; &lt;em&gt;Car&lt;/em&gt; &lt;em&gt;kata&lt;/em&gt; suite) is a very interesting exercise for refactoring legacy code. As I am reading &lt;em&gt;Working Effectively with Legacy Code&lt;/em&gt; I found two ways of solving it.&lt;/p&gt;
@@ -96,10 +96,10 @@ So, no way for the client to know about this file before or to avoid its usage. 
     
     <item>
       <title>Transformation Priority Premise: overcome the fear of new tests</title>
-      <link>http://alessandrobaffa.com/2016/07/05/transformation-priority-premise-overcome-the-fear-of-new-tests/</link>
+      <link>https://alebaffa.github.io/2016/07/05/transformation-priority-premise-overcome-the-fear-of-new-tests/</link>
       <pubDate>Tue, 05 Jul 2016 21:29:11 +0200</pubDate>
       
-      <guid>http://alessandrobaffa.com/2016/07/05/transformation-priority-premise-overcome-the-fear-of-new-tests/</guid>
+      <guid>https://alebaffa.github.io/2016/07/05/transformation-priority-premise-overcome-the-fear-of-new-tests/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://blog.8thlight.com/uncle-bob/2013/05/27/TheTransformationPriorityPremise.html&#34;&gt;The Transformation Priority Premise&lt;/a&gt; (TPP) is a great empirical list of transformations that you can apply in your code when you’re working in TDD:&lt;/p&gt;
@@ -168,10 +168,10 @@ Uhm, my method has only a return, so the transformation 9) (statement -&amp;gt; 
     
     <item>
       <title>Practicing TDD: FizzBuzz kata in Golang</title>
-      <link>http://alessandrobaffa.com/2016/06/19/practicing-tdd-fizzbuzz-kata-in-golang/</link>
+      <link>https://alebaffa.github.io/2016/06/19/practicing-tdd-fizzbuzz-kata-in-golang/</link>
       <pubDate>Sun, 19 Jun 2016 21:28:49 +0200</pubDate>
       
-      <guid>http://alessandrobaffa.com/2016/06/19/practicing-tdd-fizzbuzz-kata-in-golang/</guid>
+      <guid>https://alebaffa.github.io/2016/06/19/practicing-tdd-fizzbuzz-kata-in-golang/</guid>
       <description>&lt;p&gt;My implementation:&lt;/p&gt;
 
 &lt;script type=&#34;text/javascript&#34; src=&#34;http://gist.github.com/4c32900a8ac8bd9793f44ddeaa3f3ce1.js&#34;&gt;&lt;/script&gt;
@@ -183,10 +183,10 @@ Uhm, my method has only a return, so the transformation 9) (statement -&amp;gt; 
     
     <item>
       <title>A Community of Professionals - SoCraTes UK</title>
-      <link>http://alessandrobaffa.com/2016/06/19/a-community-of-professionals---socrates-uk/</link>
+      <link>https://alebaffa.github.io/2016/06/19/a-community-of-professionals---socrates-uk/</link>
       <pubDate>Sun, 19 Jun 2016 21:28:33 +0200</pubDate>
       
-      <guid>http://alessandrobaffa.com/2016/06/19/a-community-of-professionals---socrates-uk/</guid>
+      <guid>https://alebaffa.github.io/2016/06/19/a-community-of-professionals---socrates-uk/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;../../../../img/socrates.png&#34; alt=&#34;socrates place&#34; style=&#34;width: 300px; margin-right: 15px;&#34; align=&#34;left&#34;/&gt;&lt;/p&gt;
 
 &lt;p&gt;A couple of weeks ago I participated for the first time to a SoCraTes event, one of the Software Craftsmanship international gatherings.
@@ -231,10 +231,10 @@ The biggest lesson for me that I learned from SoCraTes UK is to realize that sof
     
     <item>
       <title>First try with concurrency in Go</title>
-      <link>http://alessandrobaffa.com/2016/05/16/first-try-with-concurrency-in-go/</link>
+      <link>https://alebaffa.github.io/2016/05/16/first-try-with-concurrency-in-go/</link>
       <pubDate>Mon, 16 May 2016 21:04:53 +0200</pubDate>
       
-      <guid>http://alessandrobaffa.com/2016/05/16/first-try-with-concurrency-in-go/</guid>
+      <guid>https://alebaffa.github.io/2016/05/16/first-try-with-concurrency-in-go/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s been a while I&amp;rsquo;m practicing with Go, but I had still never tried its concurrency features so far. My bad.&lt;/p&gt;
 
 &lt;p&gt;Fortunately &lt;a href=&#34;http://exercism.io&#34;&gt;exercism.io&lt;/a&gt; has just introduced me to this topic with the exercise &lt;a href=&#34;http://exercism.io/exercises/go/parallel-letter-frequency/readme&#34;&gt;&amp;ldquo;Parallel Letter Frequency&amp;rdquo; exercise&amp;rdquo;&lt;/a&gt;.&lt;/p&gt;
@@ -295,10 +295,10 @@ The channel is of type &lt;em&gt;map[rune]int&lt;/em&gt; and so I can fetch &lt;
     
     <item>
       <title>The Paradox Of Choice In Learning to Code</title>
-      <link>http://alessandrobaffa.com/2016/05/16/the-paradox-of-choice-in-learning-to-code/</link>
+      <link>https://alebaffa.github.io/2016/05/16/the-paradox-of-choice-in-learning-to-code/</link>
       <pubDate>Mon, 16 May 2016 15:37:25 +0200</pubDate>
       
-      <guid>http://alessandrobaffa.com/2016/05/16/the-paradox-of-choice-in-learning-to-code/</guid>
+      <guid>https://alebaffa.github.io/2016/05/16/the-paradox-of-choice-in-learning-to-code/</guid>
       <description>
 
 &lt;p&gt;I was talking with a guy some days ago and it went like this:&lt;/p&gt;
@@ -338,10 +338,10 @@ Welcome to the 2nd stage of the &lt;a href=&#34;https://en.wikipedia.org/wiki/Fo
     
     <item>
       <title>Bowling kata in Go</title>
-      <link>http://alessandrobaffa.com/2016/05/16/bowling-kata-in-go/</link>
+      <link>https://alebaffa.github.io/2016/05/16/bowling-kata-in-go/</link>
       <pubDate>Mon, 16 May 2016 12:10:33 +0200</pubDate>
       
-      <guid>http://alessandrobaffa.com/2016/05/16/bowling-kata-in-go/</guid>
+      <guid>https://alebaffa.github.io/2016/05/16/bowling-kata-in-go/</guid>
       <description>&lt;p&gt;This is my solution for the Bowling Kata, written in Go.&lt;/p&gt;
 
 &lt;script type=&#34;text/javascript&#34; src=&#34;http://gist.github.com/c3a6b863f905f1cc073d6611d3baafe2.js&#34;&gt;&lt;/script&gt;
@@ -351,10 +351,10 @@ Welcome to the 2nd stage of the &lt;a href=&#34;https://en.wikipedia.org/wiki/Fo
     
     <item>
       <title>Be careful with slice</title>
-      <link>http://alessandrobaffa.com/2016/03/31/be-careful-with-slice/</link>
+      <link>https://alebaffa.github.io/2016/03/31/be-careful-with-slice/</link>
       <pubDate>Thu, 31 Mar 2016 06:56:10 +0200</pubDate>
       
-      <guid>http://alessandrobaffa.com/2016/03/31/be-careful-with-slice/</guid>
+      <guid>https://alebaffa.github.io/2016/03/31/be-careful-with-slice/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://blog.golang.org/slices&#34;&gt;Slices&lt;/a&gt; are a great tool in Go, but sometimes they can be confused with arrays.
 A small reminder: slices are a pointer into an underline array. Let&amp;rsquo;s take this example:&lt;/p&gt;
 
@@ -428,10 +428,10 @@ fmt.Println(&amp;quot;slice: &amp;quot;, slice)
     
     <item>
       <title>Surrounding yourself with the right people</title>
-      <link>http://alessandrobaffa.com/2016/02/23/surrounding-yourself-with-the-right-people/</link>
+      <link>https://alebaffa.github.io/2016/02/23/surrounding-yourself-with-the-right-people/</link>
       <pubDate>Tue, 23 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://alessandrobaffa.com/2016/02/23/surrounding-yourself-with-the-right-people/</guid>
+      <guid>https://alebaffa.github.io/2016/02/23/surrounding-yourself-with-the-right-people/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;../../../../img/cerini.jpeg&#34; alt=&#34;alt text&#34; title=&#34;passion&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I was 8 years old when I started playing guitar. It was not my choice, though, but my parents’ who forced me to start taking some lessons. I hated it at the beginning: hours of solfège, and I wasn’t even able to play the most stupid song. No chords, nothing at all.&lt;/p&gt;
@@ -464,10 +464,10 @@ It’s also the reason why I like being a developer advocate, because I meet and
     
     <item>
       <title>Things to consider before open sourcing your project written in go</title>
-      <link>http://alessandrobaffa.com/2015/11/26/things-to-consider-before-open-sourcing-your-project-written-in-go/</link>
+      <link>https://alebaffa.github.io/2015/11/26/things-to-consider-before-open-sourcing-your-project-written-in-go/</link>
       <pubDate>Thu, 26 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://alessandrobaffa.com/2015/11/26/things-to-consider-before-open-sourcing-your-project-written-in-go/</guid>
+      <guid>https://alebaffa.github.io/2015/11/26/things-to-consider-before-open-sourcing-your-project-written-in-go/</guid>
       <description>
 
 &lt;p&gt;so, you want to finally release your &lt;em&gt;preciousss&lt;/em&gt; written in Go to the open source community. Great! And thank you.
@@ -524,10 +524,10 @@ And don’t forget the &lt;a href=&#34;https://golang.org/conduct&#34;&gt;Code o
     
     <item>
       <title>Back from dotgo 2015</title>
-      <link>http://alessandrobaffa.com/2015/11/10/back-from-dotgo-2015/</link>
+      <link>https://alebaffa.github.io/2015/11/10/back-from-dotgo-2015/</link>
       <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://alessandrobaffa.com/2015/11/10/back-from-dotgo-2015/</guid>
+      <guid>https://alebaffa.github.io/2015/11/10/back-from-dotgo-2015/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;../../../../img/dotgo.jpeg&#34; alt=&#34;alt text&#34; title=&#34;dotgo2015&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Today I’ve been at the dotGo conference in Paris, the European conference about the Go programming language. Quick summary: &lt;strong&gt;fantastic!&lt;/strong&gt;&lt;/p&gt;
@@ -538,10 +538,10 @@ And don’t forget the &lt;a href=&#34;https://golang.org/conduct&#34;&gt;Code o
     
     <item>
       <title>About me</title>
-      <link>http://alessandrobaffa.com/page/about/</link>
+      <link>https://alebaffa.github.io/page/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://alessandrobaffa.com/page/about/</guid>
+      <guid>https://alebaffa.github.io/page/about/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;../../img/me.jpg&#34; alt=&#34;alebaffa&#34; style=&#34;width: 300px; float: left; margin-right: 20px&#34;/&gt; Hi, my name is &lt;strong&gt;Alessandro Baffa&lt;/strong&gt;, I am an Italian Software Engineer and Developer Advocate at &lt;a href=&#34;http://www.amadeus.com&#34;&gt;Amadeus IT Group&lt;/a&gt;. More info on &lt;a href=&#34;https://www.linkedin.com/in/alessandrobaffa&#34;&gt;LinkedIn&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I am very interested in software engineering, with a particular focus on OOP, testing and web programming.&lt;/p&gt;
