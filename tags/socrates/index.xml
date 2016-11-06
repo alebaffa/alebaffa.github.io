@@ -10,6 +10,76 @@
     <atom:link href="https://alebaffa.github.io/tags/socrates/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Back from SoCraTes France 2016</title>
+      <link>https://alebaffa.github.io/2016/10/31/back-from-socrates-france-2016/</link>
+      <pubDate>Mon, 31 Oct 2016 12:29:46 +0200</pubDate>
+      
+      <guid>https://alebaffa.github.io/2016/10/31/back-from-socrates-france-2016/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;../../../../img/socratesfr-1.jpeg&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;My second time in a Software Craftsmanship and Testing (SoCraTes) conference and, as always, it has been an awesome experience.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../../../../img/socratesfr-2.jpeg&#34;/&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;the-self-made-agenda&#34;&gt;The self-made agenda&lt;/h2&gt;
+
+&lt;p&gt;SoCraTes is a non-conference, which means that there’s no predefined agenda, but instead it is created every day by the participants (the image above is the agenda of day 2). Everybody is more than welcome to propose sessions. They can be presentation of something you know, or open discussion about a topic you are curious about, or more simply a session where you want to learn something and you are looking for someone more experienced to help you.
+As for the Global Day of Coderetreat, what you learn during SoCraTes is your responsibility. Open mind, will to learn and the Law of Two Feet are the only things you have to bring with you to this event.&lt;/p&gt;
+
+&lt;p&gt;Sessions I attended:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;event storming and DDD&lt;/strong&gt;. I never got into both subjects so it’s been a nice introduction.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Functional philosophy&lt;/strong&gt;. Functional programming is the first item in my todo list since too long and after this excellent presentation I decided to enroll in the course on Coursera. For the second time.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;How to teach TDD&lt;/strong&gt;. Help other people to learn is something I really love to do. We shared experience and techniques on how to introduce TDD to other people/colleagues and it was interesting. Even though, inevitably, it switched to a broader discussion about organizational issues. But still, interesting.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Event sourcing&lt;/strong&gt;. Again, another subject I never studied. So, good introduction.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Feature branching is evil&lt;/strong&gt;. Thierry has a good experience as technical coach and he’s a passionate guy. He prepared this interesting presentation the night between day 1 and day 2 . Obviously the topic was sensible for many people, so the discussions were very interesting.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;../../../../img/socratesfr-3.jpeg&#34;/&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Tactical DDD&lt;/strong&gt;. Another presentation that made me understand how I absolutely don’t know anything at all about DDD and that it is such a huge topic.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Beyond Alchemy and What are Software Leprechauns&lt;/strong&gt; (by @cceelen and Laurent Bossavit). Laurent is the author of The Leprechauns of Software Engineering. We discussed about the distance between the software industry and the scientific method. We work in an industry where most of the choices are too often made based on personal tastes and/or wrong assumptions. Also, the academics working on empirical software engineering most of the time lack of real data and statistics from the real world. We work in an industry that it’s like Alchemy.
+What if the software craftsmanship community could help the academics to get these data? Or what if all of us could start applying the scientific method to the choices we make every day? What if we could document all the things we do, the practices and the techniques we use at work, the good and bad results, and make them available for scientists so to start to make the industry grow?
+In the Software Craftsmanship movement we always talk about the Profession of Software Engineer, but how can we have a Profession if we don’t even have a museum of Computer History (or really very few of them in the entire world)? How many of you, computer scientists, have ever been to such a museum? How much do we know about our History as computer scientists? How much do we know about the History of all the things that we choose to use?
+Listening to Laurent Bossavit has been maybe the most fascinating experience for me in the entire event. His book here below is already in my kindle.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;../../../../img/socratesfr-4.png&#34;/&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Instill Software Craftsmanship in a company&lt;/strong&gt;. Well, this is basically what I’m doing since one year in my current company. I attended this interesting session to get feedback from other people doing the same in their ones and share our experience with them.
+&lt;img src=&#34;../../../../img/socratesfr-5.jpeg&#34;/&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Learning Strategies&lt;/strong&gt; (by me). One of the questions I’m always been asked when I say that it’s good to always try to practice and become better software developers is “yes, but we have a family/children/life/friends/whatever and we don’t have time”. I organized this session to know how other people do. Most of the people use their working time to study. Either because their company give them a dedicated time to do so during the week, or because they take their time by themselves. Avoid those companies that don’t give you time to become better employees.
+&lt;img src=&#34;../../../../img/socratesfr-6.jpeg&#34;/&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Code katas&lt;/strong&gt;. Romeu organized code katas every lunch and dinner. Basically, every time there was an empty space in the agenda. I did a couple of them and they were absolutely fantastic! Definitely something I will do again with other things I organize. Romeu gave us so many brilliant ideas!
+&lt;img src=&#34;../../../../img/socratesfr-7.jpeg&#34;/&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;other-things-worth-mentioning&#34;&gt;Other things worth mentioning&lt;/h2&gt;
+
+&lt;p&gt;The food. Absolutely gorgeous. When the plates arrived on the table there was always this moment of religious silence when everybody was too focused to taste those absolutely gorgeous dishes.
+&lt;img src=&#34;../../../../img/socratesfr-8.jpeg&#34;/&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;It’s always great to meet the other people of the international community of Software Craftsmanship. It’s an absolutely open, welcoming, friendly, warm group of great people.
+As always I learned so much stuff, but maybe the most important is the amount of energy and strength that I always bring with me after this gathering. If you have never participated, please, join us in one of the next ones. You won’t regret it, and it will become kind of addiction too.
+Thanks to the excellent &lt;a href=&#34;https://medium.com/u/a04341a59930&#34;&gt;Houssam Fakih&lt;/a&gt; for the exceptional organization! And thanks to &lt;a href=&#34;https://twitter.com/Singsalad&#34;&gt;@franzi&lt;/a&gt;, the awesome facilitator of this event!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>A Community of Professionals - SoCraTes UK</title>
       <link>https://alebaffa.github.io/2016/06/19/a-community-of-professionals---socrates-uk/</link>
       <pubDate>Sun, 19 Jun 2016 21:28:33 +0200</pubDate>

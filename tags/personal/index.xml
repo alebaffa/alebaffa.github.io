@@ -10,6 +10,71 @@
     <atom:link href="https://alebaffa.github.io/tags/personal/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>How Can You Say You’re A Software Crafts(wo)man?</title>
+      <link>https://alebaffa.github.io/2016/08/06/how-can-you-say-youre-a-software-craftswoman/</link>
+      <pubDate>Sat, 06 Aug 2016 12:29:46 +0200</pubDate>
+      
+      <guid>https://alebaffa.github.io/2016/08/06/how-can-you-say-youre-a-software-craftswoman/</guid>
+      <description>
+
+&lt;p&gt;This is a question that came up yesterday during our latest meetup with our local &lt;a href=&#34;http://www.meetup.com/French-Riviera-Software-Craftsmanship-Community&#34;&gt;French Riviera Software Craftsmanship Community&lt;/a&gt; (note: a very nice round table session &lt;a href=&#34;http://www.meetup.com/French-Riviera-Software-Craftsmanship-Community/events/232721703/&#34;&gt;on the beach&lt;/a&gt; of Juan Les Pins ).
+This post is my answer to this question.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-software-craftsmanship-is-not&#34;&gt;What Software Craftsmanship is not&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;It’s not an elitist club&lt;/strong&gt; of people who think to hold the truth of how to write the perfect code. This is an important aspect because it is related to how much inclusive or exclusive a group of people is (and also to how much nice people are). I’ve been following the international Software Craftsmanship movement since some time now and I met some of them during &lt;a href=&#34;https://medium.com/alebaffa-blog/a-community-of-professionals-socrates-uk-927fd0bb85f4&#34;&gt;SoCraTes UK&lt;/a&gt; and I learned how much important are things like kindness, mentorship and empathy for a Software Crafts(wo)man. Software development is not only techniques and programming: it’s also relationship and communication with your peers.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;It’s not a certification&lt;/strong&gt; of one’s capabilities to write good software (assuming it does exist really). A person yesterday was doubtful whether he could call himself a software craftsman or not because he is not working in TDD or applying all the time the SOLID principles.
+These are technicalities, very important ones, but they are just tools that a person who cares about what he does can use or not in his daily job.
+It’s not in conflict with the Agile movement. Software Craftsmanship is focused a lot more on technical practices and writing quality software, but the goal is always the same: deliver values for the customer. The only difference is that Software Craftsmanship is more focused on you as a person. For a Software Crafts(wo)man adding value for the customer passes through a constant personal improvement and a willing to help the team to improve as well.
+Agile and Craftsmanship share the same focus on the importance of communication, collaboration, relationship and empathy. They are two sides of the same coin (unfortunately they are still being perceived as mutually-exclusive, while they’re not. But it’s changing1).&lt;/p&gt;
+
+&lt;h2 id=&#34;what-software-craftsmanship-is&#34;&gt;What Software Craftsmanship is&lt;/h2&gt;
+
+&lt;p&gt;It is a set of values that you embrace and you decide to follow for the rest of your life, not only your professional career. I remember when I first read the book &lt;a href=&#34;https://www.amazon.com/Software-Craftsman-Professionalism-Pragmatism-Robert/dp/0134052501&#34;&gt;The Software Craftsman&lt;/a&gt;, by Sandro Mancuso, and I saw &lt;a href=&#34;https://www.youtube.com/watch?v=9OhXqBlCmrM&#34;&gt;one of his talks&lt;/a&gt;, and I said:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“Wow, that’s it! This is what I was looking for. This is the path I want to follow. ”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;What are these values that make you a Software Crafts(wo)man? I will try to list what I think they are the most important for me.&lt;/p&gt;
+
+&lt;h2 id=&#34;continuous-improvement&#34;&gt;Continuous improvement&lt;/h2&gt;
+
+&lt;p&gt;It’s not because a Software Crafts(wo)man is a geek and so he/she has the need to try the latest technologies. It’s rather because he/she wants to pragmatically find new ways to add value to what he/she does every day. And the only way is to improve our skills by practicing, reading books, meeting people, going to conferences etc. Improving means also to learn and to be open to technologies and techniques in order to evaluate them with rationality, pragmatism and no prejudice.&lt;/p&gt;
+
+&lt;p&gt;I always make the link between continuous improvement and the second value of the Software Craftsmanship Manifesto:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Not only responding to change, but also steadily adding value&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Maybe the best metaphor to describe continuous improvement is the journey towards mastery. A Software Crafts(wo)man is a journey man, he/she’s not the master who is arrived at destination (is there one, by the way?). The journey is something that everybody can take, regardless of how fast he/she can walk.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-idea-of-professionalism&#34;&gt;The idea of Professionalism&lt;/h2&gt;
+
+&lt;p&gt;It was illuminating to me to start to think of my employer as my client. This can sound so trivial for self-employed people, but it’s not so for those who have been hired by a company. Professionalism means that you always strive to be better because you want to add value to what you do and to constantly deliver quality, pragmatically. This includes continuous improvement.&lt;/p&gt;
+
+&lt;h2 id=&#34;mentorship-help-others-to-improve&#34;&gt;Mentorship: help others to improve&lt;/h2&gt;
+
+&lt;p&gt;A Software Crafts(wo)man not only improves himself, but also he love to help others to improve their skills, both technical and soft ones.&lt;/p&gt;
+
+&lt;h2 id=&#34;social-aspects-of-software-development&#34;&gt;Social aspects of Software Development&lt;/h2&gt;
+
+&lt;p&gt;A Software Crafts(wo)man cares about the team and his/her peers. The social aspects of software development are being maybe the most important ones during SoCraTes UK. How to motivate people, how to be inclusive and not exclusive at a personal level and at team level, how to help a team or a colleague to unleash its potential .. these are things that a Software Crafts(wo)man cares about.&lt;/p&gt;
+
+&lt;h1 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h1&gt;
+
+&lt;p&gt;As you see I didn’t talk about technologies. I didn’t talk about Test-Driven Development neither Docker, nor the latest programming languages. Technologies and techniques are tools that a Software Crafts(wo)man needs to know and practice, but they are not the only things and it’s not important to be Bill Gates or Mark Zuckerberg to be a Software Crafts(wo)man. It’s not about how good you are, it’s all about values, willing to improve yourself and help others. It’s about taking your journey towards mastery and start to walk at your own speed.
+If you believe and if you want to embrace the values I mentioned in this post, or if you are already following them, you are already a Software Crafts(wo)man. Or whatever other definition you like to use.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;(If you want to read more stories about Software Craftsmanship, subscribe to the &lt;a href=&#34;https://scnewsletter.firebaseapp.com/&#34;&gt;Software Craftsmanship Newsletter&lt;/a&gt; and join the &lt;a href=&#34;http://slack.softwarecraftsmanship.org/&#34;&gt;International Community on Slack&lt;/a&gt;)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Surrounding yourself with the right people</title>
       <link>https://alebaffa.github.io/2016/02/23/surrounding-yourself-with-the-right-people/</link>
       <pubDate>Tue, 23 Feb 2016 00:00:00 +0000</pubDate>
