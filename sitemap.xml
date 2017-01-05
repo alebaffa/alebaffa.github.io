@@ -2,11 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.alessandrobaffa.com/</loc>
-    <lastmod>2016-11-06T17:46:50+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://www.alessandrobaffa.com/2016/11/06/raising-the-bar-with-science/</loc>
     <lastmod>2016-11-06T17:46:50+01:00</lastmod>
   </url>
@@ -86,11 +81,104 @@
   </url>
   
   <url>
+    <loc>http://www.alessandrobaffa.com/tags/code-kata/</loc>
+    <lastmod>2016-06-19T21:28:49+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.alessandrobaffa.com/tags/coderetreat/</loc>
+    <lastmod>2016-10-23T12:29:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.alessandrobaffa.com/tags/conferences/</loc>
+    <lastmod>2015-11-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.alessandrobaffa.com/tags/craftsmanship/</loc>
+    <lastmod>2016-10-31T12:29:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.alessandrobaffa.com/project/gotourita/</loc>
   </url>
   
   <url>
+    <loc>http://www.alessandrobaffa.com/tags/golang/</loc>
+    <lastmod>2016-06-19T21:28:49+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.alessandrobaffa.com/tags/guide/</loc>
+    <lastmod>2015-11-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.alessandrobaffa.com/tags/idea/</loc>
+    <lastmod>2016-11-06T17:46:50+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.alessandrobaffa.com/page/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.alessandrobaffa.com/tags/personal/</loc>
+    <lastmod>2016-08-06T12:29:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.alessandrobaffa.com/post/</loc>
+    <lastmod>2016-11-06T17:46:50+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.alessandrobaffa.com/project/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.alessandrobaffa.com/tags/science/</loc>
+    <lastmod>2016-11-06T17:46:50+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.alessandrobaffa.com/tags/socrates/</loc>
+    <lastmod>2016-10-31T12:29:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.alessandrobaffa.com/tags/software-craftsmanship/</loc>
+    <lastmod>2016-07-05T21:29:11+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.alessandrobaffa.com/project/scnewsletter/</loc>
+  </url>
+  
+  <url>
+    <loc>http://www.alessandrobaffa.com/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.alessandrobaffa.com/</loc>
+    <lastmod>2016-11-06T17:46:50+01:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>
