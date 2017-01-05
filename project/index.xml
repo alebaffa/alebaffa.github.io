@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Project-rsses on alebaffa&#39;s</title>
-    <link>https://alebaffa.github.io/project/index.xml</link>
-    <description>Recent content in Project-rsses on alebaffa&#39;s</description>
+    <title>Project-rsses on Welcome</title>
+    <link>http://www.alessandrobaffa.com/project/index.xml</link>
+    <description>Recent content in Project-rsses on Welcome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-EN</language>
     <copyright>(c) 2015 Alessandro Baffa.</copyright>
     <lastBuildDate>Tue, 18 Nov 2014 02:13:50 +0000</lastBuildDate>
-    <atom:link href="https://alebaffa.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.alessandrobaffa.com/project/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>My awesome project</title>
-      <link>https://alebaffa.github.io/project/first-project/</link>
+      <link>http://www.alessandrobaffa.com/project/first-project/</link>
       <pubDate>Tue, 18 Nov 2014 02:13:50 +0000</pubDate>
       
-      <guid>https://alebaffa.github.io/project/first-project/</guid>
+      <guid>http://www.alessandrobaffa.com/project/first-project/</guid>
       <description>
 
 &lt;h2 id=&#34;about-project&#34;&gt;About project&lt;/h2&gt;
