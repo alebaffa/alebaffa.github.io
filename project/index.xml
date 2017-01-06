@@ -7,7 +7,48 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-EN</language>
     <copyright>(c) 2015 Alessandro Baffa.</copyright>
+    <lastBuildDate>Fri, 06 Jan 2017 12:53:04 +0100</lastBuildDate>
     <atom:link href="http://alessandrobaffa.com/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Global Day of Coderetreat 2016 // Main organizer</title>
+      <link>http://alessandrobaffa.com/project/gdcr-2016/</link>
+      <pubDate>Fri, 06 Jan 2017 12:53:04 +0100</pubDate>
+      
+      <guid>http://alessandrobaffa.com/project/gdcr-2016/</guid>
+      <description>
+
+&lt;h2 id=&#34;about-project&#34;&gt;About project&lt;/h2&gt;
+
+&lt;p&gt;I organized the local event of the Global Day of Coderetreat 2016 in Sophia Antipolis, Nice area, South of France. It&amp;rsquo;s the biggest worldwide event for developers organized by the international Software Craftsmanship Community and it takes places every year in more than 100 cities in the world.&lt;/p&gt;
+
+&lt;p&gt;I organized the first one ever in South of France with a big success: 50 people participated.&lt;/p&gt;
+
+&lt;p&gt;I took care of finding the sponsors, the location and the communication on social media and with local companies.&lt;/p&gt;
+
+&lt;h2 id=&#34;link&#34;&gt;Link&lt;/h2&gt;
+
+&lt;p&gt;on &lt;a href=&#34;https://www.eventbrite.com/e/global-day-of-coderetreat-2016-sophia-antipolis-tickets-27254799840#&#34;&gt;Eventbrite&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Riviera Software Craftsmanship Meetup // Co-organizer</title>
+      <link>http://alessandrobaffa.com/project/meetupsw/</link>
+      <pubDate>Fri, 06 Jan 2017 12:53:04 +0100</pubDate>
+      
+      <guid>http://alessandrobaffa.com/project/meetupsw/</guid>
+      <description>
+
+&lt;h2 id=&#34;about-project&#34;&gt;About project&lt;/h2&gt;
+
+&lt;p&gt;I co-organize the French Riviera Software Craftsmanship Meetup in South France, Nice area, since 2015. I organize regular activities such as presentations or coding sessions to improve our skills in Test-Driven Development, Clean Code and Agile Engineering practices in general.&lt;/p&gt;
+
+&lt;h2 id=&#34;link&#34;&gt;Link&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.meetup.com/Riviera-SCC/&#34;&gt;https://www.meetup.com/Riviera-SCC/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Go Tour in Italian // Maintainer</title>
