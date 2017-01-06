@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Golang on Welcome</title>
-    <link>http://www.alessandrobaffa.com/tags/golang/index.xml</link>
+    <link>http://alessandrobaffa.com/tags/golang/index.xml</link>
     <description>Recent content in Golang on Welcome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-EN</language>
     <copyright>(c) 2015 Alessandro Baffa.</copyright>
-    <atom:link href="http://www.alessandrobaffa.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://alessandrobaffa.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Practicing TDD: FizzBuzz kata in Golang</title>
-      <link>http://www.alessandrobaffa.com/2016/06/19/practicing-tdd-fizzbuzz-kata-in-golang/</link>
+      <link>http://alessandrobaffa.com/2016/06/19/practicing-tdd-fizzbuzz-kata-in-golang/</link>
       <pubDate>Sun, 19 Jun 2016 21:28:49 +0200</pubDate>
       
-      <guid>http://www.alessandrobaffa.com/2016/06/19/practicing-tdd-fizzbuzz-kata-in-golang/</guid>
+      <guid>http://alessandrobaffa.com/2016/06/19/practicing-tdd-fizzbuzz-kata-in-golang/</guid>
       <description>&lt;p&gt;My implementation:&lt;/p&gt;
 
 &lt;script type=&#34;text/javascript&#34; src=&#34;http://gist.github.com/4c32900a8ac8bd9793f44ddeaa3f3ce1.js&#34;&gt;&lt;/script&gt;
@@ -26,10 +26,10 @@
     
     <item>
       <title>First try with concurrency in Go</title>
-      <link>http://www.alessandrobaffa.com/2016/05/16/first-try-with-concurrency-in-go/</link>
+      <link>http://alessandrobaffa.com/2016/05/16/first-try-with-concurrency-in-go/</link>
       <pubDate>Mon, 16 May 2016 21:04:53 +0200</pubDate>
       
-      <guid>http://www.alessandrobaffa.com/2016/05/16/first-try-with-concurrency-in-go/</guid>
+      <guid>http://alessandrobaffa.com/2016/05/16/first-try-with-concurrency-in-go/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s been a while I&amp;rsquo;m practicing with Go, but I had still never tried its concurrency features so far. My bad.&lt;/p&gt;
 
 &lt;p&gt;Fortunately &lt;a href=&#34;http://exercism.io&#34;&gt;exercism.io&lt;/a&gt; has just introduced me to this topic with the exercise &lt;a href=&#34;http://exercism.io/exercises/go/parallel-letter-frequency/readme&#34;&gt;&amp;ldquo;Parallel Letter Frequency&amp;rdquo; exercise&amp;rdquo;&lt;/a&gt;.&lt;/p&gt;
@@ -90,10 +90,10 @@ The channel is of type &lt;em&gt;map[rune]int&lt;/em&gt; and so I can fetch &lt;
     
     <item>
       <title>Things to consider before open sourcing your project written in go</title>
-      <link>http://www.alessandrobaffa.com/2015/11/26/things-to-consider-before-open-sourcing-your-project-written-in-go/</link>
+      <link>http://alessandrobaffa.com/2015/11/26/things-to-consider-before-open-sourcing-your-project-written-in-go/</link>
       <pubDate>Thu, 26 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://www.alessandrobaffa.com/2015/11/26/things-to-consider-before-open-sourcing-your-project-written-in-go/</guid>
+      <guid>http://alessandrobaffa.com/2015/11/26/things-to-consider-before-open-sourcing-your-project-written-in-go/</guid>
       <description>
 
 &lt;p&gt;so, you want to finally release your &lt;em&gt;preciousss&lt;/em&gt; written in Go to the open source community. Great! And thank you.
@@ -150,10 +150,10 @@ And don’t forget the &lt;a href=&#34;https://golang.org/conduct&#34;&gt;Code o
     
     <item>
       <title>Back from dotgo 2015</title>
-      <link>http://www.alessandrobaffa.com/2015/11/10/back-from-dotgo-2015/</link>
+      <link>http://alessandrobaffa.com/2015/11/10/back-from-dotgo-2015/</link>
       <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://www.alessandrobaffa.com/2015/11/10/back-from-dotgo-2015/</guid>
+      <guid>http://alessandrobaffa.com/2015/11/10/back-from-dotgo-2015/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;../../../../img/dotgo.jpeg&#34; alt=&#34;alt text&#34; title=&#34;dotgo2015&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Today I’ve been at the dotGo conference in Paris, the European conference about the Go programming language. Quick summary: &lt;strong&gt;fantastic!&lt;/strong&gt;&lt;/p&gt;
