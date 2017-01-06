@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Software Craftsmanship on Welcome</title>
-    <link>http://alessandrobaffa.com/tags/software-craftsmanship/index.xml</link>
+    <link>https://alebaffa.github.io/tags/software-craftsmanship/index.xml</link>
     <description>Recent content in Software Craftsmanship on Welcome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-EN</language>
     <copyright>(c) 2015 Alessandro Baffa.</copyright>
-    <atom:link href="http://alessandrobaffa.com/tags/software-craftsmanship/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://alebaffa.github.io/tags/software-craftsmanship/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Transformation Priority Premise: overcome the fear of new tests</title>
-      <link>http://alessandrobaffa.com/2016/07/05/transformation-priority-premise-overcome-the-fear-of-new-tests/</link>
+      <link>https://alebaffa.github.io/2016/07/05/transformation-priority-premise-overcome-the-fear-of-new-tests/</link>
       <pubDate>Tue, 05 Jul 2016 21:29:11 +0200</pubDate>
       
-      <guid>http://alessandrobaffa.com/2016/07/05/transformation-priority-premise-overcome-the-fear-of-new-tests/</guid>
+      <guid>https://alebaffa.github.io/2016/07/05/transformation-priority-premise-overcome-the-fear-of-new-tests/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://blog.8thlight.com/uncle-bob/2013/05/27/TheTransformationPriorityPremise.html&#34;&gt;The Transformation Priority Premise&lt;/a&gt; (TPP) is a great empirical list of transformations that you can apply in your code when you’re working in TDD:&lt;/p&gt;
@@ -83,10 +83,10 @@ Uhm, my method has only a return, so the transformation 9) (statement -&amp;gt; 
     
     <item>
       <title>Practicing TDD: FizzBuzz kata in Golang</title>
-      <link>http://alessandrobaffa.com/2016/06/19/practicing-tdd-fizzbuzz-kata-in-golang/</link>
+      <link>https://alebaffa.github.io/2016/06/19/practicing-tdd-fizzbuzz-kata-in-golang/</link>
       <pubDate>Sun, 19 Jun 2016 21:28:49 +0200</pubDate>
       
-      <guid>http://alessandrobaffa.com/2016/06/19/practicing-tdd-fizzbuzz-kata-in-golang/</guid>
+      <guid>https://alebaffa.github.io/2016/06/19/practicing-tdd-fizzbuzz-kata-in-golang/</guid>
       <description>&lt;p&gt;My implementation:&lt;/p&gt;
 
 &lt;script type=&#34;text/javascript&#34; src=&#34;http://gist.github.com/4c32900a8ac8bd9793f44ddeaa3f3ce1.js&#34;&gt;&lt;/script&gt;
@@ -98,10 +98,10 @@ Uhm, my method has only a return, so the transformation 9) (statement -&amp;gt; 
     
     <item>
       <title>A Community of Professionals - SoCraTes UK</title>
-      <link>http://alessandrobaffa.com/2016/06/19/a-community-of-professionals---socrates-uk/</link>
+      <link>https://alebaffa.github.io/2016/06/19/a-community-of-professionals---socrates-uk/</link>
       <pubDate>Sun, 19 Jun 2016 21:28:33 +0200</pubDate>
       
-      <guid>http://alessandrobaffa.com/2016/06/19/a-community-of-professionals---socrates-uk/</guid>
+      <guid>https://alebaffa.github.io/2016/06/19/a-community-of-professionals---socrates-uk/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;../../../../img/socrates.png&#34; alt=&#34;socrates place&#34; style=&#34;width: 300px; margin-right: 15px;&#34; align=&#34;left&#34;/&gt;&lt;/p&gt;
 
 &lt;p&gt;A couple of weeks ago I participated for the first time to a SoCraTes event, one of the Software Craftsmanship international gatherings.

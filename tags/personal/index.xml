@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Personal on Welcome</title>
-    <link>http://alessandrobaffa.com/tags/personal/index.xml</link>
+    <link>https://alebaffa.github.io/tags/personal/index.xml</link>
     <description>Recent content in Personal on Welcome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-EN</language>
     <copyright>(c) 2015 Alessandro Baffa.</copyright>
-    <atom:link href="http://alessandrobaffa.com/tags/personal/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://alebaffa.github.io/tags/personal/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>How Can You Say You’re A Software Crafts(wo)man?</title>
-      <link>http://alessandrobaffa.com/2016/08/06/how-can-you-say-youre-a-software-craftswoman/</link>
+      <link>https://alebaffa.github.io/2016/08/06/how-can-you-say-youre-a-software-craftswoman/</link>
       <pubDate>Sat, 06 Aug 2016 12:29:46 +0200</pubDate>
       
-      <guid>http://alessandrobaffa.com/2016/08/06/how-can-you-say-youre-a-software-craftswoman/</guid>
+      <guid>https://alebaffa.github.io/2016/08/06/how-can-you-say-youre-a-software-craftswoman/</guid>
       <description>
 
 &lt;p&gt;This is a question that came up yesterday during our latest meetup with our local &lt;a href=&#34;http://www.meetup.com/French-Riviera-Software-Craftsmanship-Community&#34;&gt;French Riviera Software Craftsmanship Community&lt;/a&gt; (note: a very nice round table session &lt;a href=&#34;http://www.meetup.com/French-Riviera-Software-Craftsmanship-Community/events/232721703/&#34;&gt;on the beach&lt;/a&gt; of Juan Les Pins ).
@@ -76,10 +76,10 @@ If you believe and if you want to embrace the values I mentioned in this post, o
     
     <item>
       <title>Surrounding yourself with the right people</title>
-      <link>http://alessandrobaffa.com/2016/02/23/surrounding-yourself-with-the-right-people/</link>
+      <link>https://alebaffa.github.io/2016/02/23/surrounding-yourself-with-the-right-people/</link>
       <pubDate>Tue, 23 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://alessandrobaffa.com/2016/02/23/surrounding-yourself-with-the-right-people/</guid>
+      <guid>https://alebaffa.github.io/2016/02/23/surrounding-yourself-with-the-right-people/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;../../../../img/cerini.jpeg&#34; alt=&#34;alt text&#34; title=&#34;passion&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I was 8 years old when I started playing guitar. It was not my choice, though, but my parents’ who forced me to start taking some lessons. I hated it at the beginning: hours of solfège, and I wasn’t even able to play the most stupid song. No chords, nothing at all.&lt;/p&gt;
