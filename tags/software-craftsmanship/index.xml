@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Software Craftsmanship on Welcome</title>
+    <title>Software Craftsmanship on blog</title>
     <link>http://alessandrobaffa.com/tags/software-craftsmanship/index.xml</link>
-    <description>Recent content in Software Craftsmanship on Welcome</description>
+    <description>Recent content in Software Craftsmanship on blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-EN</language>
     <copyright>(c) 2015 Alessandro Baffa.</copyright>
