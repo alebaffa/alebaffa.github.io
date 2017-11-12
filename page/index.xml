@@ -12,16 +12,15 @@
     
     
     <item>
-      <title>About</title>
+      <title>今日は</title>
       <link>https://alebaffa.com/page/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://alebaffa.com/page/about/</guid>
-      <description>Alessandro Baffa
-Software Engineer, strong advocate of clean code, testing, quality, continuous learning and continuous improvement.
-If you are curious to see what I am working on and what I am learning at the moment, check out my projects on Github.
-I love to organize learning activities and helping others to improve their skills. I am also good at motivating people. I am a proactive and energetic person.
-I am a photography enthusiast &amp;ndash;&amp;gt; Flickr.</description>
+      <description>I am a Full Stack Engineer living in Tokyo. More on LinkedIn.
+I am a geek. I love all kind of technology and learn new stuff every day. I am currently particularly interested in Machine/Deep Learning, Data Science, IoT and DevOps.
+I am also a photography enthusiast. I like wedding and landscape photography. I post my photos on Flickr.
+I use heavily Twitter.</description>
     </item>
     
   </channel>
