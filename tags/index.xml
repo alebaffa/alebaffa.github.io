@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on blog</title>
+    <link>https://alebaffa.com/tags/</link>
+    <description>Recent content in Tags on blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-EN</language>
+    <copyright>(c) 2015 Alessandro Baffa.</copyright>
+    <lastBuildDate>Sun, 19 Jun 2016 21:28:49 +0200</lastBuildDate>
+    
+	<atom:link href="https://alebaffa.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Code Kata</title>
+      <link>https://alebaffa.com/tags/code-kata/</link>
+      <pubDate>Sun, 19 Jun 2016 21:28:49 +0200</pubDate>
+      
+      <guid>https://alebaffa.com/tags/code-kata/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Coderetreat</title>
+      <link>https://alebaffa.com/tags/coderetreat/</link>
+      <pubDate>Sun, 23 Oct 2016 12:29:46 +0200</pubDate>
+      
+      <guid>https://alebaffa.com/tags/coderetreat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Conferences</title>
+      <link>https://alebaffa.com/tags/conferences/</link>
+      <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://alebaffa.com/tags/conferences/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Craftsmanship</title>
+      <link>https://alebaffa.com/tags/craftsmanship/</link>
+      <pubDate>Mon, 31 Oct 2016 12:29:46 +0200</pubDate>
+      
+      <guid>https://alebaffa.com/tags/craftsmanship/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>https://alebaffa.com/tags/golang/</link>
+      <pubDate>Sun, 19 Jun 2016 21:28:49 +0200</pubDate>
+      
+      <guid>https://alebaffa.com/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Guide</title>
+      <link>https://alebaffa.com/tags/guide/</link>
+      <pubDate>Thu, 26 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://alebaffa.com/tags/guide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Idea</title>
+      <link>https://alebaffa.com/tags/idea/</link>
+      <pubDate>Sun, 06 Nov 2016 17:46:50 +0100</pubDate>
+      
+      <guid>https://alebaffa.com/tags/idea/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Personal</title>
+      <link>https://alebaffa.com/tags/personal/</link>
+      <pubDate>Sat, 18 Feb 2017 08:03:16 +0100</pubDate>
+      
+      <guid>https://alebaffa.com/tags/personal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Science</title>
+      <link>https://alebaffa.com/tags/science/</link>
+      <pubDate>Sun, 06 Nov 2016 17:46:50 +0100</pubDate>
+      
+      <guid>https://alebaffa.com/tags/science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Socrates</title>
+      <link>https://alebaffa.com/tags/socrates/</link>
+      <pubDate>Mon, 31 Oct 2016 12:29:46 +0200</pubDate>
+      
+      <guid>https://alebaffa.com/tags/socrates/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software Craftsmanship</title>
+      <link>https://alebaffa.com/tags/software-craftsmanship/</link>
+      <pubDate>Tue, 05 Jul 2016 21:29:11 +0200</pubDate>
+      
+      <guid>https://alebaffa.com/tags/software-craftsmanship/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,198 +1,200 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://alessandrobaffa.com/2017/02/18/changing-everything.-again./</loc>
+    <loc>https://alebaffa.com/2017/02/18/changing-everything.-again./</loc>
     <lastmod>2017-02-18T08:03:16+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/project/gdcr-2016/</loc>
+    <loc>https://alebaffa.com/project/gdcr-2016/</loc>
     <lastmod>2017-01-06T12:53:04+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/project/meetupsw/</loc>
+    <loc>https://alebaffa.com/project/meetupsw/</loc>
     <lastmod>2017-01-06T12:53:04+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/2016/11/06/raising-the-bar-with-science/</loc>
+    <loc>https://alebaffa.com/2016/11/06/raising-the-bar-with-science/</loc>
     <lastmod>2016-11-06T17:46:50+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/2016/10/31/back-from-socrates-france-2016/</loc>
+    <loc>https://alebaffa.com/2016/10/31/back-from-socrates-france-2016/</loc>
     <lastmod>2016-10-31T12:29:46+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/2016/10/23/global-day-of-coderetreat-2016-sophia-antipolis-france/</loc>
+    <loc>https://alebaffa.com/2016/10/23/global-day-of-coderetreat-2016-sophia-antipolis-france/</loc>
     <lastmod>2016-10-23T12:29:46+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/2016/10/09/dependency-injection-vs-extract-and-override-factory-method/</loc>
+    <loc>https://alebaffa.com/2016/10/09/dependency-injection-vs-extract-and-override-factory-method/</loc>
     <lastmod>2016-10-09T21:17:23+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/2016/08/06/how-can-you-say-youre-a-software-craftswoman/</loc>
+    <loc>https://alebaffa.com/2016/08/06/how-can-you-say-youre-a-software-craftswoman/</loc>
     <lastmod>2016-08-06T12:29:46+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/2016/07/05/transformation-priority-premise-overcome-the-fear-of-new-tests/</loc>
+    <loc>https://alebaffa.com/2016/07/05/transformation-priority-premise-overcome-the-fear-of-new-tests/</loc>
     <lastmod>2016-07-05T21:29:11+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/2016/06/19/practicing-tdd-fizzbuzz-kata-in-golang/</loc>
+    <loc>https://alebaffa.com/2016/06/19/practicing-tdd-fizzbuzz-kata-in-golang/</loc>
     <lastmod>2016-06-19T21:28:49+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/2016/06/19/a-community-of-professionals---socrates-uk/</loc>
+    <loc>https://alebaffa.com/2016/06/19/a-community-of-professionals---socrates-uk/</loc>
     <lastmod>2016-06-19T21:28:33+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/2016/05/16/first-try-with-concurrency-in-go/</loc>
+    <loc>https://alebaffa.com/2016/05/16/first-try-with-concurrency-in-go/</loc>
     <lastmod>2016-05-16T21:04:53+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/2016/05/16/the-paradox-of-choice-in-learning-to-code/</loc>
+    <loc>https://alebaffa.com/2016/05/16/the-paradox-of-choice-in-learning-to-code/</loc>
     <lastmod>2016-05-16T15:37:25+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/2016/05/16/bowling-kata-in-go/</loc>
+    <loc>https://alebaffa.com/2016/05/16/bowling-kata-in-go/</loc>
     <lastmod>2016-05-16T12:10:33+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/2016/03/31/be-careful-with-slice/</loc>
+    <loc>https://alebaffa.com/2016/03/31/be-careful-with-slice/</loc>
     <lastmod>2016-03-31T06:56:10+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/2016/02/23/surrounding-yourself-with-the-right-people/</loc>
+    <loc>https://alebaffa.com/2016/02/23/surrounding-yourself-with-the-right-people/</loc>
     <lastmod>2016-02-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/2015/11/26/things-to-consider-before-open-sourcing-your-project-written-in-go/</loc>
+    <loc>https://alebaffa.com/2015/11/26/things-to-consider-before-open-sourcing-your-project-written-in-go/</loc>
     <lastmod>2015-11-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/2015/11/10/back-from-dotgo-2015/</loc>
+    <loc>https://alebaffa.com/2015/11/10/back-from-dotgo-2015/</loc>
     <lastmod>2015-11-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/page/about/</loc>
+    <loc>https://alebaffa.com/page/about/</loc>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/tags/code-kata/</loc>
+    <loc>https://alebaffa.com/tags/code-kata/</loc>
     <lastmod>2016-06-19T21:28:49+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/tags/coderetreat/</loc>
+    <loc>https://alebaffa.com/tags/coderetreat/</loc>
     <lastmod>2016-10-23T12:29:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/tags/conferences/</loc>
+    <loc>https://alebaffa.com/tags/conferences/</loc>
     <lastmod>2015-11-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/tags/craftsmanship/</loc>
+    <loc>https://alebaffa.com/tags/craftsmanship/</loc>
     <lastmod>2016-10-31T12:29:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/project/gotourita/</loc>
+    <loc>https://alebaffa.com/project/gotourita/</loc>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/tags/golang/</loc>
+    <loc>https://alebaffa.com/tags/golang/</loc>
     <lastmod>2016-06-19T21:28:49+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/tags/guide/</loc>
+    <loc>https://alebaffa.com/tags/guide/</loc>
     <lastmod>2015-11-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/tags/idea/</loc>
+    <loc>https://alebaffa.com/tags/idea/</loc>
     <lastmod>2016-11-06T17:46:50+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/page/</loc>
+    <loc>https://alebaffa.com/page/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/tags/personal/</loc>
+    <loc>https://alebaffa.com/tags/personal/</loc>
     <lastmod>2017-02-18T08:03:16+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/post/</loc>
+    <loc>https://alebaffa.com/post/</loc>
     <lastmod>2017-02-18T08:03:16+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/project/</loc>
+    <loc>https://alebaffa.com/project/</loc>
     <lastmod>2017-01-06T12:53:04+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/tags/science/</loc>
+    <loc>https://alebaffa.com/tags/science/</loc>
     <lastmod>2016-11-06T17:46:50+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/tags/socrates/</loc>
+    <loc>https://alebaffa.com/tags/socrates/</loc>
     <lastmod>2016-10-31T12:29:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/tags/software-craftsmanship/</loc>
+    <loc>https://alebaffa.com/tags/software-craftsmanship/</loc>
     <lastmod>2016-07-05T21:29:11+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/project/scnewsletter/</loc>
+    <loc>https://alebaffa.com/project/scnewsletter/</loc>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/tags/</loc>
+    <loc>https://alebaffa.com/tags/</loc>
+    <lastmod>2016-06-19T21:28:49+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://alessandrobaffa.com/</loc>
+    <loc>https://alebaffa.com/</loc>
     <lastmod>2017-02-18T08:03:16+01:00</lastmod>
     <priority>0</priority>
   </url>

@@ -4,7 +4,7 @@
 
 $primary: #F03838;
 $secondary: #303030;
-$background: #303030;
+$background: #FEFEFE;
 
 /* ============================================================ */
 /* Base */
@@ -14,9 +14,9 @@ html, body { height: 100%; }
 
 body {
     background: $background;
-    color: #FFFFFF;
+    color: #424242;
     font-family: "Open Sans", arial, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -268,9 +268,9 @@ table {
 .post-container { margin: 0 40px; }
 
 .post-header {
-    /*border-bottom: 6px solid $secondary; */
-    margin: 0 0 5px;
-    padding: 0 0 5px;
+    border-bottom: 6px solid $secondary;
+    margin: 0 0 20px;
+    padding: 0 0 20px;
     text-align: center;
     text-transform: uppercase;
 }
@@ -389,7 +389,6 @@ table {
 }
 
 .post-stub {
-    background-color: #FF1D55;
     border-bottom: 1px dotted $secondary;
     margin: 0;
     position: relative;
@@ -402,12 +401,12 @@ table {
         transition: all 0.2s ease-in-out;
         display: block;
         color: #424242;
-        padding: 10px 5px;
+        padding: 20px 5px;
 
         &:hover {
             background: #FCF5F5;
             color: $primary;
-            padding: 10px 12px;
+            padding: 20px 12px;
 
             .post-stub-tag { background: $primary; }
         }
@@ -530,7 +529,7 @@ table {
 
     .site-title a:hover,
     .button-square:hover {
-        background: #FF1D55;
+        background: #121212;
     }
 
     .button-jump-top {
