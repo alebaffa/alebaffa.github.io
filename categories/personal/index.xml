@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Personal on 今日は, I am alebaffa !</title>
+    <link>https://example.org/categories/personal/</link>
+    <description>Recent content in Personal on 今日は, I am alebaffa !</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 18 Feb 2017 08:03:16 +0100</lastBuildDate>
+    
+	<atom:link href="https://example.org/categories/personal/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Changing Everything. Again.</title>
+      <link>https://example.org/2017/02/changing-everything.-again./</link>
+      <pubDate>Sat, 18 Feb 2017 08:03:16 +0100</pubDate>
+      
+      <guid>https://example.org/2017/02/changing-everything.-again./</guid>
+      <description>After 7 years spent in France I am officially moving to Tokyo, Japan, end of May 2017. I am finally going to join my wife, Sarah, after almost 5 years of long and hard distant relationship.
+Now, before to start with the burocracy madness and to move/sell/close/sign things, I am sitting here at home, in the first weekend after having resigned from my current company, trying to think about how many things I learned over the last 7 years.</description>
+    </item>
+    
+    <item>
+      <title>The Paradox Of Choice In Learning to Code</title>
+      <link>https://example.org/2016/05/the-paradox-of-choice-in-learning-to-code/</link>
+      <pubDate>Mon, 16 May 2016 15:37:25 +0200</pubDate>
+      
+      <guid>https://example.org/2016/05/the-paradox-of-choice-in-learning-to-code/</guid>
+      <description>I was talking with a guy some days ago and it went like this:
+ he told me &amp;ldquo;I really would like to start improving myself and I need a pet project..&amp;ldquo; I said &amp;ldquo;great idea! But where do you want to improve?&amp;ldquo; he said &amp;ldquo;..that&amp;rsquo;s the problem: I still don&amp;rsquo;t know what I want to use. There are so many things out there that I would like to learn &amp;hellip; and I don&amp;rsquo;t know where to start&amp;hellip;&amp;ldquo;  This made me think about a book I read some time ago called &amp;ldquo;The Paradox of Choice: Why More Is Less&amp;rdquo; (the author gave also an awesome TED Talk about it).</description>
+    </item>
+    
+    <item>
+      <title>Surrounding yourself with the right people</title>
+      <link>https://example.org/2016/02/surrounding-yourself-with-the-right-people/</link>
+      <pubDate>Tue, 23 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/2016/02/surrounding-yourself-with-the-right-people/</guid>
+      <description>I was 8 years old when I started playing guitar. It was not my choice, though, but my parents’ who forced me to start taking some lessons. I hated it at the beginning: hours of solfège, and I wasn’t even able to play the most stupid song. No chords, nothing at all.
+Nevertheless I had some natural talent for music (I’m gifted with the so called musical ear. And so my brother and sister are - the Force is strong in my family), and maybe my parents knew that and that’s why they persisted so much with me.</description>
+    </item>
+    
+  </channel>
+</rss>

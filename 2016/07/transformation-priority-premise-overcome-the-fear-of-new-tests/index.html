@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Transformation Priority Premise: overcome the fear of new tests" />
+<meta property="og:description" content="The Transformation Priority Premise (TPP) is a great empirical list of transformations that you can apply in your code when you’re working in TDD:
+When do you need it? Practicing with TDD I realized that sometimes I reach a point when I get stuck: I am almost scared to add a new particular test because I already know it’s going to force me to completely rewrite the structure of the code." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.org/2016/07/transformation-priority-premise-overcome-the-fear-of-new-tests/" />
+
+
+
+<meta property="article:published_time" content="2016-07-05T21:29:11&#43;02:00"/>
+
+<meta property="article:modified_time" content="2016-07-05T21:29:11&#43;02:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Transformation Priority Premise: overcome the fear of new tests"/>
+<meta name="twitter:description" content="The Transformation Priority Premise (TPP) is a great empirical list of transformations that you can apply in your code when you’re working in TDD:
+When do you need it? Practicing with TDD I realized that sometimes I reach a point when I get stuck: I am almost scared to add a new particular test because I already know it’s going to force me to completely rewrite the structure of the code."/>
+<meta name="twitter:site" content="@username"/>
+<meta name="generator" content="Hugo 0.31-DEV" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Transformation Priority Premise: overcome the fear of new tests",
+  "url": "https://example.org/2016/07/transformation-priority-premise-overcome-the-fear-of-new-tests/",
+  "wordCount": "538",
+  "datePublished": "2016-07-05T21:29:11&#43;02:00",
+  "dateModified": "2016-07-05T21:29:11&#43;02:00",
+  "author": {
+    "@type": "Person",
+    "name": "alebaffa"
+  },
+  "keywords": "software-craftsmanship"
+}
+</script>
+
+
+
+    <link rel="canonical" href="https://example.org/2016/07/transformation-priority-premise-overcome-the-fear-of-new-tests/">
+
+    <title>Transformation Priority Premise: overcome the fear of new tests | 今日は, I am alebaffa !</title>
+
+    <!-- combined, minified CSS -->
+    <link href="https://example.org/css/style.css" rel="stylesheet" integrity="sha384-O8wjsnz02XiyrPxnhfF6AVOv6YLBaEGRCnVF&#43;DL3gCPBy9cieyHcpixIrVyD2JS5" crossorigin="anonymous">
+
+    
+
+    
+
+    
+
+    
+
+  </head>
+
+  <body>
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link " href="https://example.org/">Home</a>
+          
+          
+          <a class="nav-link" href="https://example.org/"></a>
+          
+          
+        </nav>
+      </div>
+    </div>
+
+    <header class="blog-header">
+      <div class="container">
+        <h1 class="blog-title"><a href="https://example.org/" rel="home">今日は, I am alebaffa !</a></h1>
+        <p class="lead blog-description">Software Engineer and photography enthusiast.</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="https://example.org/2016/07/transformation-priority-premise-overcome-the-fear-of-new-tests/">Transformation Priority Premise: overcome the fear of new tests</a></h2>
+    <p class="blog-post-meta"><time datetime="2016-07-05T21:29:11&#43;02:00">Tue Jul 05, 2016</time> by alebaffa in 
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/software-craftsmanship" rel="tag">software-craftsmanship</a>
+
+</p>
+  </header>
+  
+
+<p><a href="https://blog.8thlight.com/uncle-bob/2013/05/27/TheTransformationPriorityPremise.html">The Transformation Priority Premise</a> (TPP) is a great empirical list of transformations that you can apply in your code when you’re working in TDD:</p>
+
+<p><img src="../../../../img/tpp.png"/></p>
+
+<h2 id="when-do-you-need-it">When do you need it?</h2>
+
+<p>Practicing with TDD I realized that sometimes I reach a point when I get stuck: I am almost scared to add a new particular test because I already know it’s going to force me to completely rewrite the structure of the code.
+The problem is that the more particular tests you add, the more generic your code has to become to handle all of them.</p>
+
+<p>TPP comes in handy at this point. When you feel you’re stuck, take a look at your code and start from the top of this list to see if there are some transformations that you can apply.</p>
+
+<p>Apply them even if you don’t see clearly how they will unblock you: the code itself will light up the path to follow.</p>
+
+<h2 id="an-example-the-roman-numeral-kata">An example: the Roman Numeral Kata</h2>
+
+<p>Inspired by the solution published by Codurance, I tried to practice with TPP using the same kata in Java. I made it several times and every time taking a look to the TPP list in order to see how I could use it.</p>
+
+<p>In few occasions I got stuck with the algorithm and just by applying one of the items in the list, the code itself suggested me how to proceed.
+Let’s see few examples.</p>
+
+<p>At this point the code was handling only the case for 1, 2 and 3.
+<script type="text/javascript" src="http://gist.github.com/6944a3e84f7672505e11f3aa43dcd040.js"></script>
+</p>
+
+<p>Now I wanted to add the new test to handle 4. So, in TDD you start by doing the easiest thing, so I added a new element “IV” in the array. Tests pass.
+At this point you clearly see the duplication of the string “I” and so I said “_OK, time to refactor_”. Well, how?</p>
+
+<p>So, I took the TPP list and the transformation 8) is (array -&gt; container). So, I transformed the array to a collection that could be used as a dictionary:
+<script type="text/javascript" src="http://gist.github.com/440d85e947fef253405fe45a6b144992.js"></script>
+</p>
+
+<p>Now let’s keep only “I” and “IV” from the collection and let’s see if there’s another transformation I can use.
+Uhm, my method has only a return, so the transformation 9) (statement -&gt; recursion) looks promising. I have now a collection that may have some useful methods I can take advantage from…let’s try:
+<script type="text/javascript" src="http://gist.github.com/a692a3e1608c69c9a52db39db988a7b5.js"></script>
+</p>
+
+<p>Nice. Having a collection helped me to find an option that I wasn’t considering before.</p>
+
+<h2 id="another-example">Another example</h2>
+
+<p>At some point I had a lot of if statements:
+<script type="text/javascript" src="http://gist.github.com/6fd459d1f2049fa70fc0f7db9b8fc717.js"></script>
+</p>
+
+<p>The TPP(10) says (if -&gt; while). So, I changed the code accordingly:
+<script type="text/javascript" src="http://gist.github.com/ecb93847173129f279ff5de6ca8677dd.js"></script>
+</p>
+
+<p>At this point the repetition is really visible. A lot of while statements doing the same things with a decreasing value in the condition. It looks like something that begs to be refactored again using recursion, and so here it is:
+<script type="text/javascript" src="http://gist.github.com/a9111713ec0e3b6f6647e5ab6af6d4f1.js"></script>
+</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>The Transformation Priority Premise is really helpful. It’s a handy list of changes that you can apply easily and with no damage every time you are stuck or you don’t know how to make your code more generic.</p>
+
+<h1 id="title">Title</h1>
+
+<p>I am going to do again some code kata I already done using this technique.</p>
+
+<p>If you’re curious, you can see all the steps I’ve done in my implementation on <a href="https://github.com/alebaffa/codekata/commits/master/src">Github</a>.</p>
+
+
+  
+
+  
+  <hr>
+  <footer>
+
+  
+    <section>
+    <h4>Share</h4>
+    <nav class="nav sharing-icons">
+      <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fexample.org%2f2016%2f07%2ftransformation-priority-premise-overcome-the-fear-of-new-tests%2f" title="Share on Facebook"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://plus.google.com/share?url=https%3a%2f%2fexample.org%2f2016%2f07%2ftransformation-priority-premise-overcome-the-fear-of-new-tests%2f" title="Share on Google+"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fexample.org%2f2016%2f07%2ftransformation-priority-premise-overcome-the-fear-of-new-tests%2f" title="Share on LinkedIn"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://twitter.com/home?status=https%3a%2f%2fexample.org%2f2016%2f07%2ftransformation-priority-premise-overcome-the-fear-of-new-tests%2f" title="Tweet this"><span class="fa fa-twitter fa-2x"></span></a>
+    </nav>
+  </section>
+
+  
+
+  
+  </footer>
+  
+
+</article> 
+
+
+
+        </div> <!-- /.blog-main -->
+
+        <aside class="col-sm-3 ml-auto blog-sidebar">
+  
+  <section class="sidebar-module sidebar-module-inset">
+    <h4>About</h4>
+    <p>A simple Hugo theme based on the <a href="http://v4-alpha.getbootstrap.com/examples/blog/">Bootstrap v4 blog example</a>.</p>
+  </section>
+  
+
+  
+        <section class="sidebar-module">
+    <h4>Recent Posts</h4>
+    <ol class="list-unstyled">
+
+
+<li><a href="/2017/02/changing-everything.-again./">Changing Everything. Again.</a></li>
+
+<li><a href="/2016/11/raising-the-bar-with-science/">Raising The Bar With Science</a></li>
+
+<li><a href="/2016/10/back-from-socrates-france-2016/">Back from SoCraTes France 2016</a></li>
+
+<li><a href="/2016/10/global-day-of-coderetreat-2016-sophia-antipolis-france/">Global Day of Coderetreat 2016, Sophia Antipolis, France</a></li>
+
+<li><a href="/2016/10/dependency-injection-vs-extract-and-override-factory-method/">Dependency Injection VS Extract and Override Factory Method</a></li>
+
+    </ol>
+  </section>
+
+  
+
+  
+  <section class="sidebar-module">
+    <h4>Links</h4>
+    <ol class="list-unstyled">
+      
+      <li><a href="https://example.com">Link 1</a></li>
+      
+      <li><a href="https://example.org">Link 2</a></li>
+      
+    </ol>
+  </section>
+  
+</aside>
+
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>
+      
+      Blog template created by <a href="https://twitter.com/mdo">@mdo</a>, ported to Hugo by <a href='https://twitter.com/mralanorth'>@mralanorth</a>.
+      
+      </p>
+      <p>
+      <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+  </body>
+
+</html>

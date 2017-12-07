@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-EN</language>
     <copyright>(c) 2015 Alessandro Baffa.</copyright>
-    <lastBuildDate>Sat, 18 Feb 2017 08:03:16 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 07 Dec 2017 20:00:10 +0900</lastBuildDate>
     
 	<atom:link href="https://alebaffa.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2017: A Year in Review</title>
+      <link>https://alebaffa.com/2017/12/07/2017-a-year-in-review/</link>
+      <pubDate>Thu, 07 Dec 2017 20:00:10 +0900</pubDate>
+      
+      <guid>https://alebaffa.com/2017/12/07/2017-a-year-in-review/</guid>
+      <description>It&amp;rsquo;s almost the end of the year and, as always, it&amp;rsquo;s time to stop for a moment and look back. These first 6 months in Tokyo have been a mix of joy and struggle. I am finally living a kind of normal life with my wife and it&amp;rsquo;s fantastic, of course. We are making up for lost time and we&amp;rsquo;re having a lot of fun together. I lost the count of how many hours we spent at karaoke or how many times we ate sushi at our favorite place in Shinjuku.</description>
+    </item>
     
     <item>
       <title>Changing Everything. Again.</title>
@@ -20,6 +29,17 @@
       <guid>https://alebaffa.com/2017/02/18/changing-everything.-again./</guid>
       <description>After 7 years spent in France I am officially moving to Tokyo, Japan, end of May 2017. I am finally going to join my wife, Sarah, after almost 5 years of long and hard distant relationship.
 Now, before to start with the burocracy madness and to move/sell/close/sign things, I am sitting here at home, in the first weekend after having resigned from my current company, trying to think about how many things I learned over the last 7 years.</description>
+    </item>
+    
+    <item>
+      <title>Global Day of Coderetreat 2016 // Main organizer</title>
+      <link>https://alebaffa.com/gdcr-2016/</link>
+      <pubDate>Fri, 06 Jan 2017 12:53:04 +0100</pubDate>
+      
+      <guid>https://alebaffa.com/gdcr-2016/</guid>
+      <description>About project I organized the local event of the Global Day of Coderetreat 2016 in Sophia Antipolis, Nice area, South of France. It&amp;rsquo;s the biggest worldwide event for developers organized by the international Software Craftsmanship Community and it takes places every year in more than 100 cities in the world.
+I organized the first one ever in South of France with a big success: 50 people participated.
+I took care of finding the sponsors, the location and the communication on social media and with local companies.</description>
     </item>
     
     <item>
@@ -192,12 +212,16 @@ It’s the second time I participate (I’ve been there also last year, 2014) an
     </item>
     
     <item>
-      <title></title>
-      <link>https://alebaffa.com/1/01/01/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>About</title>
+      <link>https://alebaffa.com/about/</link>
+      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://alebaffa.com/1/01/01/</guid>
-      <description></description>
+      <guid>https://alebaffa.com/about/</guid>
+      <description>I am a Full Stack Engineer living in Tokyo. More on LinkedIn.
+I am a geek. I love all kind of technology and learn new stuff every day. I am currently particularly interested in Machine/Deep Learning, Data Science, IoT and DevOps.
+I am also a photography enthusiast. I like wedding and landscape photography. I post my photos on Flickr.
+I use heavily Twitter.
+This blog contains my personal thoughts and opinions about things that I learn.</description>
     </item>
     
     <item>

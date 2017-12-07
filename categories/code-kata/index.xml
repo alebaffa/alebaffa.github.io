@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code Kata on 今日は, I am alebaffa !</title>
+    <link>https://example.org/categories/code-kata/</link>
+    <description>Recent content in Code Kata on 今日は, I am alebaffa !</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 May 2016 12:10:33 +0200</lastBuildDate>
+    
+	<atom:link href="https://example.org/categories/code-kata/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bowling kata in Go</title>
+      <link>https://example.org/2016/05/bowling-kata-in-go/</link>
+      <pubDate>Mon, 16 May 2016 12:10:33 +0200</pubDate>
+      
+      <guid>https://example.org/2016/05/bowling-kata-in-go/</guid>
+      <description>This is my solution for the Bowling Kata, written in Go.
+ </description>
+    </item>
+    
+  </channel>
+</rss>

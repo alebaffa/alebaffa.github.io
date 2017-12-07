@@ -3,8 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://alebaffa.com/2017/12/07/2017-a-year-in-review/</loc>
+    <lastmod>2017-12-07T20:00:10+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://alebaffa.com/2017/02/18/changing-everything.-again./</loc>
     <lastmod>2017-02-18T08:03:16+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alebaffa.com/gdcr-2016/</loc>
+    <lastmod>2017-01-06T12:53:04+01:00</lastmod>
   </url>
   
   <url>
@@ -93,7 +103,8 @@
   </url>
   
   <url>
-    <loc>https://alebaffa.com/1/01/01/</loc>
+    <loc>https://alebaffa.com/about/</loc>
+    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -155,7 +166,7 @@
   
   <url>
     <loc>https://alebaffa.com/post/</loc>
-    <lastmod>2017-02-18T08:03:16+01:00</lastmod>
+    <lastmod>2017-12-07T20:00:10+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -195,7 +206,7 @@
   
   <url>
     <loc>https://alebaffa.com/</loc>
-    <lastmod>2017-02-18T08:03:16+01:00</lastmod>
+    <lastmod>2017-12-07T20:00:10+09:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-EN</language>
     <copyright>(c) 2015 Alessandro Baffa.</copyright>
-    <lastBuildDate>Sat, 18 Feb 2017 08:03:16 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 07 Dec 2017 20:00:10 +0900</lastBuildDate>
     
 	<atom:link href="https://alebaffa.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2017: A Year in Review</title>
+      <link>https://alebaffa.com/2017/12/07/2017-a-year-in-review/</link>
+      <pubDate>Thu, 07 Dec 2017 20:00:10 +0900</pubDate>
+      
+      <guid>https://alebaffa.com/2017/12/07/2017-a-year-in-review/</guid>
+      <description>It&amp;rsquo;s almost the end of the year and, as always, it&amp;rsquo;s time to stop for a moment and look back. These first 6 months in Tokyo have been a mix of joy and struggle. I am finally living a kind of normal life with my wife and it&amp;rsquo;s fantastic, of course. We are making up for lost time and we&amp;rsquo;re having a lot of fun together. I lost the count of how many hours we spent at karaoke or how many times we ate sushi at our favorite place in Shinjuku.</description>
+    </item>
     
     <item>
       <title>Changing Everything. Again.</title>
@@ -168,15 +177,6 @@ Nevertheless I had some natural talent for music (I’m gifted with the so calle
       <guid>https://alebaffa.com/2015/11/10/back-from-dotgo-2015/</guid>
       <description>Today I’ve been at the dotGo conference in Paris, the European conference about the Go programming language. Quick summary: fantastic!
 It’s the second time I participate (I’ve been there also last year, 2014) and I found exactly the same impeccable organization, a beautiful location (with lots of food..), a great ambiance, and the talks, as usual, have been extremely interesting, inspiring and cool. Some of them (not in the same order of the conference):</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://alebaffa.com/1/01/01/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://alebaffa.com/1/01/01/</guid>
-      <description></description>
     </item>
     
   </channel>
