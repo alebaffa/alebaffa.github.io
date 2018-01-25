@@ -14,10 +14,10 @@
     
     <item>
       <title>Things to consider before open sourcing your project written in go</title>
-      <link>https://alebaffa.com/2015/11/26/things-to-consider-before-open-sourcing-your-project-written-in-go/</link>
+      <link>https://alebaffa.com/posts/things-to-consider-before-open-sourcing-your-project-written-in-go/</link>
       <pubDate>Thu, 26 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://alebaffa.com/2015/11/26/things-to-consider-before-open-sourcing-your-project-written-in-go/</guid>
+      <guid>https://alebaffa.com/posts/things-to-consider-before-open-sourcing-your-project-written-in-go/</guid>
       <description>so, you want to finally release your preciousss written in Go to the open source community. Great! And thank you. Though, there are few things you may want to consider before doing the big step. Things that you may have missed perhaps because you are not yet 100% comfortable with Go (but “_I will improve later. Now let me just put this gem on Github._”). You have to know that the Go community can be quite strict when it comes to its idioms and conventions.</description>
     </item>
     

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>First try with concurrency in Go &middot; Alessandro Baffa</title>
+        <meta name="description" content="It&rsquo;s been a while I&rsquo;m practicing with Go, but I had still never tried its concurrency features so far. My bad.
+Fortunately exercism.io has just introduced me to this topic with the exercise &ldquo;Parallel Letter Frequency&rdquo; exercise&rdquo;.
+The core of my solution is here (I let you read the comments).
+Basically the exercise asks you to count the frequency of the letters in 3 different strings. They provide you with already a function that counts the frequency, but you are asked to call that function with 3 calls in parallel (one call for each string) and to collect the result (the total frequencies from all the 3 strings).">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.35-DEV" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="https://alebaffa.com/dist/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        
+    </head>
+    <body>
+        
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'XXX', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="blog" href="https://alebaffa.com/">blog</a>
+                            </h1>
+                        
+                        <a class="button-square" href="https://alebaffa.com/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                            <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/alebaffa">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/alebaffa">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://linkedin.com/in/alessandrobaffa/">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Google+" title="Google+" href="https://google.com/&#43;AlessandroBaffa">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Projects" href="/project/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Things I did" href="">Things I did</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container">
+        <header class="post-header">
+    <h1 class="post-title">First try with concurrency in Go</h1>
+    
+</header>
+
+        <div class="post-content clearfix">
+    
+
+    <p>It&rsquo;s been a while I&rsquo;m practicing with Go, but I had still never tried its concurrency features so far. My bad.</p>
+
+<p>Fortunately <a href="http://exercism.io">exercism.io</a> has just introduced me to this topic with the exercise <a href="http://exercism.io/exercises/go/parallel-letter-frequency/readme">&ldquo;Parallel Letter Frequency&rdquo; exercise&rdquo;</a>.</p>
+
+<p>The core of my solution is here (I let you read the comments).</p>
+
+<p>Basically the exercise asks you to count the frequency of the letters in 3 different strings. They provide you with already a function that counts the frequency, but you are asked to call that function with 3 calls in parallel (one call for each string) and to collect the result (the total frequencies from all the 3 strings).</p>
+
+<pre><code class="language-go">func Frequency(s string) map[rune]int {
+  //DO SOMETHING
+}
+func ConcurrentFrequency(words []string) map[rune]int {
+  // (buffered)channel if type map[run]int with capacity of the lenght of the input (3)
+	channel := make(chan map[rune]int, len(words))
+
+	for _, value := range words {
+		// anonymous function that calls Frequency() 3 times in parallel
+		// and puts the three different results in the channel of capacity 3
+		go func(v string){
+			channel &lt;- Frequency(v)
+		}(value)
+	}
+
+  // Now use the values inside the channel.
+  frequency := map[rune]int
+	// loops 3 times because channel of size 3
+	for range words {
+		for key, value := range &lt;-channel {
+			frequency[key] += value
+		}
+	}
+  return frequency
+}
+</code></pre>
+
+<p>In this solution I am basically looping over the array of strings in input and call the Frequency() function on every iteration. The interesting thing is here:</p>
+
+<pre><code class="language-go">go func(v string){
+  channel &lt;- Frequency(v)
+}(value)
+</code></pre>
+
+<p>Here I&rsquo;m starting a <strong>goroutine</strong> on an <strong>anonymous function</strong> (the <em>go</em> prefix before <em>func</em>) inside of which I call Frequency(). The Frequency function sends its returned value in a <strong>channel</strong> (of the same type returned from the function). The channel is the way goroutines communicates with each other and so it&rsquo;s also the way to send values back.</p>
+
+<p>Once the channel contains the returned values, you can loop over the channel itself (not sure here if it&rsquo;s because it&rsquo;s a <em>buffered channel</em> and so with a specified capacity or I can do this every time, I still have to understand this).
+The channel is of type <em>map[rune]int</em> and so I can fetch <key, value> from it, like so:</p>
+
+<pre><code class="language-go">for range words {
+  for key, value := range &lt;-channel {
+    frequency[key] += value
+  }
+}
+</code></pre>
+
+<p>Working with channels is very simple and powerful. There are plenty of things that I still have to learn, but this was a good start. <strong>Thanks Exercism.io</strong>!</p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+            
+                <a href="/tags/golang/">Golang</a>
+            
+        </p>
+    
+
+    <div class="share">
+        
+            <a class="icon-twitter" href="https://twitter.com/share?text=First%20try%20with%20concurrency%20in%20Go&url=https%3a%2f%2falebaffa.com%2fposts%2fconcurrency-in-go%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+            </a>
+        
+
+        
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2falebaffa.com%2fposts%2fconcurrency-in-go%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+            </a>
+        
+
+        
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2falebaffa.com%2fposts%2fconcurrency-in-go%2f"
+              onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+              <i class="fa fa-google-plus"></i>
+                <span class="hidden">Google+</span>
+            </a>
+        
+        
+    </div>
+</footer>
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="blog" href="https://alebaffa.com/">blog</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2018 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://alebaffa.com/js/jquery-1.11.3.min.js"></script>
+        <script src="https://alebaffa.com/js/jquery.fitvids.js"></script>
+        
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        
+        
+        <script src="https://alebaffa.com/js/scripts.js"></script>
+    </body>
+</html>
+

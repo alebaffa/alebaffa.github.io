@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Dependency Injection VS Extract and Override Factory Method &middot; Alessandro Baffa</title>
+        <meta name="description" content="Two ways of solving the Racing Car kata - Text converter">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.35-DEV" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="https://alebaffa.com/dist/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        
+    </head>
+    <body>
+        
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'XXX', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="blog" href="https://alebaffa.com/">blog</a>
+                            </h1>
+                        
+                        <a class="button-square" href="https://alebaffa.com/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                            <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/alebaffa">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/alebaffa">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://linkedin.com/in/alessandrobaffa/">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Google+" title="Google+" href="https://google.com/&#43;AlessandroBaffa">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Projects" href="/project/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Things I did" href="">Things I did</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container">
+        <header class="post-header">
+    <h1 class="post-title">Dependency Injection VS Extract and Override Factory Method</h1>
+    
+        <p class="post-description">Two ways of solving the Racing Car kata - Text converter</p>
+    
+</header>
+
+        <div class="post-content clearfix">
+    
+
+    
+
+<p>The TextConverter exercise (in the <em>Racing</em> <em>Car</em> <em>kata</em> suite) is a very interesting exercise for refactoring legacy code. As I am reading <em>Working Effectively with Legacy Code</em> I found two ways of solving it.</p>
+
+<p>Refactoring can only be done safely with unit tests and so I did, rigourously in TDD. Though, in this blog post I am not going to show you all the testing process, but only the two ways of decoupling the dependency.</p>
+
+<h2 id="the-problem">The problem</h2>
+
+<p>The code comes with a classic dependency issue: a method that <em>secretly</em> (from the point of view of the client) reads from an external file that is created using the filename passed in the constructor.
+So, no way for the client to know about this file before or to avoid its usage. Here the original code:</p>
+
+<script type="text/javascript" src="http://gist.github.com/f1f7e91dba6c6252d1237381da856645.js"></script>
+
+
+<p>As you can see, the filename &ldquo;<em>fullFilenameWithPath</em>&rdquo; is passed in the constructor and then it&rsquo;s used internally by <em>FileReader</em>. This creates an annoying hidden dependency that prevents the testing of the method <em>convertToHtml()</em>. If you try to call the method <em>convertToHtml()</em> from your tests you will get a &ldquo;<em>File Not Found Exception</em>&rdquo;.</p>
+
+<p>Let&rsquo;s leave aside that ugly mix of levels of abstractions in this method (<em>FileReader</em>, <em>BufferedReader</em>, <em>&lt; br /&gt;</em>, static call to <em>escapeHtml()</em> all together .. <em>blah</em>). I found that this will be fixed almost <em>automagically</em> once you figure out how to extract that dependency from there.</p>
+
+<p>So, how to extract that dependency so that we can test it?</p>
+
+<h2 id="technique-1-dependency-injection">Technique 1: Dependency Injection</h2>
+
+<blockquote>
+<p>An injection is the passing of a dependency to a dependent object (a client) that would use it.</p>
+</blockquote>
+
+<p>In this case the dependency is <em>FileReader</em> and the dependent object is our <em>HtmlTextConverter</em> class.</p>
+
+<p>I want to pass the dependency from the constructor, but we can&rsquo;t change the existing one. In <em>Working Effectively with Legacy Code</em> this is called <em>Preserving Signature</em>, but more easily we can&rsquo;t change an API that is used by the clients.</p>
+
+<p>So, I can refactor this class in 3 steps:</p>
+
+<ol>
+<li>I extract the <em>new FileReader</em> from the method so that now it is created by a ReaderFactory (I am using the <a href="https://sourcemaking.com/design_patterns/factory_method">Factory Design Pattern</a> here, so that I can create a FileReader, or more in general a Reader, with a method <em>createFactory()</em>)</li>
+<li>I create a new constructor that takes a <em>ReaderFactory</em> interface as input</li>
+<li>I make the old constructor to call the new one passing the implementation of <em>ReaderFactory</em> that does the same job of <em>new FileReader()</em>.</li>
+</ol>
+
+<p>The point 3 is called <em>Parametrize Constructor</em> in <em>Working Effectively With Legacy Code</em> and this is the result:</p>
+
+<script type="text/javascript" src="http://gist.github.com/b4e9323e3b692cb6de63efa1c08fa41d.js"></script>
+
+
+<p>The fact that I extracted the <em>FileReader</em> from the method allowed me also to better define how I wanted to use it, so to get rid of <em>BufferedReader</em>, now handled in HtmlFormatter class. This allowed me also to remove the global variable fullFilenameWithPath from HtmlTextConverter.
+ A simple refactoring that made me, at the same time, decouple the dependency and make the code cleaner by removing that ugly mix of levels of abstractions.</p>
+
+<p>With this implementation I can now test the method just by creating a fake implementation of ReaderFactory in order to read from a String instead of a file:</p>
+
+<script type="text/javascript" src="http://gist.github.com/35267e8d83a380d4ec071faf95cc356c.js"></script>
+
+
+<h2 id="technique-2-extract-and-override-factory-method">Technique 2: Extract and Override Factory Method</h2>
+
+<p>In this technique you extract all the work involved in the creation of <em>FileReader</em> in the constructor into another factory method. Then, you create a testing subclass and override the method. This is the result:</p>
+
+<script type="text/javascript" src="http://gist.github.com/f1e01dcfa82737091ff430fb40932d51.js"></script>
+
+
+<p>I have extracted the <em>new FileReader()</em> into another method called <em>getReader()</em>, so now I can override it in a subclass called <em>FakeHtmlTextConverter</em> as follows:</p>
+
+<script type="text/javascript" src="http://gist.github.com/b823ce0137a2b01b60873741fe19b68c.js"></script>
+
+
+<p>This technique allows me to not change the constructor, but instead using a fake implementation in the tests, like so:</p>
+
+<script type="text/javascript" src="http://gist.github.com/73fa748312c3cda72fad659d698d1203.js"></script>
+
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p><em>Working Effectively With Legacy Code</em> is an illuminating book and i strongly recommend it to read. It&rsquo;s pretty dense with content, but reading it along with small exercise like this one it&rsquo;s a great way to absorb it faster and make it yours.</p>
+
+<p>This exercise is interesting and puts you a bit uncomfortable since the refactoring is becomes pretty big very quickly and it&rsquo;s difficult to do it in small steps. You stay in the red zone (<em>test don&rsquo;t pass</em>) for long, at least the first time you do it and mostly if you&rsquo;re not familiar with design patterns or any refactoring strategy in particular.</p>
+
+<p>Regarding the techniques, the 2. is strongly linked to the programming language used. You can&rsquo;t use it in C/C++. The 1. is more clean. Both are two great ones.</p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+
+    <div class="share">
+        
+            <a class="icon-twitter" href="https://twitter.com/share?text=Dependency%20Injection%20VS%20Extract%20and%20Override%20Factory%20Method&url=https%3a%2f%2falebaffa.com%2fposts%2fracing-car-kata-refactoring%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+            </a>
+        
+
+        
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2falebaffa.com%2fposts%2fracing-car-kata-refactoring%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+            </a>
+        
+
+        
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2falebaffa.com%2fposts%2fracing-car-kata-refactoring%2f"
+              onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+              <i class="fa fa-google-plus"></i>
+                <span class="hidden">Google+</span>
+            </a>
+        
+        
+    </div>
+</footer>
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="blog" href="https://alebaffa.com/">blog</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2018 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://alebaffa.com/js/jquery-1.11.3.min.js"></script>
+        <script src="https://alebaffa.com/js/jquery.fitvids.js"></script>
+        
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        
+        
+        <script src="https://alebaffa.com/js/scripts.js"></script>
+    </body>
+</html>
+

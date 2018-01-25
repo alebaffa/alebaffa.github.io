@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Be careful with slice &middot; Alessandro Baffa</title>
+        <meta name="description" content="Bad things happen when you don&#39;t take care of the capacity of the slice">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.35-DEV" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="https://alebaffa.com/dist/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        
+    </head>
+    <body>
+        
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'XXX', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="blog" href="https://alebaffa.com/">blog</a>
+                            </h1>
+                        
+                        <a class="button-square" href="https://alebaffa.com/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                            <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/alebaffa">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/alebaffa">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://linkedin.com/in/alessandrobaffa/">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Google+" title="Google+" href="https://google.com/&#43;AlessandroBaffa">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Projects" href="/project/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Things I did" href="">Things I did</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container">
+        <header class="post-header">
+    <h1 class="post-title">Be careful with slice</h1>
+    
+        <p class="post-description">Bad things happen when you don&#39;t take care of the capacity of the slice</p>
+    
+</header>
+
+        <div class="post-content clearfix">
+    
+
+    <p><a href="https://blog.golang.org/slices">Slices</a> are a great tool in Go, but sometimes they can be confused with arrays.
+A small reminder: slices are a pointer into an underline array. Let&rsquo;s take this example:</p>
+
+<pre><code class="language-go">array := []int{1, 2, 3, 4, 5, 6}
+slice := array[1:3]
+
+// let's print both
+fmt.Println(&quot;array: &quot;, array)
+fmt.Println(&quot;slice: &quot;, slice)
+
+// array:  [1 2 3 4 5 6]
+// slice: [2 3]
+</code></pre>
+
+<p>Since the slice is only a pointer to the underline array, if you do some operations with the elements of the array you are also changing the elements of the slice. Like this example:</p>
+
+<pre><code class="language-go">// let's double the first element of the array
+array[1] *= 2
+
+// let's print the array and the slice
+fmt.Println(&quot;array: &quot;, array)
+fmt.Println(&quot;slice: &quot;, slice)
+
+// array:  [1 4 3 4 5 6]
+// slice: [4 3]
+</code></pre>
+
+<p>A slice have two important properties:</p>
+
+<pre><code class="language-go">fmt.Println(&quot;length of the slice: &quot;, len(slice))
+fmt.Println(&quot;capacity of the slice: &quot;, cap(slice))
+
+// length of the slice: :  2
+// capacity of the slice: 5
+</code></pre>
+
+<p>The length is the number of elements that the slice contains, while the capacity is the max number of elements it can contain.</p>
+
+<p>It&rsquo;s important to take care of what happens when the slice fulfills its capacity. Let&rsquo;s continue the example by adding new things in the slice (and so in the array):</p>
+
+<pre><code class="language-go">middle = append(slice, 100)
+middle = append(slice, 101)
+middle = append(slice, 102)
+middle = append(slice, 103)
+
+// slice:  [4 3 99 100 101 102 103]
+// array:  [1 4 3 99 100 101]
+// capacity of slice:  10
+</code></pre>
+
+<p>The array has reached its length (6 elements), but the slice has been extended. It is actually been copied and moved and it became a new slice with double capacity (10. It was 5 before).</p>
+
+<p>At this point the slice is not pointing anymore to that array. So, now if you do some operations to the underline array, the elements of the slice won&rsquo;t change anymore. Example:</p>
+
+<pre><code class="language-go">// let's double the first element of the array
+array[1] *= 2
+
+// let's print the array and the slice now:
+fmt.Println(&quot;array: &quot;, array)
+fmt.Println(&quot;slice: &quot;, slice)
+
+//array:  [1 8 3 99 100 101]
+//slice:  [4 3 99 100 101 102 103]
+</code></pre>
+
+<p>As you can see, the <em>array[1] = 8</em>, but the corresponding element in the slice is still 4.</p>
+
+<p>This is an important thing to take care of when you&rsquo;re using slices. It can be really confusing. Always take care of the capacity in case your program is managing a lot of elements.</p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+
+    <div class="share">
+        
+            <a class="icon-twitter" href="https://twitter.com/share?text=Be%20careful%20with%20slice&url=https%3a%2f%2falebaffa.com%2fposts%2fbe_careful_with_slices%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+            </a>
+        
+
+        
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2falebaffa.com%2fposts%2fbe_careful_with_slices%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+            </a>
+        
+
+        
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2falebaffa.com%2fposts%2fbe_careful_with_slices%2f"
+              onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+              <i class="fa fa-google-plus"></i>
+                <span class="hidden">Google+</span>
+            </a>
+        
+        
+    </div>
+</footer>
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="blog" href="https://alebaffa.com/">blog</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2018 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://alebaffa.com/js/jquery-1.11.3.min.js"></script>
+        <script src="https://alebaffa.com/js/jquery.fitvids.js"></script>
+        
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        
+        
+        <script src="https://alebaffa.com/js/scripts.js"></script>
+    </body>
+</html>
+

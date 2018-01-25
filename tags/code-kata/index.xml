@@ -14,10 +14,10 @@
     
     <item>
       <title>Practicing TDD: FizzBuzz kata in Golang</title>
-      <link>https://alebaffa.com/2016/06/19/practicing-tdd-fizzbuzz-kata-in-golang/</link>
+      <link>https://alebaffa.com/posts/fizz-buzz-golang/</link>
       <pubDate>Sun, 19 Jun 2016 21:28:49 +0200</pubDate>
       
-      <guid>https://alebaffa.com/2016/06/19/practicing-tdd-fizzbuzz-kata-in-golang/</guid>
+      <guid>https://alebaffa.com/posts/fizz-buzz-golang/</guid>
       <description>My implementation:
  and here the list of all the steps that I’ve done to implement it in TDD on my github account.</description>
     </item>

@@ -14,30 +14,30 @@
     
     <item>
       <title>Transformation Priority Premise: overcome the fear of new tests</title>
-      <link>https://alebaffa.com/2016/07/05/transformation-priority-premise-overcome-the-fear-of-new-tests/</link>
+      <link>https://alebaffa.com/posts/tpp/</link>
       <pubDate>Tue, 05 Jul 2016 21:29:11 +0200</pubDate>
       
-      <guid>https://alebaffa.com/2016/07/05/transformation-priority-premise-overcome-the-fear-of-new-tests/</guid>
+      <guid>https://alebaffa.com/posts/tpp/</guid>
       <description>The Transformation Priority Premise (TPP) is a great empirical list of transformations that you can apply in your code when you’re working in TDD:
 When do you need it? Practicing with TDD I realized that sometimes I reach a point when I get stuck: I am almost scared to add a new particular test because I already know it’s going to force me to completely rewrite the structure of the code.</description>
     </item>
     
     <item>
       <title>Practicing TDD: FizzBuzz kata in Golang</title>
-      <link>https://alebaffa.com/2016/06/19/practicing-tdd-fizzbuzz-kata-in-golang/</link>
+      <link>https://alebaffa.com/posts/fizz-buzz-golang/</link>
       <pubDate>Sun, 19 Jun 2016 21:28:49 +0200</pubDate>
       
-      <guid>https://alebaffa.com/2016/06/19/practicing-tdd-fizzbuzz-kata-in-golang/</guid>
+      <guid>https://alebaffa.com/posts/fizz-buzz-golang/</guid>
       <description>My implementation:
  and here the list of all the steps that I’ve done to implement it in TDD on my github account.</description>
     </item>
     
     <item>
       <title>A Community of Professionals - SoCraTes UK</title>
-      <link>https://alebaffa.com/2016/06/19/a-community-of-professionals---socrates-uk/</link>
+      <link>https://alebaffa.com/posts/socrates-uk/</link>
       <pubDate>Sun, 19 Jun 2016 21:28:33 +0200</pubDate>
       
-      <guid>https://alebaffa.com/2016/06/19/a-community-of-professionals---socrates-uk/</guid>
+      <guid>https://alebaffa.com/posts/socrates-uk/</guid>
       <description>A couple of weeks ago I participated for the first time to a SoCraTes event, one of the Software Craftsmanship international gatherings. SoCraTes (Software Craftsmanship and Testing) is an self-organized conference where the people from the international Software Craftsmanship Community meet and spend 3 days organizing themselves activities and talks around everything related to software craftsmanship: from the technical to the human aspects of it. There are few events of this kind every year (Italy, France, Germany, Belgium, Switzerland, Romania, Finland, Canaries) and I participated to the one in UK.</description>
     </item>
     
