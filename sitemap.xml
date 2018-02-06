@@ -18,11 +18,6 @@
   </url>
   
   <url>
-    <loc>https://alebaffa.com/gdcr-2016/</loc>
-    <lastmod>2017-01-06T12:53:04+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://alebaffa.com/project/gdcr-2016/</loc>
     <lastmod>2017-01-06T12:53:04+01:00</lastmod>
   </url>
@@ -103,8 +98,8 @@
   </url>
   
   <url>
-    <loc>https://alebaffa.com/about/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+    <loc>https://alebaffa.com/page/about/</loc>
+    <lastmod>2014-09-28T00:00:00+09:00</lastmod>
   </url>
   
   <url>
@@ -155,6 +150,7 @@
   
   <url>
     <loc>https://alebaffa.com/page/</loc>
+    <lastmod>2014-09-28T00:00:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -208,10 +204,6 @@
     <loc>https://alebaffa.com/</loc>
     <lastmod>2018-01-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://alebaffa.com/page/about/</loc>
   </url>
   
 </urlset>

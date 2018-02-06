@@ -5,7 +5,6 @@
     <link>https://alebaffa.com/</link>
     <description>Recent content on blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-EN</language>
     <copyright>(c) 2015 Alessandro Baffa.</copyright>
     <lastBuildDate>Thu, 25 Jan 2018 00:00:00 +0000</lastBuildDate>
     
@@ -39,17 +38,6 @@ First huge difference from my previous job: here I can put my hands on literally
       <guid>https://alebaffa.com/posts/new-chapter-of-life/</guid>
       <description>After 7 years spent in France I am officially moving to Tokyo, Japan, end of May 2017. I am finally going to join my wife, Sarah, after almost 5 years of long and hard distant relationship.
 Now, before to start with the burocracy madness and to move/sell/close/sign things, I am sitting here at home, in the first weekend after having resigned from my current company, trying to think about how many things I learned over the last 7 years.</description>
-    </item>
-    
-    <item>
-      <title>Global Day of Coderetreat 2016 // Main organizer</title>
-      <link>https://alebaffa.com/gdcr-2016/</link>
-      <pubDate>Fri, 06 Jan 2017 12:53:04 +0100</pubDate>
-      
-      <guid>https://alebaffa.com/gdcr-2016/</guid>
-      <description>About project I organized the local event of the Global Day of Coderetreat 2016 in Sophia Antipolis, Nice area, South of France. It&amp;rsquo;s the biggest worldwide event for developers organized by the international Software Craftsmanship Community and it takes places every year in more than 100 cities in the world.
-I organized the first one ever in South of France with a big success: 50 people participated.
-I took care of finding the sponsors, the location and the communication on social media and with local companies.</description>
     </item>
     
     <item>
@@ -212,16 +200,13 @@ It’s the second time I participate (I’ve been there also last year, 2014) an
     </item>
     
     <item>
-      <title>About</title>
-      <link>https://alebaffa.com/about/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      <title>Hello! I&#39;m Alessandro</title>
+      <link>https://alebaffa.com/page/about/</link>
+      <pubDate>Sun, 28 Sep 2014 00:00:00 +0900</pubDate>
       
-      <guid>https://alebaffa.com/about/</guid>
-      <description>I am a Full Stack Engineer living in Tokyo. More on LinkedIn.
-I am a geek. I love all kind of technology and learn new stuff every day. I am currently particularly interested in Machine/Deep Learning, Data Science, IoT and DevOps.
-I am also a photography enthusiast. I like wedding and landscape photography. I post my photos on Flickr.
-I use heavily Twitter.
-This blog contains my personal thoughts and opinions about things that I learn.</description>
+      <guid>https://alebaffa.com/page/about/</guid>
+      <description>I am a Software Engineer based in Tokyo and I currently make things work at Rakuten where I am a Web engineer. More on LinkedIn.
+I like working in projects where I can handle the full technical stack, from the frontend to the backend. I like doing stuff I&amp;rsquo;ve never tried before and I consider every difficulty an occasion to learn and improve my myself. I also love to share what I&amp;rsquo;ve learned with the community by organizing meetups, workshops, learning events or giving presentations.</description>
     </item>
     
     <item>
@@ -247,19 +232,6 @@ The main idea was to share interesting link regarding quality code and software 
 The project is now on hold since December 2016 in order to rethink about the idea and how to make it more valuable.
 Link http://www.softwarecraftsmanship.news/
 https://github.com/alebaffa/swcraftnewsletter</description>
-    </item>
-    
-    <item>
-      <title>今日は - hello!</title>
-      <link>https://alebaffa.com/page/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://alebaffa.com/page/about/</guid>
-      <description>I am a Full Stack Engineer living in Tokyo. More on LinkedIn.
-I am a geek. I love all kind of technology and learn new stuff every day. I am currently particularly interested in Machine/Deep Learning, Data Science, IoT and DevOps.
-I am also a photography enthusiast. I like wedding and landscape photography. I post my photos on Flickr.
-I use heavily Twitter.
-This blog contains my personal thoughts and opinions about things that I learn.</description>
     </item>
     
   </channel>

@@ -13,7 +13,7 @@
         
         <link rel="stylesheet" href="https://alebaffa.com/dist/styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         
         
     </head>
@@ -68,15 +68,15 @@ ga('send', 'pageview');
                     <ul class="site-nav">
                         
     <li class="site-nav-item">
+        <a title="Blog" href="/">Blog</a>
+    </li>
+
+    <li class="site-nav-item">
         <a title="Projects" href="/project/">Projects</a>
     </li>
 
     <li class="site-nav-item">
         <a title="About" href="/page/about/">About</a>
-    </li>
-
-    <li class="site-nav-item">
-        <a title="Things I did" href="">Things I did</a>
     </li>
 
                     </ul>
@@ -87,13 +87,22 @@ ga('send', 'pageview');
 
 
 <div class="container">
-    <article class="post-container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
         <header class="post-header">
-    <h1 class="post-title">Raising The Bar With Science</h1>
+    <h1 class="post-title" itemprop="name headline">Raising The Bar With Science</h1>
     
+    <p class="post-date">
+        <span>Published <time datetime="2016-11-06" itemprop="datePublished">Sun, Nov 6, 2016</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="https://twitter.com/alebaffa" itemprop="url" rel="author">alebaffa</a>
+            </span>
+        </span>
+    </p>
 </header>
 
-        <div class="post-content clearfix">
+        <div class="post-content clearfix" itemprop="articleBody">
     
 
     
@@ -175,6 +184,8 @@ We need to formalize our practices based on empirical data that can show us what
         
     </div>
 </footer>
+
+        
     </article>
 </div>
 
