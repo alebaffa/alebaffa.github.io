@@ -461,7 +461,7 @@ table {
 .post-stub-date {
     display: inline-block;
 
-    &:before { content: "/ "; }
+    &:after { content: "~ "; }
 }
 
 .next-posts-link a,
