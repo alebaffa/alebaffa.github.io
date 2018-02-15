@@ -106,9 +106,9 @@ table tr { border-bottom: 1px dotted #aeadad; }
 .button-square:hover { background: #303030; }
 .error { text-align: center; }
 .comments { margin-top: 10px; }
-.site-header { padding: 40px 0 0; overflow: auto; text-align: center; text-transform: uppercase; }
+.site-header { padding: 40px 0 0; overflow: auto; text-align: center; }
 .site-title-wrapper { display: table; margin: 0 auto; }
-.site-title { float: left; font-size: 14px; font-weight: 600; margin: 0; text-transform: uppercase; }
+.site-title { float: left; font-size: 14px; font-weight: 600; margin: 0; }
 .site-title a { float: left; background: #f03838; color: #fefefe; padding: 5px 10px 6px; }
 .site-title a:hover { background: #303030; }
 .site-logo { display: block; }
@@ -139,7 +139,7 @@ table tr { border-bottom: 1px dotted #aeadad; }
 .share a { background: #f03838; color: #fff; display: inline-block; font-size: 16px; margin-left: 5px; padding: 5px 0 4px; width: 30px; text-align: center; }
 .share a:hover { background: #303030; }
 .post-navigation { display: table; margin: 70px auto 100px; }
-.newer-posts, .older-posts { float: left; background: #f03838; color: #fefefe; font-size: 14px; font-weight: 600; margin: 0 5px; padding: 5px 10px 6px; text-transform: uppercase; }
+.newer-posts, .older-posts { float: left; background: #f03838; color: #fefefe; font-size: 14px; font-weight: 600; margin: 0 5px; padding: 5px 10px 6px; }
 .newer-posts:hover, .older-posts:hover { background: #303030; }
 .page-number { display: none; }
 .post-list { list-style: none; padding: 0; }
