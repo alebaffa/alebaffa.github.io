@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>log4j on Alessandro Baffa</title>
+    <link>https://alebaffa.eth.link/tags/log4j/</link>
+    <description>Recent content in log4j on Alessandro Baffa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 23 Mar 2018 23:02:43 +0900</lastBuildDate>
+    
+	<atom:link href="https://alebaffa.eth.link/tags/log4j/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Unit testing a custom logger in log4j2</title>
+      <link>https://alebaffa.eth.link/post/unit-testing-custom-logger-log4j2/</link>
+      <pubDate>Sat, 17 Mar 2018 13:55:46 +0900</pubDate>
+      
+      <guid>https://alebaffa.eth.link/post/unit-testing-custom-logger-log4j2/</guid>
+      <description>In this period I&amp;rsquo;m upgrading a Spring Boot project from 1.3 &amp;ndash;&amp;gt; 1.5 &amp;ndash;&amp;gt; 2.0. One of the steps is to get rid of log4j 1.x.
+In the project there is custom logger, but unfortunately its unit test with log4j2 is no more working and we receive the following error:
+ mockito wanted but not invoked, Actually there were zero interactions with this mock
+ Basically this exact same error in Stackoverflow.</description>
+    </item>
+    
+  </channel>
+</rss>

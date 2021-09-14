@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+        <title>Back from SoCraTes France 2016 | Alessandro Baffa</title>
+        <meta name="description" content="Back from SoCraTes France 2016">
+        <meta property="og:site_name" content="Back from SoCraTes France 2016" />
+        <meta property="og:title" content="Alessandro Baffa" />
+        <meta property="og:description" content="My second time in a Software Craftsmanship and Testing (SoCraTes) conference and, as always, it has been an awesome experience.
+The self-made agenda SoCraTes is a non-conference, which means that there’s no predefined agenda, but instead it is created every day by the participants (the image above is the agenda of day 2). Everybody is more than welcome to propose sessions. They can be presentation of something you know, or open discussion about a topic you are curious about, or more simply a session where you want to learn something and you are looking for someone more experienced to help you."/>
+        <meta property="og:image" content="https://alebaffa.eth.link/images/author.png" />
+    
+    
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    
+    <meta name="keywords" content="fast, hugo, theme, minimal, gruvbox">
+    <link rel="icon" type="image/svg" href='https://alebaffa.eth.link'/>
+    <meta name="author" content='jane_doe'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.68.3" />
+    
+    <link rel="stylesheet" href="https://alebaffa.eth.link/sass/main.min.2ec5574c3cc6d0e06666d718ad1606a880afc23333cec89d3843ff7e4db2bfe8.css" type="text/css" media="screen" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
+
+    
+
+    
+
+    
+    </head>
+
+<body>
+      <div class="line" id="scrollIndicator"></div>
+      <div class="main"><div class="title">
+  <div class="name">
+    <h2><a href="https://alebaffa.eth.link"
+	   style="text-decoration: none; color: inherit;">Hi!</a></h2>
+  </div>
+  <div class="color-scheme">
+    <input type="checkbox" class="checkbox" id="chk" />
+    <label class="label" for="chk">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+      <div class="ball"></div>
+    </label>
+  </div>
+</div>
+<script>
+  const themeSetter = (theme) => {
+      document.body.classList.toggle('dark')
+      localStorage.setItem('theme', theme)
+      blockSwitcher()
+  }
+
+  const blockSwitcher = () => [...document.getElementsByTagName("BLOCKQUOTE")]
+	.forEach(b => b.classList.toggle('dark'))
+
+  const styleSwapper = () => {
+      document.body.classList.add('back-transition')
+      if (localStorage.getItem('theme') === 'dark') themeSetter('light')
+      else if (localStorage.getItem('theme') === 'light') themeSetter('dark')
+  }
+
+  if (localStorage.getItem('theme') === 'dark'){
+      themeSetter('dark')
+      document.addEventListener("DOMContentLoaded", blockSwitcher)
+  }
+ else localStorage.setItem('theme', 'light')
+
+  document.getElementById('chk').addEventListener('change',styleSwapper);
+
+  window.addEventListener("scroll", () => {
+      let height = document.documentElement.scrollHeight
+          - document.documentElement.clientHeight;
+      if(height >= 500){
+	  let winScroll = document.body.scrollTop
+              || document.documentElement.scrollTop;
+	  let scrolled = (winScroll / height) * 100;
+	  document.getElementById("scrollIndicator").style.width = scrolled + "%";
+      }
+  });
+</script>
+
+<section class="intro">
+    
+    <div class="post-header">
+    <h2 class="post-title"><a class="go-back" href="https://alebaffa.eth.link/post/">
+	      <i class="far fa-caret-square-left"></i></a> Back from SoCraTes France 2016</h2>
+    </div>
+    
+    <p>By <a href="">alebaffa</a></p>
+    
+    <p class="post-dets">Published on: October 31, 2016
+        | Reading Time: 5 min | Last Modified : October 31, 2016
+        <br>
+    </p>
+    <span class="tags">
+        
+        <h5><a class="tag" href='https://alebaffa.eth.link/tags/conferences'>conferences</a></h5>
+        
+    </span>
+    
+    <div class="content">
+        <!-- raw HTML omitted -->
+<p>My second time in a Software Craftsmanship and Testing (SoCraTes) conference and, as always, it has been an awesome experience.</p>
+<!-- raw HTML omitted -->
+<h2 id="the-self-made-agenda">The self-made agenda</h2>
+<p>SoCraTes is a non-conference, which means that there’s no predefined agenda, but instead it is created every day by the participants (the image above is the agenda of day 2). Everybody is more than welcome to propose sessions. They can be presentation of something you know, or open discussion about a topic you are curious about, or more simply a session where you want to learn something and you are looking for someone more experienced to help you.
+As for the Global Day of Coderetreat, what you learn during SoCraTes is your responsibility. Open mind, will to learn and the Law of Two Feet are the only things you have to bring with you to this event.</p>
+<p>Sessions I attended:</p>
+<ul>
+<li>
+<p><strong>event storming and DDD</strong>. I never got into both subjects so it’s been a nice introduction.</p>
+</li>
+<li>
+<p><strong>Functional philosophy</strong>. Functional programming is the first item in my todo list since too long and after this excellent presentation I decided to enroll in the course on Coursera. For the second time.</p>
+</li>
+<li>
+<p><strong>How to teach TDD</strong>. Help other people to learn is something I really love to do. We shared experience and techniques on how to introduce TDD to other people/colleagues and it was interesting. Even though, inevitably, it switched to a broader discussion about organizational issues. But still, interesting.</p>
+</li>
+<li>
+<p><strong>Event sourcing</strong>. Again, another subject I never studied. So, good introduction.</p>
+</li>
+<li>
+<p><strong>Feature branching is evil</strong>. Thierry has a good experience as technical coach and he’s a passionate guy. He prepared this interesting presentation the night between day 1 and day 2 . Obviously the topic was sensible for many people, so the discussions were very interesting.</p>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p><strong>Tactical DDD</strong>. Another presentation that made me understand how I absolutely don’t know anything at all about DDD and that it is such a huge topic.</p>
+</li>
+<li>
+<p><strong>Beyond Alchemy and What are Software Leprechauns</strong> (by @cceelen and Laurent Bossavit). Laurent is the author of The Leprechauns of Software Engineering. We discussed about the distance between the software industry and the scientific method. We work in an industry where most of the choices are too often made based on personal tastes and/or wrong assumptions. Also, the academics working on empirical software engineering most of the time lack of real data and statistics from the real world. We work in an industry that it’s like Alchemy.
+What if the software craftsmanship community could help the academics to get these data? Or what if all of us could start applying the scientific method to the choices we make every day? What if we could document all the things we do, the practices and the techniques we use at work, the good and bad results, and make them available for scientists so to start to make the industry grow?
+In the Software Craftsmanship movement we always talk about the Profession of Software Engineer, but how can we have a Profession if we don’t even have a museum of Computer History (or really very few of them in the entire world)? How many of you, computer scientists, have ever been to such a museum? How much do we know about our History as computer scientists? How much do we know about the History of all the things that we choose to use?
+Listening to Laurent Bossavit has been maybe the most fascinating experience for me in the entire event. His book here below is already in my kindle.</p>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p><strong>Instill Software Craftsmanship in a company</strong>. Well, this is basically what I’m doing since one year in my current company. I attended this interesting session to get feedback from other people doing the same in their ones and share our experience with them.
+<!-- raw HTML omitted --></p>
+</li>
+<li>
+<p><strong>Learning Strategies</strong> (by me). One of the questions I’m always been asked when I say that it’s good to always try to practice and become better software developers is “yes, but we have a family/children/life/friends/whatever and we don’t have time”. I organized this session to know how other people do. Most of the people use their working time to study. Either because their company give them a dedicated time to do so during the week, or because they take their time by themselves. Avoid those companies that don’t give you time to become better employees.
+<!-- raw HTML omitted --></p>
+</li>
+<li>
+<p><strong>Code katas</strong>. Romeu organized code katas every lunch and dinner. Basically, every time there was an empty space in the agenda. I did a couple of them and they were absolutely fantastic! Definitely something I will do again with other things I organize. Romeu gave us so many brilliant ideas!
+<!-- raw HTML omitted --></p>
+</li>
+</ul>
+<h2 id="other-things-worth-mentioning">Other things worth mentioning</h2>
+<p>The food. Absolutely gorgeous. When the plates arrived on the table there was always this moment of religious silence when everybody was too focused to taste those absolutely gorgeous dishes.
+<!-- raw HTML omitted --></p>
+<h2 id="conclusions">Conclusions</h2>
+<p>It’s always great to meet the other people of the international community of Software Craftsmanship. It’s an absolutely open, welcoming, friendly, warm group of great people.
+As always I learned so much stuff, but maybe the most important is the amount of energy and strength that I always bring with me after this gathering. If you have never participated, please, join us in one of the next ones. You won’t regret it, and it will become kind of addiction too.
+Thanks to the excellent <a href="https://medium.com/u/a04341a59930">Houssam Fakih</a> for the exceptional organization! And thanks to <a href="https://twitter.com/Singsalad">@franzi</a>, the awesome facilitator of this event!</p>
+
+    </div>
+    
+</section>
+<footer id="footer">
+    <strong></strong>
+    <div class="social">
+        &nbsp; <a href="https://twitter.com/alebaffa" target="_blank" rel="noopener" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a> &nbsp;&nbsp; <a href="https://github.com/alebaffa" target="_blank" rel="noopener" title="Github"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a> &nbsp;&nbsp; <a href="https://www.linkedin.com/alessandrobaffa" target="_blank" rel="noopener" title="Linkedin"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a> &nbsp;&nbsp; <a href="https://www.facebook.com/alessandro.baffa" target="_blank" rel="noopener" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a> &nbsp;
+    </div><strong></strong>
+    <p style="color:grey;">© 2021 Alessandro Baffa.  <a href="https://creativecommons.org/licenses/by/4.0/">Some rights reserved</a>.</p>
+</footer>
+</div>
+    </body>
+</html>

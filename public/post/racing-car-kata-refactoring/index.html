@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+        <title>Dependency Injection VS Extract and Override Factory Method | Alessandro Baffa</title>
+        <meta name="description" content="Dependency Injection VS Extract and Override Factory Method">
+        <meta property="og:site_name" content="Dependency Injection VS Extract and Override Factory Method" />
+        <meta property="og:title" content="Alessandro Baffa" />
+        <meta property="og:description" content="The TextConverter exercise (in the Racing Car kata suite) is a very interesting exercise for refactoring legacy code. As I am reading Working Effectively with Legacy Code I found two ways of solving it.
+Refactoring can only be done safely with unit tests and so I did, rigourously in TDD. Though, in this blog post I am not going to show you all the testing process, but only the two ways of decoupling the dependency."/>
+        <meta property="og:image" content="https://alebaffa.eth.link/images/author.png" />
+    
+    
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    
+    <meta name="keywords" content="fast, hugo, theme, minimal, gruvbox">
+    <link rel="icon" type="image/svg" href='https://alebaffa.eth.link'/>
+    <meta name="author" content='jane_doe'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.68.3" />
+    
+    <link rel="stylesheet" href="https://alebaffa.eth.link/sass/main.min.2ec5574c3cc6d0e06666d718ad1606a880afc23333cec89d3843ff7e4db2bfe8.css" type="text/css" media="screen" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
+
+    
+
+    
+
+    
+    </head>
+
+<body>
+      <div class="line" id="scrollIndicator"></div>
+      <div class="main"><div class="title">
+  <div class="name">
+    <h2><a href="https://alebaffa.eth.link"
+	   style="text-decoration: none; color: inherit;">Hi!</a></h2>
+  </div>
+  <div class="color-scheme">
+    <input type="checkbox" class="checkbox" id="chk" />
+    <label class="label" for="chk">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+      <div class="ball"></div>
+    </label>
+  </div>
+</div>
+<script>
+  const themeSetter = (theme) => {
+      document.body.classList.toggle('dark')
+      localStorage.setItem('theme', theme)
+      blockSwitcher()
+  }
+
+  const blockSwitcher = () => [...document.getElementsByTagName("BLOCKQUOTE")]
+	.forEach(b => b.classList.toggle('dark'))
+
+  const styleSwapper = () => {
+      document.body.classList.add('back-transition')
+      if (localStorage.getItem('theme') === 'dark') themeSetter('light')
+      else if (localStorage.getItem('theme') === 'light') themeSetter('dark')
+  }
+
+  if (localStorage.getItem('theme') === 'dark'){
+      themeSetter('dark')
+      document.addEventListener("DOMContentLoaded", blockSwitcher)
+  }
+ else localStorage.setItem('theme', 'light')
+
+  document.getElementById('chk').addEventListener('change',styleSwapper);
+
+  window.addEventListener("scroll", () => {
+      let height = document.documentElement.scrollHeight
+          - document.documentElement.clientHeight;
+      if(height >= 500){
+	  let winScroll = document.body.scrollTop
+              || document.documentElement.scrollTop;
+	  let scrolled = (winScroll / height) * 100;
+	  document.getElementById("scrollIndicator").style.width = scrolled + "%";
+      }
+  });
+</script>
+
+<section class="intro">
+    
+    <div class="post-header">
+    <h2 class="post-title"><a class="go-back" href="https://alebaffa.eth.link/post/">
+	      <i class="far fa-caret-square-left"></i></a> Dependency Injection VS Extract and Override Factory Method</h2>
+    </div>
+    
+    <p>By <a href="">alebaffa</a></p>
+    
+    <p class="post-dets">Published on: October 9, 2016
+        | Reading Time: 4 min | Last Modified : October 9, 2016
+        <br>
+    </p>
+    <span class="tags">
+        
+        <h5><a class="tag" href='https://alebaffa.eth.link/tags/refactoring'>refactoring</a></h5>
+        
+    </span>
+    
+    <div class="content">
+        <p>The TextConverter exercise (in the <em>Racing</em> <em>Car</em> <em>kata</em> suite) is a very interesting exercise for refactoring legacy code. As I am reading <em>Working Effectively with Legacy Code</em> I found two ways of solving it.</p>
+<p>Refactoring can only be done safely with unit tests and so I did, rigourously in TDD. Though, in this blog post I am not going to show you all the testing process, but only the two ways of decoupling the dependency.</p>
+<h2 id="the-problem">The problem</h2>
+<p>The code comes with a classic dependency issue: a method that <em>secretly</em> (from the point of view of the client) reads from an external file that is created using the filename passed in the constructor.
+So, no way for the client to know about this file before or to avoid its usage. Here the original code:</p>
+<script type="application/javascript" src="https://gist.github.com/f1f7e91dba6c6252d1237381da856645/.js"></script>
+
+<p>As you can see, the filename &ldquo;<em>fullFilenameWithPath</em>&rdquo; is passed in the constructor and then it&rsquo;s used internally by <em>FileReader</em>. This creates an annoying hidden dependency that prevents the testing of the method <em>convertToHtml()</em>. If you try to call the method <em>convertToHtml()</em> from your tests you will get a &ldquo;<em>File Not Found Exception</em>&quot;.</p>
+<p>Let&rsquo;s leave aside that ugly mix of levels of abstractions in this method (<em>FileReader</em>, <em>BufferedReader</em>, <em>&lt; br /&gt;</em>, static call to <em>escapeHtml()</em> all together .. <em>blah</em>). I found that this will be fixed almost <em>automagically</em> once you figure out how to extract that dependency from there.</p>
+<p>So, how to extract that dependency so that we can test it?</p>
+<h2 id="technique-1-dependency-injection">Technique 1: Dependency Injection</h2>
+<blockquote>
+<p>An injection is the passing of a dependency to a dependent object (a client) that would use it.</p>
+</blockquote>
+<p>In this case the dependency is <em>FileReader</em> and the dependent object is our <em>HtmlTextConverter</em> class.</p>
+<p>I want to pass the dependency from the constructor, but we can&rsquo;t change the existing one. In <em>Working Effectively with Legacy Code</em> this is called <em>Preserving Signature</em>, but more easily we can&rsquo;t change an API that is used by the clients.</p>
+<p>So, I can refactor this class in 3 steps:</p>
+<ol>
+<li>I extract the <em>new FileReader</em> from the method so that now it is created by a ReaderFactory (I am using the <a href="https://sourcemaking.com/design_patterns/factory_method">Factory Design Pattern</a> here, so that I can create a FileReader, or more in general a Reader, with a method <em>createFactory()</em>)</li>
+<li>I create a new constructor that takes a <em>ReaderFactory</em> interface as input</li>
+<li>I make the old constructor to call the new one passing the implementation of <em>ReaderFactory</em> that does the same job of <em>new FileReader()</em>.</li>
+</ol>
+<p>The point 3 is called <em>Parametrize Constructor</em> in <em>Working Effectively With Legacy Code</em> and this is the result:</p>
+<script type="application/javascript" src="https://gist.github.com/b4e9323e3b692cb6de63efa1c08fa41d/.js"></script>
+
+<p>The fact that I extracted the <em>FileReader</em> from the method allowed me also to better define how I wanted to use it, so to get rid of <em>BufferedReader</em>, now handled in HtmlFormatter class. This allowed me also to remove the global variable fullFilenameWithPath from HtmlTextConverter.
+A simple refactoring that made me, at the same time, decouple the dependency and make the code cleaner by removing that ugly mix of levels of abstractions.</p>
+<p>With this implementation I can now test the method just by creating a fake implementation of ReaderFactory in order to read from a String instead of a file:</p>
+<script type="application/javascript" src="https://gist.github.com/35267e8d83a380d4ec071faf95cc356c/.js"></script>
+
+<h2 id="technique-2-extract-and-override-factory-method">Technique 2: Extract and Override Factory Method</h2>
+<p>In this technique you extract all the work involved in the creation of <em>FileReader</em> in the constructor into another factory method. Then, you create a testing subclass and override the method. This is the result:</p>
+<script type="application/javascript" src="https://gist.github.com/f1e01dcfa82737091ff430fb40932d51/.js"></script>
+
+<p>I have extracted the <em>new FileReader()</em> into another method called <em>getReader()</em>, so now I can override it in a subclass called <em>FakeHtmlTextConverter</em> as follows:</p>
+<script type="application/javascript" src="https://gist.github.com/b823ce0137a2b01b60873741fe19b68c/.js"></script>
+
+<p>This technique allows me to not change the constructor, but instead using a fake implementation in the tests, like so:</p>
+<script type="application/javascript" src="https://gist.github.com/73fa748312c3cda72fad659d698d1203/.js"></script>
+
+<h2 id="conclusion">Conclusion</h2>
+<p><em>Working Effectively With Legacy Code</em> is an illuminating book and i strongly recommend it to read. It&rsquo;s pretty dense with content, but reading it along with small exercise like this one it&rsquo;s a great way to absorb it faster and make it yours.</p>
+<p>This exercise is interesting and puts you a bit uncomfortable since the refactoring is becomes pretty big very quickly and it&rsquo;s difficult to do it in small steps. You stay in the red zone (<em>test don&rsquo;t pass</em>) for long, at least the first time you do it and mostly if you&rsquo;re not familiar with design patterns or any refactoring strategy in particular.</p>
+<p>Regarding the techniques, the 2. is strongly linked to the programming language used. You can&rsquo;t use it in C/C++. The 1. is more clean. Both are two great ones.</p>
+
+    </div>
+    
+</section>
+<footer id="footer">
+    <strong></strong>
+    <div class="social">
+        &nbsp; <a href="https://twitter.com/alebaffa" target="_blank" rel="noopener" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a> &nbsp;&nbsp; <a href="https://github.com/alebaffa" target="_blank" rel="noopener" title="Github"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a> &nbsp;&nbsp; <a href="https://www.linkedin.com/alessandrobaffa" target="_blank" rel="noopener" title="Linkedin"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a> &nbsp;&nbsp; <a href="https://www.facebook.com/alessandro.baffa" target="_blank" rel="noopener" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a> &nbsp;
+    </div><strong></strong>
+    <p style="color:grey;">© 2021 Alessandro Baffa.  <a href="https://creativecommons.org/licenses/by/4.0/">Some rights reserved</a>.</p>
+</footer>
+</div>
+    </body>
+</html>

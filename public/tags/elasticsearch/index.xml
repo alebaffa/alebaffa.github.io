@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>elasticsearch on Alessandro Baffa</title>
+    <link>https://alebaffa.eth.link/tags/elasticsearch/</link>
+    <description>Recent content in elasticsearch on Alessandro Baffa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 22 Feb 2018 19:59:13 +0900</lastBuildDate>
+    
+	<atom:link href="https://alebaffa.eth.link/tags/elasticsearch/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Improving the development experience: Jupyter for Elasticsearch</title>
+      <link>https://alebaffa.eth.link/post/elastic-search-jupyter/</link>
+      <pubDate>Thu, 22 Feb 2018 19:59:13 +0900</pubDate>
+      
+      <guid>https://alebaffa.eth.link/post/elastic-search-jupyter/</guid>
+      <description>I have been asked to extract data from Elasticsearch and I had no clue of what kind of data were stored inside of it. Moreover, there was a lack of documentation and the only thing that could help me were some old Python scripts written by an old colleague.
+Fortunately, Python is pretty damn good when it comes to readability.
+So, because I am working to improve the development experience of my team and I am messing around with Jupyter, I thought I could create a Jupyter notebook with a super simple Elasticsearch client in Python 3 that supports a connection with a proxy (vital, if working in a company).</description>
+    </item>
+    
+  </channel>
+</rss>

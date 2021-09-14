@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>spring-boot on Alessandro Baffa</title>
+    <link>https://alebaffa.eth.link/tags/spring-boot/</link>
+    <description>Recent content in spring-boot on Alessandro Baffa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 23 Mar 2018 23:02:43 +0900</lastBuildDate>
+    
+	<atom:link href="https://alebaffa.eth.link/tags/spring-boot/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Unit testing a static custom logger in Spring Boot and log4j2</title>
+      <link>https://alebaffa.eth.link/post/spring-boot-custom-logger-log4j2/</link>
+      <pubDate>Fri, 23 Mar 2018 23:02:43 +0900</pubDate>
+      
+      <guid>https://alebaffa.eth.link/post/spring-boot-custom-logger-log4j2/</guid>
+      <description>Last time I wrote a post about how to unit test a custom logger with log4j2. Today I migrated another custom logger from log4j 1.x to log4j 2.x, but this time it was encapsulated in a Spring Boot component as a static class attribute.
+Custom logger You have a simple custom logger
+public class SimpleCustomLogger { private final ExtendedLoggerWrapper log; private SimpleCustomLogger(final Logger log) { this.log = new ExtendedLoggerWrapper((AbstractLogger) log, log.</description>
+    </item>
+    
+  </channel>
+</rss>

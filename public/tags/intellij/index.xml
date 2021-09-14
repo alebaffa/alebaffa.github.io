@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IntelliJ on Alessandro Baffa</title>
+    <link>https://alebaffa.eth.link/tags/intellij/</link>
+    <description>Recent content in IntelliJ on Alessandro Baffa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Feb 2018 23:19:11 +0900</lastBuildDate>
+    
+	<atom:link href="https://alebaffa.eth.link/tags/intellij/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Debug a Java Spring Boot application in Docker from IntelliJ</title>
+      <link>https://alebaffa.eth.link/post/debug-java-docker-compose-intellij/</link>
+      <pubDate>Wed, 28 Feb 2018 23:19:11 +0900</pubDate>
+      
+      <guid>https://alebaffa.eth.link/post/debug-java-docker-compose-intellij/</guid>
+      <description>You have a Java Spring Boot application built with Gradle in a Docker container and you need to debug it from your favorite IDE on your host machine (IntelliJ).
+You can do it by attaching the remote debugger in IntelliJ to your Java application running in Docker.
+Steps Open port :5005 in the container In this example the Java container is created using docker-compose. All you need to do here is to open the port :5005:</description>
+    </item>
+    
+  </channel>
+</rss>

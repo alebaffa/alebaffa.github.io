@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+        <title>jupyter-notebook | Alessandro Baffa</title>
+        <meta name="description" content="jupyter-notebook">
+        <meta property="og:site_name" content="jupyter-notebook" />
+        <meta property="og:title" content="Alessandro Baffa" />
+        <meta property="og:description" content=""/>
+        <meta property="og:image" content="https://alebaffa.eth.link/images/author.png" />
+    
+    
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    
+    <meta name="keywords" content="fast, hugo, theme, minimal, gruvbox">
+    <link rel="icon" type="image/svg" href='https://alebaffa.eth.link'/>
+    <meta name="author" content='jane_doe'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.68.3" />
+    
+    <link rel="stylesheet" href="https://alebaffa.eth.link/sass/main.min.2ec5574c3cc6d0e06666d718ad1606a880afc23333cec89d3843ff7e4db2bfe8.css" type="text/css" media="screen" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
+
+    
+
+    
+
+    
+    <link rel="alternate" type="application/rss+xml" href="https://alebaffa.eth.link/tags/jupyter-notebook/index.xml" title="Alessandro Baffa" />
+    </head>
+
+<body>
+      <div class="line" id="scrollIndicator"></div>
+      <div class="main"><div class="title">
+  <div class="name">
+    <h2><a href="https://alebaffa.eth.link"
+	   style="text-decoration: none; color: inherit;">Hi!</a></h2>
+  </div>
+  <div class="color-scheme">
+    <input type="checkbox" class="checkbox" id="chk" />
+    <label class="label" for="chk">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+      <div class="ball"></div>
+    </label>
+  </div>
+</div>
+<script>
+  const themeSetter = (theme) => {
+      document.body.classList.toggle('dark')
+      localStorage.setItem('theme', theme)
+      blockSwitcher()
+  }
+
+  const blockSwitcher = () => [...document.getElementsByTagName("BLOCKQUOTE")]
+	.forEach(b => b.classList.toggle('dark'))
+
+  const styleSwapper = () => {
+      document.body.classList.add('back-transition')
+      if (localStorage.getItem('theme') === 'dark') themeSetter('light')
+      else if (localStorage.getItem('theme') === 'light') themeSetter('dark')
+  }
+
+  if (localStorage.getItem('theme') === 'dark'){
+      themeSetter('dark')
+      document.addEventListener("DOMContentLoaded", blockSwitcher)
+  }
+ else localStorage.setItem('theme', 'light')
+
+  document.getElementById('chk').addEventListener('change',styleSwapper);
+
+  window.addEventListener("scroll", () => {
+      let height = document.documentElement.scrollHeight
+          - document.documentElement.clientHeight;
+      if(height >= 500){
+	  let winScroll = document.body.scrollTop
+              || document.documentElement.scrollTop;
+	  let scrolled = (winScroll / height) * 100;
+	  document.getElementById("scrollIndicator").style.width = scrolled + "%";
+      }
+  });
+</script>
+
+<br>
+    <h2 class="post-title"><a class="go-back" href="https://alebaffa.eth.link">
+	<i class="far fa-caret-square-left"></i> </a>jupyter-notebook</h2>
+        
+        
+          
+            <div class="post-item">
+              
+                <well class="well">
+                  <h3><a class="link" href="https://alebaffa.eth.link/post/jupyter-import-notebook/">Jupyter: the easiest way to import code from another notebook</a>
+                    
+                    by <a class="link" href="">Alessandro</a></h3>
+                  
+                    <h4>February 27, 2018 | Reading Time: 1 min </h4>
+                    <span class="tags">
+                        
+                        <h5><a class="tag" href='https://alebaffa.eth.link/tags/jupyter-notebook'>jupyter-notebook</a></h5>
+                        
+                    </span>
+                    <p>Yesterday I published a post about how to create a module in jupyter.
+There is another way to quickly import the code from another notebook. Say you are working in your_notebook.ipynb and you need a Python class class Hello(): from another_notebook.ipynb. To import it you just need to do the following:
+# in your_notebook.ipynb do %run another_notebook.ipynb hello = Hello() Voila, with %run you access the code from the other notebook.</p>
+                </well>
+                            
+            </div><br>
+          
+            <div class="post-item">
+              
+                <well class="well">
+                  <h3><a class="link" href="https://alebaffa.eth.link/post/create_modules_in_jupyter_notebooks/">Create modules in Jupyter notebooks</a>
+                    
+                    by <a class="link" href="">Alessandro</a></h3>
+                  
+                    <h4>February 26, 2018 | Reading Time: 1 min </h4>
+                    <span class="tags">
+                        
+                        <h5><a class="tag" href='https://alebaffa.eth.link/tags/jupyter-notebook'>jupyter-notebook</a></h5>
+                        
+                        <h5><a class="tag" href='https://alebaffa.eth.link/tags/python'>python</a></h5>
+                        
+                    </span>
+                    <p>In my current attempt to improve the development experience of my team, I am trying to introduce Jupyter notebooks to share knowledge about some data analysis scripts developed over the last years. I can copy paste the code into a notebook, run the single cells to show the result below the code, export the notebook as markdown and push it to Bitbucket: voila, documentation.
+Though, a disadvantage of Jupyter notebooks over Python scripts is that they cannot be linked to each other.</p>
+                </well>
+                            
+            </div><br>
+          
+            <div class="post-item">
+              
+                <well class="well">
+                  <h3><a class="link" href="https://alebaffa.eth.link/post/elastic-search-jupyter/">Improving the development experience: Jupyter for Elasticsearch</a>
+                    
+                    by <a class="link" href="">Alessandro</a></h3>
+                  
+                    <h4>February 22, 2018 | Reading Time: 2 min </h4>
+                    <span class="tags">
+                        
+                        <h5><a class="tag" href='https://alebaffa.eth.link/tags/elasticsearch'>elasticsearch</a></h5>
+                        
+                        <h5><a class="tag" href='https://alebaffa.eth.link/tags/jupyter-notebook'>jupyter-notebook</a></h5>
+                        
+                    </span>
+                    <p>I have been asked to extract data from Elasticsearch and I had no clue of what kind of data were stored inside of it. Moreover, there was a lack of documentation and the only thing that could help me were some old Python scripts written by an old colleague.
+Fortunately, Python is pretty damn good when it comes to readability.
+So, because I am working to improve the development experience of my team and I am messing around with Jupyter, I thought I could create a Jupyter notebook with a super simple Elasticsearch client in Python 3 that supports a connection with a proxy (vital, if working in a company).</p>
+                </well>
+                            
+            </div><br>
+          
+        
+<footer id="footer">
+    <strong></strong>
+    <div class="social">
+        &nbsp; <a href="https://twitter.com/alebaffa" target="_blank" rel="noopener" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a> &nbsp;&nbsp; <a href="https://github.com/alebaffa" target="_blank" rel="noopener" title="Github"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a> &nbsp;&nbsp; <a href="https://www.linkedin.com/alessandrobaffa" target="_blank" rel="noopener" title="Linkedin"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a> &nbsp;&nbsp; <a href="https://www.facebook.com/alessandro.baffa" target="_blank" rel="noopener" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a> &nbsp;
+    </div><strong></strong>
+    <p style="color:grey;">© 2021 Alessandro Baffa.  <a href="https://creativecommons.org/licenses/by/4.0/">Some rights reserved</a>.</p>
+</footer>
+</div>
+    </body>
+</html>
