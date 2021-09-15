@@ -5,10 +5,10 @@ draft: false
 tags: ["personal-improvement"]
 description: "Personal recommendations for Japanese learners"
 ---
-This is a list of resources that I'm finding exceptional for my Japanese studies. I'm at a JLPT N4 level at the moment.
+This is a list of resources that is working well for my Japanese studies.
 
 ## Reading
-Read, read, read. You need to read until you destroy the visual and mental barrier of kanji. Until you don't reach that point, your eyes will naturally tend to skip the entire content to pass to something else you can read without effort. So, force your mind to stop and read it all until your brain will stop making antibodies for kanji.
+You need to read until you destroy the visual and mental barrier of kanji. Until you don't reach that point, your eyes will naturally tend to skip the entire content to pass to something else you can read without effort. So, force your mind to stop and read it all until your brain will stop making antibodies for kanji.
 
 The problem, as always, is to find the right content for your level because you also don't want to spend 25 minutes to read two lines.
 
@@ -19,10 +19,9 @@ this is also very useful:
 - [LingQ](https://www.lingq.com/). Not only it's full of content for every level, but most importantly you can also import in it whatever the content in Japanese you are reading/watching. It will analyze the text and allow you to save words and sentences in an internal SRS, with automatic translation (made by dictionaries and contributors). **Advantage compared to Anki**: you can import videos from YouTube (it basically imports its subtitles from it), so you can analyze all its transcript and study those sentences you are interested to analyze and learn. Basically, LingQ allows to conveniently automate something that you can do manually with effort with Anki (and lots of time. Time that I do not have). 
 
 ### Reading stuff for the context you need
-So, I am a software engineer and I know I will never find anything of technology-related on NHK Easy News. So, the only sources are the standard online magazine that are not easy to read at all (yes, there's a lot of katakana, but still also a tons of kanji unknown for JLPT N4/N3).
 
-My trick:
-- **Twitter**. 280 characters are shorter than an article, and also it is where people communicate as they do in real life, with slang and whatever. Follow people in the context you're interested to and do the effort to read what they write without clicking on "*translate this tweet*". Use browsers plugins to translate the kanji you don't know.
+- **Twitter**. 280 characters are shorter than an article. Follow people in the context you're interested to and do the effort to read what they write without clicking on "*translate this tweet*". Use browsers plugins to translate the kanji you don't know or imprort them into LingQ.
+- **Online magazines**. If you want to build up vocabulary that is specific to a particular context, you can't avoid reading more complicated stuff. I work with software engineering and blockchain, so for me [Coinpost.jp](https://coinpost.jp/) or [neweconomy.jp](https://www.neweconomy.jp/) are the must-read to stay up-to-date with what happens in JP. Again, browser plugins or import into LingQ. Yes, there's a lot of katakana in technology, but surely not enough for my JLPT N4.
 
 
 ## Listening
