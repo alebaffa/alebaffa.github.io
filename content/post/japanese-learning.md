@@ -70,7 +70,7 @@ If you live in Japan most cities organize local Japanese classes managed by volu
 - they are totally unstructured. It's rare to find volunteers who have a background of language teaching, most of them are just nice people who want to help. They speak a lot, they are very curious people and, in most cases, they have no idea how to interact precisely with your level of Japanese. This is great because it stretches your comprehension abilities;
 - you can review what you have studied on your own. This is what I do: I study some grammar at home and I prepare few sentences and questions for them, so we can speak about them, make more examples and basically build up the topic of the lesson each time we meet.
 
-These classes are up to you, really. The volunteers are the best resource you can find, but you need to understand how to take advantage of it properly and not waste your time.
+These classes are up to you, really. The volunteers are the best resource you can find, but you need to understand how to take advantage of them properly and not waste your time.
 
 
 ## Worth mentioning resources
