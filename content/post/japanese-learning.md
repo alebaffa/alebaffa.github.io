@@ -65,7 +65,15 @@ While it's true that you can do this with whatever the content (just stop the vi
 * [日本語でシャドーイング with しろくろパパ](https://linktr.ee/shirokuropapa)
 * [Miku Real Japanese](https://www.youtube.com/channel/UCsQCbl3a9FtYvA55BxdzYiQ) (not free,  you have to buy it)
 
-## Worth mentioning
+## Volunteers Japanese school (for Japan residents)
+If you live in Japan most cities organize local Japanese classes managed by volunteers, typically Japanese elderly people who want to help foreigners with their studies. They are free (or extremely cheap, mostly a symbolic cost, really) and sometimes they also provide some study material. There are two things I like of these classes: 
+- they are totally unstructured. It's rare to find volunteers who have a background of language teaching, most of them are just nice people who want to help. They speak a lot, they are very curious people and, in most cases, they have no idea how to interact precisely with your level of Japanese. This is great because it stretches your comprehension abilities;
+- you can review what you have studied on your own. This is what I do: I study some grammar at home and I prepare few sentences and questions for them, so we can speak about them, make more examples and basically build up the topic of the lesson each time we meet.
+
+These classes are up to you, really. The volunteers are the best resource you can find, but you need to understand how to take advantage of it properly and not waste your time.
+
+
+## Worth mentioning resources
 Funny and useful:
 * [Game Gengo ゲーム言語](https://www.youtube.com/c/GameGengo), study Japanese sentences and patterns from videogames. Fantastic!
 * [Hiro JP Academy](https://www.youtube.com/channel/UC94tM7a6-QNOg6ze1ZzakrA/videos). Study Japanese sentences and patterns through videos from anime.
