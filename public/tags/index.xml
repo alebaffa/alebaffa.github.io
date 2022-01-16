@@ -2,192 +2,201 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Alessandro Baffa</title>
-    <link>https://alebaffa.eth.link/tags/</link>
+    <link>https://alebaffa.github.io/tags/</link>
     <description>Recent content in Tags on Alessandro Baffa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Sep 2021 12:23:42 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 16 Jan 2022 18:27:29 +0100</lastBuildDate>
     
-	<atom:link href="https://alebaffa.eth.link/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://alebaffa.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>general</title>
+      <link>https://alebaffa.github.io/tags/general/</link>
+      <pubDate>Sun, 16 Jan 2022 18:27:29 +0100</pubDate>
+      
+      <guid>https://alebaffa.github.io/tags/general/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>personal</title>
-      <link>https://alebaffa.eth.link/tags/personal/</link>
+      <link>https://alebaffa.github.io/tags/personal/</link>
       <pubDate>Sun, 12 Sep 2021 12:23:42 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/tags/personal/</guid>
+      <guid>https://alebaffa.github.io/tags/personal/</guid>
       <description></description>
     </item>
     
     <item>
       <title>personal-improvement</title>
-      <link>https://alebaffa.eth.link/tags/personal-improvement/</link>
+      <link>https://alebaffa.github.io/tags/personal-improvement/</link>
       <pubDate>Sun, 12 Sep 2021 12:23:42 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/tags/personal-improvement/</guid>
+      <guid>https://alebaffa.github.io/tags/personal-improvement/</guid>
       <description></description>
     </item>
     
     <item>
       <title>crypto</title>
-      <link>https://alebaffa.eth.link/tags/crypto/</link>
+      <link>https://alebaffa.github.io/tags/crypto/</link>
       <pubDate>Wed, 10 Mar 2021 08:17:31 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/tags/crypto/</guid>
+      <guid>https://alebaffa.github.io/tags/crypto/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ipfs</title>
-      <link>https://alebaffa.eth.link/tags/ipfs/</link>
+      <link>https://alebaffa.github.io/tags/ipfs/</link>
       <pubDate>Sat, 27 Jun 2020 15:35:00 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/tags/ipfs/</guid>
+      <guid>https://alebaffa.github.io/tags/ipfs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>log4j</title>
-      <link>https://alebaffa.eth.link/tags/log4j/</link>
+      <link>https://alebaffa.github.io/tags/log4j/</link>
       <pubDate>Fri, 23 Mar 2018 23:02:43 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/tags/log4j/</guid>
+      <guid>https://alebaffa.github.io/tags/log4j/</guid>
       <description></description>
     </item>
     
     <item>
       <title>log4j2</title>
-      <link>https://alebaffa.eth.link/tags/log4j2/</link>
+      <link>https://alebaffa.github.io/tags/log4j2/</link>
       <pubDate>Fri, 23 Mar 2018 23:02:43 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/tags/log4j2/</guid>
+      <guid>https://alebaffa.github.io/tags/log4j2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>spring-boot</title>
-      <link>https://alebaffa.eth.link/tags/spring-boot/</link>
+      <link>https://alebaffa.github.io/tags/spring-boot/</link>
       <pubDate>Fri, 23 Mar 2018 23:02:43 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/tags/spring-boot/</guid>
+      <guid>https://alebaffa.github.io/tags/spring-boot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>unit test</title>
-      <link>https://alebaffa.eth.link/tags/unit-test/</link>
+      <link>https://alebaffa.github.io/tags/unit-test/</link>
       <pubDate>Fri, 23 Mar 2018 23:02:43 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/tags/unit-test/</guid>
+      <guid>https://alebaffa.github.io/tags/unit-test/</guid>
       <description></description>
     </item>
     
     <item>
       <title>debug</title>
-      <link>https://alebaffa.eth.link/tags/debug/</link>
+      <link>https://alebaffa.github.io/tags/debug/</link>
       <pubDate>Wed, 28 Feb 2018 23:19:11 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/tags/debug/</guid>
+      <guid>https://alebaffa.github.io/tags/debug/</guid>
       <description></description>
     </item>
     
     <item>
       <title>docker</title>
-      <link>https://alebaffa.eth.link/tags/docker/</link>
+      <link>https://alebaffa.github.io/tags/docker/</link>
       <pubDate>Wed, 28 Feb 2018 23:19:11 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/tags/docker/</guid>
+      <guid>https://alebaffa.github.io/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>docker-compose</title>
-      <link>https://alebaffa.eth.link/tags/docker-compose/</link>
+      <link>https://alebaffa.github.io/tags/docker-compose/</link>
       <pubDate>Wed, 28 Feb 2018 23:19:11 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/tags/docker-compose/</guid>
+      <guid>https://alebaffa.github.io/tags/docker-compose/</guid>
       <description></description>
     </item>
     
     <item>
       <title>IntelliJ</title>
-      <link>https://alebaffa.eth.link/tags/intellij/</link>
+      <link>https://alebaffa.github.io/tags/intellij/</link>
       <pubDate>Wed, 28 Feb 2018 23:19:11 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/tags/intellij/</guid>
+      <guid>https://alebaffa.github.io/tags/intellij/</guid>
       <description></description>
     </item>
     
     <item>
       <title>java</title>
-      <link>https://alebaffa.eth.link/tags/java/</link>
+      <link>https://alebaffa.github.io/tags/java/</link>
       <pubDate>Wed, 28 Feb 2018 23:19:11 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/tags/java/</guid>
+      <guid>https://alebaffa.github.io/tags/java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>jupyter-notebook</title>
-      <link>https://alebaffa.eth.link/tags/jupyter-notebook/</link>
+      <link>https://alebaffa.github.io/tags/jupyter-notebook/</link>
       <pubDate>Tue, 27 Feb 2018 19:57:31 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/tags/jupyter-notebook/</guid>
+      <guid>https://alebaffa.github.io/tags/jupyter-notebook/</guid>
       <description></description>
     </item>
     
     <item>
       <title>python</title>
-      <link>https://alebaffa.eth.link/tags/python/</link>
+      <link>https://alebaffa.github.io/tags/python/</link>
       <pubDate>Mon, 26 Feb 2018 21:38:37 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/tags/python/</guid>
+      <guid>https://alebaffa.github.io/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CI</title>
-      <link>https://alebaffa.eth.link/tags/ci/</link>
+      <link>https://alebaffa.github.io/tags/ci/</link>
       <pubDate>Fri, 23 Feb 2018 21:06:57 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/tags/ci/</guid>
+      <guid>https://alebaffa.github.io/tags/ci/</guid>
       <description></description>
     </item>
     
     <item>
       <title>jenkins</title>
-      <link>https://alebaffa.eth.link/tags/jenkins/</link>
+      <link>https://alebaffa.github.io/tags/jenkins/</link>
       <pubDate>Fri, 23 Feb 2018 21:06:57 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/tags/jenkins/</guid>
+      <guid>https://alebaffa.github.io/tags/jenkins/</guid>
       <description></description>
     </item>
     
     <item>
       <title>elasticsearch</title>
-      <link>https://alebaffa.eth.link/tags/elasticsearch/</link>
+      <link>https://alebaffa.github.io/tags/elasticsearch/</link>
       <pubDate>Thu, 22 Feb 2018 19:59:13 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/tags/elasticsearch/</guid>
+      <guid>https://alebaffa.github.io/tags/elasticsearch/</guid>
       <description></description>
     </item>
     
     <item>
       <title>conferences</title>
-      <link>https://alebaffa.eth.link/tags/conferences/</link>
+      <link>https://alebaffa.github.io/tags/conferences/</link>
       <pubDate>Mon, 31 Oct 2016 12:29:46 +0200</pubDate>
       
-      <guid>https://alebaffa.eth.link/tags/conferences/</guid>
+      <guid>https://alebaffa.github.io/tags/conferences/</guid>
       <description></description>
     </item>
     
     <item>
       <title>refactoring</title>
-      <link>https://alebaffa.eth.link/tags/refactoring/</link>
+      <link>https://alebaffa.github.io/tags/refactoring/</link>
       <pubDate>Sun, 09 Oct 2016 21:17:23 +0200</pubDate>
       
-      <guid>https://alebaffa.eth.link/tags/refactoring/</guid>
+      <guid>https://alebaffa.github.io/tags/refactoring/</guid>
       <description></description>
     </item>
     

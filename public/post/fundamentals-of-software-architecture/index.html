@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+        <title>[Book] Fundamentals of Software Architecture - Notes | Alessandro Baffa</title>
+        <meta name="description" content="[Book] Fundamentals of Software Architecture - Notes">
+        <meta property="og:site_name" content="[Book] Fundamentals of Software Architecture - Notes" />
+        <meta property="og:title" content="Alessandro Baffa" />
+        <meta property="og:description" content="Chapter 1: Introduction The four dimensions that define software architecture
+ Structure, the type of the architecture the system is implemented in (microservices, layered, microkernel&hellip;). Architecture characteristics, the success criteria of a system, the -ilities (reliability, elasticity, availability, security, agility, fault tolerance, deployability, testability, etc&hellip;) Architectural decisions, *the rules *of how a system should be constructed. For example, in a layered architecture the presentation layer can access the database only through the business layer."/>
+        <meta property="og:image" content="https://alebaffa.github.io/images/author.png" />
+    
+    
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    
+    <meta name="keywords" content="fast, hugo, theme, minimal, gruvbox">
+    <link rel="icon" type="image/svg" href='https://alebaffa.github.io'/>
+    <meta name="author" content='jane_doe'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.68.3" />
+    
+    <link rel="stylesheet" href="https://alebaffa.github.io/sass/main.min.2ec5574c3cc6d0e06666d718ad1606a880afc23333cec89d3843ff7e4db2bfe8.css" type="text/css" media="screen" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
+
+    
+
+    
+
+    
+    </head>
+
+<body>
+      <div class="line" id="scrollIndicator"></div>
+      <div class="main"><div class="title">
+  <div class="name">
+    <h2><a href="https://alebaffa.github.io"
+	   style="text-decoration: none; color: inherit;">Hi!</a></h2>
+  </div>
+  <div class="color-scheme">
+    <input type="checkbox" class="checkbox" id="chk" />
+    <label class="label" for="chk">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+      <div class="ball"></div>
+    </label>
+  </div>
+</div>
+<script>
+  const themeSetter = (theme) => {
+      document.body.classList.toggle('dark')
+      localStorage.setItem('theme', theme)
+      blockSwitcher()
+  }
+
+  const blockSwitcher = () => [...document.getElementsByTagName("BLOCKQUOTE")]
+	.forEach(b => b.classList.toggle('dark'))
+
+  const styleSwapper = () => {
+      document.body.classList.add('back-transition')
+      if (localStorage.getItem('theme') === 'dark') themeSetter('light')
+      else if (localStorage.getItem('theme') === 'light') themeSetter('dark')
+  }
+
+  if (localStorage.getItem('theme') === 'dark'){
+      themeSetter('dark')
+      document.addEventListener("DOMContentLoaded", blockSwitcher)
+  }
+ else localStorage.setItem('theme', 'light')
+
+  document.getElementById('chk').addEventListener('change',styleSwapper);
+
+  window.addEventListener("scroll", () => {
+      let height = document.documentElement.scrollHeight
+          - document.documentElement.clientHeight;
+      if(height >= 500){
+	  let winScroll = document.body.scrollTop
+              || document.documentElement.scrollTop;
+	  let scrolled = (winScroll / height) * 100;
+	  document.getElementById("scrollIndicator").style.width = scrolled + "%";
+      }
+  });
+</script>
+
+<section class="intro">
+    
+    <div class="post-header">
+    <h2 class="post-title"><a class="go-back" href="https://alebaffa.github.io/post/">
+	      <i class="far fa-caret-square-left"></i></a> [Book] Fundamentals of Software Architecture - Notes</h2>
+    </div>
+    
+    <p class="post-dets">Published on: January 16, 2022
+        | Reading Time: 4 min | Last Modified : January 16, 2022
+        <br>
+    </p>
+    <span class="tags">
+        
+        <h5><a class="tag" href='https://alebaffa.github.io/tags/general'>general</a></h5>
+        
+    </span>
+    
+    <div class="content">
+        <p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1642342998250/dgSGYyfE9.jpeg" alt="cover book.jpg"></p>
+<h3 id="chapter-1-introduction">Chapter 1: Introduction</h3>
+<p><strong>The four dimensions that define software architecture</strong></p>
+<ol>
+<li><strong>Structure</strong>, the type of the architecture the system is implemented in (microservices, layered, microkernel&hellip;).</li>
+<li><strong>Architecture characteristics</strong>, the success criteria of a system, the <em>-ilities</em> (reliability, elasticity, availability, security, agility, fault tolerance, deployability, testability, etc&hellip;)</li>
+<li><strong>Architectural decisions</strong>, *the rules *of how a system should be constructed. For example, in a layered architecture the presentation layer can access the database only through the business layer.</li>
+<li><strong>Design principles</strong>, a set of implementation guidelines, that are not forced rules (which instead is an architectural decision) and which choice is left to the developers. For example, &ldquo;<em>in a microservices architecture the communication between services should leverage asynchronous messaging</em>&quot;.</li>
+</ol>
+<p><strong>Eight core expectations of a software architect</strong></p>
+<ol>
+<li><strong>Make architecture decisions</strong>. The architect should make architectural decisions (e.g. reactive based framework) and give design principles (e.g. asynchronous messaging) to guide the development teams make their own technical good decisions (e.g. React, Vue, AMQP, etc&hellip;).</li>
+<li><strong>Continually analyze the architecture</strong>.</li>
+<li><strong>Keep current with latest trends</strong>. Follow technology blogs, check technology radars, etc and find as much time as possible to keep up to date with technologies, tools, platforms and techniques.</li>
+<li>Ensure compliance with decisions</li>
+<li>Diverse exposure and experience</li>
+<li>Have business domain knowledge</li>
+<li>Possess interpersonal skills</li>
+<li>Understand and navigate politics</li>
+</ol>
+<p><strong>The Laws of Software Architecture</strong></p>
+<ol>
+<li>First Law: <em>Everything is a trade-off</em></li>
+<li>Second Law: <em>Why is more important than How</em></li>
+</ol>
+<h3 id="chapter-2-architectural-thinking">Chapter 2: Architectural Thinking</h3>
+<p><strong>Architecture versus design/development</strong>
+An architect deals with the four dimensions mentioned before and guides the design choices/implementation details managed by the developers, also through leadership and mentoring. There must be bi-directional communication between the architect and the developers team.</p>
+<p><strong>The three levels of knowledge in the knowledge triangle</strong>
+From top to bottom:</p>
+<ol>
+<li><strong>Things you know</strong>. Developers&rsquo; early career focuses mostly on this, which are also the <em>things you must maintain</em>.  This is related to the importance to keep a deep knowledge on few technical specialties.</li>
+<li><strong>Things you know you don&rsquo;t know</strong>. Advancing in one&rsquo;s career incidentally increases this level.</li>
+<li><strong>Things you don&rsquo;t know you don&rsquo;t know</strong>.</li>
+</ol>
+<p>This reminds me of the  <a href="https://en.wikipedia.org/wiki/Four_stages_of_competence">Four Stages of Competence</a> .</p>
+<p><strong>Focus more on technical breadth rather than technical depth</strong>
+Taking <em>the three levels of knowledge</em> as a reference, the <em>technical breadth</em> includes the 1. and 2. . An architect must also maintain few deep technical specialties.</p>
+<blockquote>
+<p>Developers transitioning to the architect role may have to change the way they view knowledge acquisition. Balancing their portfolio of knowledge regarding depth versus breadth is something every developer should consider throughout their career.</p>
+</blockquote>
+<p><strong>Ways of maintaining your technical depth and remaining hands-on as an architect</strong></p>
+<ul>
+<li>Develop Proof of Concept. When doing so, an architect should try to produce code that is clean and can be followed as an example by the development team.</li>
+<li>Get involved in the development of some features.</li>
+<li>Bug fixes</li>
+<li>Develop automation and analyzing tools (check out <a href="https://www.archunit.org/">https://www.archunit.org/</a>)</li>
+<li>Code reviews</li>
+</ul>
+<h3 id="chapter-3-modularity">Chapter 3: Modularity</h3>
+<p><strong>Abstractness, Instability and Distance from the main sequence</strong></p>
+<ul>
+<li>Abstractness measures the ratio between abstract elements (interfaces, abstract classes..) and concrete elements (concrete class).</li>
+<li>Instability measures the ratio between incoming coupling (<em>afferent coupling</em>, functions, components..) and outgoing coupling (<em>efferent coupling</em>, connections to other components).</li>
+</ul>
+<p>The Main Sequence is a derived metrics based on Abstractness and Instability.</p>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1642351293595/kzEkJdMJx.png" alt="image.png"></p>
+<blockquote>
+<p>The closer to the line, the better balanced the class. Classes that fall too far into the upper-righthand corner enter into what architects call the zone of uselessness: code that is too abstract becomes difficult to use. Conversely, code that falls into the lower-lefthand corner enter the zone of pain: code with too much implementation and not enough abstraction becomes brittle and hard to maintain.</p>
+</blockquote>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1642351366891/lnvY0jVol.png" alt="image.png"></p>
+<p><strong>What is meant by the term connascence?</strong></p>
+<blockquote>
+<p>Two components are connascent if a change in one would require the other to be modified in order to maintain the overall correctness of the system.</p>
+</blockquote>
+<p><em>Connascence</em> is an old topic that can be found in many other books related to clean code, refactoring, code smells. A useful link is <a href="https://codesai.com/2017/01/about-connascence">this</a> .</p>
+<h3 id="chapter-4-architecture-characteristics-defined">Chapter 4: Architecture Characteristics Defined</h3>
+<p><strong>Three criteria to be considered an architecture characteristic</strong>
+An architecture characteristic meets three criteria:</p>
+<ol>
+<li>Specifies a nondomain design consideration</li>
+<li>Influences some structural aspect of the design</li>
+<li>Is critical or important to application success</li>
+</ol>
+<p><strong>Implicit and explicit characteristics</strong></p>
+<blockquote>
+<p>Implicit ones rarely appear in requirements, yet they’re necessary for project success. For example, availability, reliability, and security underpin virtually all applications, yet they’re rarely specified in design documents. Architects must use their knowledge of the problem domain to uncover these architecture characteristics during the analysis phase. [&hellip;] Explicit architecture characteristics appear in requirements documents or other specific instructions.</p>
+</blockquote>
+<p><strong>Operational, Structural and Cross-Cutting characteristics</strong></p>
+<ul>
+<li>**Operational **architecture characteristics cover capabilities such as performance, scalability, elasticity, availability, and reliability;</li>
+<li><strong>Structural</strong> characteristics are about code quality concerns, such as good modularity, controlled coupling between components, readable code, and a host of other internal quality assessments. Configurability, Extendibility, Installability, Localization, Portability, etc.;</li>
+<li><strong>Cross-Cutting</strong> characteristics fall outside or defy categorization yet form important design constraints and considerations. Accessibility, Authentication, Authorization, Security, Privacy, Legal, etc.</li>
+</ul>
+<p>The International Organization for Standards (ISO) publishes a list of characteristics organized by capabilities. Check it out <a href="https://iso25000.com/index.php/en/iso-25000-standards/iso-25010">here</a>.</p>
+
+    </div>
+    
+</section>
+<footer id="footer">
+    <strong></strong>
+    <div class="social">
+        &nbsp; <a href="https://twitter.com/alebaffa" target="_blank" rel="noopener" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a> &nbsp;&nbsp; <a href="https://github.com/alebaffa" target="_blank" rel="noopener" title="Github"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a> &nbsp;&nbsp; <a href="https://www.linkedin.com/alessandrobaffa" target="_blank" rel="noopener" title="Linkedin"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a> &nbsp;&nbsp; <a href="https://www.facebook.com/alessandro.baffa" target="_blank" rel="noopener" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a> &nbsp;
+    </div><strong></strong>
+    <p style="color:grey;">© 2021 Alessandro Baffa.  <a href="https://creativecommons.org/licenses/by/4.0/">Some rights reserved</a>.</p>
+</footer>
+</div>
+    </body>
+</html>

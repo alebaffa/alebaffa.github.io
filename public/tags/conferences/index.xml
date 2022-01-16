@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>conferences on Alessandro Baffa</title>
-    <link>https://alebaffa.eth.link/tags/conferences/</link>
+    <link>https://alebaffa.github.io/tags/conferences/</link>
     <description>Recent content in conferences on Alessandro Baffa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 31 Oct 2016 12:29:46 +0200</lastBuildDate>
     
-	<atom:link href="https://alebaffa.eth.link/tags/conferences/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://alebaffa.github.io/tags/conferences/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Back from SoCraTes France 2016</title>
-      <link>https://alebaffa.eth.link/post/socrates-france/</link>
+      <link>https://alebaffa.github.io/post/socrates-france/</link>
       <pubDate>Mon, 31 Oct 2016 12:29:46 +0200</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/socrates-france/</guid>
+      <guid>https://alebaffa.github.io/post/socrates-france/</guid>
       <description>My second time in a Software Craftsmanship and Testing (SoCraTes) conference and, as always, it has been an awesome experience.
 The self-made agenda SoCraTes is a non-conference, which means that there’s no predefined agenda, but instead it is created every day by the participants (the image above is the agenda of day 2). Everybody is more than welcome to propose sessions. They can be presentation of something you know, or open discussion about a topic you are curious about, or more simply a session where you want to learn something and you are looking for someone more experienced to help you.</description>
     </item>
     
     <item>
       <title>Global Day of Coderetreat 2016, Sophia Antipolis, France</title>
-      <link>https://alebaffa.eth.link/post/global-day-of-coderetreat/</link>
+      <link>https://alebaffa.github.io/post/global-day-of-coderetreat/</link>
       <pubDate>Sun, 23 Oct 2016 12:29:46 +0200</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/global-day-of-coderetreat/</guid>
+      <guid>https://alebaffa.github.io/post/global-day-of-coderetreat/</guid>
       <description>We did it! The Global Day of Coderetreat in Sophia Antipolis has been a great success! My first coderetreat ever, and I played the role of the organizer and facilitator. It’s an event that I started to organize in August and I have been lucky to find the support of the University of Nice-Sophia Antipolis and my company, Amadeus IT Group. In the organization of all this I have been hugely helped by other people who have been facilitators with me (we were 3 facilitators, 1 host and 2 facilitators/helpers).</description>
     </item>
     
     <item>
       <title>A Community of Professionals - SoCraTes UK</title>
-      <link>https://alebaffa.eth.link/post/socrates-uk/</link>
+      <link>https://alebaffa.github.io/post/socrates-uk/</link>
       <pubDate>Sun, 19 Jun 2016 21:28:33 +0200</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/socrates-uk/</guid>
+      <guid>https://alebaffa.github.io/post/socrates-uk/</guid>
       <description>A couple of weeks ago I participated for the first time to a SoCraTes event, one of the Software Craftsmanship international gatherings. SoCraTes (Software Craftsmanship and Testing) is an self-organized conference where the people from the international Software Craftsmanship Community meet and spend 3 days organizing themselves activities and talks around everything related to software craftsmanship: from the technical to the human aspects of it. There are few events of this kind every year (Italy, France, Germany, Belgium, Switzerland, Romania, Finland, Canaries) and I participated to the one in UK.</description>
     </item>
     

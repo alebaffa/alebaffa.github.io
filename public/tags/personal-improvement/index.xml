@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>personal-improvement on Alessandro Baffa</title>
-    <link>https://alebaffa.eth.link/tags/personal-improvement/</link>
+    <link>https://alebaffa.github.io/tags/personal-improvement/</link>
     <description>Recent content in personal-improvement on Alessandro Baffa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 12 Sep 2021 12:23:42 +0900</lastBuildDate>
     
-	<atom:link href="https://alebaffa.eth.link/tags/personal-improvement/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://alebaffa.github.io/tags/personal-improvement/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>日本語勉強 - Personal recommendations for Japanese learners</title>
-      <link>https://alebaffa.eth.link/post/japanese-learning/</link>
+      <link>https://alebaffa.github.io/post/japanese-learning/</link>
       <pubDate>Sun, 12 Sep 2021 12:23:42 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/japanese-learning/</guid>
-      <description>This is a list of resources that I&amp;rsquo;m finding exceptional for my Japanese studies. I&amp;rsquo;m at a JLPT N4 level at the moment.
-Reading Read, read, read. You need to read until you destroy the visual and mental barrier of kanji. Until you don&amp;rsquo;t reach that point, your eyes will naturally tend to skip the entire content to pass to something else you can read without effort. So, force your mind to stop and read it all until your brain will stop making antibodies for kanji.</description>
+      <guid>https://alebaffa.github.io/post/japanese-learning/</guid>
+      <description>This is a list of resources that is working well for my Japanese studies.
+Reading You need to read until you destroy the visual and mental barrier of kanji. Until you don&amp;rsquo;t reach that point, your eyes will naturally tend to skip the entire content to pass to something else you can read without effort. So, force your mind to stop and read it all until your brain will stop making antibodies for kanji.</description>
     </item>
     
   </channel>

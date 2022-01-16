@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>personal on Alessandro Baffa</title>
-    <link>https://alebaffa.eth.link/tags/personal/</link>
+    <link>https://alebaffa.github.io/tags/personal/</link>
     <description>Recent content in personal on Alessandro Baffa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 12 Sep 2021 12:23:42 +0900</lastBuildDate>
     
-	<atom:link href="https://alebaffa.eth.link/tags/personal/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://alebaffa.github.io/tags/personal/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>My current learning journey</title>
-      <link>https://alebaffa.eth.link/post/my-last-seven-months/</link>
+      <link>https://alebaffa.github.io/post/my-last-seven-months/</link>
       <pubDate>Thu, 25 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/my-last-seven-months/</guid>
+      <guid>https://alebaffa.github.io/post/my-last-seven-months/</guid>
       <description>I started my journey at Rakuten in June 2017 and, more precisely, I am Full Stack Engineer working for Rakuten Magazine. It&amp;rsquo;s a pretty new Web project, so it&amp;rsquo;s not big and we are very few people: 4 guys focused on Web and API (myself included), and 3 guys on Android/iOS.
 First huge difference from my previous job: here I can put my hands on literally everything. We have a total freedom to choose what technology stack to use, if it&amp;rsquo;s reasonable and well argumented.</description>
     </item>
     
     <item>
       <title>Changing Everything. Again.</title>
-      <link>https://alebaffa.eth.link/post/new-chapter-of-life/</link>
+      <link>https://alebaffa.github.io/post/new-chapter-of-life/</link>
       <pubDate>Sat, 18 Feb 2017 08:03:16 +0100</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/new-chapter-of-life/</guid>
+      <guid>https://alebaffa.github.io/post/new-chapter-of-life/</guid>
       <description>After 7 years spent in France I am officially moving to Tokyo, Japan, end of May 2017. I am finally going to join my wife, Sarah, after almost 5 years of long and hard distant relationship.
 Now, before to start with the burocracy madness and to move/sell/close/sign things, I am sitting here at home, in the first weekend after having resigned from my current company, trying to think about how many things I learned over the last 7 years.</description>
     </item>

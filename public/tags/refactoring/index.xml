@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>refactoring on Alessandro Baffa</title>
-    <link>https://alebaffa.eth.link/tags/refactoring/</link>
+    <link>https://alebaffa.github.io/tags/refactoring/</link>
     <description>Recent content in refactoring on Alessandro Baffa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 09 Oct 2016 21:17:23 +0200</lastBuildDate>
     
-	<atom:link href="https://alebaffa.eth.link/tags/refactoring/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://alebaffa.github.io/tags/refactoring/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Dependency Injection VS Extract and Override Factory Method</title>
-      <link>https://alebaffa.eth.link/post/racing-car-kata-refactoring/</link>
+      <link>https://alebaffa.github.io/post/racing-car-kata-refactoring/</link>
       <pubDate>Sun, 09 Oct 2016 21:17:23 +0200</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/racing-car-kata-refactoring/</guid>
+      <guid>https://alebaffa.github.io/post/racing-car-kata-refactoring/</guid>
       <description>The TextConverter exercise (in the Racing Car kata suite) is a very interesting exercise for refactoring legacy code. As I am reading Working Effectively with Legacy Code I found two ways of solving it.
 Refactoring can only be done safely with unit tests and so I did, rigourously in TDD. Though, in this blog post I am not going to show you all the testing process, but only the two ways of decoupling the dependency.</description>
     </item>

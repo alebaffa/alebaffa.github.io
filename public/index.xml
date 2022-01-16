@@ -2,20 +2,114 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Alessandro Baffa</title>
-    <link>https://alebaffa.eth.link/</link>
+    <link>https://alebaffa.github.io/</link>
     <description>Recent posts from on Alessandro Baffa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://alebaffa.eth.link/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://alebaffa.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Book] Fundamentals of Software Architecture - Notes</title>
+      <link>https://alebaffa.github.io/post/fundamentals-of-software-architecture/</link>
+      <pubDate>Sun, 16 Jan 2022 18:27:29 +0100</pubDate>
+      
+      <guid>https://alebaffa.github.io/post/fundamentals-of-software-architecture/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://cdn.hashnode.com/res/hashnode/image/upload/v1642342998250/dgSGYyfE9.jpeg&#34; alt=&#34;cover book.jpg&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;chapter-1-introduction&#34;&gt;Chapter 1: Introduction&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;The four dimensions that define software architecture&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Structure&lt;/strong&gt;, the type of the architecture the system is implemented in (microservices, layered, microkernel&amp;hellip;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Architecture characteristics&lt;/strong&gt;, the success criteria of a system, the &lt;em&gt;-ilities&lt;/em&gt; (reliability, elasticity, availability, security, agility, fault tolerance, deployability, testability, etc&amp;hellip;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Architectural decisions&lt;/strong&gt;, *the rules *of how a system should be constructed. For example, in a layered architecture the presentation layer can access the database only through the business layer.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Design principles&lt;/strong&gt;, a set of implementation guidelines, that are not forced rules (which instead is an architectural decision) and which choice is left to the developers. For example, &amp;ldquo;&lt;em&gt;in a microservices architecture the communication between services should leverage asynchronous messaging&lt;/em&gt;&amp;quot;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Eight core expectations of a software architect&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Make architecture decisions&lt;/strong&gt;. The architect should make architectural decisions (e.g. reactive based framework) and give design principles (e.g. asynchronous messaging) to guide the development teams make their own technical good decisions (e.g. React, Vue, AMQP, etc&amp;hellip;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Continually analyze the architecture&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Keep current with latest trends&lt;/strong&gt;. Follow technology blogs, check technology radars, etc and find as much time as possible to keep up to date with technologies, tools, platforms and techniques.&lt;/li&gt;
+&lt;li&gt;Ensure compliance with decisions&lt;/li&gt;
+&lt;li&gt;Diverse exposure and experience&lt;/li&gt;
+&lt;li&gt;Have business domain knowledge&lt;/li&gt;
+&lt;li&gt;Possess interpersonal skills&lt;/li&gt;
+&lt;li&gt;Understand and navigate politics&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;The Laws of Software Architecture&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;First Law: &lt;em&gt;Everything is a trade-off&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Second Law: &lt;em&gt;Why is more important than How&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;chapter-2-architectural-thinking&#34;&gt;Chapter 2: Architectural Thinking&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Architecture versus design/development&lt;/strong&gt;
+An architect deals with the four dimensions mentioned before and guides the design choices/implementation details managed by the developers, also through leadership and mentoring. There must be bi-directional communication between the architect and the developers team.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The three levels of knowledge in the knowledge triangle&lt;/strong&gt;
+From top to bottom:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Things you know&lt;/strong&gt;. Developers&amp;rsquo; early career focuses mostly on this, which are also the &lt;em&gt;things you must maintain&lt;/em&gt;.  This is related to the importance to keep a deep knowledge on few technical specialties.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Things you know you don&amp;rsquo;t know&lt;/strong&gt;. Advancing in one&amp;rsquo;s career incidentally increases this level.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Things you don&amp;rsquo;t know you don&amp;rsquo;t know&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This reminds me of the  &lt;a href=&#34;https://en.wikipedia.org/wiki/Four_stages_of_competence&#34;&gt;Four Stages of Competence&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Focus more on technical breadth rather than technical depth&lt;/strong&gt;
+Taking &lt;em&gt;the three levels of knowledge&lt;/em&gt; as a reference, the &lt;em&gt;technical breadth&lt;/em&gt; includes the 1. and 2. . An architect must also maintain few deep technical specialties.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Developers transitioning to the architect role may have to change the way they view knowledge acquisition. Balancing their portfolio of knowledge regarding depth versus breadth is something every developer should consider throughout their career.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Ways of maintaining your technical depth and remaining hands-on as an architect&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Develop Proof of Concept. When doing so, an architect should try to produce code that is clean and can be followed as an example by the development team.&lt;/li&gt;
+&lt;li&gt;Get involved in the development of some features.&lt;/li&gt;
+&lt;li&gt;Bug fixes&lt;/li&gt;
+&lt;li&gt;Develop automation and analyzing tools (check out &lt;a href=&#34;https://www.archunit.org/&#34;&gt;https://www.archunit.org/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Code reviews&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;chapter-3-modularity&#34;&gt;Chapter 3: Modularity&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Abstractness, Instability and Distance from the main sequence&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Abstractness measures the ratio between abstract elements (interfaces, abstract classes..) and concrete elements (concrete class).&lt;/li&gt;
+&lt;li&gt;Instability measures the ratio between incoming coupling (&lt;em&gt;afferent coupling&lt;/em&gt;, functions, components..) and outgoing coupling (&lt;em&gt;efferent coupling&lt;/em&gt;, connections to other components).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The Main Sequence is a derived metrics based on Abstractness and Instability.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.hashnode.com/res/hashnode/image/upload/v1642351293595/kzEkJdMJx.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The closer to the line, the better balanced the class. Classes that fall too far into the upper-righthand corner enter into what architects call the zone of uselessness: code that is too abstract becomes difficult to use. Conversely, code that falls into the lower-lefthand corner enter the zone of pain: code with too much implementation and not enough abstraction becomes brittle and hard to maintain.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.hashnode.com/res/hashnode/image/upload/v1642351366891/lnvY0jVol.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What is meant by the term connascence?&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Two components are connascent if a change in one would require the other to be modified in order to maintain the overall correctness of the system.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;Connascence&lt;/em&gt; is an old topic that can be found in many other books related to clean code, refactoring, code smells. A useful link is &lt;a href=&#34;https://codesai.com/2017/01/about-connascence&#34;&gt;this&lt;/a&gt; .&lt;/p&gt;
+&lt;h3 id=&#34;chapter-4-architecture-characteristics-defined&#34;&gt;Chapter 4: Architecture Characteristics Defined&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Three criteria to be considered an architecture characteristic&lt;/strong&gt;
+An architecture characteristic meets three criteria:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Specifies a nondomain design consideration&lt;/li&gt;
+&lt;li&gt;Influences some structural aspect of the design&lt;/li&gt;
+&lt;li&gt;Is critical or important to application success&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Implicit and explicit characteristics&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Implicit ones rarely appear in requirements, yet they’re necessary for project success. For example, availability, reliability, and security underpin virtually all applications, yet they’re rarely specified in design documents. Architects must use their knowledge of the problem domain to uncover these architecture characteristics during the analysis phase. [&amp;hellip;] Explicit architecture characteristics appear in requirements documents or other specific instructions.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Operational, Structural and Cross-Cutting characteristics&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;**Operational **architecture characteristics cover capabilities such as performance, scalability, elasticity, availability, and reliability;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Structural&lt;/strong&gt; characteristics are about code quality concerns, such as good modularity, controlled coupling between components, readable code, and a host of other internal quality assessments. Configurability, Extendibility, Installability, Localization, Portability, etc.;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cross-Cutting&lt;/strong&gt; characteristics fall outside or defy categorization yet form important design constraints and considerations. Accessibility, Authentication, Authorization, Security, Privacy, Legal, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The International Organization for Standards (ISO) publishes a list of characteristics organized by capabilities. Check it out &lt;a href=&#34;https://iso25000.com/index.php/en/iso-25000-standards/iso-25010&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
     <item>
       <title>日本語勉強 - Personal recommendations for Japanese learners</title>
-      <link>https://alebaffa.eth.link/post/japanese-learning/</link>
+      <link>https://alebaffa.github.io/post/japanese-learning/</link>
       <pubDate>Sun, 12 Sep 2021 12:23:42 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/japanese-learning/</guid>
-      <description>&lt;p&gt;This is a list of resources that I&amp;rsquo;m finding exceptional for my Japanese studies. I&amp;rsquo;m at a JLPT N4 level at the moment.&lt;/p&gt;
+      <guid>https://alebaffa.github.io/post/japanese-learning/</guid>
+      <description>&lt;p&gt;This is a list of resources that is working well for my Japanese studies.&lt;/p&gt;
 &lt;h2 id=&#34;reading&#34;&gt;Reading&lt;/h2&gt;
-&lt;p&gt;Read, read, read. You need to read until you destroy the visual and mental barrier of kanji. Until you don&amp;rsquo;t reach that point, your eyes will naturally tend to skip the entire content to pass to something else you can read without effort. So, force your mind to stop and read it all until your brain will stop making antibodies for kanji.&lt;/p&gt;
+&lt;p&gt;You need to read until you destroy the visual and mental barrier of kanji. Until you don&amp;rsquo;t reach that point, your eyes will naturally tend to skip the entire content to pass to something else you can read without effort. So, force your mind to stop and read it all until your brain will stop making antibodies for kanji.&lt;/p&gt;
 &lt;p&gt;The problem, as always, is to find the right content for your level because you also don&amp;rsquo;t want to spend 25 minutes to read two lines.&lt;/p&gt;
 &lt;p&gt;So, along with the &lt;em&gt;usual suspect&lt;/em&gt;, already known by everybody studying Japanese, i.e.:&lt;/p&gt;
 &lt;ul&gt;
@@ -26,10 +120,9 @@
 &lt;li&gt;&lt;a href=&#34;https://www.lingq.com/&#34;&gt;LingQ&lt;/a&gt;. Not only it&amp;rsquo;s full of content for every level, but most importantly you can also import in it whatever the content in Japanese you are reading/watching. It will analyze the text and allow you to save words and sentences in an internal SRS, with automatic translation (made by dictionaries and contributors). &lt;strong&gt;Advantage compared to Anki&lt;/strong&gt;: you can import videos from YouTube (it basically imports its subtitles from it), so you can analyze all its transcript and study those sentences you are interested to analyze and learn. Basically, LingQ allows to conveniently automate something that you can do manually with effort with Anki (and lots of time. Time that I do not have).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;reading-stuff-for-the-context-you-need&#34;&gt;Reading stuff for the context you need&lt;/h3&gt;
-&lt;p&gt;So, I am a software engineer and I know I will never find anything of technology-related on NHK Easy News. So, the only sources are the standard online magazine that are not easy to read at all (yes, there&amp;rsquo;s a lot of katakana, but still also a tons of kanji unknown for JLPT N4/N3).&lt;/p&gt;
-&lt;p&gt;My trick:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Twitter&lt;/strong&gt;. 280 characters are shorter than an article, and also it is where people communicate as they do in real life, with slang and whatever. Follow people in the context you&amp;rsquo;re interested to and do the effort to read what they write without clicking on &amp;ldquo;&lt;em&gt;translate this tweet&lt;/em&gt;&amp;quot;. Use browsers plugins to translate the kanji you don&amp;rsquo;t know.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Twitter&lt;/strong&gt;. 280 characters are shorter than an article. Follow people in the context you&amp;rsquo;re interested to and do the effort to read what they write without clicking on &amp;ldquo;&lt;em&gt;translate this tweet&lt;/em&gt;&amp;quot;. Use browsers plugins to translate the kanji you don&amp;rsquo;t know or imprort them into LingQ.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Online magazines&lt;/strong&gt;. If you want to build up vocabulary that is specific to a particular context, you can&amp;rsquo;t avoid reading more complicated stuff. I work with software engineering and blockchain, so for me &lt;a href=&#34;https://coinpost.jp/&#34;&gt;Coinpost.jp&lt;/a&gt; or &lt;a href=&#34;https://www.neweconomy.jp/&#34;&gt;neweconomy.jp&lt;/a&gt; are the must-read to stay up-to-date with what happens in JP. Again, browser plugins or import into LingQ. Yes, there&amp;rsquo;s a lot of katakana in technology, but surely not enough for my JLPT N4.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;listening&#34;&gt;Listening&lt;/h2&gt;
 &lt;p&gt;This is the most interesting part that I&amp;rsquo;m personally very happy about. There&amp;rsquo;s a huge amount of content on YouTube for Japanese listening, for all levels.&lt;/p&gt;
@@ -76,7 +169,14 @@ Few years ago I could only find &lt;a href=&#34;https://www.youtube.com/c/Benjir
 &lt;li&gt;&lt;a href=&#34;https://linktr.ee/shirokuropapa&#34;&gt;日本語でシャドーイング with しろくろパパ&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCsQCbl3a9FtYvA55BxdzYiQ&#34;&gt;Miku Real Japanese&lt;/a&gt; (not free,  you have to buy it)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;worth-mentioning&#34;&gt;Worth mentioning&lt;/h2&gt;
+&lt;h2 id=&#34;volunteers-japanese-classes-for-japan-residents&#34;&gt;Volunteers Japanese classes (for Japan residents)&lt;/h2&gt;
+&lt;p&gt;If you live in Japan most cities organize local Japanese classes managed by volunteers, typically Japanese elderly people who want to help foreigners with their studies. They are free (or extremely cheap, mostly a symbolic cost, really) and sometimes they also provide some study material. There are two things I like of these classes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;they are totally unstructured. It&amp;rsquo;s rare to find volunteers who have a background of language teaching, most of them are just nice people who want to help. They speak a lot, they are very curious people and, in most cases, they have no idea how to interact precisely with your level of Japanese. This is great because it stretches your comprehension abilities;&lt;/li&gt;
+&lt;li&gt;you can review what you have studied on your own. This is what I do: I study some grammar at home and I prepare few sentences and questions for them, so we can speak about them, make more examples and basically build up the topic of the lesson each time we meet.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These classes are up to you, really. The volunteers are the best resource you can find, but you need to understand how to take advantage of them properly and not waste your time.&lt;/p&gt;
+&lt;h2 id=&#34;worth-mentioning-resources&#34;&gt;Worth mentioning resources&lt;/h2&gt;
 &lt;p&gt;Funny and useful:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/c/GameGengo&#34;&gt;Game Gengo ゲーム言語&lt;/a&gt;, study Japanese sentences and patterns from videogames. Fantastic!&lt;/li&gt;
@@ -89,10 +189,10 @@ Few years ago I could only find &lt;a href=&#34;https://www.youtube.com/c/Benjir
     
     <item>
       <title>On NFT (2 part)</title>
-      <link>https://alebaffa.eth.link/post/on-nft-2/</link>
+      <link>https://alebaffa.github.io/post/on-nft-2/</link>
       <pubDate>Wed, 10 Mar 2021 08:17:31 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/on-nft-2/</guid>
+      <guid>https://alebaffa.github.io/post/on-nft-2/</guid>
       <description>&lt;p&gt;Non-Fungible Tokens (NFT) are interesting, but there&amp;rsquo;s a lot of confusion about the concept of &lt;em&gt;ownership&lt;/em&gt;. If you buy a NFT, you are only buying the ownership of a pointer to a metadata (audio, video, etc..) stored somewhere (more likely a centralized server, only some use IPFS). But this pointed metadata can be counterfeit (e.g. the NFT could be a screenshot. And this happening often now), so you still need an additional way to prove the actual asset is legit, the &amp;ldquo;oracle problem&amp;rdquo;. There is no solution at the moment.&lt;/p&gt;
 &lt;p&gt;Blockchain guarantees you own the NFT, but not actual asset represented by the NFT.&lt;/p&gt;
 &lt;p&gt;Could W3C&amp;rsquo;s Decentralized Identifiers (DID) and Verifiable Credentials (VC) solve this, or provide an alternative, more efficient way to link the NFT to the identity of its issuer? Probably.&lt;/p&gt;
@@ -110,10 +210,10 @@ Few years ago I could only find &lt;a href=&#34;https://www.youtube.com/c/Benjir
     
     <item>
       <title>On NFTs..</title>
-      <link>https://alebaffa.eth.link/post/on-nfts/</link>
+      <link>https://alebaffa.github.io/post/on-nfts/</link>
       <pubDate>Mon, 01 Mar 2021 17:45:41 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/on-nfts/</guid>
+      <guid>https://alebaffa.github.io/post/on-nfts/</guid>
       <description>&lt;p&gt;Non-Fungible Tokens (#NFTs) is a very wide topic and I do not want to go in details here, so I just suggest a couple of links:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://opensea.io/blog/guides/non-fungible-tokens&#34;&gt;The Non-Fungible Tokens Bible by OpenSea&lt;/a&gt; :  it contains everything you need to know about NFTs.&lt;/li&gt;
@@ -133,10 +233,10 @@ Another problem is the storage. NFTs storage is mostly still up to the owner, wh
     
     <item>
       <title>A Decentralized Blog</title>
-      <link>https://alebaffa.eth.link/post/decentralized-blog/</link>
+      <link>https://alebaffa.github.io/post/decentralized-blog/</link>
       <pubDate>Sat, 27 Jun 2020 15:35:00 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/decentralized-blog/</guid>
+      <guid>https://alebaffa.github.io/post/decentralized-blog/</guid>
       <description>&lt;p&gt;This blog is now hosted on &lt;a href=&#34;https://ipfs.io/&#34;&gt;IPFS&lt;/a&gt;, the Interplanetary Filesystem.&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;m using &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; and &lt;a href=&#34;http://fleek.co/&#34;&gt;Fleek.co&lt;/a&gt; to automatically build and deploy the static files on IPFS.&lt;/p&gt;
 &lt;p&gt;There are three ways to see this page. The first is to use a standard browser (Chrome, Firefox..etc) with extensions such as &lt;a href=&#34;https://chrome.google.com/webstore/detail/ipfs-companion/nibjojkomfdiaoajekhjakgkdhaomnch?hl=en&#34;&gt;IPFS Companion&lt;/a&gt; that uses a IPNS gateway set up by default (or you can install IPFS and run a node locally), or the Metamask plugin, and when you type &lt;a href=&#34;http://alebaffa.eth/&#34;&gt;http://alebaffa.eth/&lt;/a&gt; (yes, the &amp;lsquo;/&amp;rsquo; at the end is needed) you will be redirected to this URL:&lt;/p&gt;
@@ -152,10 +252,10 @@ Another problem is the storage. NFTs storage is mostly still up to the owner, wh
     
     <item>
       <title>Unit testing a static custom logger in Spring Boot and log4j2</title>
-      <link>https://alebaffa.eth.link/post/spring-boot-custom-logger-log4j2/</link>
+      <link>https://alebaffa.github.io/post/spring-boot-custom-logger-log4j2/</link>
       <pubDate>Fri, 23 Mar 2018 23:02:43 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/spring-boot-custom-logger-log4j2/</guid>
+      <guid>https://alebaffa.github.io/post/spring-boot-custom-logger-log4j2/</guid>
       <description>&lt;p&gt;Last time I wrote a post about &lt;a href=&#34;https://www.alebaffa.com/2018/03/17/unit-testing-custom-logger-log4j2/&#34;&gt;how to unit test a custom logger with log4j2&lt;/a&gt;. Today I migrated another custom logger from log4j 1.x to log4j 2.x, but this time it was encapsulated in a Spring Boot component as a static class attribute.&lt;/p&gt;
 &lt;h2 id=&#34;custom-logger&#34;&gt;Custom logger&lt;/h2&gt;
 &lt;p&gt;You have a simple custom logger&lt;/p&gt;
@@ -242,10 +342,10 @@ Another problem is the storage. NFTs storage is mostly still up to the owner, wh
     
     <item>
       <title>Unit testing a custom logger in log4j2</title>
-      <link>https://alebaffa.eth.link/post/unit-testing-custom-logger-log4j2/</link>
+      <link>https://alebaffa.github.io/post/unit-testing-custom-logger-log4j2/</link>
       <pubDate>Sat, 17 Mar 2018 13:55:46 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/unit-testing-custom-logger-log4j2/</guid>
+      <guid>https://alebaffa.github.io/post/unit-testing-custom-logger-log4j2/</guid>
       <description>&lt;p&gt;In this period I&amp;rsquo;m upgrading a Spring Boot project from 1.3 &amp;ndash;&amp;gt; 1.5 &amp;ndash;&amp;gt; 2.0. One of the steps is to get rid of log4j 1.x.&lt;/p&gt;
 &lt;p&gt;In the project there is custom logger, but unfortunately its unit test with log4j2 is no more working and we receive the following error:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -326,10 +426,10 @@ Another problem is the storage. NFTs storage is mostly still up to the owner, wh
     
     <item>
       <title>Debug a Java Spring Boot application in Docker from IntelliJ</title>
-      <link>https://alebaffa.eth.link/post/debug-java-docker-compose-intellij/</link>
+      <link>https://alebaffa.github.io/post/debug-java-docker-compose-intellij/</link>
       <pubDate>Wed, 28 Feb 2018 23:19:11 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/debug-java-docker-compose-intellij/</guid>
+      <guid>https://alebaffa.github.io/post/debug-java-docker-compose-intellij/</guid>
       <description>&lt;p&gt;You have a Java Spring Boot application built with Gradle in a Docker container and you need to debug it from your favorite IDE on your host machine (IntelliJ).&lt;/p&gt;
 &lt;p&gt;You can do it by attaching the remote debugger in IntelliJ to your Java application running in Docker.&lt;/p&gt;
 &lt;h3 id=&#34;steps&#34;&gt;Steps&lt;/h3&gt;
@@ -359,10 +459,10 @@ All you need to do here is to open the port &lt;code&gt;:5005&lt;/code&gt;:&lt;/
     
     <item>
       <title>Jupyter: the easiest way to import code from another notebook</title>
-      <link>https://alebaffa.eth.link/post/jupyter-import-notebook/</link>
+      <link>https://alebaffa.github.io/post/jupyter-import-notebook/</link>
       <pubDate>Tue, 27 Feb 2018 19:57:31 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/jupyter-import-notebook/</guid>
+      <guid>https://alebaffa.github.io/post/jupyter-import-notebook/</guid>
       <description>&lt;p&gt;Yesterday I published a post about &lt;a href=&#34;https://www.alebaffa.com/posts/create_modules_in_jupyter_notebooks/&#34;&gt;how to create a module in jupyter&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;There is another way to quickly import the code from another notebook. Say you are working in &lt;code&gt;your_notebook.ipynb&lt;/code&gt; and you need a Python class &lt;code&gt;class Hello():&lt;/code&gt; from &lt;code&gt;another_notebook.ipynb&lt;/code&gt;.
 To import it you just need to do the following:&lt;/p&gt;
@@ -376,10 +476,10 @@ Easy peasy.&lt;/p&gt;
     
     <item>
       <title>Create modules in Jupyter notebooks</title>
-      <link>https://alebaffa.eth.link/post/create_modules_in_jupyter_notebooks/</link>
+      <link>https://alebaffa.github.io/post/create_modules_in_jupyter_notebooks/</link>
       <pubDate>Mon, 26 Feb 2018 21:38:37 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/create_modules_in_jupyter_notebooks/</guid>
+      <guid>https://alebaffa.github.io/post/create_modules_in_jupyter_notebooks/</guid>
       <description>&lt;p&gt;In my current attempt to improve the development experience of my team, I am trying to introduce Jupyter notebooks to share knowledge about some data analysis scripts developed over the last years. I can copy paste the code into a notebook, run the single cells to show the result below the code, export the notebook as markdown and push it to Bitbucket: voila, documentation.&lt;/p&gt;
 &lt;p&gt;Though, a disadvantage of Jupyter notebooks over Python scripts is that they cannot be linked to each other. They are completely separated entities, so if you have Python scripts that share common utils modules (e.g.: connection, encryption, etc&amp;hellip;) and you try to run them in a Jupyter notebook, you have to copy-paste also those modules into cells. It&amp;rsquo;s annoying, you break the readability of your beautiful notebook and it ruins the very first reason why you started to use it.&lt;/p&gt;
 &lt;h2 id=&#34;python-modules-in-jupyter&#34;&gt;Python modules in Jupyter&lt;/h2&gt;
@@ -396,10 +496,10 @@ Easy peasy.&lt;/p&gt;
     
     <item>
       <title>Journey towards Continuous Integration - Part 1</title>
-      <link>https://alebaffa.eth.link/post/road-towards-ci-part-one/</link>
+      <link>https://alebaffa.github.io/post/road-towards-ci-part-one/</link>
       <pubDate>Fri, 23 Feb 2018 21:06:57 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/road-towards-ci-part-one/</guid>
+      <guid>https://alebaffa.github.io/post/road-towards-ci-part-one/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;I am going to write a set of posts that describe what I quickly talked about in the last &lt;strong&gt;Docker Tokyo Meetup&lt;/strong&gt;. Though, this is not going to be focused on Docker only, but rather on all the challenges I found/I&amp;rsquo;m finding trying to set up the Continuous Integration for my team&amp;rsquo;s project. Nevertheless, Docker played/is playing an important role and it has revealed some interesting things about the quality of the project itself, which I&amp;rsquo;m trying to fix. It&amp;rsquo;s interesting to see what happens to an application when you lock it up into a container, not only because you can clearly detect the interactions with outside systems, but also to reveal some flaws in its internal architecture.&lt;/p&gt;
@@ -435,10 +535,10 @@ Easy peasy.&lt;/p&gt;
     
     <item>
       <title>Improving the development experience: Jupyter for Elasticsearch</title>
-      <link>https://alebaffa.eth.link/post/elastic-search-jupyter/</link>
+      <link>https://alebaffa.github.io/post/elastic-search-jupyter/</link>
       <pubDate>Thu, 22 Feb 2018 19:59:13 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/elastic-search-jupyter/</guid>
+      <guid>https://alebaffa.github.io/post/elastic-search-jupyter/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;I have been asked to extract data from Elasticsearch and I had no clue of what kind of data were stored inside of it. Moreover, there was a lack of documentation and the only thing that could help me were some old Python scripts written by an old colleague.&lt;/p&gt;
 &lt;p&gt;Fortunately, Python is pretty damn good when it comes to readability.&lt;/p&gt;
@@ -460,10 +560,10 @@ Easy peasy.&lt;/p&gt;
     
     <item>
       <title>My current learning journey</title>
-      <link>https://alebaffa.eth.link/post/my-last-seven-months/</link>
+      <link>https://alebaffa.github.io/post/my-last-seven-months/</link>
       <pubDate>Thu, 25 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/my-last-seven-months/</guid>
+      <guid>https://alebaffa.github.io/post/my-last-seven-months/</guid>
       <description>&lt;p&gt;I started my journey at Rakuten in June 2017 and, more precisely, I am Full Stack Engineer working for &lt;a href=&#34;https://magazine.rakuten.co.jp/&#34;&gt;Rakuten Magazine&lt;/a&gt;. It&amp;rsquo;s a pretty new Web project, so it&amp;rsquo;s not big and we are very few people: 4 guys focused on Web and API (myself included), and 3 guys on Android/iOS.&lt;/p&gt;
 &lt;p&gt;First huge difference from my previous job: here I can put my hands on literally everything. We have a total freedom to choose what technology stack to use, if it&amp;rsquo;s reasonable and well argumented. The main technology is &lt;strong&gt;Java&lt;/strong&gt;, but I&amp;rsquo;m basically jumping from one technology to another one every single day, from frontend to backend. In two words: &lt;em&gt;Full Stack&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Needless to say, my learning experience in the last 7 months has been incredibly huge. I&amp;rsquo;ve never used most of the technologies I&amp;rsquo;m using now, so it&amp;rsquo;s an on going learning process where, in the same time, I try to make things work and available for my teammates.&lt;/p&gt;
@@ -501,10 +601,10 @@ scripts that extract data from &lt;strong&gt;Elastic Search&lt;/strong&gt; and d
     
     <item>
       <title>Changing Everything. Again.</title>
-      <link>https://alebaffa.eth.link/post/new-chapter-of-life/</link>
+      <link>https://alebaffa.github.io/post/new-chapter-of-life/</link>
       <pubDate>Sat, 18 Feb 2017 08:03:16 +0100</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/new-chapter-of-life/</guid>
+      <guid>https://alebaffa.github.io/post/new-chapter-of-life/</guid>
       <description>&lt;p&gt;After 7 years spent in France I am officially moving to Tokyo, Japan, end of May 2017.
 I am finally going to join my wife, Sarah, after almost 5 years of long and hard distant relationship.&lt;/p&gt;
 &lt;p&gt;Now, before to start with the burocracy madness and to move/sell/close/sign things, I am sitting here at home, in the first weekend after having resigned from my current company, trying to think about how many things I learned over the last 7 years. How many things I&amp;rsquo;m going to bring with me from this French experience.&lt;/p&gt;
@@ -520,10 +620,10 @@ I also started to organize events and I started to overcome my fear of public sp
     
     <item>
       <title>Back from SoCraTes France 2016</title>
-      <link>https://alebaffa.eth.link/post/socrates-france/</link>
+      <link>https://alebaffa.github.io/post/socrates-france/</link>
       <pubDate>Mon, 31 Oct 2016 12:29:46 +0200</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/socrates-france/</guid>
+      <guid>https://alebaffa.github.io/post/socrates-france/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;My second time in a Software Craftsmanship and Testing (SoCraTes) conference and, as always, it has been an awesome experience.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
@@ -587,10 +687,10 @@ Thanks to the excellent &lt;a href=&#34;https://medium.com/u/a04341a59930&#34;&g
     
     <item>
       <title>Global Day of Coderetreat 2016, Sophia Antipolis, France</title>
-      <link>https://alebaffa.eth.link/post/global-day-of-coderetreat/</link>
+      <link>https://alebaffa.github.io/post/global-day-of-coderetreat/</link>
       <pubDate>Sun, 23 Oct 2016 12:29:46 +0200</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/global-day-of-coderetreat/</guid>
+      <guid>https://alebaffa.github.io/post/global-day-of-coderetreat/</guid>
       <description>&lt;p&gt;We did it! The Global Day of Coderetreat in Sophia Antipolis has been a great success! My first coderetreat ever, and I played the role of the organizer and facilitator.
 It’s an event that I started to organize in August and I have been lucky to find the support of the &lt;a href=&#34;http://unice.fr/en&#34;&gt;University of Nice-Sophia Antipolis&lt;/a&gt; and my company, &lt;a href=&#34;http://www.amadeus.com/web/amadeus/en_1A-corporate/Amadeus-Home/1319560218660-Page-AMAD_HomePpal&#34;&gt;Amadeus IT Group&lt;/a&gt;. In the organization of all this I have been hugely helped by other people who have been facilitators with me (we were 3 facilitators, 1 host and 2 facilitators/helpers).&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
@@ -635,10 +735,10 @@ I got confirmed again that I absolutely have to learn functional programming :)&
     
     <item>
       <title>Dependency Injection VS Extract and Override Factory Method</title>
-      <link>https://alebaffa.eth.link/post/racing-car-kata-refactoring/</link>
+      <link>https://alebaffa.github.io/post/racing-car-kata-refactoring/</link>
       <pubDate>Sun, 09 Oct 2016 21:17:23 +0200</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/racing-car-kata-refactoring/</guid>
+      <guid>https://alebaffa.github.io/post/racing-car-kata-refactoring/</guid>
       <description>&lt;p&gt;The TextConverter exercise (in the &lt;em&gt;Racing&lt;/em&gt; &lt;em&gt;Car&lt;/em&gt; &lt;em&gt;kata&lt;/em&gt; suite) is a very interesting exercise for refactoring legacy code. As I am reading &lt;em&gt;Working Effectively with Legacy Code&lt;/em&gt; I found two ways of solving it.&lt;/p&gt;
 &lt;p&gt;Refactoring can only be done safely with unit tests and so I did, rigourously in TDD. Though, in this blog post I am not going to show you all the testing process, but only the two ways of decoupling the dependency.&lt;/p&gt;
 &lt;h2 id=&#34;the-problem&#34;&gt;The problem&lt;/h2&gt;
@@ -688,10 +788,10 @@ A simple refactoring that made me, at the same time, decouple the dependency and
     
     <item>
       <title>A Community of Professionals - SoCraTes UK</title>
-      <link>https://alebaffa.eth.link/post/socrates-uk/</link>
+      <link>https://alebaffa.github.io/post/socrates-uk/</link>
       <pubDate>Sun, 19 Jun 2016 21:28:33 +0200</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/socrates-uk/</guid>
+      <guid>https://alebaffa.github.io/post/socrates-uk/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;A couple of weeks ago I participated for the first time to a SoCraTes event, one of the Software Craftsmanship international gatherings.
 SoCraTes (Software Craftsmanship and Testing) is an self-organized conference where the people from the international Software Craftsmanship Community meet and spend 3 days organizing themselves activities and talks around everything related to software craftsmanship: from the technical to the human aspects of it.
@@ -718,10 +818,10 @@ There are few events of this kind every year (Italy, France, Germany, Belgium, S
     
     <item>
       <title>Amarcord - Old posts from 2011 (ITA/ENG)</title>
-      <link>https://alebaffa.eth.link/post/amarcord-2011/</link>
+      <link>https://alebaffa.github.io/post/amarcord-2011/</link>
       <pubDate>Mon, 07 Feb 2011 10:37:06 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/amarcord-2011/</guid>
+      <guid>https://alebaffa.github.io/post/amarcord-2011/</guid>
       <description>&lt;h3 id=&#34;-non-ci-penso-un-attimo-faccio-benzina-in-svizzera&#34;&gt;&amp;raquo; Non ci penso un attimo: faccio benzina in Svizzera.&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Infatti, la carta regionale dei servizi è ormai un documento che hanno tutti, ma non tutti hanno il pin, cioè il codice per attivarla e c’è chi non s’è accorto che è scaduta e ne deve chiedere una nuova. Dove: alla Asl, ai Comuni abilitati o a Spazio Regione, lo sportello dei cittadini presso il Pirellino, in via Benzi – Viale Varese a Como. Oppure, può collegarsi al sito Internet della Regione Lombardia dedicato alla carta dei servizi, &lt;a href=&#34;http://www.crs.lombardia.it&#34;&gt;www.crs.lombardia.it&lt;/a&gt; e farne richiesta.&lt;/p&gt;
@@ -1025,10 +1125,10 @@ I like this post so much that I totally got lost while reading it. And of course
     
     <item>
       <title>Amarcord - Old posts from 2010 (ITA)</title>
-      <link>https://alebaffa.eth.link/post/amarcord-2010/</link>
+      <link>https://alebaffa.github.io/post/amarcord-2010/</link>
       <pubDate>Sun, 07 Feb 2010 10:07:16 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/amarcord-2010/</guid>
+      <guid>https://alebaffa.github.io/post/amarcord-2010/</guid>
       <description>&lt;h2 id=&#34;september-2010&#34;&gt;September 2010&lt;/h2&gt;
 &lt;h3 id=&#34;-global-minds&#34;&gt;&amp;raquo;&amp;gt; Global Minds&lt;/h3&gt;
 &lt;p&gt;L’esperienza di vita all’estero è qualcosa che non smetterò mai di consigliare a tutti. E’ un’esperienza da prendere al volo, qualcosa per cui vale la pena mollare tutto e tutti e partire senza troppe riflessioni e calcoli. Di lati negativi ce ne sono, ma di lati positivi ce ne sono altrettanti e alcuni che sto scoprendo solo ora. E’ proprio vero che l’esperienza internazionale ti apre la mente, fa crollare alcune barriere che sono puramente psicologiche e che non ci accorgiamo di avere. Vivere all’estero è una continua creazione di nuovi stimoli, ogni giorno la vita pratica ti arricchisce di qualcosa di più, un continuo alimentarsi di conoscenze nuove, scoperte, una cultura nuova, la lingua ..&lt;/p&gt;
@@ -1130,10 +1230,10 @@ Provate ad andare SU QUALSIASI STRADA della città. E’ uno scandalo di proporz
     
     <item>
       <title>Amarcord - Old posts from 2009 (ITA)</title>
-      <link>https://alebaffa.eth.link/post/amarcord-2009/</link>
+      <link>https://alebaffa.github.io/post/amarcord-2009/</link>
       <pubDate>Sat, 07 Feb 2009 10:05:04 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/amarcord-2009/</guid>
+      <guid>https://alebaffa.github.io/post/amarcord-2009/</guid>
       <description>&lt;h2 id=&#34;february&#34;&gt;February&lt;/h2&gt;
 &lt;h3 id=&#34;-mail-disaster-recovery&#34;&gt;&amp;raquo; Mail: disaster recovery&lt;/h3&gt;
 &lt;p&gt;Mi sto dando al backup delle email. Il blackout dell’altro giorno di Gmail mi ha messo abbastanza ansia.&lt;/p&gt;
@@ -1176,10 +1276,10 @@ Via Castelnuovo, 7,  Como&lt;/p&gt;
     
     <item>
       <title>Amarcord - Old posts from 2008 (ITA)</title>
-      <link>https://alebaffa.eth.link/post/amarcord-2008/</link>
+      <link>https://alebaffa.github.io/post/amarcord-2008/</link>
       <pubDate>Thu, 07 Feb 2008 09:42:00 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/amarcord-2008/</guid>
+      <guid>https://alebaffa.github.io/post/amarcord-2008/</guid>
       <description>&lt;h1 id=&#34;posts-from-2008&#34;&gt;Posts from 2008&lt;/h1&gt;
 &lt;h2 id=&#34;january&#34;&gt;January&lt;/h2&gt;
 &lt;h3 id=&#34;-100-di-questi-anni&#34;&gt;&amp;raquo;&amp;gt; 100 di questi anni!!&lt;/h3&gt;
@@ -1600,10 +1700,10 @@ E’ l’ignoranza che crea il terreno fertile per la Camorra. Perchè è questa
     
     <item>
       <title>Amarcord - Old posts from 2007 (ITA)</title>
-      <link>https://alebaffa.eth.link/post/amarcord-2007/</link>
+      <link>https://alebaffa.github.io/post/amarcord-2007/</link>
       <pubDate>Sat, 08 Sep 2007 08:49:18 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/amarcord-2007/</guid>
+      <guid>https://alebaffa.github.io/post/amarcord-2007/</guid>
       <description>&lt;h1 id=&#34;posts-from-2007&#34;&gt;Posts from 2007&lt;/h1&gt;
 &lt;h2 id=&#34;september&#34;&gt;September&lt;/h2&gt;
 &lt;h3 id=&#34;-crea-il-tuo-avatar-personalizzato&#34;&gt;&amp;raquo;&amp;gt; Crea il tuo avatar personalizzato&lt;/h3&gt;

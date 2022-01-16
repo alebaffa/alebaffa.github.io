@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>jupyter-notebook on Alessandro Baffa</title>
-    <link>https://alebaffa.eth.link/tags/jupyter-notebook/</link>
+    <link>https://alebaffa.github.io/tags/jupyter-notebook/</link>
     <description>Recent content in jupyter-notebook on Alessandro Baffa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 27 Feb 2018 19:57:31 +0900</lastBuildDate>
     
-	<atom:link href="https://alebaffa.eth.link/tags/jupyter-notebook/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://alebaffa.github.io/tags/jupyter-notebook/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Jupyter: the easiest way to import code from another notebook</title>
-      <link>https://alebaffa.eth.link/post/jupyter-import-notebook/</link>
+      <link>https://alebaffa.github.io/post/jupyter-import-notebook/</link>
       <pubDate>Tue, 27 Feb 2018 19:57:31 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/jupyter-import-notebook/</guid>
+      <guid>https://alebaffa.github.io/post/jupyter-import-notebook/</guid>
       <description>Yesterday I published a post about how to create a module in jupyter.
 There is another way to quickly import the code from another notebook. Say you are working in your_notebook.ipynb and you need a Python class class Hello(): from another_notebook.ipynb. To import it you just need to do the following:
 # in your_notebook.ipynb do %run another_notebook.ipynb hello = Hello() Voila, with %run you access the code from the other notebook.</description>
@@ -24,20 +24,20 @@ There is another way to quickly import the code from another notebook. Say you a
     
     <item>
       <title>Create modules in Jupyter notebooks</title>
-      <link>https://alebaffa.eth.link/post/create_modules_in_jupyter_notebooks/</link>
+      <link>https://alebaffa.github.io/post/create_modules_in_jupyter_notebooks/</link>
       <pubDate>Mon, 26 Feb 2018 21:38:37 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/create_modules_in_jupyter_notebooks/</guid>
+      <guid>https://alebaffa.github.io/post/create_modules_in_jupyter_notebooks/</guid>
       <description>In my current attempt to improve the development experience of my team, I am trying to introduce Jupyter notebooks to share knowledge about some data analysis scripts developed over the last years. I can copy paste the code into a notebook, run the single cells to show the result below the code, export the notebook as markdown and push it to Bitbucket: voila, documentation.
 Though, a disadvantage of Jupyter notebooks over Python scripts is that they cannot be linked to each other.</description>
     </item>
     
     <item>
       <title>Improving the development experience: Jupyter for Elasticsearch</title>
-      <link>https://alebaffa.eth.link/post/elastic-search-jupyter/</link>
+      <link>https://alebaffa.github.io/post/elastic-search-jupyter/</link>
       <pubDate>Thu, 22 Feb 2018 19:59:13 +0900</pubDate>
       
-      <guid>https://alebaffa.eth.link/post/elastic-search-jupyter/</guid>
+      <guid>https://alebaffa.github.io/post/elastic-search-jupyter/</guid>
       <description>I have been asked to extract data from Elasticsearch and I had no clue of what kind of data were stored inside of it. Moreover, there was a lack of documentation and the only thing that could help me were some old Python scripts written by an old colleague.
 Fortunately, Python is pretty damn good when it comes to readability.
 So, because I am working to improve the development experience of my team and I am messing around with Jupyter, I thought I could create a Jupyter notebook with a super simple Elasticsearch client in Python 3 that supports a connection with a proxy (vital, if working in a company).</description>

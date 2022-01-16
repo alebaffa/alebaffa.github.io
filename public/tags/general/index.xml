@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>general on Alessandro Baffa</title>
+    <link>https://alebaffa.github.io/tags/general/</link>
+    <description>Recent content in general on Alessandro Baffa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 16 Jan 2022 18:27:29 +0100</lastBuildDate>
+    
+	<atom:link href="https://alebaffa.github.io/tags/general/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Book] Fundamentals of Software Architecture - Notes</title>
+      <link>https://alebaffa.github.io/post/fundamentals-of-software-architecture/</link>
+      <pubDate>Sun, 16 Jan 2022 18:27:29 +0100</pubDate>
+      
+      <guid>https://alebaffa.github.io/post/fundamentals-of-software-architecture/</guid>
+      <description>Chapter 1: Introduction The four dimensions that define software architecture
+ Structure, the type of the architecture the system is implemented in (microservices, layered, microkernel&amp;hellip;). Architecture characteristics, the success criteria of a system, the -ilities (reliability, elasticity, availability, security, agility, fault tolerance, deployability, testability, etc&amp;hellip;) Architectural decisions, *the rules *of how a system should be constructed. For example, in a layered architecture the presentation layer can access the database only through the business layer.</description>
+    </item>
+    
+  </channel>
+</rss>
