@@ -2,41 +2,160 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>conferences on Alessandro Baffa</title>
-    <link>https://alebaffa.github.io/tags/conferences/</link>
-    <description>Recent content in conferences on Alessandro Baffa</description>
+    <link>/tags/conferences/</link>
+    <description>Alessandro Baffa (conferences)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 31 Oct 2016 12:29:46 +0200</lastBuildDate>
     
-	<atom:link href="https://alebaffa.github.io/tags/conferences/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/conferences/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Back from SoCraTes France 2016</title>
-      <link>https://alebaffa.github.io/post/socrates-france/</link>
+      <link>/posts/socrates-france/</link>
       <pubDate>Mon, 31 Oct 2016 12:29:46 +0200</pubDate>
       
-      <guid>https://alebaffa.github.io/post/socrates-france/</guid>
-      <description>My second time in a Software Craftsmanship and Testing (SoCraTes) conference and, as always, it has been an awesome experience.
-The self-made agenda SoCraTes is a non-conference, which means that there’s no predefined agenda, but instead it is created every day by the participants (the image above is the agenda of day 2). Everybody is more than welcome to propose sessions. They can be presentation of something you know, or open discussion about a topic you are curious about, or more simply a session where you want to learn something and you are looking for someone more experienced to help you.</description>
+      <guid>/posts/socrates-france/</guid>
+      <description>&lt;img src=&#34;../../../../img/socratesfr-1.jpeg&#34;/&gt;
+&lt;p&gt;My second time in a Software Craftsmanship and Testing (SoCraTes) conference and, as always, it has been an awesome experience.&lt;/p&gt;
+&lt;img src=&#34;../../../../img/socratesfr-2.jpeg&#34;/&gt;
+&lt;h2 id=&#34;the-self-made-agenda&#34;&gt;The self-made agenda&lt;/h2&gt;
+&lt;p&gt;SoCraTes is a non-conference, which means that there’s no predefined agenda, but instead it is created every day by the participants (the image above is the agenda of day 2). Everybody is more than welcome to propose sessions. They can be presentation of something you know, or open discussion about a topic you are curious about, or more simply a session where you want to learn something and you are looking for someone more experienced to help you.
+As for the Global Day of Coderetreat, what you learn during SoCraTes is your responsibility. Open mind, will to learn and the Law of Two Feet are the only things you have to bring with you to this event.&lt;/p&gt;
+&lt;p&gt;Sessions I attended:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;event storming and DDD&lt;/strong&gt;. I never got into both subjects so it’s been a nice introduction.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Functional philosophy&lt;/strong&gt;. Functional programming is the first item in my todo list since too long and after this excellent presentation I decided to enroll in the course on Coursera. For the second time.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;How to teach TDD&lt;/strong&gt;. Help other people to learn is something I really love to do. We shared experience and techniques on how to introduce TDD to other people/colleagues and it was interesting. Even though, inevitably, it switched to a broader discussion about organizational issues. But still, interesting.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Event sourcing&lt;/strong&gt;. Again, another subject I never studied. So, good introduction.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Feature branching is evil&lt;/strong&gt;. Thierry has a good experience as technical coach and he’s a passionate guy. He prepared this interesting presentation the night between day 1 and day 2 . Obviously the topic was sensible for many people, so the discussions were very interesting.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;../../../../img/socratesfr-3.jpeg&#34;/&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Tactical DDD&lt;/strong&gt;. Another presentation that made me understand how I absolutely don’t know anything at all about DDD and that it is such a huge topic.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Beyond Alchemy and What are Software Leprechauns&lt;/strong&gt; (by @cceelen and Laurent Bossavit). Laurent is the author of The Leprechauns of Software Engineering. We discussed about the distance between the software industry and the scientific method. We work in an industry where most of the choices are too often made based on personal tastes and/or wrong assumptions. Also, the academics working on empirical software engineering most of the time lack of real data and statistics from the real world. We work in an industry that it’s like Alchemy.
+What if the software craftsmanship community could help the academics to get these data? Or what if all of us could start applying the scientific method to the choices we make every day? What if we could document all the things we do, the practices and the techniques we use at work, the good and bad results, and make them available for scientists so to start to make the industry grow?
+In the Software Craftsmanship movement we always talk about the Profession of Software Engineer, but how can we have a Profession if we don’t even have a museum of Computer History (or really very few of them in the entire world)? How many of you, computer scientists, have ever been to such a museum? How much do we know about our History as computer scientists? How much do we know about the History of all the things that we choose to use?
+Listening to Laurent Bossavit has been maybe the most fascinating experience for me in the entire event. His book here below is already in my kindle.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;../../../../img/socratesfr-4.png&#34;/&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Instill Software Craftsmanship in a company&lt;/strong&gt;. Well, this is basically what I’m doing since one year in my current company. I attended this interesting session to get feedback from other people doing the same in their ones and share our experience with them.
+&lt;img src=&#34;../../../../img/socratesfr-5.jpeg&#34;/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Learning Strategies&lt;/strong&gt; (by me). One of the questions I’m always been asked when I say that it’s good to always try to practice and become better software developers is “yes, but we have a family/children/life/friends/whatever and we don’t have time”. I organized this session to know how other people do. Most of the people use their working time to study. Either because their company give them a dedicated time to do so during the week, or because they take their time by themselves. Avoid those companies that don’t give you time to become better employees.
+&lt;img src=&#34;../../../../img/socratesfr-6.jpeg&#34;/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Code katas&lt;/strong&gt;. Romeu organized code katas every lunch and dinner. Basically, every time there was an empty space in the agenda. I did a couple of them and they were absolutely fantastic! Definitely something I will do again with other things I organize. Romeu gave us so many brilliant ideas!
+&lt;img src=&#34;../../../../img/socratesfr-7.jpeg&#34;/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;other-things-worth-mentioning&#34;&gt;Other things worth mentioning&lt;/h2&gt;
+&lt;p&gt;The food. Absolutely gorgeous. When the plates arrived on the table there was always this moment of religious silence when everybody was too focused to taste those absolutely gorgeous dishes.
+&lt;img src=&#34;../../../../img/socratesfr-8.jpeg&#34;/&gt;&lt;/p&gt;
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+&lt;p&gt;It’s always great to meet the other people of the international community of Software Craftsmanship. It’s an absolutely open, welcoming, friendly, warm group of great people.
+As always I learned so much stuff, but maybe the most important is the amount of energy and strength that I always bring with me after this gathering. If you have never participated, please, join us in one of the next ones. You won’t regret it, and it will become kind of addiction too.
+Thanks to the excellent &lt;a href=&#34;https://medium.com/u/a04341a59930&#34;&gt;Houssam Fakih&lt;/a&gt; for the exceptional organization! And thanks to &lt;a href=&#34;https://twitter.com/Singsalad&#34;&gt;@franzi&lt;/a&gt;, the awesome facilitator of this event!&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Global Day of Coderetreat 2016, Sophia Antipolis, France</title>
-      <link>https://alebaffa.github.io/post/global-day-of-coderetreat/</link>
+      <link>/posts/global-day-of-coderetreat/</link>
       <pubDate>Sun, 23 Oct 2016 12:29:46 +0200</pubDate>
       
-      <guid>https://alebaffa.github.io/post/global-day-of-coderetreat/</guid>
-      <description>We did it! The Global Day of Coderetreat in Sophia Antipolis has been a great success! My first coderetreat ever, and I played the role of the organizer and facilitator. It’s an event that I started to organize in August and I have been lucky to find the support of the University of Nice-Sophia Antipolis and my company, Amadeus IT Group. In the organization of all this I have been hugely helped by other people who have been facilitators with me (we were 3 facilitators, 1 host and 2 facilitators/helpers).</description>
+      <guid>/posts/global-day-of-coderetreat/</guid>
+      <description>&lt;p&gt;We did it! The Global Day of Coderetreat in Sophia Antipolis has been a great success! My first coderetreat ever, and I played the role of the organizer and facilitator.
+It’s an event that I started to organize in August and I have been lucky to find the support of the &lt;a href=&#34;http://unice.fr/en&#34;&gt;University of Nice-Sophia Antipolis&lt;/a&gt; and my company, &lt;a href=&#34;http://www.amadeus.com/web/amadeus/en_1A-corporate/Amadeus-Home/1319560218660-Page-AMAD_HomePpal&#34;&gt;Amadeus IT Group&lt;/a&gt;. In the organization of all this I have been hugely helped by other people who have been facilitators with me (we were 3 facilitators, 1 host and 2 facilitators/helpers).&lt;/p&gt;
+&lt;img src=&#34;../../../../img/coderetreat-2.jpeg&#34;/&gt;
+&lt;h2 id=&#34;what-we-did&#34;&gt;What we did&lt;/h2&gt;
+&lt;p&gt;We started at 9am with the breakfast and at 9:30 I did the introduction of the day describing the day and showing the slide prepared by the global organizers (who have been really awesome giving us all the necessary material). There were 36 people (over 45 registered). Some of them were students of the university, other ones people from my company and other ones people working in the area.&lt;/p&gt;
+&lt;h3 id=&#34;the-check-in&#34;&gt;The check-in&lt;/h3&gt;
+&lt;p&gt;We used Eventbrite for the registration so their mobile app for the check-int. We asked the participants to put some stickers on their t-shirts with: name, favorite programming languages, their level of knowledge of TDD &lt;em&gt;(0=”don’t know what it is, but I want to try” … 4=”I am a TDD Jedi”)&lt;/em&gt;. The idea was to ease the making of the pairs, useful with so many people.&lt;/p&gt;
+&lt;img src=&#34;../../../../img/coderetreat-3.jpeg&#34;/&gt;
+&lt;h3 id=&#34;the-sessions&#34;&gt;The sessions&lt;/h3&gt;
+&lt;p&gt;At 10am we started with the sessions. After each of them we made a 10 minutes retrospective where we were all in a circle we tried to use the technique of the ball: only the person who has it can speak. Turned out that we were spending too much time finding the next person who wanted to talk, so we used this technique only for the first session and then we stopped. For all the other ones we stayed all in a circle and everybody had to speak for very few seconds.
+And now the sessions.&lt;/p&gt;
+&lt;p&gt;1.: &lt;strong&gt;no constraints&lt;/strong&gt;. We left people to familiarize with the exercise without any particular constraint (but for being in pair). We saw that quite few people didn’t have a working testing framework and other ones either an IDE (mostly students). That’s how we decided what to assign for the second session.&lt;/p&gt;
+&lt;p&gt;2.: &lt;strong&gt;TDD, ping-pong pairing, use IDE and a build system&lt;/strong&gt;. During the check-in we actually asked people to write their level of knowledge of TDD (from 0 to 4) and stick it on their t-shirts, and for this session we asked to everyone to pair with someone who was more familiar with this technique. This way people who were not familiar with testing and IDE got introduced to them and got something working pretty quickly. For some people this set-up took quite some time and few pairs started to focus on the exercise pretty late in the session. Other ones instead didn’t have any issue at all.
+But still, because of this problems we decide to stick with this constraint and continue with it.&lt;/p&gt;
+&lt;img src=&#34;../../../../img/coderetreat-4.jpeg&#34;/&gt;
+&lt;ul&gt;
+&lt;li&gt;Lunch for 1h30.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;3.: &lt;strong&gt;same constraints as session #2&lt;/strong&gt; + rules of simple design and 1 constraint of their choice on top of it. Actually we also had a list of constraints that people could choose from, in case they felt particularly brave :-). So, in this session we didn’t give any mandatory one, but we let those who had problems with the set-up to continue, while we said to the others to pick a new one of their choice.
+It turned out it was a good idea. At the end of this session basically everybody was up and running, way more confident and really happy about ping-pair programming and curious about TDD.&lt;/p&gt;
+&lt;p&gt;4.: &lt;strong&gt;no mouse and no more than 4 lines of code&lt;/strong&gt; per function. People had lot of fun with this one, and for the only person who was using Vim we put another constraint: silent pairing (but to tell the other person the shortcuts). Quite difficult for them, but the retrospective was funny :)&lt;/p&gt;
+&lt;img src=&#34;../../../../img/coderetreat-5.jpeg&#34;/&gt;
+&lt;p&gt;5.: &lt;strong&gt;only one additional level of indentation per function&lt;/strong&gt;. This was the most difficult session of the day, basically. The good thing is that everybody at this point was very comfortable with experimenting and nobody was basically afraid to try things. So, this session was interesting because we, as facilitators, received interesting questions regarding the meaning of this constraint, the differences between one language to another, and other interesting point of views.&lt;/p&gt;
+&lt;img src=&#34;../../../../img/coderetreat-6.jpeg&#34;/&gt;
+&lt;h3 id=&#34;what-went-well&#34;&gt;What went well&lt;/h3&gt;
+&lt;p&gt;Basically: everything! It’s been way better than expected. All the participants got very well the spirit of the day: learning by going out of their comfort zones. And they really did! In each retrospective almost everybody was willing to try a new programming language in the next session (Elm has been the most successful one :D), a lot of people discovered Test-Driven Development for the first time and they were very happy to continue using it. Other ones discovered pair programming and they loved to be with another person discussing about design and coding. Also the fact to delete the code at the end of each session was not a problem, instead it was the contrary: some of them were pretty happy about the feeling and they said to be willing to continue to do code katas on their own with this format.&lt;/p&gt;
+&lt;p&gt;In the closing circle everybody had something to be very happy about. We could really see the excitement in their eyes and we hope they will keep this spirit also after this event. Basically everybody asked us to do another coderetreat next month :) …. Why not? :)&lt;/p&gt;
+&lt;h3 id=&#34;what-i-learned&#34;&gt;What I learned&lt;/h3&gt;
+&lt;p&gt;I learned that these kind of events should be done more frequently, because there are many people who really want them.
+I learned that, as facilitator, you have to be prepared to handle every kind of personality and each of them needs different kind of help.
+I learned that there’s no way to escape croissants for breakfast in France :)
+I learned that the most important thing is to make people comfortable. It’s only when they feel good and safe that they unleash their potential.
+I learned (actually, just a confirmation) that Software Craftsmanship is a mindset that influences every aspect of your life. And being inclusive, open, helpful and kind are on the top of the list.
+I got confirmed again that I absolutely have to learn functional programming :)&lt;/p&gt;
+&lt;h3 id=&#34;video-and-photos&#34;&gt;Video and photos&lt;/h3&gt;
+&lt;p&gt;This is a short video of the event:&lt;/p&gt;
+&lt;iframe src=&#34;https://player.vimeo.com/video/188463180&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;and this is the photo album:
+&lt;a href=&#34;https://goo.gl/photos/T9VJT1GtLudEq63D9&#34;&gt;https://goo.gl/photos/T9VJT1GtLudEq63D9&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>A Community of Professionals - SoCraTes UK</title>
-      <link>https://alebaffa.github.io/post/socrates-uk/</link>
+      <link>/posts/socrates-uk/</link>
       <pubDate>Sun, 19 Jun 2016 21:28:33 +0200</pubDate>
       
-      <guid>https://alebaffa.github.io/post/socrates-uk/</guid>
-      <description>A couple of weeks ago I participated for the first time to a SoCraTes event, one of the Software Craftsmanship international gatherings. SoCraTes (Software Craftsmanship and Testing) is an self-organized conference where the people from the international Software Craftsmanship Community meet and spend 3 days organizing themselves activities and talks around everything related to software craftsmanship: from the technical to the human aspects of it. There are few events of this kind every year (Italy, France, Germany, Belgium, Switzerland, Romania, Finland, Canaries) and I participated to the one in UK.</description>
+      <guid>/posts/socrates-uk/</guid>
+      <description>&lt;img src=&#34;../../../../img/socrates.png&#34; alt=&#34;socrates place&#34; style=&#34;width: 300px; margin-right: 15px;&#34; align=&#34;left&#34;/&gt;
+&lt;p&gt;A couple of weeks ago I participated for the first time to a SoCraTes event, one of the Software Craftsmanship international gatherings.
+SoCraTes (Software Craftsmanship and Testing) is an self-organized conference where the people from the international Software Craftsmanship Community meet and spend 3 days organizing themselves activities and talks around everything related to software craftsmanship: from the technical to the human aspects of it.
+There are few events of this kind every year (Italy, France, Germany, Belgium, Switzerland, Romania, Finland, Canaries) and I participated to the one in UK.&lt;/p&gt;
+&lt;h2&gt;Location&lt;/h2&gt;
+&lt;p&gt;The location was in Dorking, not far from Gatwick airport. A stunning place!
+&lt;img src=&#34;../../../../img/socrates-out-1.jpeg&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Organization — The Open Space&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;It’s a self-organizing conference because the agenda is created every day by the participants through an Open Space. These were the market places of the two days (the third and last day was dedicated more to relax, chat and walk until people left).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../../../img/open-space-1.jpeg&#34; style=&#34;width: 400px; margin-right: 2px;&#34; align=&#34;left&#34; /&gt;
+&lt;img src=&#34;../../../../img/open-space-2.jpeg&#34; style=&#34;width: 400px;&#34; align=&#34;left&#34;/&gt;&lt;/p&gt;
+&lt;h2&gt;Personal experience&lt;/h2&gt;
+It’s been maybe one of the most stimulating experiences I’ve ever participated to. 
+&lt;p&gt;Through the sessions in the event I really understood the meaning of Software Craftsmanship. I attended technical sessions about refactoring legacy code, TDD and functional programming, as well as other sessions related more to the human aspects of software development like Agile, technical coaching, Community of Practice, communication techniques and interesting comparisons between sport and development.&lt;/p&gt;
+&lt;p&gt;Differently from a traditional conference, in the SoCraTes events the session are fully interactive and once they start they may also never really end: if people are interested they continue to work on it during the evening and the other days. The sessions organized during the event may also continue after the event itself, so starting cool open source projects that the entire community will one day benefit from. And it will happen very often, as far as I understood. And it’s so cool.&lt;/p&gt;
+&lt;p&gt;The Software Craftsmanship international community is really awesome: friendly, open and welcoming people who meet in these events to share their passion, to discuss and challenge themselves and to help others to learn how to craft their careers and their skills.&lt;/p&gt;
+&lt;h2&gt;What I learned&lt;/h2&gt;
+The biggest lesson for me that I learned from SoCraTes UK is to realize that software is about people and that too often our industry forgets about it. 
+&lt;p&gt;It’s not that I’ve never thought about empathy, diversity, inclusion and all these stuff, but meeting with a community of passionate people who put these things before the technicalities of software development (when they could fully do it considered their high technical skills) made me realize that maybe I’ve never put the right amount of focus on them.&lt;/p&gt;
+&lt;p&gt;Software Craftsmanship is care about our industry and this includes everything, from the techniques it is based on to the people who work in it.&lt;/p&gt;
+&lt;p&gt;It’s been my first SoCraTes event ever, but I will surely participate to the other ones as often as I can. The one in France is not so far from my house so I will surely go there!&lt;/p&gt;
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;If you want to get a glimpse of what SoCraTes UK was, register to the &lt;a href=&#34;https://scnewsletter.firebaseapp.com/&#34;&gt;Software Craftsmanship Newsletter&lt;/a&gt; that I created: the next issue will be fully dedicated to this events.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

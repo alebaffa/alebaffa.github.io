@@ -2,24 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ipfs on Alessandro Baffa</title>
-    <link>https://alebaffa.github.io/tags/ipfs/</link>
-    <description>Recent content in ipfs on Alessandro Baffa</description>
+    <link>/tags/ipfs/</link>
+    <description>Alessandro Baffa (ipfs)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 27 Jun 2020 15:35:00 +0900</lastBuildDate>
     
-	<atom:link href="https://alebaffa.github.io/tags/ipfs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/ipfs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>A Decentralized Blog</title>
-      <link>https://alebaffa.github.io/post/decentralized-blog/</link>
+      <link>/posts/decentralized-blog/</link>
       <pubDate>Sat, 27 Jun 2020 15:35:00 +0900</pubDate>
       
-      <guid>https://alebaffa.github.io/post/decentralized-blog/</guid>
-      <description>This blog is now hosted on IPFS, the Interplanetary Filesystem.
-I&amp;rsquo;m using Hugo and Fleek.co to automatically build and deploy the static files on IPFS.
-There are three ways to see this page. The first is to use a standard browser (Chrome, Firefox..etc) with extensions such as IPFS Companion that uses a IPNS gateway set up by default (or you can install IPFS and run a node locally), or the Metamask plugin, and when you type http://alebaffa.</description>
+      <guid>/posts/decentralized-blog/</guid>
+      <description>&lt;p&gt;This blog is now hosted on &lt;a href=&#34;https://ipfs.io/&#34;&gt;IPFS&lt;/a&gt;, the Interplanetary Filesystem.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m using &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; and &lt;a href=&#34;http://fleek.co/&#34;&gt;Fleek.co&lt;/a&gt; to automatically build and deploy the static files on IPFS.&lt;/p&gt;
+&lt;p&gt;There are three ways to see this page. The first is to use a standard browser (Chrome, Firefox..etc) with extensions such as &lt;a href=&#34;https://chrome.google.com/webstore/detail/ipfs-companion/nibjojkomfdiaoajekhjakgkdhaomnch?hl=en&#34;&gt;IPFS Companion&lt;/a&gt; that uses a IPNS gateway set up by default (or you can install IPFS and run a node locally), or the Metamask plugin, and when you type &lt;a href=&#34;http://alebaffa.eth/&#34;&gt;http://alebaffa.eth/&lt;/a&gt; (yes, the &amp;lsquo;/&amp;rsquo; at the end is needed) you will be redirected to this URL:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://bafybeihhihm3jodq66hqtcasd6xgdkkxereipxqqg3evswsdjtju3hssii.ipfs.dweb.link/&#34;&gt;https://bafybeihhihm3jodq66hqtcasd6xgdkkxereipxqqg3evswsdjtju3hssii.ipfs.dweb.link/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Uh,what happened? Well, you are fetching content from IPFS. The string before .ipfs.dweb.link/ is the &lt;a href=&#34;https://docs.ipfs.io/concepts/content-addressing/&#34;&gt;CID&lt;/a&gt; of this page, i.e. the Content Identifier, which is the cryptographic hash of the physical file you are reading now. What does it mean? It means that if I change anything in this page, the hash will change and so its address. This makes this content unique and not changeable. You can inspect the CID from &lt;a href=&#34;https://cid.ipfs.io/#bafybeibel2wf2vyocphmteaxnzxx6f2sqvlaw3lbvuztpm7kf22tsevpk4&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The second way to access this blog from any browser is to just type &lt;a href=&#34;http://alebaffa.eth.link&#34;&gt;http://alebaffa.eth.link&lt;/a&gt;. The URL will not change this time. The routing to the IPFS content is taken care by EthDNS and EthLink (&lt;a href=&#34;https://eth.link/)&#34;&gt;https://eth.link/)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The third way is to use Brave brower, that has native support for IPFS. So, you just type &lt;a href=&#34;http://alebaffa.eth/&#34;&gt;http://alebaffa.eth/&lt;/a&gt; and you will be redirected to its CID without need to install other plugings. Awesome!&lt;/p&gt;
+&lt;p&gt;What does this all mean? The URL you typed in your browser is not pointing to a location (i.e. a web server), it is pointing to a specific content that has its own hash. A very light hash, which is opening to a whole new world of opportunities such as &lt;a href=&#34;https://medium.com/coinmonks/ipfs-blockchain-decentralised-file-storage-9ef3a1fa307b&#34;&gt;Decentralized file storage&lt;/a&gt; with Ethereum or things like &lt;a href=&#34;https://filecoin.io/&#34;&gt;Filecoin&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

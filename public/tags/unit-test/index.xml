@@ -2,36 +2,187 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>unit test on Alessandro Baffa</title>
-    <link>https://alebaffa.github.io/tags/unit-test/</link>
-    <description>Recent content in unit test on Alessandro Baffa</description>
+    <link>/tags/unit-test/</link>
+    <description>Alessandro Baffa (unit test)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Mar 2018 23:02:43 +0900</lastBuildDate>
     
-	<atom:link href="https://alebaffa.github.io/tags/unit-test/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/unit-test/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Unit testing a static custom logger in Spring Boot and log4j2</title>
-      <link>https://alebaffa.github.io/post/spring-boot-custom-logger-log4j2/</link>
+      <link>/posts/spring-boot-custom-logger-log4j2/</link>
       <pubDate>Fri, 23 Mar 2018 23:02:43 +0900</pubDate>
       
-      <guid>https://alebaffa.github.io/post/spring-boot-custom-logger-log4j2/</guid>
-      <description>Last time I wrote a post about how to unit test a custom logger with log4j2. Today I migrated another custom logger from log4j 1.x to log4j 2.x, but this time it was encapsulated in a Spring Boot component as a static class attribute.
-Custom logger You have a simple custom logger
-public class SimpleCustomLogger { private final ExtendedLoggerWrapper log; private SimpleCustomLogger(final Logger log) { this.log = new ExtendedLoggerWrapper((AbstractLogger) log, log.</description>
+      <guid>/posts/spring-boot-custom-logger-log4j2/</guid>
+      <description>&lt;p&gt;Last time I wrote a post about &lt;a href=&#34;https://www.alebaffa.com/2018/03/17/unit-testing-custom-logger-log4j2/&#34;&gt;how to unit test a custom logger with log4j2&lt;/a&gt;. Today I migrated another custom logger from log4j 1.x to log4j 2.x, but this time it was encapsulated in a Spring Boot component as a static class attribute.&lt;/p&gt;
+&lt;h2 id=&#34;custom-logger&#34;&gt;Custom logger&lt;/h2&gt;
+&lt;p&gt;You have a simple custom logger&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;SimpleCustomLogger&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; ExtendedLoggerWrapper log&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;SimpleCustomLogger&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; Logger log&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; ExtendedLoggerWrapper&lt;span style=&#34;color:#f92672&#34;&gt;((&lt;/span&gt;AbstractLogger&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; log&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; 
+                            log&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getName&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(),&lt;/span&gt; log&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getMessageFactory&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;());&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;synchronized&lt;/span&gt; SimpleCustomLogger &lt;span style=&#34;color:#a6e22e&#34;&gt;getLogger&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; Class&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;?&amp;gt;&lt;/span&gt; clazz&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; Logger wrapped &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; LogManager&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getLogger&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;clazz&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; SimpleCustomLogger&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;wrapped&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;info&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Object message&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;log&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;isInfoEnabled&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;())&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+      log&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;info&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;message&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;which is used in a Spring Boot Component like so&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; org.springframework.stereotype.Component&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+&lt;span style=&#34;color:#a6e22e&#34;&gt;@Component&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;CustomComponent&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; SimpleCustomLogger logger &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; SimpleCustomLogger&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getLogger&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;CustomComponent&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;doSomething&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        logger&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;info&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello from the Simple Custom Logger&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;the-power-of-the-listappender&#34;&gt;The power of the ListAppender&lt;/h2&gt;
+&lt;p&gt;The trick of the &lt;code&gt;ListAppender&lt;/code&gt; showed in my &lt;a href=&#34;https://www.alebaffa.com/2018/03/17/unit-testing-custom-logger-log4j2/&#34;&gt;last post&lt;/a&gt; works exactly the same here. It will listen to all the events that are happening to the logger it is attached to.&lt;/p&gt;
+&lt;p&gt;Here the log4j2.xml:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;Configuration&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;status=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;DEBUG&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;TestCustomLogger&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;Appenders&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;Console&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;STDOUT&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;PatternLayout&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;pattern=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%m%n&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/Console&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;List&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;List1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/Appenders&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;Loggers&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;Root&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;level=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;DEBUG&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;AppenderRef&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ref=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;STDOUT&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;AppenderRef&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ref=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;List1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/Root&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/Loggers&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/Configuration&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;and here unit test:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@RunWith&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;SpringRunner&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;@SpringBootTest&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;SimpleCustomLoggerTest&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color:#a6e22e&#34;&gt;@Autowired&lt;/span&gt;
+  CustomComponent component&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+  &lt;span style=&#34;color:#a6e22e&#34;&gt;@ClassRule&lt;/span&gt;
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; LoggerContextRule context &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; LoggerContextRule&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;log4j2.xml&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; ListAppender listAppender&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+  &lt;span style=&#34;color:#a6e22e&#34;&gt;@Before&lt;/span&gt;
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;setup&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(){&lt;/span&gt;
+    listAppender &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; context&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getListAppender&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;List1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;).&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;clear&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+  &lt;span style=&#34;color:#a6e22e&#34;&gt;@Test&lt;/span&gt;
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;testCustomComponent&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;// This will write something with the custom logger
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    component&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;doSomething&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt; 
+    &lt;span style=&#34;color:#75715e&#34;&gt;// Retrieve the ListAppender
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;LogEvent&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; events &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; listAppender&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getEvents&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+    
+    assertThat&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;events&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; hasSize&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;1&lt;span style=&#34;color:#f92672&#34;&gt;));&lt;/span&gt;
+    assertEquals&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Custom logger is catched by the ListAppender&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt;
+        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello from the Simple Custom Logger&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt;
+        events&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;0&lt;span style=&#34;color:#f92672&#34;&gt;).&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getMessage&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;().&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getFormattedMessage&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;());&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Unit testing a custom logger with log4j2 is really super simple.&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Unit testing a custom logger in log4j2</title>
-      <link>https://alebaffa.github.io/post/unit-testing-custom-logger-log4j2/</link>
+      <link>/posts/unit-testing-custom-logger-log4j2/</link>
       <pubDate>Sat, 17 Mar 2018 13:55:46 +0900</pubDate>
       
-      <guid>https://alebaffa.github.io/post/unit-testing-custom-logger-log4j2/</guid>
-      <description>In this period I&amp;rsquo;m upgrading a Spring Boot project from 1.3 &amp;ndash;&amp;gt; 1.5 &amp;ndash;&amp;gt; 2.0. One of the steps is to get rid of log4j 1.x.
-In the project there is custom logger, but unfortunately its unit test with log4j2 is no more working and we receive the following error:
- mockito wanted but not invoked, Actually there were zero interactions with this mock
- Basically this exact same error in Stackoverflow.</description>
+      <guid>/posts/unit-testing-custom-logger-log4j2/</guid>
+      <description>&lt;p&gt;In this period I&amp;rsquo;m upgrading a Spring Boot project from 1.3 &amp;ndash;&amp;gt; 1.5 &amp;ndash;&amp;gt; 2.0. One of the steps is to get rid of log4j 1.x.&lt;/p&gt;
+&lt;p&gt;In the project there is custom logger, but unfortunately its unit test with log4j2 is no more working and we receive the following error:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;mockito wanted but not invoked, Actually there were zero interactions with this mock&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Basically &lt;a href=&#34;https://stackoverflow.com/questions/41793901/logger-with-mockito-in-java&#34;&gt;this exact same error&lt;/a&gt; in Stackoverflow.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s see how we can make a new test using log4j2.&lt;/p&gt;
+&lt;h2 id=&#34;take-a-look-to-the-log4j2-library-tests&#34;&gt;Take a look to the log4j2 library tests&lt;/h2&gt;
+&lt;p&gt;A &lt;a href=&#34;https://stackoverflow.com/a/28422839/3519732&#34;&gt;very good advice&lt;/a&gt; is to take a look to the tests used in the log4j2 library, to see how people are doing.
+&lt;a href=&#34;https://git-wip-us.apache.org/repos/asf?p=logging-log4j2.git;a=blob;f=log4j-core/src/test/java/org/apache/logging/log4j/core/CustomLevelsOverrideTest.java;h=628d73f685870b50a80bea1f17b017b2ad61fcb7;hb=HEAD&#34;&gt;This&lt;/a&gt; is the JUnit test I took as an example. In my case I don&amp;rsquo;t want to test a custom logging level, I just want to test the logger itself. Though, from this test you can basically see what you need in terms of dependencies and classes.&lt;/p&gt;
+&lt;h2 id=&#34;create-a-custom-logger&#34;&gt;Create a custom logger&lt;/h2&gt;
+&lt;p&gt;You can create one manually yourself, otherwise Log4j2 provides a useful tool to generate one automatically. You can take a look to the official documentation &lt;a href=&#34;https://logging.apache.org/log4j/2.x/manual/customloglevels.html#CodeGen&#34;&gt;here&lt;/a&gt;. You just need to run the following command (here it&amp;rsquo;s creating a class &lt;code&gt;MyLogger.java&lt;/code&gt; with the standard &lt;code&gt;info()&lt;/code&gt;, &lt;code&gt;debug()&lt;/code&gt;, &lt;code&gt;error()&lt;/code&gt;, but you could use your own names such as &lt;code&gt;defcon1&lt;/code&gt; etc.. if you need a more domain specific naming):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ java -cp log4j-core-2.11.0.jar org.apache.logging.log4j.core.tools.CustomLoggerGenerator com.demo.MyLogger info&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; debug&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; error&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt; &amp;gt; MyLogger.java
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Frankly, I struggled a bit to make this work. Be sure to run it from &lt;strong&gt;the same location&lt;/strong&gt; where &lt;code&gt;log4j-core-2.11.0.jar&lt;/code&gt; is stored.&lt;/p&gt;
+&lt;h2 id=&#34;gradle-dependencies&#34;&gt;Gradle dependencies&lt;/h2&gt;
+&lt;p&gt;The following are the dependencies you need:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;	compile(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;org.apache.logging.log4j:log4j-api:2.11.0&amp;#39;&lt;/span&gt;)
+	compile(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;org.apache.logging.log4j:log4j-core:2.11.0&amp;#39;&lt;/span&gt;)
+	compile(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;org.apache.logging.log4j:log4j-core:2.11.0:tests&amp;#39;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The key here is the third one: &lt;code&gt;log4j-core:2.11.0:tests&lt;/code&gt;. This includes a jar that contains two classes useful for the tests: &lt;code&gt;org.apache.logging.log4j.junit.LoggerContextRule&lt;/code&gt; and &lt;code&gt;org.apache.logging.log4j.test.appender.ListAppender&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;listappender&#34;&gt;ListAppender&lt;/h2&gt;
+&lt;p&gt;You have your gradle dependencies and your custom logger. Now you need to set up an &lt;a href=&#34;https://logging.apache.org/log4j/2.x/manual/appenders.html&#34;&gt;Appender&lt;/a&gt;. In Log4j 1.x you could use&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@Mock&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; Appender mockAppender&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;@Captor&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; ArgumentCaptor&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;LoggingEvent&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; captorLoggingEvent&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;but &lt;code&gt;LoggingEvent&lt;/code&gt; is no more included in log4j2. In order to get the logger events now you can use &lt;code&gt;ListAppender&lt;/code&gt;, which provides the events in all the appenders in the configuration. So, let&amp;rsquo;s create this configuration with the appender list. You have multiple choices here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;you can &lt;a href=&#34;https://logging.apache.org/log4j/2.x/manual/customconfig.html&#34;&gt;create one programmatically&lt;/a&gt; or&lt;/li&gt;
+&lt;li&gt;you can more simply create a standard configuration file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I went for the latter and I created my &lt;code&gt;test/resources/logj2.xml&lt;/code&gt; that will be used only by my JUnit test. This one:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;Configuration&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;status=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;DEBUG&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;TestCustomLevels&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;Appenders&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;Console&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;STDOUT&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;PatternLayout&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;pattern=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%m%n&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/Console&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;List&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;List1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/Appenders&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;Loggers&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;Root&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;level=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;DEBUG&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;AppenderRef&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ref=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;STDOUT&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;AppenderRef&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ref=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;List1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/Root&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/Loggers&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/Configuration&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;junit&#34;&gt;JUnit&lt;/h2&gt;
+&lt;p&gt;Now you can test your custom logger like so (in this example I have created a Spring Boot project in IntelliJ to have the closest conditions possible to the project I am migrating):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@RunWith&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;SpringRunner&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;@SpringBootTest&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;DemoApplicationTests&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+
+	&lt;span style=&#34;color:#a6e22e&#34;&gt;@ClassRule&lt;/span&gt;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; LoggerContextRule context &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; LoggerContextRule&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;log4j2.xml&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; ListAppender listAppender&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+	&lt;span style=&#34;color:#a6e22e&#34;&gt;@Before&lt;/span&gt;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;before&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+		listAppender &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; context&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getListAppender&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;List1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;).&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;clear&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+	&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+	&lt;span style=&#34;color:#a6e22e&#34;&gt;@Test&lt;/span&gt;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;LoggerTest&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+		MyLogger logger &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; MyLogger&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;create&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;DemoApplicationTests&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;LogEvent&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; events &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; listAppender&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getEvents&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+		assertThat&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;events&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; hasSize&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;0&lt;span style=&#34;color:#f92672&#34;&gt;));&lt;/span&gt;
+
+		logger&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;info&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;TEST&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+		assertThat&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;events&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; hasSize&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;1&lt;span style=&#34;color:#f92672&#34;&gt;));&lt;/span&gt;
+
+		assertEquals&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;TEST&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; events&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;0&lt;span style=&#34;color:#f92672&#34;&gt;).&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getMessage&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;().&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;toString&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;());&lt;/span&gt;
+	&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;download-this-example&#34;&gt;Download this example&lt;/h3&gt;
+&lt;p&gt;The entire source code is available &lt;a href=&#34;https://github.com/alebaffa/spring-boot-log4j2&#34;&gt;on my github&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

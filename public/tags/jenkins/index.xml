@@ -2,22 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>jenkins on Alessandro Baffa</title>
-    <link>https://alebaffa.github.io/tags/jenkins/</link>
-    <description>Recent content in jenkins on Alessandro Baffa</description>
+    <link>/tags/jenkins/</link>
+    <description>Alessandro Baffa (jenkins)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Feb 2018 21:06:57 +0900</lastBuildDate>
     
-	<atom:link href="https://alebaffa.github.io/tags/jenkins/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/jenkins/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Journey towards Continuous Integration - Part 1</title>
-      <link>https://alebaffa.github.io/post/road-towards-ci-part-one/</link>
+      <link>/posts/road-towards-ci-part-one/</link>
       <pubDate>Fri, 23 Feb 2018 21:06:57 +0900</pubDate>
       
-      <guid>https://alebaffa.github.io/post/road-towards-ci-part-one/</guid>
-      <description>Introduction I am going to write a set of posts that describe what I quickly talked about in the last Docker Tokyo Meetup. Though, this is not going to be focused on Docker only, but rather on all the challenges I found/I&amp;rsquo;m finding trying to set up the Continuous Integration for my team&amp;rsquo;s project. Nevertheless, Docker played/is playing an important role and it has revealed some interesting things about the quality of the project itself, which I&amp;rsquo;m trying to fix.</description>
+      <guid>/posts/road-towards-ci-part-one/</guid>
+      <description>&lt;img src=&#34;../../assets/images/ci.jpg&#34;&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;I am going to write a set of posts that describe what I quickly talked about in the last &lt;strong&gt;Docker Tokyo Meetup&lt;/strong&gt;. Though, this is not going to be focused on Docker only, but rather on all the challenges I found/I&amp;rsquo;m finding trying to set up the Continuous Integration for my team&amp;rsquo;s project. Nevertheless, Docker played/is playing an important role and it has revealed some interesting things about the quality of the project itself, which I&amp;rsquo;m trying to fix. It&amp;rsquo;s interesting to see what happens to an application when you lock it up into a container, not only because you can clearly detect the interactions with outside systems, but also to reveal some flaws in its internal architecture.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s also interesting to see what kind of changes it brings to the team: coding practices, change of development habits, new learning mindset.&lt;/p&gt;
+&lt;p&gt;This is not a completed journey in my team, there&amp;rsquo;s still work to do. With these posts I would like to share what I&amp;rsquo;ve been learning so far trying to fix all this.&lt;/p&gt;
+&lt;p&gt;Here the slides of my lightning talk at the meetup:&lt;/p&gt;
+&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;dbf151d34622488ca03eed2ebba526b8&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;
+&lt;p&gt;The project is a standard Web application based on &lt;strong&gt;Spring Boot&lt;/strong&gt;, &lt;strong&gt;gradle&lt;/strong&gt;, &lt;strong&gt;Oracle&lt;/strong&gt;, &lt;strong&gt;Apache&lt;/strong&gt; and &lt;strong&gt;Redis&lt;/strong&gt; for the backend, &lt;strong&gt;JQuery&lt;/strong&gt; and &lt;strong&gt;npm&lt;/strong&gt; for the frontend (we don&amp;rsquo;t entirely manage the frontend, though, just the integration with our API in the dynamic pages. The static assets are provided by an external design company). The application is deployed in the internal PaaS based on &lt;strong&gt;Cloud Foundry&lt;/strong&gt;. We also develop two mobile applications, &lt;strong&gt;Android&lt;/strong&gt; and &lt;strong&gt;iOS&lt;/strong&gt;, and we also have various batches (in Java and Python) that do other stuff, like fetching the content that is displayed in the Web/apps or send information to &lt;strong&gt;Elasticsearch&lt;/strong&gt; or other systems. There is also a small recommendation engine that does some Machine Learning with &lt;strong&gt;Tensorflow&lt;/strong&gt;. In all this I am not counting other side things like &lt;strong&gt;Slack bots&lt;/strong&gt; (in Scala and Java) and a CLI written in &lt;strong&gt;Go&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;So, it&amp;rsquo;s a very small project compared to what I was used to at my previous employer, but yet its architecture is an interesting set of various technologies that is fun to manage and an endless source of learning material.&lt;/p&gt;
+&lt;h2 id=&#34;next-posts&#34;&gt;Next posts&lt;/h2&gt;
+&lt;p&gt;Other things may come up to my mind later on, but these are surely the most interesting things I learned so far that are worth sharing:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;build system and dependency management&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;tests isolation and coding practices&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;development environments&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;knowledge sharing&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;development mindset&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Stay tuned.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

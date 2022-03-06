@@ -2,23 +2,99 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>personal-improvement on Alessandro Baffa</title>
-    <link>https://alebaffa.github.io/tags/personal-improvement/</link>
-    <description>Recent content in personal-improvement on Alessandro Baffa</description>
+    <link>/tags/personal-improvement/</link>
+    <description>Alessandro Baffa (personal-improvement)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 12 Sep 2021 12:23:42 +0900</lastBuildDate>
     
-	<atom:link href="https://alebaffa.github.io/tags/personal-improvement/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/personal-improvement/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>日本語勉強 - Personal recommendations for Japanese learners</title>
-      <link>https://alebaffa.github.io/post/japanese-learning/</link>
+      <link>/posts/japanese-learning/</link>
       <pubDate>Sun, 12 Sep 2021 12:23:42 +0900</pubDate>
       
-      <guid>https://alebaffa.github.io/post/japanese-learning/</guid>
-      <description>This is a list of resources that is working well for my Japanese studies.
-Reading You need to read until you destroy the visual and mental barrier of kanji. Until you don&amp;rsquo;t reach that point, your eyes will naturally tend to skip the entire content to pass to something else you can read without effort. So, force your mind to stop and read it all until your brain will stop making antibodies for kanji.</description>
+      <guid>/posts/japanese-learning/</guid>
+      <description>&lt;p&gt;This is a list of resources that is working well for my Japanese studies.&lt;/p&gt;
+&lt;h2 id=&#34;reading&#34;&gt;Reading&lt;/h2&gt;
+&lt;p&gt;You need to read until you destroy the visual and mental barrier of kanji. Until you don&amp;rsquo;t reach that point, your eyes will naturally tend to skip the entire content to pass to something else you can read without effort. So, force your mind to stop and read it all until your brain will stop making antibodies for kanji.&lt;/p&gt;
+&lt;p&gt;The problem, as always, is to find the right content for your level because you also don&amp;rsquo;t want to spend 25 minutes to read two lines.&lt;/p&gt;
+&lt;p&gt;So, along with the &lt;em&gt;usual suspect&lt;/em&gt;, already known by everybody studying Japanese, i.e.:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www3.nhk.or.jp/news/easy/&#34;&gt;NHK Easy News&lt;/a&gt; (or &lt;a href=&#34;https://nhkeasier.com/&#34;&gt;NHK News Web Easier&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;this is also very useful:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.lingq.com/&#34;&gt;LingQ&lt;/a&gt;. Not only it&amp;rsquo;s full of content for every level, but most importantly you can also import in it whatever the content in Japanese you are reading/watching. It will analyze the text and allow you to save words and sentences in an internal SRS, with automatic translation (made by dictionaries and contributors). &lt;strong&gt;Advantage compared to Anki&lt;/strong&gt;: you can import videos from YouTube (it basically imports its subtitles from it), so you can analyze all its transcript and study those sentences you are interested to analyze and learn. Basically, LingQ allows to conveniently automate something that you can do manually with effort with Anki (and lots of time. Time that I do not have).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;reading-stuff-for-the-context-you-need&#34;&gt;Reading stuff for the context you need&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Twitter&lt;/strong&gt;. 280 characters are shorter than an article. Follow people in the context you&amp;rsquo;re interested to and do the effort to read what they write without clicking on &amp;ldquo;&lt;em&gt;translate this tweet&lt;/em&gt;&amp;quot;. Use browsers plugins to translate the kanji you don&amp;rsquo;t know or imprort them into LingQ.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Online magazines&lt;/strong&gt;. If you want to build up vocabulary that is specific to a particular context, you can&amp;rsquo;t avoid reading more complicated stuff. I work with software engineering and blockchain, so for me &lt;a href=&#34;https://coinpost.jp/&#34;&gt;Coinpost.jp&lt;/a&gt; or &lt;a href=&#34;https://www.neweconomy.jp/&#34;&gt;neweconomy.jp&lt;/a&gt; are the must-read to stay up-to-date with what happens in JP. Again, browser plugins or import into LingQ. Yes, there&amp;rsquo;s a lot of katakana in technology, but surely not enough for my JLPT N4.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;listening&#34;&gt;Listening&lt;/h2&gt;
+&lt;p&gt;This is the most interesting part that I&amp;rsquo;m personally very happy about. There&amp;rsquo;s a huge amount of content on YouTube for Japanese listening, for all levels.&lt;/p&gt;
+&lt;p&gt;There are two kind of videos available:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;grammar short lessons videos (5 minutes)&lt;/li&gt;
+&lt;li&gt;real Japanese conversations (30 - 50 mins)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;grammar-short-videos&#34;&gt;Grammar short videos&lt;/h3&gt;
+&lt;p&gt;This is my personal workflow with this type of videos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I study some grammar parts on my JLPT books (I&amp;rsquo;m preparing for JLPT N3)&lt;/li&gt;
+&lt;li&gt;I go to YouTube to search for the related video where the same grammar part is explained by a native Japanese speaker and I can listen to usage examples. E.g.: you studied [-ようになる] on the book, then I go to YouTube and search &amp;ldquo;-ようになる&amp;rdquo;. You will find tons of excellent videos. My favorites channels are:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCsQCbl3a9FtYvA55BxdzYiQ&#34;&gt;Miku Real Japanese&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCq62LsItH2ADzfT4dnjtVIA/videos&#34;&gt;じゃぱすた/Let&amp;rsquo;s study Japanese&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCynMzryFHJG-htbCk58v2-Q/videos&#34;&gt;Japanese with Yuka&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/c/Akokitamura&#34;&gt;Ako Nihongo Lessons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/c/JapaneseAmmowithMisa/videos&#34;&gt;Japanese Ammo with Misa&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;listening-real-japanese-conversations&#34;&gt;Listening real Japanese conversations&lt;/h2&gt;
+&lt;p&gt;The above video are great to learn grammar, but they have the same problem you find in formal language courses: they are &lt;em&gt;structured&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Real life conversation is &lt;em&gt;unstructured&lt;/em&gt;, so you need this type of content too.
+Few years ago I could only find &lt;a href=&#34;https://www.youtube.com/c/BenjiroJapanese&#34;&gt;Benjiro - Beginner Japanese&lt;/a&gt;, I guess he was the one who started with this brilliant idea of creating content where people just freely discuss in Japanese in an unstructured way. His channel is not updated anymore, but the videos are there available for all and they are just gems.&lt;/p&gt;
+&lt;p&gt;Now there are many more on the same line. My favorite ones on YouTube:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCsQCbl3a9FtYvA55BxdzYiQ&#34;&gt;Miku Real Japanese&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/c/SayuriSaying&#34;&gt;Sayuri Saying&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCcCeJ3pQYFgvfVuMxVRWhoA&#34;&gt;もしもしゆうすけ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UC8dWfySP_cKDMFj6aFfQbFA&#34;&gt;YUYUの日本語Podcast&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCh-GhnQ7qDQmS6Bz3pGc1Mw/videos&#34;&gt;あかね的日本語教室&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are few podcast I also listen (I use Google Podcast):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://anchor.fm/LetsTalkinJapanese&#34;&gt;Let’s Talk in Japanese!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://anchor.fm/erikojuku&#34;&gt;日本語って！&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;shadowing&#34;&gt;Shadowing&lt;/h2&gt;
+&lt;p&gt;Worth mentioning this too. If you don&amp;rsquo;t have too many occasions to practice Japanese speaking, you can try with &amp;ldquo;&lt;em&gt;shadowing&lt;/em&gt;&amp;quot;: listen and repeat out loud.&lt;/p&gt;
+&lt;p&gt;While it&amp;rsquo;s true that you can do this with whatever the content (just stop the video/podcast and repeat what you just listened), there are few that are focused on this only:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://linktr.ee/shirokuropapa&#34;&gt;日本語でシャドーイング with しろくろパパ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCsQCbl3a9FtYvA55BxdzYiQ&#34;&gt;Miku Real Japanese&lt;/a&gt; (not free,  you have to buy it)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;volunteers-japanese-classes-for-japan-residents&#34;&gt;Volunteers Japanese classes (for Japan residents)&lt;/h2&gt;
+&lt;p&gt;If you live in Japan most cities organize local Japanese classes managed by volunteers, typically Japanese elderly people who want to help foreigners with their studies. They are free (or extremely cheap, mostly a symbolic cost, really) and sometimes they also provide some study material. There are two things I like of these classes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;they are totally unstructured. It&amp;rsquo;s rare to find volunteers who have a background of language teaching, most of them are just nice people who want to help. They speak a lot, they are very curious people and, in most cases, they have no idea how to interact precisely with your level of Japanese. This is great because it stretches your comprehension abilities;&lt;/li&gt;
+&lt;li&gt;you can review what you have studied on your own. This is what I do: I study some grammar at home and I prepare few sentences and questions for them, so we can speak about them, make more examples and basically build up the topic of the lesson each time we meet.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These classes are up to you, really. The volunteers are the best resource you can find, but you need to understand how to take advantage of them properly and not waste your time.&lt;/p&gt;
+&lt;h2 id=&#34;worth-mentioning-resources&#34;&gt;Worth mentioning resources&lt;/h2&gt;
+&lt;p&gt;Funny and useful:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/c/GameGengo&#34;&gt;Game Gengo ゲーム言語&lt;/a&gt;, study Japanese sentences and patterns from videogames. Fantastic!&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UC94tM7a6-QNOg6ze1ZzakrA/videos&#34;&gt;Hiro JP Academy&lt;/a&gt;. Study Japanese sentences and patterns through videos from anime.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/user/Dogen&#34;&gt;Dogen&lt;/a&gt;. Definitely NOT for Japanese beginners, but super funny. A hint of your future life as a Japanese proficent person.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/c/maydaysan&#34;&gt;maydaysan&lt;/a&gt;. Super short videos (and also kanji lessons, but I don&amp;rsquo;t watch them) to die laughing.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
   </channel>

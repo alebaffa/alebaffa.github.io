@@ -2,32 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>crypto on Alessandro Baffa</title>
-    <link>https://alebaffa.github.io/tags/crypto/</link>
-    <description>Recent content in crypto on Alessandro Baffa</description>
+    <link>/tags/crypto/</link>
+    <description>Alessandro Baffa (crypto)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 10 Mar 2021 08:17:31 +0900</lastBuildDate>
     
-	<atom:link href="https://alebaffa.github.io/tags/crypto/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/crypto/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>On NFT (2 part)</title>
-      <link>https://alebaffa.github.io/post/on-nft-2/</link>
+      <link>/posts/on-nft-2/</link>
       <pubDate>Wed, 10 Mar 2021 08:17:31 +0900</pubDate>
       
-      <guid>https://alebaffa.github.io/post/on-nft-2/</guid>
-      <description>Non-Fungible Tokens (NFT) are interesting, but there&amp;rsquo;s a lot of confusion about the concept of ownership. If you buy a NFT, you are only buying the ownership of a pointer to a metadata (audio, video, etc..) stored somewhere (more likely a centralized server, only some use IPFS). But this pointed metadata can be counterfeit (e.g. the NFT could be a screenshot. And this happening often now), so you still need an additional way to prove the actual asset is legit, the &amp;ldquo;oracle problem&amp;rdquo;.</description>
+      <guid>/posts/on-nft-2/</guid>
+      <description>&lt;p&gt;Non-Fungible Tokens (NFT) are interesting, but there&amp;rsquo;s a lot of confusion about the concept of &lt;em&gt;ownership&lt;/em&gt;. If you buy a NFT, you are only buying the ownership of a pointer to a metadata (audio, video, etc..) stored somewhere (more likely a centralized server, only some use IPFS). But this pointed metadata can be counterfeit (e.g. the NFT could be a screenshot. And this happening often now), so you still need an additional way to prove the actual asset is legit, the &amp;ldquo;oracle problem&amp;rdquo;. There is no solution at the moment.&lt;/p&gt;
+&lt;p&gt;Blockchain guarantees you own the NFT, but not actual asset represented by the NFT.&lt;/p&gt;
+&lt;p&gt;Could W3C&amp;rsquo;s Decentralized Identifiers (DID) and Verifiable Credentials (VC) solve this, or provide an alternative, more efficient way to link the NFT to the identity of its issuer? Probably.&lt;/p&gt;
+&lt;p&gt;NFT experimentations are blooming, and it&amp;rsquo;s interesting to see how these problems are being addressed. The latest interesting one is a proposal to convert all existing NFTs to a DID. It means that a NFT could theoretically:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;become an authentication tool cross chain&lt;/li&gt;
+&lt;li&gt;acquire its own dynamic social graph on the Web3, and so increase its value.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Decentralized Identities will be the next wave after NFT.&lt;/p&gt;
+&lt;p&gt;Proposal by Ceramic Networks: &lt;a href=&#34;https://github.com/ceramicnetwork/CIP/blob/main/CIPs/CIP-94/CIP-94.md&#34;&gt;https://github.com/ceramicnetwork/CIP/blob/main/CIPs/CIP-94/CIP-94.md&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href=&#34;on-nfts.md&#34;&gt;Previous post about NFT&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>On NFTs..</title>
-      <link>https://alebaffa.github.io/post/on-nfts/</link>
+      <link>/posts/on-nfts/</link>
       <pubDate>Mon, 01 Mar 2021 17:45:41 +0900</pubDate>
       
-      <guid>https://alebaffa.github.io/post/on-nfts/</guid>
-      <description>Non-Fungible Tokens (#NFTs) is a very wide topic and I do not want to go in details here, so I just suggest a couple of links:
- The Non-Fungible Tokens Bible by OpenSea : it contains everything you need to know about NFTs. A Beginner&amp;rsquo;s Guide to NFTs: it contains an interesting panorama of all types of existing NFTs (i.e.: NFT is not only art or gaming. This blog is using a NFT as domain name: alebaffa.</description>
+      <guid>/posts/on-nfts/</guid>
+      <description>&lt;p&gt;Non-Fungible Tokens (#NFTs) is a very wide topic and I do not want to go in details here, so I just suggest a couple of links:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://opensea.io/blog/guides/non-fungible-tokens&#34;&gt;The Non-Fungible Tokens Bible by OpenSea&lt;/a&gt; :  it contains everything you need to know about NFTs.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d&#34;&gt;A Beginner&amp;rsquo;s Guide to NFTs&lt;/a&gt;: it contains an interesting panorama of all types of existing NFTs (i.e.: NFT is not only art or gaming. This blog is using a NFT as domain name: &lt;strong&gt;alebaffa.eth&lt;/strong&gt; is a NFT that points to my blog &lt;a href=&#34;decentralized-blog.md&#34;&gt;stored on IPFS&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It&amp;rsquo;s interesting to see what problems are coming up and still need to be fixed.
+&lt;img src=&#34;../../images/NFT2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Digital scarcity&lt;/em&gt; and &lt;em&gt;proof of ownership&lt;/em&gt; programmatically embedded in Non-Fungible Tokens alone don&amp;rsquo;t prevent someone to screenshot your NFT and resell it on another marketplace:
+&lt;a href=&#34;https://twitter.com/larvalabs/status/1364041628508434432&#34;&gt;https://twitter.com/larvalabs/status/1364041628508434432&lt;/a&gt;.
+I&amp;rsquo;d be very interested to know what is the legal framework for NFT art.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../images/NFT.png&#34; alt=&#34;&#34;&gt;
+The above case reminds me of &lt;a href=&#34;https://www.amazon.com/Future-Ideas-Commons-Connected-World/dp/0375726446&#34;&gt;The Future of Ideas&lt;/a&gt;, the book from Lawrence Lessig that I read a decade ago. It was written at the very early stages of the Web 2.0 when there was a risk that the old lobbies (music labels, movies companies, etc..) could have the power to leverage their Intellectual Properties rights to stop the new wave of creativity that Internet was helping to flourish. This book, and the movement it helped to create, led to the creation of the &lt;a href=&#34;https://creativecommons.org/&#34;&gt;Creative Commons&lt;/a&gt;. Of course, we are not talking about lobbies here now, but the problem is the same: if today a NFT can also assume the form of &amp;ldquo;fungible/non-fungible token&amp;rdquo;, a composable token (&lt;a href=&#34;https://github.com/ethereum/eips/issues/998&#34;&gt;ERC-998&lt;/a&gt;), it means we can programmatically create a &amp;ldquo;remix&amp;rdquo;. How we are going to deal with it, programmatically, will be interesting to see in terms of copyright. The benefits of course is that the original owner of part of this composable automatically takes credit and profit, but what if ERC-998 is not used? What the NFT marketplaces are going to do to protect the artists? Can the current legal framework be used? Which one? Can the blockchain proof-of-ownership be used in court?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../images/storage.png&#34; alt=&#34;&#34;&gt;
+Another problem is the storage. NFTs storage is mostly still up to the owner, which is not sustainable in the long term. Some use IPFS &amp;ldquo;pinning&amp;rdquo;, which means the token is stored on someone else&amp;rsquo;s IPFS node that keeps it for you, which in turns often means on someone else&amp;rsquo;s AWS storage used as a IPFS node. &amp;ldquo;Not your storage, not your NFT&amp;rdquo;. This problem could be solved with solutions like &lt;a href=&#34;https://filecoin.io/&#34;&gt;Filecoin&lt;/a&gt;, which adds the economic incentive to IPFS, but it has not been yet adopted by any of the NFT marketplaces.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

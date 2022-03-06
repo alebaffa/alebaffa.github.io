@@ -2,23 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>refactoring on Alessandro Baffa</title>
-    <link>https://alebaffa.github.io/tags/refactoring/</link>
-    <description>Recent content in refactoring on Alessandro Baffa</description>
+    <link>/tags/refactoring/</link>
+    <description>Alessandro Baffa (refactoring)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 09 Oct 2016 21:17:23 +0200</lastBuildDate>
     
-	<atom:link href="https://alebaffa.github.io/tags/refactoring/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/refactoring/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Dependency Injection VS Extract and Override Factory Method</title>
-      <link>https://alebaffa.github.io/post/racing-car-kata-refactoring/</link>
+      <link>/posts/racing-car-kata-refactoring/</link>
       <pubDate>Sun, 09 Oct 2016 21:17:23 +0200</pubDate>
       
-      <guid>https://alebaffa.github.io/post/racing-car-kata-refactoring/</guid>
-      <description>The TextConverter exercise (in the Racing Car kata suite) is a very interesting exercise for refactoring legacy code. As I am reading Working Effectively with Legacy Code I found two ways of solving it.
-Refactoring can only be done safely with unit tests and so I did, rigourously in TDD. Though, in this blog post I am not going to show you all the testing process, but only the two ways of decoupling the dependency.</description>
+      <guid>/posts/racing-car-kata-refactoring/</guid>
+      <description>&lt;p&gt;The TextConverter exercise (in the &lt;em&gt;Racing&lt;/em&gt; &lt;em&gt;Car&lt;/em&gt; &lt;em&gt;kata&lt;/em&gt; suite) is a very interesting exercise for refactoring legacy code. As I am reading &lt;em&gt;Working Effectively with Legacy Code&lt;/em&gt; I found two ways of solving it.&lt;/p&gt;
+&lt;p&gt;Refactoring can only be done safely with unit tests and so I did, rigourously in TDD. Though, in this blog post I am not going to show you all the testing process, but only the two ways of decoupling the dependency.&lt;/p&gt;
+&lt;h2 id=&#34;the-problem&#34;&gt;The problem&lt;/h2&gt;
+&lt;p&gt;The code comes with a classic dependency issue: a method that &lt;em&gt;secretly&lt;/em&gt; (from the point of view of the client) reads from an external file that is created using the filename passed in the constructor.
+So, no way for the client to know about this file before or to avoid its usage. Here the original code:&lt;/p&gt;
+&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/f1f7e91dba6c6252d1237381da856645/.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;As you can see, the filename &amp;ldquo;&lt;em&gt;fullFilenameWithPath&lt;/em&gt;&amp;rdquo; is passed in the constructor and then it&amp;rsquo;s used internally by &lt;em&gt;FileReader&lt;/em&gt;. This creates an annoying hidden dependency that prevents the testing of the method &lt;em&gt;convertToHtml()&lt;/em&gt;. If you try to call the method &lt;em&gt;convertToHtml()&lt;/em&gt; from your tests you will get a &amp;ldquo;&lt;em&gt;File Not Found Exception&lt;/em&gt;&amp;quot;.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s leave aside that ugly mix of levels of abstractions in this method (&lt;em&gt;FileReader&lt;/em&gt;, &lt;em&gt;BufferedReader&lt;/em&gt;, &lt;em&gt;&amp;lt; br /&amp;gt;&lt;/em&gt;, static call to &lt;em&gt;escapeHtml()&lt;/em&gt; all together .. &lt;em&gt;blah&lt;/em&gt;). I found that this will be fixed almost &lt;em&gt;automagically&lt;/em&gt; once you figure out how to extract that dependency from there.&lt;/p&gt;
+&lt;p&gt;So, how to extract that dependency so that we can test it?&lt;/p&gt;
+&lt;h2 id=&#34;technique-1-dependency-injection&#34;&gt;Technique 1: Dependency Injection&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;An injection is the passing of a dependency to a dependent object (a client) that would use it.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In this case the dependency is &lt;em&gt;FileReader&lt;/em&gt; and the dependent object is our &lt;em&gt;HtmlTextConverter&lt;/em&gt; class.&lt;/p&gt;
+&lt;p&gt;I want to pass the dependency from the constructor, but we can&amp;rsquo;t change the existing one. In &lt;em&gt;Working Effectively with Legacy Code&lt;/em&gt; this is called &lt;em&gt;Preserving Signature&lt;/em&gt;, but more easily we can&amp;rsquo;t change an API that is used by the clients.&lt;/p&gt;
+&lt;p&gt;So, I can refactor this class in 3 steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;I extract the &lt;em&gt;new FileReader&lt;/em&gt; from the method so that now it is created by a ReaderFactory (I am using the &lt;a href=&#34;https://sourcemaking.com/design_patterns/factory_method&#34;&gt;Factory Design Pattern&lt;/a&gt; here, so that I can create a FileReader, or more in general a Reader, with a method &lt;em&gt;createFactory()&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;I create a new constructor that takes a &lt;em&gt;ReaderFactory&lt;/em&gt; interface as input&lt;/li&gt;
+&lt;li&gt;I make the old constructor to call the new one passing the implementation of &lt;em&gt;ReaderFactory&lt;/em&gt; that does the same job of &lt;em&gt;new FileReader()&lt;/em&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The point 3 is called &lt;em&gt;Parametrize Constructor&lt;/em&gt; in &lt;em&gt;Working Effectively With Legacy Code&lt;/em&gt; and this is the result:&lt;/p&gt;
+&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/b4e9323e3b692cb6de63efa1c08fa41d/.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;The fact that I extracted the &lt;em&gt;FileReader&lt;/em&gt; from the method allowed me also to better define how I wanted to use it, so to get rid of &lt;em&gt;BufferedReader&lt;/em&gt;, now handled in HtmlFormatter class. This allowed me also to remove the global variable fullFilenameWithPath from HtmlTextConverter.
+A simple refactoring that made me, at the same time, decouple the dependency and make the code cleaner by removing that ugly mix of levels of abstractions.&lt;/p&gt;
+&lt;p&gt;With this implementation I can now test the method just by creating a fake implementation of ReaderFactory in order to read from a String instead of a file:&lt;/p&gt;
+&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/35267e8d83a380d4ec071faf95cc356c/.js&#34;&gt;&lt;/script&gt;
+
+&lt;h2 id=&#34;technique-2-extract-and-override-factory-method&#34;&gt;Technique 2: Extract and Override Factory Method&lt;/h2&gt;
+&lt;p&gt;In this technique you extract all the work involved in the creation of &lt;em&gt;FileReader&lt;/em&gt; in the constructor into another factory method. Then, you create a testing subclass and override the method. This is the result:&lt;/p&gt;
+&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/f1e01dcfa82737091ff430fb40932d51/.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;I have extracted the &lt;em&gt;new FileReader()&lt;/em&gt; into another method called &lt;em&gt;getReader()&lt;/em&gt;, so now I can override it in a subclass called &lt;em&gt;FakeHtmlTextConverter&lt;/em&gt; as follows:&lt;/p&gt;
+&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/b823ce0137a2b01b60873741fe19b68c/.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;This technique allows me to not change the constructor, but instead using a fake implementation in the tests, like so:&lt;/p&gt;
+&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/73fa748312c3cda72fad659d698d1203/.js&#34;&gt;&lt;/script&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Working Effectively With Legacy Code&lt;/em&gt; is an illuminating book and i strongly recommend it to read. It&amp;rsquo;s pretty dense with content, but reading it along with small exercise like this one it&amp;rsquo;s a great way to absorb it faster and make it yours.&lt;/p&gt;
+&lt;p&gt;This exercise is interesting and puts you a bit uncomfortable since the refactoring is becomes pretty big very quickly and it&amp;rsquo;s difficult to do it in small steps. You stay in the red zone (&lt;em&gt;test don&amp;rsquo;t pass&lt;/em&gt;) for long, at least the first time you do it and mostly if you&amp;rsquo;re not familiar with design patterns or any refactoring strategy in particular.&lt;/p&gt;
+&lt;p&gt;Regarding the techniques, the 2. is strongly linked to the programming language used. You can&amp;rsquo;t use it in C/C++. The 1. is more clean. Both are two great ones.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

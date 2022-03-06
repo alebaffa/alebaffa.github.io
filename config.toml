@@ -1,146 +1,65 @@
-# Hey, thanks for using my theme. If you like this theme,checkout my repo (https://gitlab.com/avron/gruvhugo"
-# and drop a star while you're at it. ;)
-baseurl = "/"
-title = "Alessandro Baffa"
+baseURL = "/"
 languageCode = "en-us"
-paginate = "10" # Number of posts per page
-#disqusShortname = "" # Enable comments by entering your Disqus shortname
-#googleAnalytics = "" # Enable Google Analytics by entering your tracking id
-#-------------------------------------------------------------------------------
-# DEFAULT SETTINGS
-#-------------------------------------------------------------------------------
+title = "Alessandro Baffa"
+theme = "anubis"
+paginate = 3
 
-# Default Theme
-theme= "gruvhugo"
+disqusShortname = ""
+googleAnalytics = "UA-114385313-1"
 
-# Default Post Extension
-defaultExtension= "html"
+[author]
+name = "Alessandro Baffa"
 
-# Default metadata format for newly created frontmatter using
-# hugo new command. "toml", "yaml", or "json"
-metaDataFormat= "toml"
+[params]
+author = "Alessandro Baffa"
+description = "Software Engineer and Solutions Architect."
+dateFormat = "2006-01-02"
+paginationSinglePost = true
+style = "auto"
+readMore = true
+readNextPosts = 2
+copyCodeButton = true
+rssAsSocialIcon = true
 
-# [taxonomies]
-#   tag      = "tags"
-#   category = "categories"
-#   series   = "series"
+# Graphcomment support
+graphcommentId = ""
 
-[params.main]
-  enabled = true
-  enableKatex = true
-  metaKeywords = "fast, hugo, theme, minimal, gruvbox"
-  headerTitle = "Hi!"
-  copyright = "© 2021 Alessandro Baffa.  <a href=\"https://creativecommons.org/licenses/by/4.0/\">Some rights reserved</a>."
-  name = "jane_doe"
-  img = "images/author.png"
-  #img_title = "Thanks to Christina @ wocintechchat.com for this photo."
-  #icon = "ima/logo.png"
-  quote = "Computer Science is no more about computers than Astronomy is about telescopes."
-  description= """I am Alessandro Baffa, I am a software engineer and solutions architect from Italy and currently based in Tokyo. 
-  <br /><br />
-  
-  My specialities are enterprise Java based Web backend development, Agile development practices, clean code, AWS infrastructure architecture, IoT architecture design, enterprise distributed ledgers and blockchains.
-  <br /><br />
-  
-  I love helping people to learn things and improve their software skills. I have experience in organizing technical events for developers from local meetups, communities of practices in companies and small conferences."""
-  licenseUrl = ""
+# utteranc.es support
+utterancesRepo = ""  # mandatory
+utterancesTheme = "" # optional
+utterancesIssue = "" # optional
+utterancesLabel = "" # optional
 
- # Social icons
-  [[params.social]]
-    name = "twitter"
-    url  = "https://twitter.com/alebaffa"
+[[params.social]]
+id = "twitter"
+url = "https://www.twitter.com/alebaffa"
 
-  [[params.social]]
-    name = "github"
-    url  = "https://github.com/alebaffa"
+[[params.social]]
+id = "linkedin"
+url = "https://www.linkedin.com/in/alessandrobaffa"
 
-  [[params.social]]
-    name = "linkedin"
-    url  = "https://www.linkedin.com/alessandrobaffa"
-
-  [[params.social]]
-    name = "facebook"
-    url  = "https://www.facebook.com/alessandro.baffa"
-
-[params.style]
-  # add path to custom CSS files here
-  custom_css = []
-  # add path to custom SCSS files here
-  custom_scss = []
+[[params.social]]
+id = "github"
+url = "https://github.com/alebaffa"
 
 [menu]
-#   [[menu.main]]
-#     identifier = "about"
-#     name       = "About"
-#     url        = "about"
 
-  [[menu.main]]
-    identifier = "posts"
-    name       = "Posts"
-    url        = "post/"
+[[menu.main]]
+identifier = "about"
+name = "About"
+url = "/about/"
+weight = 1
 
-#   [[menu.main]]
-#     identifier = "wiki"
-#     name       = "Wiki"
-#     url        = "none"
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 2
 
-[markup]
-  defaultMarkdownHandler = "goldmark"
-  [markup.asciidocExt]
-    backend = "html5"
-    docType = "article"
-    extensions = []
-    failureLevel = "fatal"
-    noHeaderOrFooter = true
-    safeMode = "unsafe"
-    sectionNumbers = false
-    trace = false
-    verbose = true
-    workingFolderCurrent = false
-    [markup.asciidocExt.attributes]
-  [markup.blackFriday]
-    angledQuotes = false
-    footnoteAnchorPrefix = ""
-    footnoteReturnLinkContents = ""
-    fractions = true
-    hrefTargetBlank = false
-    latexDashes = true
-    nofollowLinks = false
-    noreferrerLinks = false
-    plainIDAnchors = true
-    skipHTML = false
-    smartDashes = true
-    smartypants = true
-    smartypantsQuotesNBSP = false
-    taskLists = true
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      definitionList = true
-      footnote = true
-      linkify = true
-      strikethrough = true
-      table = true
-      taskList = true
-      typographer = true
-    [markup.goldmark.parser]
-      attribute = true
-      autoHeadingID = true
-      autoHeadingIDType = "github"
-    [markup.goldmark.renderer]
-      hardWraps = false
-      unsafe = false
-      xhtml = false
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = false
-    hl_Lines = ""
-    lineNoStart = 1
-    lineNos = false
-    lineNumbersInTable = true
-    noClasses = true
-    style = "monokai"
-    tabWidth = 4
-  [markup.tableOfContents]
-    endLevel = 3
-    ordered = false
-    startLevel = 2
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+
+[markup.goldmark.renderer]
+unsafe = true
