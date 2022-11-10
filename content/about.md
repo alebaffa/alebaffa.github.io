@@ -24,3 +24,5 @@ menu:
 [Twitter  - @alebaffa](https://twitter.com/alebaffa)
 
 [Github   - https://github.com/alebaffa](https://github.com/alebaffa)
+
+<a rel="me" href="https://fosstodon.org/@alebaffa">Follow me on Mastodon</a>
