@@ -1,40 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>elasticsearch on Alessandro Baffa</title>
-    <link>/tags/elasticsearch/</link>
-    <description>Alessandro Baffa (elasticsearch)</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 22 Feb 2018 19:59:13 +0900</lastBuildDate>
-    
-    <atom:link href="/tags/elasticsearch/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Improving the development experience: Jupyter for Elasticsearch</title>
-      <link>/posts/elastic-search-jupyter/</link>
-      <pubDate>Thu, 22 Feb 2018 19:59:13 +0900</pubDate>
-      
-      <guid>/posts/elastic-search-jupyter/</guid>
-      <description>&lt;img src=&#34;../../assets/images/notebook.jpg&#34;&gt;
+    <channel>
+        <title>elasticsearch on alebaffa&#39;s blog</title>
+        <link>https://alebaffa.github.io/tags/elasticsearch/</link>
+        <description>Recent content in elasticsearch on alebaffa&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 22 Feb 2018 19:59:13 +0900</lastBuildDate><atom:link href="https://alebaffa.github.io/tags/elasticsearch/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Improving the development experience: Jupyter for Elasticsearch</title>
+        <link>https://alebaffa.github.io/p/improving-the-development-experience-jupyter-for-elasticsearch/</link>
+        <pubDate>Thu, 22 Feb 2018 19:59:13 +0900</pubDate>
+        
+        <guid>https://alebaffa.github.io/p/improving-the-development-experience-jupyter-for-elasticsearch/</guid>
+        <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;I have been asked to extract data from Elasticsearch and I had no clue of what kind of data were stored inside of it. Moreover, there was a lack of documentation and the only thing that could help me were some old Python scripts written by an old colleague.&lt;/p&gt;
 &lt;p&gt;Fortunately, Python is pretty damn good when it comes to readability.&lt;/p&gt;
-&lt;p&gt;So, because I am working to improve the development experience of my team and I am messing around with Jupyter, I thought I could create &lt;a href=&#34;https://github.com/alebaffa/es_client_jupyter/blob/master/es_client_notebook.ipynb&#34;&gt;a Jupyter notebook&lt;/a&gt; with a super simple Elasticsearch client in Python 3 that supports a connection with a proxy (vital, if working in a company).&lt;/p&gt;
+&lt;p&gt;So, because I am working to improve the development experience of my team and I am messing around with Jupyter, I thought I could create &lt;a class=&#34;link&#34; href=&#34;https://github.com/alebaffa/es_client_jupyter/blob/master/es_client_notebook.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;a Jupyter notebook&lt;/a&gt; with a super simple Elasticsearch client in Python 3 that supports a connection with a proxy (vital, if working in a company).&lt;/p&gt;
 &lt;h3 id=&#34;advantages-for-my-team&#34;&gt;Advantages for my team&lt;/h3&gt;
 &lt;p&gt;Increased visibility and knowledge sharing on Elasticsearch and how to handle quickly and efficiently its data. Now with Jupyter and this notebook they can connect immediately to our internal Elasticsearch, extract data and play with cool Python libraries for data analysis such as pandas, numpy and machine learning like Tensorflow. If before the data analysis in my team was managed by a single person (who then quit), who became the &lt;em&gt;big data guy&lt;/em&gt;, now all the team is up and running and can do the same task quickly.&lt;/p&gt;
 &lt;p&gt;Also, with Jupyter they can execute and see the result in the same view, step by step, for every line of code they write, so reducing dramatically the time spent to develop any python script that we need for data analysis in the team. Before it was kind of &lt;em&gt;trial and error until it worked&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Another great advantage is that we can now include code and text in the same notebook, extract it as markdown and store it into our internal Bitbucket (we don&amp;rsquo;t have the notebook viewer plugin). They will become an incredible efficient and effective documentation that will help the team to improve its data analysis skills.&lt;/p&gt;
 &lt;h3 id=&#34;next-steps&#34;&gt;Next steps&lt;/h3&gt;
-&lt;p&gt;Jupyter is great. My teammates were just blown away when they saw it and how it can improve our development workflow for data analysis tasks. Now the next step is to organize workshops or &lt;em&gt;coding dojos&lt;/em&gt; to practice with Pandas, Numpy and Tensorflow. Also, it would be cool to install &lt;a href=&#34;https://jupyterhub.readthedocs.io/en/latest/&#34;&gt;Jupyter Hub&lt;/a&gt; so that we can have a common environment where to share notebooks. Fortunately, there is also a Docker image for it:&lt;/p&gt;
+&lt;p&gt;Jupyter is great. My teammates were just blown away when they saw it and how it can improve our development workflow for data analysis tasks. Now the next step is to organize workshops or &lt;em&gt;coding dojos&lt;/em&gt; to practice with Pandas, Numpy and Tensorflow. Also, it would be cool to install &lt;a class=&#34;link&#34; href=&#34;https://jupyterhub.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Jupyter Hub&lt;/a&gt; so that we can have a common environment where to share notebooks. Fortunately, there is also a Docker image for it:&lt;/p&gt;
 &lt;h2 id=&#34;docker-run--d---name-jupyterhub-jupyterhubjupyterhub-jupyterhub&#34;&gt;&lt;code&gt;docker run -d --name jupyterhub jupyterhub/jupyterhub jupyterhub&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;(&lt;em&gt;Source - the usual suspect - for the proxy support:&lt;/em&gt; &lt;a href=&#34;https://stackoverflow.com/questions/32778235/elasticsearch-python-proxy&#34;&gt;StackOverflow&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;The Jupyter notebook is on my github, &lt;a href=&#34;https://github.com/alebaffa/es_client_jupyter/blob/master/es_client_notebook.ipynb&#34;&gt;HERE&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;(&lt;em&gt;Source - the usual suspect - for the proxy support:&lt;/em&gt; &lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/32778235/elasticsearch-python-proxy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;StackOverflow&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;The Jupyter notebook is on my github, &lt;a class=&#34;link&#34; href=&#34;https://github.com/alebaffa/es_client_jupyter/blob/master/es_client_notebook.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;HERE&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Here the Python script:
 &lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/alebaffa/09f61f79e625ee85b20deb5393132961.js&#34;&gt;&lt;/script&gt;
 &lt;/p&gt;
 </description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

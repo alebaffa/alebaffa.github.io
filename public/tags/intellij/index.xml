@@ -1,32 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>IntelliJ on Alessandro Baffa</title>
-    <link>/tags/intellij/</link>
-    <description>Alessandro Baffa (IntelliJ)</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 28 Feb 2018 23:19:11 +0900</lastBuildDate>
-    
-    <atom:link href="/tags/intellij/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Debug a Java Spring Boot application in Docker from IntelliJ</title>
-      <link>/posts/debug-java-docker-compose-intellij/</link>
-      <pubDate>Wed, 28 Feb 2018 23:19:11 +0900</pubDate>
-      
-      <guid>/posts/debug-java-docker-compose-intellij/</guid>
-      <description>&lt;p&gt;You have a Java Spring Boot application built with Gradle in a Docker container and you need to debug it from your favorite IDE on your host machine (IntelliJ).&lt;/p&gt;
+    <channel>
+        <title>IntelliJ on alebaffa&#39;s blog</title>
+        <link>https://alebaffa.github.io/tags/intellij/</link>
+        <description>Recent content in IntelliJ on alebaffa&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 28 Feb 2018 23:19:11 +0900</lastBuildDate><atom:link href="https://alebaffa.github.io/tags/intellij/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Debug a Java Spring Boot application in Docker from IntelliJ</title>
+        <link>https://alebaffa.github.io/p/debug-a-java-spring-boot-application-in-docker-from-intellij/</link>
+        <pubDate>Wed, 28 Feb 2018 23:19:11 +0900</pubDate>
+        
+        <guid>https://alebaffa.github.io/p/debug-a-java-spring-boot-application-in-docker-from-intellij/</guid>
+        <description>&lt;p&gt;You have a Java Spring Boot application built with Gradle in a Docker container and you need to debug it from your favorite IDE on your host machine (IntelliJ).&lt;/p&gt;
 &lt;p&gt;You can do it by attaching the remote debugger in IntelliJ to your Java application running in Docker.&lt;/p&gt;
 &lt;h3 id=&#34;steps&#34;&gt;Steps&lt;/h3&gt;
 &lt;h4 id=&#34;open-port-5005-in-the-container&#34;&gt;Open port :5005 in the container&lt;/h4&gt;
 &lt;p&gt;In this example the Java container is created using &lt;code&gt;docker-compose&lt;/code&gt;.
 All you need to do here is to open the port &lt;code&gt;:5005&lt;/code&gt;:&lt;/p&gt;
-&lt;script src=&#34;https://gist.github.com/alebaffa/f3fdf9f5cc22394f8d397f475f693115.js&#34;&gt;&lt;/script&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h4 id=&#34;create-a-remote-debugger-in-intellij&#34;&gt;Create a remote debugger in IntelliJ&lt;/h4&gt;
 &lt;p&gt;&lt;code&gt;Run --&amp;gt; Edit Configuration --&amp;gt; Add new configuration --&amp;gt; Remote&lt;/code&gt;&lt;/p&gt;
-&lt;img src=&#34;../../assets/images/remote-debugger.jpg&#34;&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;The default port is exactly the &lt;code&gt;:5005&lt;/code&gt;. Be sure that the debugger mode is on &lt;strong&gt;Attach&lt;/strong&gt;. Give it a name to this configuration (i.e.: Docker debugger)&lt;/p&gt;
 &lt;h4 id=&#34;add-an-option-in-gradle&#34;&gt;Add an option in Gradle&lt;/h4&gt;
 &lt;p&gt;You need to also add an additional option in your gradle command: &lt;code&gt;--debug-jvm&lt;/code&gt;. Say you need to debug an integration test, all you need to do is this:&lt;/p&gt;
@@ -38,11 +33,11 @@ All you need to do here is to open the port &lt;code&gt;:5005&lt;/code&gt;:&lt;/
 &lt;li&gt;put a breakpoint somewhere in the code in IntelliJ&lt;/li&gt;
 &lt;li&gt;Start the Remote debugger in IntelliJ (the Docker debugger) you created previously&lt;/li&gt;
 &lt;/ol&gt;
-&lt;img src=&#34;../../assets/images/start-remote-debugger.jpg&#34;&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h4 id=&#34;enjoy-your-debug&#34;&gt;Enjoy your debug&lt;/h4&gt;
 &lt;p&gt;The remote debugger will unfreeze the integration tests in Docker and your breakpoint will fire up as soon as the execution gets there.&lt;/p&gt;
 </description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>
