@@ -8,10 +8,10 @@
     <lastBuildDate>Thu, 22 Feb 2018 19:59:13 +0900</lastBuildDate><atom:link href="https://alebaffa.github.io/tags/elasticsearch/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Improving the development experience: Jupyter for Elasticsearch</title>
-      <link>https://alebaffa.github.io/blog/elastic-search-jupyter/</link>
+      <link>https://alebaffa.github.io/blog/elastic-jupiter/</link>
       <pubDate>Thu, 22 Feb 2018 19:59:13 +0900</pubDate>
       
-      <guid>https://alebaffa.github.io/blog/elastic-search-jupyter/</guid>
+      <guid>https://alebaffa.github.io/blog/elastic-jupiter/</guid>
       <description>I have been asked to extract data from Elasticsearch and I had no clue of what kind of data were stored inside of it.</description>
     </item>
     

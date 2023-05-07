@@ -41,7 +41,7 @@
   
     
       <url>
-            <loc>https://alebaffa.github.io/blog/spring-boot-custom-logger-log4j2/</loc>
+            <loc>https://alebaffa.github.io/blog/log4j/</loc>
             <lastmod>2018-03-23T23:02:43+09:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
@@ -52,18 +52,7 @@
   
     
       <url>
-            <loc>https://alebaffa.github.io/blog/unit-testing-custom-logger-log4j2/</loc>
-            <lastmod>2018-03-17T13:55:46+09:00</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-  
-    
-      <url>
-            <loc>https://alebaffa.github.io/blog/debug-java-docker-compose-intellij/</loc>
+            <loc>https://alebaffa.github.io/blog/docker/</loc>
             <lastmod>2018-02-28T23:19:11+09:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
@@ -77,19 +66,8 @@
     
   
     
-  
-    
       <url>
-            <loc>https://alebaffa.github.io/blog/jupyter-import-notebook/</loc>
-            <lastmod>2018-02-27T19:57:31+09:00</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-      <url>
-            <loc>https://alebaffa.github.io/blog/create_modules_in_jupyter_notebooks/</loc>
+            <loc>https://alebaffa.github.io/blog/jupiter/</loc>
             <lastmod>2018-02-26T21:38:37+09:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
@@ -103,21 +81,8 @@
     
   
     
-  
-    
       <url>
-            <loc>https://alebaffa.github.io/blog/road-towards-ci-part-one/</loc>
-            <lastmod>2018-02-23T21:06:57+09:00</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-  
-    
-      <url>
-            <loc>https://alebaffa.github.io/blog/elastic-search-jupyter/</loc>
+            <loc>https://alebaffa.github.io/blog/elastic-jupiter/</loc>
             <lastmod>2018-02-22T19:59:13+09:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
@@ -146,7 +111,7 @@
   
     
       <url>
-            <loc>https://alebaffa.github.io/blog/socrates-france/</loc>
+            <loc>https://alebaffa.github.io/blog/socrates/</loc>
             <lastmod>2016-10-31T12:29:46+02:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
@@ -157,7 +122,7 @@
   
     
       <url>
-            <loc>https://alebaffa.github.io/blog/global-day-of-coderetreat/</loc>
+            <loc>https://alebaffa.github.io/blog/coderetreat/</loc>
             <lastmod>2016-10-23T12:29:46+02:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
@@ -166,7 +131,7 @@
   
     
       <url>
-            <loc>https://alebaffa.github.io/blog/racing-car-kata-refactoring/</loc>
+            <loc>https://alebaffa.github.io/blog/refactoring/</loc>
             <lastmod>2016-10-09T21:17:23+02:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>

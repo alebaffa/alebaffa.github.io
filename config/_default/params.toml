@@ -36,11 +36,11 @@ disableImageOptimization = false
 
 [homepage]
   layout = "background" # valid options: page, profile, hero, card, background, custom
-  homepageImage = "img/tokyo.jpeg" # used in: hero, and card
+  homepageImage = "img/como.jpg" # used in: hero, and card
   showRecent = true
   showRecentItems = 3
   showMoreLink = true
-  showMoreLinkDest = "/content"
+  showMoreLinkDest = "/blog"
   cardView = true
   cardViewScreenWidth = false
   layoutBackgroundBlur = true # only used when layout equals background
@@ -52,7 +52,7 @@ disableImageOptimization = false
   showDateUpdated = true
   showAuthor = true
   showHero = true
-  heroStyle = "basic" # valid options: basic, big, background, thumbAndBackground
+  heroStyle = "big" # valid options: basic, big, background, thumbAndBackground
   layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
   layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
   showBreadcrumbs = true

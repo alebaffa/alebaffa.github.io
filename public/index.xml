@@ -18,70 +18,40 @@
     
     <item>
       <title>Unit testing a static custom logger in Spring Boot and log4j2</title>
-      <link>https://alebaffa.github.io/blog/spring-boot-custom-logger-log4j2/</link>
+      <link>https://alebaffa.github.io/blog/log4j/</link>
       <pubDate>Fri, 23 Mar 2018 23:02:43 +0900</pubDate>
       
-      <guid>https://alebaffa.github.io/blog/spring-boot-custom-logger-log4j2/</guid>
+      <guid>https://alebaffa.github.io/blog/log4j/</guid>
       <description>Last time I wrote a post about how to unit test a custom logger with log4j2.</description>
       
     </item>
     
     <item>
-      <title>Unit testing a custom logger in log4j2</title>
-      <link>https://alebaffa.github.io/blog/unit-testing-custom-logger-log4j2/</link>
-      <pubDate>Sat, 17 Mar 2018 13:55:46 +0900</pubDate>
-      
-      <guid>https://alebaffa.github.io/blog/unit-testing-custom-logger-log4j2/</guid>
-      <description>In this period I&amp;rsquo;m upgrading a Spring Boot project from 1.</description>
-      
-    </item>
-    
-    <item>
       <title>Debug a Java Spring Boot application in Docker from IntelliJ</title>
-      <link>https://alebaffa.github.io/blog/debug-java-docker-compose-intellij/</link>
+      <link>https://alebaffa.github.io/blog/docker/</link>
       <pubDate>Wed, 28 Feb 2018 23:19:11 +0900</pubDate>
       
-      <guid>https://alebaffa.github.io/blog/debug-java-docker-compose-intellij/</guid>
+      <guid>https://alebaffa.github.io/blog/docker/</guid>
       <description>You have a Java Spring Boot application built with Gradle in a Docker container and you need to debug it from your favorite IDE on your host machine (IntelliJ).</description>
-      
-    </item>
-    
-    <item>
-      <title>Jupyter: the easiest way to import code from another notebook</title>
-      <link>https://alebaffa.github.io/blog/jupyter-import-notebook/</link>
-      <pubDate>Tue, 27 Feb 2018 19:57:31 +0900</pubDate>
-      
-      <guid>https://alebaffa.github.io/blog/jupyter-import-notebook/</guid>
-      <description>Yesterday I published a post about how to create a module in jupyter.</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://alebaffa.github.io/blog/docker/featured.jpg" />
     </item>
     
     <item>
       <title>Create modules in Jupyter notebooks</title>
-      <link>https://alebaffa.github.io/blog/create_modules_in_jupyter_notebooks/</link>
+      <link>https://alebaffa.github.io/blog/jupiter/</link>
       <pubDate>Mon, 26 Feb 2018 21:38:37 +0900</pubDate>
       
-      <guid>https://alebaffa.github.io/blog/create_modules_in_jupyter_notebooks/</guid>
+      <guid>https://alebaffa.github.io/blog/jupiter/</guid>
       <description>In my current attempt to improve the development experience of my team, I am trying to introduce Jupyter notebooks to share knowledge about some data analysis scripts developed over the last years.</description>
       
     </item>
     
     <item>
-      <title>Journey towards Continuous Integration - Part 1</title>
-      <link>https://alebaffa.github.io/blog/road-towards-ci-part-one/</link>
-      <pubDate>Fri, 23 Feb 2018 21:06:57 +0900</pubDate>
-      
-      <guid>https://alebaffa.github.io/blog/road-towards-ci-part-one/</guid>
-      <description>Introduction # I am going to write a set of posts that describe what I quickly talked about in the last Docker Tokyo Meetup.</description>
-      
-    </item>
-    
-    <item>
       <title>Improving the development experience: Jupyter for Elasticsearch</title>
-      <link>https://alebaffa.github.io/blog/elastic-search-jupyter/</link>
+      <link>https://alebaffa.github.io/blog/elastic-jupiter/</link>
       <pubDate>Thu, 22 Feb 2018 19:59:13 +0900</pubDate>
       
-      <guid>https://alebaffa.github.io/blog/elastic-search-jupyter/</guid>
+      <guid>https://alebaffa.github.io/blog/elastic-jupiter/</guid>
       <description>I have been asked to extract data from Elasticsearch and I had no clue of what kind of data were stored inside of it.</description>
       
     </item>
@@ -108,30 +78,30 @@
     
     <item>
       <title>Back from SoCraTes France 2016</title>
-      <link>https://alebaffa.github.io/blog/socrates-france/</link>
+      <link>https://alebaffa.github.io/blog/socrates/</link>
       <pubDate>Mon, 31 Oct 2016 12:29:46 +0200</pubDate>
       
-      <guid>https://alebaffa.github.io/blog/socrates-france/</guid>
+      <guid>https://alebaffa.github.io/blog/socrates/</guid>
       <description>My second time in a Software Craftsmanship and Testing (SoCraTes) conference and, as always, it has been an awesome experience.</description>
       
     </item>
     
     <item>
       <title>Global Day of Coderetreat 2016, Sophia Antipolis, France</title>
-      <link>https://alebaffa.github.io/blog/global-day-of-coderetreat/</link>
+      <link>https://alebaffa.github.io/blog/coderetreat/</link>
       <pubDate>Sun, 23 Oct 2016 12:29:46 +0200</pubDate>
       
-      <guid>https://alebaffa.github.io/blog/global-day-of-coderetreat/</guid>
+      <guid>https://alebaffa.github.io/blog/coderetreat/</guid>
       <description>We did it!</description>
       
     </item>
     
     <item>
       <title>Dependency Injection VS Extract and Override Factory Method</title>
-      <link>https://alebaffa.github.io/blog/racing-car-kata-refactoring/</link>
+      <link>https://alebaffa.github.io/blog/refactoring/</link>
       <pubDate>Sun, 09 Oct 2016 21:17:23 +0200</pubDate>
       
-      <guid>https://alebaffa.github.io/blog/racing-car-kata-refactoring/</guid>
+      <guid>https://alebaffa.github.io/blog/refactoring/</guid>
       <description>The TextConverter exercise (in the Racing Car kata suite) is a very interesting exercise for refactoring legacy code.</description>
       
     </item>

@@ -8,10 +8,10 @@
     <lastBuildDate>Mon, 26 Feb 2018 21:38:37 +0900</lastBuildDate><atom:link href="https://alebaffa.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create modules in Jupyter notebooks</title>
-      <link>https://alebaffa.github.io/blog/create_modules_in_jupyter_notebooks/</link>
+      <link>https://alebaffa.github.io/blog/jupiter/</link>
       <pubDate>Mon, 26 Feb 2018 21:38:37 +0900</pubDate>
       
-      <guid>https://alebaffa.github.io/blog/create_modules_in_jupyter_notebooks/</guid>
+      <guid>https://alebaffa.github.io/blog/jupiter/</guid>
       <description>In my current attempt to improve the development experience of my team, I am trying to introduce Jupyter notebooks to share knowledge about some data analysis scripts developed over the last years.</description>
     </item>
     
