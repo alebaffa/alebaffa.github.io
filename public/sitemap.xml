@@ -1,132 +1,238 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://alebaffa.github.io/</loc>
-    <lastmod>2021-09-12T12:23:42+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/post/</loc>
-    <lastmod>2021-09-12T12:23:42+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/tags/personal-improvement/</loc>
-    <lastmod>2021-09-12T12:23:42+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/tags/</loc>
-    <lastmod>2021-09-12T12:23:42+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/p/%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%8B%89%E5%BC%B7-personal-recommendations-for-japanese-learners/</loc>
-    <lastmod>2021-09-12T12:23:42+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/archives/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/tags/log4j2/</loc>
-    <lastmod>2018-03-23T23:02:43+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/tags/spring-boot/</loc>
-    <lastmod>2018-03-23T23:02:43+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/tags/unit-test/</loc>
-    <lastmod>2018-03-23T23:02:43+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/p/unit-testing-a-static-custom-logger-in-spring-boot-and-log4j2/</loc>
-    <lastmod>2018-03-23T23:02:43+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/tags/log4j/</loc>
-    <lastmod>2018-03-17T13:55:46+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/p/unit-testing-a-custom-logger-in-log4j2/</loc>
-    <lastmod>2018-03-17T13:55:46+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/tags/debug/</loc>
-    <lastmod>2018-02-28T23:19:11+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/p/debug-a-java-spring-boot-application-in-docker-from-intellij/</loc>
-    <lastmod>2018-02-28T23:19:11+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/tags/docker-compose/</loc>
-    <lastmod>2018-02-28T23:19:11+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/tags/intellij/</loc>
-    <lastmod>2018-02-28T23:19:11+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/tags/java/</loc>
-    <lastmod>2018-02-28T23:19:11+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/tags/jupyter-notebook/</loc>
-    <lastmod>2018-02-27T19:57:31+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/p/jupyter-the-easiest-way-to-import-code-from-another-notebook/</loc>
-    <lastmod>2018-02-27T19:57:31+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/p/create-modules-in-jupyter-notebooks/</loc>
-    <lastmod>2018-02-26T21:38:37+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/tags/python/</loc>
-    <lastmod>2018-02-26T21:38:37+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/tags/ci/</loc>
-    <lastmod>2018-02-23T21:06:57+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/tags/docker/</loc>
-    <lastmod>2018-02-23T21:06:57+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/tags/jenkins/</loc>
-    <lastmod>2018-02-23T21:06:57+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/p/journey-towards-continuous-integration-part-1/</loc>
-    <lastmod>2018-02-23T21:06:57+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/tags/elasticsearch/</loc>
-    <lastmod>2018-02-22T19:59:13+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/p/improving-the-development-experience-jupyter-for-elasticsearch/</loc>
-    <lastmod>2018-02-22T19:59:13+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/p/my-current-learning-journey/</loc>
-    <lastmod>2018-01-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/tags/personal/</loc>
-    <lastmod>2018-01-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/p/changing-everything.-again./</loc>
-    <lastmod>2017-02-18T08:03:16+01:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/p/back-from-socrates-france-2016/</loc>
-    <lastmod>2016-10-31T12:29:46+02:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/tags/conferences/</loc>
-    <lastmod>2016-10-31T12:29:46+02:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/p/global-day-of-coderetreat-2016-sophia-antipolis-france/</loc>
-    <lastmod>2016-10-23T12:29:46+02:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/p/dependency-injection-vs-extract-and-override-factory-method/</loc>
-    <lastmod>2016-10-09T21:17:23+02:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/tags/refactoring/</loc>
-    <lastmod>2016-10-09T21:17:23+02:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/p/a-community-of-professionals-socrates-uk/</loc>
-    <lastmod>2016-06-19T21:28:33+02:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/p/amarcord-old-posts-from-2011-ita/eng/</loc>
-    <lastmod>2011-02-07T10:37:06+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/p/amarcord-old-posts-from-2010-ita/</loc>
-    <lastmod>2010-02-07T10:07:16+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/p/amarcord-old-posts-from-2009-ita/</loc>
-    <lastmod>2009-02-07T10:05:04+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/p/amarcord-old-posts-from-2008-ita/</loc>
-    <lastmod>2008-02-07T09:42:00+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/p/amarcord-old-posts-from-2007-ita/</loc>
-    <lastmod>2007-09-08T08:49:18+09:00</lastmod>
-  </url><url>
-    <loc>https://alebaffa.github.io/categories/</loc>
-  </url><url>
-    <loc>https://alebaffa.github.io/search/</loc>
-  </url>
+  
+    
+      <url>
+            <loc>https://alebaffa.github.io/blog/</loc>
+            <lastmod>2021-09-12T00:00:00+00:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://alebaffa.github.io/</loc>
+            <lastmod>2021-09-12T00:00:00+00:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://alebaffa.github.io/blog/learn-japanese/</loc>
+            <lastmod>2021-09-12T00:00:00+00:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://alebaffa.github.io/blog/spring-boot-custom-logger-log4j2/</loc>
+            <lastmod>2018-03-23T23:02:43+09:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://alebaffa.github.io/blog/unit-testing-custom-logger-log4j2/</loc>
+            <lastmod>2018-03-17T13:55:46+09:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://alebaffa.github.io/blog/debug-java-docker-compose-intellij/</loc>
+            <lastmod>2018-02-28T23:19:11+09:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://alebaffa.github.io/blog/jupyter-import-notebook/</loc>
+            <lastmod>2018-02-27T19:57:31+09:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://alebaffa.github.io/blog/create_modules_in_jupyter_notebooks/</loc>
+            <lastmod>2018-02-26T21:38:37+09:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://alebaffa.github.io/blog/road-towards-ci-part-one/</loc>
+            <lastmod>2018-02-23T21:06:57+09:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://alebaffa.github.io/blog/elastic-search-jupyter/</loc>
+            <lastmod>2018-02-22T19:59:13+09:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://alebaffa.github.io/blog/my-last-seven-months/</loc>
+            <lastmod>2018-01-25T00:00:00+00:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://alebaffa.github.io/blog/new-chapter-of-life/</loc>
+            <lastmod>2017-02-18T08:03:16+01:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://alebaffa.github.io/blog/socrates-france/</loc>
+            <lastmod>2016-10-31T12:29:46+02:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://alebaffa.github.io/blog/global-day-of-coderetreat/</loc>
+            <lastmod>2016-10-23T12:29:46+02:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://alebaffa.github.io/blog/racing-car-kata-refactoring/</loc>
+            <lastmod>2016-10-09T21:17:23+02:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://alebaffa.github.io/blog/socrates-uk/</loc>
+            <lastmod>2016-06-19T21:28:33+02:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://alebaffa.github.io/blog/amarcord-2011/</loc>
+            <lastmod>2011-02-07T10:37:06+09:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://alebaffa.github.io/blog/amarcord-2010/</loc>
+            <lastmod>2010-02-07T10:07:16+09:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://alebaffa.github.io/blog/amarcord-2009/</loc>
+            <lastmod>2009-02-07T10:05:04+09:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://alebaffa.github.io/blog/amarcord-2008/</loc>
+            <lastmod>2008-02-07T09:42:00+09:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://alebaffa.github.io/blog/amarcord-2007/</loc>
+            <lastmod>2007-09-08T08:49:18+09:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+  
 </urlset>

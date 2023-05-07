@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://alebaffa.github.io/sitemap.xml

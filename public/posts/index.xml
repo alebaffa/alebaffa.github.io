@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Home</title>
+    <link>https://alebaffa.github.io/posts/</link>
+    <description>Recent content in Posts on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 12 Sep 2021 12:23:42 +0900</lastBuildDate><atom:link href="https://alebaffa.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>日本語勉強 - Personal recommendations for Japanese learners</title>
+      <link>https://alebaffa.github.io/posts/japanese-learning/japanese-learning/</link>
+      <pubDate>Sun, 12 Sep 2021 12:23:42 +0900</pubDate>
+      
+      <guid>https://alebaffa.github.io/posts/japanese-learning/japanese-learning/</guid>
+      <description>This is a list of resources that is working well for my Japanese studies.</description>
+    </item>
+    
+    <item>
+      <title>Unit testing a static custom logger in Spring Boot and log4j2</title>
+      <link>https://alebaffa.github.io/posts/spring-boot-custom-logger-log4j2/</link>
+      <pubDate>Fri, 23 Mar 2018 23:02:43 +0900</pubDate>
+      
+      <guid>https://alebaffa.github.io/posts/spring-boot-custom-logger-log4j2/</guid>
+      <description>Last time I wrote a post about how to unit test a custom logger with log4j2.</description>
+    </item>
+    
+    <item>
+      <title>Unit testing a custom logger in log4j2</title>
+      <link>https://alebaffa.github.io/posts/unit-testing-custom-logger-log4j2/</link>
+      <pubDate>Sat, 17 Mar 2018 13:55:46 +0900</pubDate>
+      
+      <guid>https://alebaffa.github.io/posts/unit-testing-custom-logger-log4j2/</guid>
+      <description>In this period I&amp;rsquo;m upgrading a Spring Boot project from 1.</description>
+    </item>
+    
+    <item>
+      <title>Debug a Java Spring Boot application in Docker from IntelliJ</title>
+      <link>https://alebaffa.github.io/posts/debug-java-docker-compose-intellij/</link>
+      <pubDate>Wed, 28 Feb 2018 23:19:11 +0900</pubDate>
+      
+      <guid>https://alebaffa.github.io/posts/debug-java-docker-compose-intellij/</guid>
+      <description>You have a Java Spring Boot application built with Gradle in a Docker container and you need to debug it from your favorite IDE on your host machine (IntelliJ).</description>
+    </item>
+    
+    <item>
+      <title>Jupyter: the easiest way to import code from another notebook</title>
+      <link>https://alebaffa.github.io/posts/jupyter-import-notebook/</link>
+      <pubDate>Tue, 27 Feb 2018 19:57:31 +0900</pubDate>
+      
+      <guid>https://alebaffa.github.io/posts/jupyter-import-notebook/</guid>
+      <description>Yesterday I published a post about how to create a module in jupyter.</description>
+    </item>
+    
+    <item>
+      <title>Create modules in Jupyter notebooks</title>
+      <link>https://alebaffa.github.io/posts/create_modules_in_jupyter_notebooks/</link>
+      <pubDate>Mon, 26 Feb 2018 21:38:37 +0900</pubDate>
+      
+      <guid>https://alebaffa.github.io/posts/create_modules_in_jupyter_notebooks/</guid>
+      <description>In my current attempt to improve the development experience of my team, I am trying to introduce Jupyter notebooks to share knowledge about some data analysis scripts developed over the last years.</description>
+    </item>
+    
+    <item>
+      <title>Journey towards Continuous Integration - Part 1</title>
+      <link>https://alebaffa.github.io/posts/road-towards-ci-part-one/</link>
+      <pubDate>Fri, 23 Feb 2018 21:06:57 +0900</pubDate>
+      
+      <guid>https://alebaffa.github.io/posts/road-towards-ci-part-one/</guid>
+      <description>Introduction # I am going to write a set of posts that describe what I quickly talked about in the last Docker Tokyo Meetup.</description>
+    </item>
+    
+    <item>
+      <title>Improving the development experience: Jupyter for Elasticsearch</title>
+      <link>https://alebaffa.github.io/posts/elastic-search-jupyter/</link>
+      <pubDate>Thu, 22 Feb 2018 19:59:13 +0900</pubDate>
+      
+      <guid>https://alebaffa.github.io/posts/elastic-search-jupyter/</guid>
+      <description>I have been asked to extract data from Elasticsearch and I had no clue of what kind of data were stored inside of it.</description>
+    </item>
+    
+    <item>
+      <title>My current learning journey</title>
+      <link>https://alebaffa.github.io/posts/my-last-seven-months/</link>
+      <pubDate>Thu, 25 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://alebaffa.github.io/posts/my-last-seven-months/</guid>
+      <description>I started my journey at Rakuten in June 2017 and, more precisely, I am Full Stack Engineer working for Rakuten Magazine.</description>
+    </item>
+    
+    <item>
+      <title>Changing Everything. Again.</title>
+      <link>https://alebaffa.github.io/posts/new-chapter-of-life/</link>
+      <pubDate>Sat, 18 Feb 2017 08:03:16 +0100</pubDate>
+      
+      <guid>https://alebaffa.github.io/posts/new-chapter-of-life/</guid>
+      <description>After 7 years spent in France I am officially moving to Tokyo, Japan, end of May 2017.</description>
+    </item>
+    
+    <item>
+      <title>Back from SoCraTes France 2016</title>
+      <link>https://alebaffa.github.io/posts/socrates-france/</link>
+      <pubDate>Mon, 31 Oct 2016 12:29:46 +0200</pubDate>
+      
+      <guid>https://alebaffa.github.io/posts/socrates-france/</guid>
+      <description>My second time in a Software Craftsmanship and Testing (SoCraTes) conference and, as always, it has been an awesome experience.</description>
+    </item>
+    
+    <item>
+      <title>Global Day of Coderetreat 2016, Sophia Antipolis, France</title>
+      <link>https://alebaffa.github.io/posts/global-day-of-coderetreat/</link>
+      <pubDate>Sun, 23 Oct 2016 12:29:46 +0200</pubDate>
+      
+      <guid>https://alebaffa.github.io/posts/global-day-of-coderetreat/</guid>
+      <description>We did it!</description>
+    </item>
+    
+    <item>
+      <title>Dependency Injection VS Extract and Override Factory Method</title>
+      <link>https://alebaffa.github.io/posts/racing-car-kata-refactoring/</link>
+      <pubDate>Sun, 09 Oct 2016 21:17:23 +0200</pubDate>
+      
+      <guid>https://alebaffa.github.io/posts/racing-car-kata-refactoring/</guid>
+      <description>The TextConverter exercise (in the Racing Car kata suite) is a very interesting exercise for refactoring legacy code.</description>
+    </item>
+    
+    <item>
+      <title>A Community of Professionals - SoCraTes UK</title>
+      <link>https://alebaffa.github.io/posts/socrates-uk/</link>
+      <pubDate>Sun, 19 Jun 2016 21:28:33 +0200</pubDate>
+      
+      <guid>https://alebaffa.github.io/posts/socrates-uk/</guid>
+      <description>A couple of weeks ago I participated for the first time to a SoCraTes event, one of the Software Craftsmanship international gatherings.</description>
+    </item>
+    
+    <item>
+      <title>Amarcord - Old posts from 2011 (ITA/ENG)</title>
+      <link>https://alebaffa.github.io/posts/amarcord-2011/</link>
+      <pubDate>Mon, 07 Feb 2011 10:37:06 +0900</pubDate>
+      
+      <guid>https://alebaffa.github.io/posts/amarcord-2011/</guid>
+      <description>&amp;raquo; Non ci penso un attimo: faccio benzina in Svizzera.</description>
+    </item>
+    
+    <item>
+      <title>Amarcord - Old posts from 2010 (ITA)</title>
+      <link>https://alebaffa.github.io/posts/amarcord-2010/</link>
+      <pubDate>Sun, 07 Feb 2010 10:07:16 +0900</pubDate>
+      
+      <guid>https://alebaffa.github.io/posts/amarcord-2010/</guid>
+      <description>September 2010 # &amp;raquo;&amp;gt; Global Minds # L’esperienza di vita all’estero è qualcosa che non smetterò mai di consigliare a tutti.</description>
+    </item>
+    
+    <item>
+      <title>Amarcord - Old posts from 2009 (ITA)</title>
+      <link>https://alebaffa.github.io/posts/amarcord-2009/</link>
+      <pubDate>Sat, 07 Feb 2009 10:05:04 +0900</pubDate>
+      
+      <guid>https://alebaffa.github.io/posts/amarcord-2009/</guid>
+      <description>February # &amp;raquo; Mail: disaster recovery # Mi sto dando al backup delle email.</description>
+    </item>
+    
+    <item>
+      <title>Amarcord - Old posts from 2008 (ITA)</title>
+      <link>https://alebaffa.github.io/posts/amarcord-2008/</link>
+      <pubDate>Thu, 07 Feb 2008 09:42:00 +0900</pubDate>
+      
+      <guid>https://alebaffa.github.io/posts/amarcord-2008/</guid>
+      <description>Posts from 2008 # January # &amp;raquo;&amp;gt; 100 di questi anni!</description>
+    </item>
+    
+    <item>
+      <title>Amarcord - Old posts from 2007 (ITA)</title>
+      <link>https://alebaffa.github.io/posts/amarcord-2007/</link>
+      <pubDate>Sat, 08 Sep 2007 08:49:18 +0900</pubDate>
+      
+      <guid>https://alebaffa.github.io/posts/amarcord-2007/</guid>
+      <description>Posts from 2007 # September # &amp;raquo;&amp;gt; Crea il tuo avatar personalizzato # doppelme è un’applicazione online che permette di creare il proprio avatar personalizzato in pochi e semplici passi.</description>
+    </item>
+    
+  </channel>
+</rss>

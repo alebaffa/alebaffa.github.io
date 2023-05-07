@@ -1,84 +1,37 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>jupyter-notebook on alebaffa&#39;s blog</title>
-        <link>https://alebaffa.github.io/tags/jupyter-notebook/</link>
-        <description>Recent content in jupyter-notebook on alebaffa&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Tue, 27 Feb 2018 19:57:31 +0900</lastBuildDate><atom:link href="https://alebaffa.github.io/tags/jupyter-notebook/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Jupyter: the easiest way to import code from another notebook</title>
-        <link>https://alebaffa.github.io/p/jupyter-the-easiest-way-to-import-code-from-another-notebook/</link>
-        <pubDate>Tue, 27 Feb 2018 19:57:31 +0900</pubDate>
-        
-        <guid>https://alebaffa.github.io/p/jupyter-the-easiest-way-to-import-code-from-another-notebook/</guid>
-        <description>&lt;p&gt;Yesterday I published a post about &lt;a class=&#34;link&#34; href=&#34;https://www.alebaffa.com/posts/create_modules_in_jupyter_notebooks/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;how to create a module in jupyter&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;There is another way to quickly import the code from another notebook. Say you are working in &lt;code&gt;your_notebook.ipynb&lt;/code&gt; and you need a Python class &lt;code&gt;class Hello():&lt;/code&gt; from &lt;code&gt;another_notebook.ipynb&lt;/code&gt;.
-To import it you just need to do the following:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# in your_notebook.ipynb do&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;run&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;another_notebook&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ipynb&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;hello&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Hello&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;Voila, with &lt;code&gt;%run&lt;/code&gt; you access the code from the other notebook.
-Easy peasy.&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Create modules in Jupyter notebooks</title>
-        <link>https://alebaffa.github.io/p/create-modules-in-jupyter-notebooks/</link>
-        <pubDate>Mon, 26 Feb 2018 21:38:37 +0900</pubDate>
-        
-        <guid>https://alebaffa.github.io/p/create-modules-in-jupyter-notebooks/</guid>
-        <description>&lt;p&gt;In my current attempt to improve the development experience of my team, I am trying to introduce Jupyter notebooks to share knowledge about some data analysis scripts developed over the last years. I can copy paste the code into a notebook, run the single cells to show the result below the code, export the notebook as markdown and push it to Bitbucket: voila, documentation.&lt;/p&gt;
-&lt;p&gt;Though, a disadvantage of Jupyter notebooks over Python scripts is that they cannot be linked to each other. They are completely separated entities, so if you have Python scripts that share common utils modules (e.g.: connection, encryption, etc&amp;hellip;) and you try to run them in a Jupyter notebook, you have to copy-paste also those modules into cells. It&amp;rsquo;s annoying, you break the readability of your beautiful notebook and it ruins the very first reason why you started to use it.&lt;/p&gt;
-&lt;h2 id=&#34;python-modules-in-jupyter&#34;&gt;Python modules in Jupyter&lt;/h2&gt;
-&lt;p&gt;You can create Python modules into Jupyter as well. Assuming you are using Anaconda, just create your Python module and put it into a specific folder, specifically (I&amp;rsquo;m using Windows 10 as I write)  &lt;code&gt;Anaconda3\Lib&lt;/code&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
-&lt;p&gt;Create your &lt;code&gt;hello-world&lt;/code&gt; module:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;Put some logic in it:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;Then you can import it from your separate notebook, like so:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-</description>
-        </item>
-        <item>
-        <title>Improving the development experience: Jupyter for Elasticsearch</title>
-        <link>https://alebaffa.github.io/p/improving-the-development-experience-jupyter-for-elasticsearch/</link>
-        <pubDate>Thu, 22 Feb 2018 19:59:13 +0900</pubDate>
-        
-        <guid>https://alebaffa.github.io/p/improving-the-development-experience-jupyter-for-elasticsearch/</guid>
-        <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;I have been asked to extract data from Elasticsearch and I had no clue of what kind of data were stored inside of it. Moreover, there was a lack of documentation and the only thing that could help me were some old Python scripts written by an old colleague.&lt;/p&gt;
-&lt;p&gt;Fortunately, Python is pretty damn good when it comes to readability.&lt;/p&gt;
-&lt;p&gt;So, because I am working to improve the development experience of my team and I am messing around with Jupyter, I thought I could create &lt;a class=&#34;link&#34; href=&#34;https://github.com/alebaffa/es_client_jupyter/blob/master/es_client_notebook.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;a Jupyter notebook&lt;/a&gt; with a super simple Elasticsearch client in Python 3 that supports a connection with a proxy (vital, if working in a company).&lt;/p&gt;
-&lt;h3 id=&#34;advantages-for-my-team&#34;&gt;Advantages for my team&lt;/h3&gt;
-&lt;p&gt;Increased visibility and knowledge sharing on Elasticsearch and how to handle quickly and efficiently its data. Now with Jupyter and this notebook they can connect immediately to our internal Elasticsearch, extract data and play with cool Python libraries for data analysis such as pandas, numpy and machine learning like Tensorflow. If before the data analysis in my team was managed by a single person (who then quit), who became the &lt;em&gt;big data guy&lt;/em&gt;, now all the team is up and running and can do the same task quickly.&lt;/p&gt;
-&lt;p&gt;Also, with Jupyter they can execute and see the result in the same view, step by step, for every line of code they write, so reducing dramatically the time spent to develop any python script that we need for data analysis in the team. Before it was kind of &lt;em&gt;trial and error until it worked&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Another great advantage is that we can now include code and text in the same notebook, extract it as markdown and store it into our internal Bitbucket (we don&amp;rsquo;t have the notebook viewer plugin). They will become an incredible efficient and effective documentation that will help the team to improve its data analysis skills.&lt;/p&gt;
-&lt;h3 id=&#34;next-steps&#34;&gt;Next steps&lt;/h3&gt;
-&lt;p&gt;Jupyter is great. My teammates were just blown away when they saw it and how it can improve our development workflow for data analysis tasks. Now the next step is to organize workshops or &lt;em&gt;coding dojos&lt;/em&gt; to practice with Pandas, Numpy and Tensorflow. Also, it would be cool to install &lt;a class=&#34;link&#34; href=&#34;https://jupyterhub.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Jupyter Hub&lt;/a&gt; so that we can have a common environment where to share notebooks. Fortunately, there is also a Docker image for it:&lt;/p&gt;
-&lt;h2 id=&#34;docker-run--d---name-jupyterhub-jupyterhubjupyterhub-jupyterhub&#34;&gt;&lt;code&gt;docker run -d --name jupyterhub jupyterhub/jupyterhub jupyterhub&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;(&lt;em&gt;Source - the usual suspect - for the proxy support:&lt;/em&gt; &lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/32778235/elasticsearch-python-proxy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;StackOverflow&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;The Jupyter notebook is on my github, &lt;a class=&#34;link&#34; href=&#34;https://github.com/alebaffa/es_client_jupyter/blob/master/es_client_notebook.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;HERE&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Here the Python script:
-&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/alebaffa/09f61f79e625ee85b20deb5393132961.js&#34;&gt;&lt;/script&gt;
-&lt;/p&gt;
-</description>
-        </item>
-        
-    </channel>
+  <channel>
+    <title>jupyter-notebook on Home</title>
+    <link>https://alebaffa.github.io/tags/jupyter-notebook/</link>
+    <description>Recent content in jupyter-notebook on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 27 Feb 2018 19:57:31 +0900</lastBuildDate><atom:link href="https://alebaffa.github.io/tags/jupyter-notebook/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jupyter: the easiest way to import code from another notebook</title>
+      <link>https://alebaffa.github.io/blog/jupyter-import-notebook/</link>
+      <pubDate>Tue, 27 Feb 2018 19:57:31 +0900</pubDate>
+      
+      <guid>https://alebaffa.github.io/blog/jupyter-import-notebook/</guid>
+      <description>Yesterday I published a post about how to create a module in jupyter.</description>
+    </item>
+    
+    <item>
+      <title>Create modules in Jupyter notebooks</title>
+      <link>https://alebaffa.github.io/blog/create_modules_in_jupyter_notebooks/</link>
+      <pubDate>Mon, 26 Feb 2018 21:38:37 +0900</pubDate>
+      
+      <guid>https://alebaffa.github.io/blog/create_modules_in_jupyter_notebooks/</guid>
+      <description>In my current attempt to improve the development experience of my team, I am trying to introduce Jupyter notebooks to share knowledge about some data analysis scripts developed over the last years.</description>
+    </item>
+    
+    <item>
+      <title>Improving the development experience: Jupyter for Elasticsearch</title>
+      <link>https://alebaffa.github.io/blog/elastic-search-jupyter/</link>
+      <pubDate>Thu, 22 Feb 2018 19:59:13 +0900</pubDate>
+      
+      <guid>https://alebaffa.github.io/blog/elastic-search-jupyter/</guid>
+      <description>I have been asked to extract data from Elasticsearch and I had no clue of what kind of data were stored inside of it.</description>
+    </item>
+    
+  </channel>
 </rss>

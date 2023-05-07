@@ -1,71 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>personal on alebaffa&#39;s blog</title>
-        <link>https://alebaffa.github.io/tags/personal/</link>
-        <description>Recent content in personal on alebaffa&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Thu, 25 Jan 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://alebaffa.github.io/tags/personal/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>My current learning journey</title>
-        <link>https://alebaffa.github.io/p/my-current-learning-journey/</link>
-        <pubDate>Thu, 25 Jan 2018 00:00:00 +0000</pubDate>
-        
-        <guid>https://alebaffa.github.io/p/my-current-learning-journey/</guid>
-        <description>&lt;p&gt;I started my journey at Rakuten in June 2017 and, more precisely, I am Full Stack Engineer working for &lt;a class=&#34;link&#34; href=&#34;https://magazine.rakuten.co.jp/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Rakuten Magazine&lt;/a&gt;. It&amp;rsquo;s a pretty new Web project, so it&amp;rsquo;s not big and we are very few people: 4 guys focused on Web and API (myself included), and 3 guys on Android/iOS.&lt;/p&gt;
-&lt;p&gt;First huge difference from my previous job: here I can put my hands on literally everything. We have a total freedom to choose what technology stack to use, if it&amp;rsquo;s reasonable and well argumented. The main technology is &lt;strong&gt;Java&lt;/strong&gt;, but I&amp;rsquo;m basically jumping from one technology to another one every single day, from frontend to backend. In two words: &lt;em&gt;Full Stack&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Needless to say, my learning experience in the last 7 months has been incredibly huge. I&amp;rsquo;ve never used most of the technologies I&amp;rsquo;m using now, so it&amp;rsquo;s an on going learning process where, in the same time, I try to make things work and available for my teammates.&lt;/p&gt;
-&lt;p&gt;Here a quick list of what I&amp;rsquo;ve been doing so far, with the promise to start writing more often on this blog to share my discoveries and epiphanies.&lt;/p&gt;
-&lt;h2 id=&#34;web-development&#34;&gt;Web Development&lt;/h2&gt;
-&lt;p&gt;I am helping with the development of the Web application and the APIs. Classic Web development here, so &lt;strong&gt;Spring Boot&lt;/strong&gt;, &lt;strong&gt;gradle&lt;/strong&gt;, &lt;strong&gt;Apache&lt;/strong&gt;. Learned so much here. Spring Boot is fun, but its magic is at the same time awesome and dangerous. Still, you can do fantastic things with dependency injection and testing with Mockito is fairly painless. I&amp;rsquo;m trying to apply &lt;em&gt;outside-in-TDD&lt;/em&gt; and I feel I need to watch again &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=24vzFAvOzo0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Sandro Mancuso&amp;rsquo;s videos&lt;/a&gt;. Like, 100 times again.&lt;/p&gt;
-&lt;p&gt;I learned a lot also how gradle works in detail. I fixed lot of things, but there&amp;rsquo;s still lot of &lt;em&gt;magics&lt;/em&gt; that I need to understand.&lt;/p&gt;
-&lt;p&gt;I hacked a lot with Apache configuration, which is &lt;strong&gt;really&lt;/strong&gt; powerful and so well documented that I basically managed to do things I&amp;rsquo;ve never heard about in no time. I know how to setup a reverse proxy, how to automatically optimize static assets, how to avoid CORS and many more things I&amp;rsquo;ve never done before.&lt;/p&gt;
-&lt;p&gt;I also have the opportunity to not forget how much I hate &lt;strong&gt;Javascript&lt;/strong&gt;, and &lt;strong&gt;NodeJS&lt;/strong&gt; in particular. Fortunately there are some cool testing libraries that allow you to write unit tests in a very readable way, but still the huge worldwide adoption of this technology remains for me a mistery.&lt;/p&gt;
-&lt;p&gt;We chose to deploy into our internal Paas based on &lt;strong&gt;CloudFoundry&lt;/strong&gt;, which is super stable and very easy to use. The guys in that department do a truly amazing job and they provide a very high quality service. At Rakuten we are not forced to use internal services, it&amp;rsquo;s just a matter of need and cost. We could deploy somewhere else externally, like Azure, AWS or Google Cloud, but again, the guys internally do such an amazing job that you really need to have a very good reason to move somewhere else.&lt;/p&gt;
-&lt;h2 id=&#34;devops-clean-up-and-industrialization&#34;&gt;Devops, clean up and industrialization&lt;/h2&gt;
-&lt;p&gt;I am trying to set up the &lt;strong&gt;Continuous Integration and Deployment&lt;/strong&gt; for the project. I spent countless hours so far with &lt;strong&gt;Docker&lt;/strong&gt; and &lt;strong&gt;Jenkins&lt;/strong&gt; and I feel pretty comfortable with both of them now. Docker was one of the main things I wanted to master, and I spent so much time on it that now I put in a container &lt;em&gt;every-single-thing-I-do&lt;/em&gt;.
-Of course, Jenkins is itself a container, so it&amp;rsquo;s a &lt;em&gt;Docker-in-Docker&lt;/em&gt; configuration, which is pretty fun, or  &lt;em&gt;Docker-compose-in-Docker&lt;/em&gt;, which adds even more spice. Needless to say, I wasted a fair amount of my lifetime with the corporate proxy, but at least now I master the proxy settings. I&amp;rsquo;m watching the Docker repo on Github now, so I don&amp;rsquo;t miss an issue.&lt;/p&gt;
-&lt;p&gt;Of course, this work is not only &lt;em&gt;&amp;ldquo;oh yeah, just put a Dockerfile/Jenkinsfile in the repo and it works&amp;rdquo;&lt;/em&gt;. I had to spent, and still spending, a &lt;strong&gt;huge&lt;/strong&gt; amount of time making our projects suitable for complete automation. Isolation is the biggest issue I found so far. I had to rewrite, fix and refactor lots of stuff in lots of different places, from NodeJS to gradle, unit tests and git-submodules (which I removed, btw).&lt;/p&gt;
-&lt;p&gt;This work is basically forcing me to deep dive into every single module we have, so I am actively working on lots of different things to make everything work together in containers.&lt;/p&gt;
-&lt;h2 id=&#34;data-analysis-and-machine-learning&#34;&gt;Data Analysis and Machine Learning&lt;/h2&gt;
-&lt;p&gt;A colleague left the company and I inherited his legacy, but I&amp;rsquo;m actually not sad at all. I manage now also &lt;strong&gt;Python&lt;/strong&gt;
-scripts that extract data from &lt;strong&gt;Elastic Search&lt;/strong&gt; and do some cool stuff with &lt;strong&gt;pandas&lt;/strong&gt; and &lt;strong&gt;numpy&lt;/strong&gt;. It&amp;rsquo;s fun, and those libraries are really impressive.&lt;/p&gt;
-&lt;p&gt;We also have a small recommendation engine based on &lt;strong&gt;Tensorflow&lt;/strong&gt;, so for the moment I&amp;rsquo;m trying to improve its documentation and I plan to do a presentation with my team to explain how it works. All this once I will have figured out its details, since there&amp;rsquo;s no documentation nor test whatsoever.&lt;/p&gt;
-&lt;h2 id=&#34;development-experience-and-agile&#34;&gt;Development Experience and Agile&lt;/h2&gt;
-&lt;p&gt;Another big thing I&amp;rsquo;m doing is to improve how we develop software in the team. I am trying to put in place tools and workflows that can help my teammates to be faster and more productive. Containerization is one of the things and I&amp;rsquo;ll be using it to create a better development environment for the different modules we have. The fact that in our team I&amp;rsquo;m the only one with a MacBook while the others have Windows it&amp;rsquo;s not helpful, and it means I am going to spend a fair amount of time with &lt;strong&gt;Vagrant&lt;/strong&gt; and such.&lt;/p&gt;
-&lt;p&gt;Documentation improvement is another big thing I&amp;rsquo;m doing.&lt;/p&gt;
-&lt;p&gt;We use Slack in our department, so we have some &lt;strong&gt;bots&lt;/strong&gt; with which you can interact realtime. Creating one is pretty easy, so I&amp;rsquo;m planning to create a new one soon to request a particular information that we always struggle to find in the database.&lt;/p&gt;
-&lt;p&gt;I introduced also a bit of Scrum, for the moment only standup meetings and a better usage of backlog. There&amp;rsquo;s much more work to do here, but already with this I feel like our knowledge sharing is improved since I joined. I am trying to play my role of &lt;strong&gt;Scrum Master&lt;/strong&gt; (as I&amp;rsquo;m also certified), but the limitation here is the language: business people speak only Japanese, so for the moment I don&amp;rsquo;t interact with them directly. Hope this will improve quickly.&lt;/p&gt;
-&lt;h2 id=&#34;mentorship&#34;&gt;Mentorship&lt;/h2&gt;
-&lt;p&gt;I am trying to gently introduce good practices with my teammates. The cultural differences make it a pretty difficult task. I&amp;rsquo;m the only western guy in the team and I don&amp;rsquo;t know well Japanese and Chinese cultures yet, so I always struggle to find the good way to suggest things without being considered rude or unpolite (and here in Japan it is so damn more important than other countries). Anyway, things are improving and my teammates are very nice guys, so I&amp;rsquo;ve never encountered too much resistance. They want to learn, and it&amp;rsquo;s the most important thing.&lt;/p&gt;
-&lt;p&gt;I share links and engage with them in discussions in the pull requests.&lt;/p&gt;
-&lt;h2 id=&#34;non-technical-stuff&#34;&gt;Non technical stuff&lt;/h2&gt;
-&lt;p&gt;I am part of the Mindfulness Network group at Rakuten now. I love mindfulness and meditation and I would like to help this network to group internally. It&amp;rsquo;s so much important. I don&amp;rsquo;t meditate every day as I wish, but I try to do it quite frequently.&lt;/p&gt;
-&lt;p&gt;I am learning Japanese, my fourth spoken language. I am studying a lot and I&amp;rsquo;m planning to take the proficency certification (JLPT 4) in July 2018. I am not able to have a conversation with anyone for the moment, even though I can feel my listening is improving little by little.&lt;/p&gt;
-&lt;h2 id=&#34;more-soon&#34;&gt;More soon&amp;hellip;&lt;/h2&gt;
-&lt;p&gt;I want to keep writing more often on this blog, to give you more details about all the cool stuff listed here. There are lots of cool stuff I&amp;rsquo;m learning everyday and here it&amp;rsquo;s the best place to keep track of them.&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Changing Everything. Again.</title>
-        <link>https://alebaffa.github.io/p/changing-everything.-again./</link>
-        <pubDate>Sat, 18 Feb 2017 08:03:16 +0100</pubDate>
-        
-        <guid>https://alebaffa.github.io/p/changing-everything.-again./</guid>
-        <description>&lt;p&gt;After 7 years spent in France I am officially moving to Tokyo, Japan, end of May 2017.
-I am finally going to join my wife, Sarah, after almost 5 years of long and hard distant relationship.&lt;/p&gt;
-&lt;p&gt;Now, before to start with the burocracy madness and to move/sell/close/sign things, I am sitting here at home, in the first weekend after having resigned from my current company, trying to think about how many things I learned over the last 7 years. How many things I&amp;rsquo;m going to bring with me from this French experience.&lt;/p&gt;
-&lt;p&gt;It&amp;rsquo;s strange to say, but the first thing that comes to my mind is my current employer, &lt;strong&gt;Amadeus&lt;/strong&gt;. I would have never thought that a company could have been so important for my life. Despite its difficulties and things that, sometimes, I may not like of it, at the end of the day I am leaving a really great place that completely changed me and made me a better person and professional (I even found my wife :D). I grew and learned so much here. I will always be thankful to this company and to my fantastic colleagues I&amp;rsquo;ve been honored to work with.&lt;/p&gt;
-&lt;p&gt;I am also thinking about all the things that I started to do here in France. Photography has become my passion and I&amp;rsquo;m so thrilled to think that I&amp;rsquo;m going to live in the city of Nikon and Fujifilm :) I have so many ideas about photography in Japan!
-I also started to organize events and I started to overcome my fear of public speaking. I can&amp;rsquo;t wait to start to be an active member in the technical Meetups panorama of Tokyo, and also to organize one (Tokyo Software Craftsmanship? :-)). I started to travel and to know people from all around the world. I learned well French and improved my English. I started to have a fully multicultural life. I changed my point of view on everything and I learned that everything is relative: &lt;em&gt;tout est relatif&lt;/em&gt;. I started to be a Global Citizen. I learned what I want to do and I have a clear direction for my future career.&lt;/p&gt;
-&lt;p&gt;I could write for hours just listing all the things I learned, but I stop here.&lt;/p&gt;
-&lt;p&gt;I am leaving with a bag of experience, a huge amount of energy and lots of ideas for the future. But most important, I can&amp;rsquo;t wait to start living with my wife, have a &lt;em&gt;normal life&lt;/em&gt; with her - if we can say &lt;em&gt;normal&lt;/em&gt; in Tokyo - settle down and raise a family together for the first time.&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;m thrilled. I can&amp;rsquo;t wait.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Merci la France&lt;/em&gt; for everything you gave me.&lt;/p&gt;
-</description>
-        </item>
-        
-    </channel>
+  <channel>
+    <title>personal on Home</title>
+    <link>https://alebaffa.github.io/tags/personal/</link>
+    <description>Recent content in personal on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 25 Jan 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://alebaffa.github.io/tags/personal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My current learning journey</title>
+      <link>https://alebaffa.github.io/blog/my-last-seven-months/</link>
+      <pubDate>Thu, 25 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://alebaffa.github.io/blog/my-last-seven-months/</guid>
+      <description>I started my journey at Rakuten in June 2017 and, more precisely, I am Full Stack Engineer working for Rakuten Magazine.</description>
+    </item>
+    
+    <item>
+      <title>Changing Everything. Again.</title>
+      <link>https://alebaffa.github.io/blog/new-chapter-of-life/</link>
+      <pubDate>Sat, 18 Feb 2017 08:03:16 +0100</pubDate>
+      
+      <guid>https://alebaffa.github.io/blog/new-chapter-of-life/</guid>
+      <description>After 7 years spent in France I am officially moving to Tokyo, Japan, end of May 2017.</description>
+    </item>
+    
+  </channel>
 </rss>
