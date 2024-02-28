@@ -4,7 +4,7 @@ author: alebaffa
 pubDatetime: 2016-06-19T04:58:18Z
 slug: socrates-uk
 featured: false
-draft: false
+draft: true
 tags:
   - life
 description: My first time at a SoCraTes conference

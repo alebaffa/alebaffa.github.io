@@ -5,7 +5,7 @@ author: alabaffa
 pubDatetime: 2008-09-08T08:49:18Z
 slug: amarcord-2008-ita
 featured: false
-draft: false
+draft: true
 tags:
   - amarcord
 description: Old posts from 2008

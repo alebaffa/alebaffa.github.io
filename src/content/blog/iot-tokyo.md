@@ -5,7 +5,7 @@ author: alebaffa
 pubDatetime: 2010-09-08T08:49:18Z
 slug: iot-tokyo-first-month
 featured: false
-draft: false
+draft: true
 tags:
   - life
 description: First month in IoT in Tokyo

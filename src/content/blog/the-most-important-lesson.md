@@ -1,10 +1,10 @@
 ---
-title: "My Two Most Important Lessons"
+title: "Two lessons from my past"
 author: alebaffa
 pubDatetime: 2018-10-21T04:58:18Z
 slug: life-lessons
 featured: false
-draft: false
+draft: true
 tags:
   - life
 description: Personal life lessons

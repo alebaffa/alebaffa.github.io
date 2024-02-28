@@ -4,7 +4,7 @@ author: alebaffa
 pubDatetime: 2016-10-31T04:58:18Z
 slug: socrates-france
 featured: false
-draft: false
+draft: true
 tags:
   - life
 description: Personal feedback from the event
