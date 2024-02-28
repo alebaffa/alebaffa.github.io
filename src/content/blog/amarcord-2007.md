@@ -1,6 +1,15 @@
 ---
-title: 'Amarcord - Old posts from 2007 (ITA)'
-pubDate: 'Sep 08 2007'
+title: "Amarcord - Old posts from 2007 (ITA)"
+date: 2007-09-08T08:49:18Z
+author: alabaffa
+pubDatetime: 2007-09-08T08:49:18Z
+slug: amarcord-2007-ita
+featured: true
+draft: false
+tags:
+  - amarcord
+description:
+  Old posts from 2007
 ---
 # Posts from 2007
 ## September
@@ -45,9 +54,9 @@ Permette di scrivere sul proprio blog da remoto, senza accedere direttamente all
 
 Windows Live Writer è poi capace di rilevare il template grafico utilizzato nel proprio blog e quindi permette di scrivere in un ambiente in puro stile WYSIWYG, quindi quello che vedete quando scrivete è esattamente come verrà pubblicato nel vostro blog (oddio, ad essere onesti onesti con le immagini un TAB in più ho visto che è necessario..).
 
-Inoltre sembra visualizzare i miei plugin installati in Wordpress e permette di utilizzarli attraverso dei pulsanti che vengono creati nel menù laterale, quindi molto molto comodi! Io per esempio uso un plugin per l’inserimento dei tag Technorati e qui a lato vedo 'Inserisci Tag' che mi apre una finestrella in cui posso inserire i tag senza dover per forza racchiudere a mano questi nel tag [/tags]. Molto molto comodo!
+Inoltre sembra visualizzare i miei plugin installati in Wordpress e permette di utilizzarli attraverso dei pulsanti che vengono creati nel menù laterale, quindi molto molto comodi! Io per esempio uso un plugin per l’inserimento dei tag Technorati e qui a lato vedo "Inserisci Tag" che mi apre una finestrella in cui posso inserire i tag senza dover per forza racchiudere a mano questi nel tag [/tags]. Molto molto comodo!
 
-Insomma, è uno strumento carino Microsoft che sembra funzionare molto bene! Senza problemi! (io il mio Windows ce l’ho in licenza OEM, quindi non so cosa succede se lo si scarica con una versione diciamo 'non ufficiale', ecco..).
+Insomma, è uno strumento carino Microsoft che sembra funzionare molto bene! Senza problemi! (io il mio Windows ce l’ho in licenza OEM, quindi non so cosa succede se lo si scarica con una versione diciamo "non ufficiale", ecco..).
 
 Ora sono curioso di vedere cosa succede se includo un video nel post! Con il mio plugin sopra il video esce il nome dello stesso e il nome del video..vediamo cosa esce ora..
 
@@ -58,7 +67,7 @@ Oggi era il giorno di una presentazione di un progetto in università. Progetto 
 
 Ma oggi è stato anche il giorno in cui ho scoperto che Murphy (quello famoso, quello delle Leggi di Murphy) si interessa anche di informatica! Ebbene sì, perchè alle 15.45 il programmino funzionava, mentre alle 16.01 il programmino non funzionava! E non avevamo neanche spento i pc, li avevamo lasciati in standby!
 
-Il prof l’ha chiamato 'effetto demo'. Io lo chiamo capitolo in più nel libro 'Murphy: le leggi della Sfiga'.
+Il prof l’ha chiamato "effetto demo". Io lo chiamo capitolo in più nel libro "Murphy: le leggi della Sfiga".
 
 (P.S.: comunque tutto è andato bene ugualmente! Il prof. è molto comprensivo! fiuuu…)
 
@@ -127,7 +136,7 @@ Ma la migliore probabilmente è quella suonata dalla Play! symphony orchestra:
 ### >>> Guerra dei browser: evoluzioni
 La prima vittoria in guerra fu anni fa di Internet Explorer nel modo in cui ormai tutti conosciamo: IE incluso in tutte le copie di Windows fece in modo che tutti gli utenti utilizzassero quel browser, stroncando così la concorrenza e decretando la vittoria definitiva di Microsoft. Che il vento stesse cambiando lo si è iniziato a vedere in questi ultimi anni.
 
-Oggi ho scoperto uno strumento interessantissimo: Google Trends. Esso permette di visualizzare 'how many searches have been done for the terms you enter, relative to the total number of searches done on Google over time' in rapporto al numero di notizie correlate alla parola chiave che sono comparse in Google News nel tempo. I dati possono essere filtrati per paese, regione, città e possono essere comparate più parole chiave tra loro.
+Oggi ho scoperto uno strumento interessantissimo: Google Trends. Esso permette di visualizzare "how many searches have been done for the terms you enter, relative to the total number of searches done on Google over time" in rapporto al numero di notizie correlate alla parola chiave che sono comparse in Google News nel tempo. I dati possono essere filtrati per paese, regione, città e possono essere comparate più parole chiave tra loro.
 
 Per curiosità ho voluto vedere come si evolve appunto la lotta tra i browser, almeno dal punto di vista dell’interesse nella rete di uno piuttosto dell’altro. Il risultato è un pò quello che ci si poteva aspettare, però con qualche curiosità interessante.
 
@@ -147,17 +156,17 @@ Chiudo con i dati su Opera e Safari che non hanno trend degni di nota tranne nel
 
 
 ### >>> Noi, Lucifero e lo sviluppo sostenibile
-Interessantissimo post di Vittorio Strampelli che riporta le utlime statistiche da uno studio della Global Footprint Network, circa l’impronta ecologica dell’umanità, ovvero 'la sua necessità di aree coltivabili, pascoli, foreste, zone di pesca e le confronta con la biocapacità globale, ovvero la possibilità degli ecosistemi di generare risorse e di assorbire rifiuti'.
+Interessantissimo post di Vittorio Strampelli che riporta le utlime statistiche da uno studio della Global Footprint Network, circa l’impronta ecologica dell’umanità, ovvero "la sua necessità di aree coltivabili, pascoli, foreste, zone di pesca e le confronta con la biocapacità globale, ovvero la possibilità degli ecosistemi di generare risorse e di assorbire rifiuti".
 
 […]un cittadino medio pesa sul pianeta per 2,2 ettari di terreni produttivi, pascoli, paludi, foreste e zone di pesca costiera, ma la Terra ha solo 1,8 ettari da mettere a disposizione per ognuno degli esseri umani che la affollano. Già oggi stiamo usando le risorse di 1,2 pianeti, e se continuiamo su questa strada avremo bisogno di due pianeti entro il 2050.
 
 L’impronta ecologica dell´Europa è al momento circa due volte di più di quanto sarebbe sostenibile dal continente: 4,7 ettari a persona […], australiani e canadesi sono peggio di noi, sfruttando rispettivamente 7 e 8 ettari ciascuno, mentre gli statunitensi arrivano addirittura a 9,7 ettari. All’altro capo della scala i Paesi dell’Africa, dell’America Latina e di buona parte dell’Asia, che consumano le risorse della Terra in proporzione sostenibile
 
-Il paese di 'Lucifero' Fidel Castro è risultato essere l’unico paese in cui sviluppo e sostenibilità viaggiano nella stessa direzione. Altro fattore, quindi, che pone Cuba un passo avanti rispetto a tutti gli altri dopo il loro esemplare sistema sanitario nazionale, uno dei più all’avanguardia del mondo, l’istruzione, l’alta qualità della vita e il sistema di distribuzione delle ricchezze che lo rende uno degli unici al mondo in cui non esistono praticamente dei gradoni sociali con super ricchi e super poveri.
+Il paese di "Lucifero" Fidel Castro è risultato essere l’unico paese in cui sviluppo e sostenibilità viaggiano nella stessa direzione. Altro fattore, quindi, che pone Cuba un passo avanti rispetto a tutti gli altri dopo il loro esemplare sistema sanitario nazionale, uno dei più all’avanguardia del mondo, l’istruzione, l’alta qualità della vita e il sistema di distribuzione delle ricchezze che lo rende uno degli unici al mondo in cui non esistono praticamente dei gradoni sociali con super ricchi e super poveri.
 
-Questa notizia mi interessa moltissimo perchè mi completa il quadro su Cuba dopo il documentario di Micheal Moore (Sicko) che approfondisce il tema, appunto, del sistema sanitario cubano rispetto a quello statunitense, e dopo aver finito di leggere 'Dissidenti o mercenari?' - Ospina, Declercq -  in cui è ben spiegato l’intricato rapporto tra Cuba e il mondo dell’informazione, quasi sempre ostacolato da personaggi di dubbissima trasparenza figli della situazione venutasi a creare dopo l’embargo degli USA.
+Questa notizia mi interessa moltissimo perchè mi completa il quadro su Cuba dopo il documentario di Micheal Moore (Sicko) che approfondisce il tema, appunto, del sistema sanitario cubano rispetto a quello statunitense, e dopo aver finito di leggere "Dissidenti o mercenari?" - Ospina, Declercq -  in cui è ben spiegato l’intricato rapporto tra Cuba e il mondo dell’informazione, quasi sempre ostacolato da personaggi di dubbissima trasparenza figli della situazione venutasi a creare dopo l’embargo degli USA.
 
-Troppo spesso chi parla di Cuba dimentica che questo è un paese da 50 anni in guerra (non sto esagerando con il termine) con gli Stati Uniti e che quindi la libertà di informazione viene ridefinita di conseguenza, come anni fa tutto l’Occidente fece durante la Guerra del Golfo in cui (e riporto un passo del libro che dicevo prima): 'durante la guerra del Golfo gli americani dissero alla stampa - non esplicitamente, ma ricordandosi della guerra del Vietnam - voi siete cittadini americani, non potete restare fuori dagli interessi di Stato, non potete dare le informazioni che volete.[…] la stampa mondiale, malgrado qualche protesta, accettò questo principio'. 
+Troppo spesso chi parla di Cuba dimentica che questo è un paese da 50 anni in guerra (non sto esagerando con il termine) con gli Stati Uniti e che quindi la libertà di informazione viene ridefinita di conseguenza, come anni fa tutto l’Occidente fece durante la Guerra del Golfo in cui (e riporto un passo del libro che dicevo prima): "durante la guerra del Golfo gli americani dissero alla stampa - non esplicitamente, ma ricordandosi della guerra del Vietnam - voi siete cittadini americani, non potete restare fuori dagli interessi di Stato, non potete dare le informazioni che volete.[…] la stampa mondiale, malgrado qualche protesta, accettò questo principio". 
 
 Insomma, il fiume di gente che va a pregare sotto l’ospedale perchè Castro migliori le sue condizioni di salute, ha tanti motivi per farlo ..
 
@@ -171,7 +180,7 @@ Da qualche giorno IE7 è scaricabile da tutti!
 … ci arrivano sempre un pò dopo, però ci arrivano!
 
 ### >>> Sarà vero?
-Pare che a Francis Ford Coppola sia stato rubato il pc nella sua abitazione in Argentina (compresi i dispositivi di backup) e per questo motivo abbia perso 15 ANNI DI LAVORO, tra cui anche pezzi per il suo ultimo film (che dovrebbe chiamarsi 'Tetro').
+Pare che a Francis Ford Coppola sia stato rubato il pc nella sua abitazione in Argentina (compresi i dispositivi di backup) e per questo motivo abbia perso 15 ANNI DI LAVORO, tra cui anche pezzi per il suo ultimo film (che dovrebbe chiamarsi "Tetro").
 
 Fonte: downloadblog
 
@@ -244,12 +253,12 @@ Ho scaricato il cd dei Radiohead - In Rainbows. Gratis dal loro sito. Mi è bast
 Il cd è davvero molto bello! Ed è bellissimo poterne parlare così liberamente sul blog! Un mio amico giustamente mi dice “Ecco vedi, costasse 10 euro adesso andrei a comprarlo”. Anche avendolo in mp3 gratis. Concordo in pieno!!
 
 ### >>> Information R/evolution
-Dal genio che tempo fa creò il famosissimo 'The Machine is Us': Mike Wesch. Ecco un altro video bellissimo sulla rivoluzione che stiamo vivendo con il web 2.0.  La macchina siamo Noi.
+Dal genio che tempo fa creò il famosissimo "The Machine is Us": Mike Wesch. Ecco un altro video bellissimo sulla rivoluzione che stiamo vivendo con il web 2.0.  La macchina siamo Noi.
 
 ### >>> Gmail: utilità anti-spam
 Ho appena scoperto un’utilità fantastica circa i sistemi anti-spam utilizzati da Gmail. Questa casella di posta possiede già un eccezionale filtro che lascia passare veramente pochissime mail, ma la seguente possibilità è decisamente intelligente.
 
-Quando provate a crearvi un indirizzo di posta introducendo un punto, messo a caso all’interno del vostro pseudonimo, per esempio nome.cognome@gmail.com, il sistema vede l’indirizzo come conincidente a nomecognome@gmail.com. Questo vuol dire che se provate a inviarvi una mail al secondo indirizzo, anche quando è il primo quello che con cui vi siete registrati alla Google Mail e che utilizzate come principale, essa giunge ugualmente a destinazione! Funziona ovviamente nei due sensi: se avete un indirizzo senza nessun punto, potete inserirlo a caso e inviarvi la mail. Il senso? Il senso è che questo è sfruttabile per esempio quando volete iscrivervi su siti non proprio sicuri al 100% e invece di farlo utilizzando l’indirizzo 'serio' si può utilizzare il secondo (con o senza punto). Poi nelle impostazioni personali di Gmail create un filtro per tutte le mail con destinatario nomecognome@gmail.com e il gioco è fatto!
+Quando provate a crearvi un indirizzo di posta introducendo un punto, messo a caso all’interno del vostro pseudonimo, per esempio nome.cognome@gmail.com, il sistema vede l’indirizzo come conincidente a nomecognome@gmail.com. Questo vuol dire che se provate a inviarvi una mail al secondo indirizzo, anche quando è il primo quello che con cui vi siete registrati alla Google Mail e che utilizzate come principale, essa giunge ugualmente a destinazione! Funziona ovviamente nei due sensi: se avete un indirizzo senza nessun punto, potete inserirlo a caso e inviarvi la mail. Il senso? Il senso è che questo è sfruttabile per esempio quando volete iscrivervi su siti non proprio sicuri al 100% e invece di farlo utilizzando l’indirizzo "serio" si può utilizzare il secondo (con o senza punto). Poi nelle impostazioni personali di Gmail create un filtro per tutte le mail con destinatario nomecognome@gmail.com e il gioco è fatto!
 
 Sono proprio dei geni in Google, non c’è niente da dire!
 
@@ -265,7 +274,7 @@ e successivamente il comando sudo update-initramfs -u per aggiornare il pacchett
 Ora tutto funziona!
 
 ### >>> ipiaripamonti.org a SMAU 2007
-Il sito www.ipiaripamonti.org, da me sviluppato con la collaborazione di mio padre qualche anno fa, è stato oggetto di interesse oggi al seminario 'L’accessibilità a scuola si fa insieme', patrocinato da Porte Aperte sul Web alla prima giornata di SMAU 2007.  Mio padre ha descritto brevemente il sito che è stato poi testato dal direttore  dell’Istituto dei Ciechi di Milano e da un ragazzo non vedente presente al seminario. Il sito è risultato essere facilmente navigabile e anche gradevole, secondo il ragazzo, che ha utilizzato Jaws per la navigazione e ha poi dato alcuni consigli su alcuni punti che potrebbero essere migliorati, soprattutto interessante il tema del pdf accessibile (che non conoscevo). Sono soddisfatto soprattutto perchè è risultato semplice spostarsi da un settore all’altro della pagina perchè è stata una cosa a cui sono stato molto attento e la mia scelta è stata anche apprezzata dal tester.
+Il sito www.ipiaripamonti.org, da me sviluppato con la collaborazione di mio padre qualche anno fa, è stato oggetto di interesse oggi al seminario "L’accessibilità a scuola si fa insieme", patrocinato da Porte Aperte sul Web alla prima giornata di SMAU 2007.  Mio padre ha descritto brevemente il sito che è stato poi testato dal direttore  dell’Istituto dei Ciechi di Milano e da un ragazzo non vedente presente al seminario. Il sito è risultato essere facilmente navigabile e anche gradevole, secondo il ragazzo, che ha utilizzato Jaws per la navigazione e ha poi dato alcuni consigli su alcuni punti che potrebbero essere migliorati, soprattutto interessante il tema del pdf accessibile (che non conoscevo). Sono soddisfatto soprattutto perchè è risultato semplice spostarsi da un settore all’altro della pagina perchè è stata una cosa a cui sono stato molto attento e la mia scelta è stata anche apprezzata dal tester.
 
 Al seminario ha assistito mio padre, non io personalmente.
 
@@ -300,7 +309,7 @@ Credo sia esattamente così! E che le case discografiche debbano cominciare a ca
 ### >>> ddl Levi sull’editoria: resoconto finale
 Il decreto legge Levi-Prodi sull’editoria non è ancora stato definitivamente fermato e quindi non possiamo ancora dire che tutto è concluso. La ragione e il senso comune si aspettano che comunque la fine sia quella che tutti ci attendiamo. Nel frattempo si possono tirare le somme e fare alcune considerazioni finali alla luce di quanto è successo perchè di opinioni ce ne sono state tante e i problemi riscontrati sono molti, comunque vada a finire.
 
-Innanzi tutto è bene dire che le considerazioni in merito all’appartenenza dei blog e siti personali all’insieme dei 'prodotti editoriali' e 'attività editoriali' sono discordanti. Il dott. Spataro, con il suo chiarissimo video, afferma che questo decreto mette sullo stesso piano siti di carattere editoriale e blog, ponendo entrambi sotto le restrizioni della legge in merito all’editoria, con tutte le conseguenze del caso (burocratico, fiscale e penale). Dall’altra parte Luca Lodi afferma il contrario e cioè che, ad un’attenta analisi, il decreto non ingloba i blogger e che è stato
+Innanzi tutto è bene dire che le considerazioni in merito all’appartenenza dei blog e siti personali all’insieme dei "prodotti editoriali" e "attività editoriali" sono discordanti. Il dott. Spataro, con il suo chiarissimo video, afferma che questo decreto mette sullo stesso piano siti di carattere editoriale e blog, ponendo entrambi sotto le restrizioni della legge in merito all’editoria, con tutte le conseguenze del caso (burocratico, fiscale e penale). Dall’altra parte Luca Lodi afferma il contrario e cioè che, ad un’attenta analisi, il decreto non ingloba i blogger e che è stato
 
 confuso il concetto di «forma non imprenditoriale» con “tutti coloro che non sono impresa” piuttosto che “soggetti che svolgono attività editoriale in forma non imprenditoriale, quindi senza imprenditore, come le associazioni o le società cooperative” e che, quindi, non significa necessariamente ricomprendere anche i blogger che non svolgono “attività editoriale”
 
@@ -357,7 +366,7 @@ Per creare il cd live ncecessita di un cd di Windows che va aperto e copiati i s
 
 FONDAMENTALE!
 
-### >>> Firefox blogging add-on: altro 'mai più senza'
+### >>> Firefox blogging add-on: altro "mai più senza"
 Facendo il periodico giro tra le liste delle estesioni per Firefox mi sono imbattuto in ScribeFire, una comodissima estensione che permette di avere un’interfaccia direttamente all’interno del browser per scrivere e gestire i post del proprio blog. Ha molto funzionalità tra cui anche la possibilità di gestire i vecchi post, creare bozze, inserire tags, gestire le pagine, ma manca la possibilità di inserire video, ahimè sempre lo stesso problema.
 E’ comodo perchè se siete in un sito e trovate qualcosa di carino da pubblicare nel vostro blog, potete aprire direttamente l’interfaccia nel browser senza avviare altri programmi che fanno perdere tempo e la visuale del sito di vostro interesse.
 
@@ -529,14 +538,14 @@ Pensavo che peggio di così non potesse andare. Invece mi sbagliavo, perchè le 
 Stamattina sul bus qualcuno ha vomitato, ma mica alla fine del mio tragitto. Ancora prima che salissi!!
 
 ### >>> stress natalizio
-Ho ordinato qualcosa su Ibs. Avvisi vari su tale sito mi rendono nota la possibilità di non recapito dell’articolo entro Natale. Preoccupatissimo corro ad ordinarlo su un altro sito. Scopro che questo sito, a mio malgrado, è IL PIU’ VELOCE DEL MONDO a processare gli ordini. Contento, vado su Ibs per cancellare l’ordine: 'ordine in Partenza'. Tempo 2 giorni e mi arriva! Corro sull’altro sito per cancellare l’ordine: 'siamo il sito più veloce del mondo, il tuo ordine è incancellabile!'.
+Ho ordinato qualcosa su Ibs. Avvisi vari su tale sito mi rendono nota la possibilità di non recapito dell’articolo entro Natale. Preoccupatissimo corro ad ordinarlo su un altro sito. Scopro che questo sito, a mio malgrado, è IL PIU’ VELOCE DEL MONDO a processare gli ordini. Contento, vado su Ibs per cancellare l’ordine: "ordine in Partenza". Tempo 2 giorni e mi arriva! Corro sull’altro sito per cancellare l’ordine: "siamo il sito più veloce del mondo, il tuo ordine è incancellabile!".
 
-Morale della favola: tempo 3 giorni e mi arrivano 2 articoli uguali, da regalare a Natale. Ho speso il doppio per 'un pensierino'. Ragion per cui so già cosa mi regalerò a Natale.
+Morale della favola: tempo 3 giorni e mi arrivano 2 articoli uguali, da regalare a Natale. Ho speso il doppio per "un pensierino". Ragion per cui so già cosa mi regalerò a Natale.
 
 Dannato e-commerce e dannata soddisfazione del cliente!!!
 
 ### >>> Una settimana senza tecnologia
-Un giornalista inglese dell’Independent, che da solo si definisce 'gadgetaholic' cioè quasi completamente dipendente dai gadget elettronici, ha provato a passare una settimana senza l’utilizzo di alcuna tecnologia digitale e ha fatto un diario giornaliero di questa esperienza. Il risultato è divertentissimo e la traduzione italiana riportata dal Corriere.it non riesce bene a esprimere il senso di disorientamento dell’autore: totale.
+Un giornalista inglese dell’Independent, che da solo si definisce "gadgetaholic" cioè quasi completamente dipendente dai gadget elettronici, ha provato a passare una settimana senza l’utilizzo di alcuna tecnologia digitale e ha fatto un diario giornaliero di questa esperienza. Il risultato è divertentissimo e la traduzione italiana riportata dal Corriere.it non riesce bene a esprimere il senso di disorientamento dell’autore: totale.
 
 Tutto questo mi porta a riflettere sulla mia situazione e al fatto che a me basterebbe molto meno per raggiungere lo smarrimento: io non uso iPod (rotto), radio online non le ascolto mai, Facebook lo uso ma non sono addicted. Però le mail le guardo SEMPRE, le slide dell’università sono TUTTE online, giornali cartacei (ahimè) non li compro quasi mai, leggo tutto online e ormai il blog e gli RSS sono diventati quasi una droga, senza contare l’utilizzo spropositato di Messenger, con cui sono basati il 90% delle comunicazioni con gli amici durante la settimana. A me basterebbe non connettermi ad Internet per 7 giorni per raggiungere l’oblio!! E non so neanche giocare a Scarabeo …
 
