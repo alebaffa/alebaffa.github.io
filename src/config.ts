@@ -39,7 +39,7 @@ export const SOCIALS: SocialObjects = [
   {
     name: "Bluesky",
     href: "https://bsky.app/profile/alebaffa.xyz",
-    linkTitle: `${SITE.title} on Twitch`,
+    linkTitle: `${SITE.title} on Bluesky`,
     active: false,
   },
   {
