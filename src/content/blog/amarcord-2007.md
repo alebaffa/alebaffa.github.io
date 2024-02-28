@@ -4,12 +4,11 @@ date: 2007-09-08T08:49:18Z
 author: alabaffa
 pubDatetime: 2007-09-08T08:49:18Z
 slug: amarcord-2007-ita
-featured: true
+featured: false
 draft: false
 tags:
   - amarcord
-description:
-  Old posts from 2007
+description: Old posts from 2007
 ---
 # Posts from 2007
 ## September
