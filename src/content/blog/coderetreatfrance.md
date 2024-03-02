@@ -4,7 +4,7 @@ pubDatetime: 2016-10-23T12:29:46
 title: Global Day of Coderetreat 2016, Sophia Antipolis, France
 slug: global-day-code-retreat-france
 featured: false
-draft: false
+draft: true
 tags:
   - event
 description: First event of this kind ever in Southern France
