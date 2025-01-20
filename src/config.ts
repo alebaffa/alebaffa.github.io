@@ -1,7 +1,7 @@
 import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
-  website: "https://blog.alebaffa.xyz", // replace this with your deployed domain
+  website: "https://alessandrobaffa.com", // replace this with your deployed domain
   author: "Alessandro",
   desc: "Personal web log",
   title: "alebaffa's",
@@ -38,13 +38,13 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "Bluesky",
-    href: "https://bsky.app/profile/alebaffa.xyz",
+    href: "https://bsky.app/profile/alebaffa.bsky.social",
     linkTitle: `${SITE.title} on Bluesky`,
     active: true,
   },
   {
     name: "Mastodon",
-    href: "https://mastodon.uno/@xylya",
+    href: "https://famichiki.jp/@alebaffa",
     linkTitle: `${SITE.title} on Mastodon`,
     active: true,
   },
