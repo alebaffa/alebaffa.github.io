@@ -1,6 +1,3 @@
 [submodule "olimpino"]
 	path = olimpino
 	url = https://github.com/alebaffa/olimpino
-[submodule "running"]
-	path = running
-	url = https://github.com/alebaffa/running.git
