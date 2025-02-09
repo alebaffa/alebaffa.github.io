@@ -1,8 +1,6 @@
-+++
-date = '2025-02-09T15:48:34+09:00'
-draft = false
-title = ''
-+++
-# Hello,
+---
+title: Consistency. Sustainability. Purpose
+description: The hallway smelt of boiled cabbage and old rag mats.
+---
 
- this is Alessandro Baffa's weblog about running.
+In 2026, I’ll be taking on my first marathon, and this blog is my journey—one step, one challenge at a time.
