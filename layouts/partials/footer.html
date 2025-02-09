@@ -1,0 +1,10 @@
+{{ with .Site.Copyright }}
+  <span>{{ . }}</span>
+{{ end }}
+{{ if not .Site.Params.hideMadeWithLine }}
+  <span>
+    {{ if .Site.Copyright }}|{{ end }}
+    Made with
+    <a href="https://gohugo.io/">Hugo</a>
+  </span>
+{{ end }}
