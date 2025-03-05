@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Consistency. Sustainability. Purpose on Alessandro Baffa&#39;s weblog</title>
+    <title>Hi! I am Alessandro on Alessandro Baffa&#39;s weblog</title>
     <link>//localhost:1313/</link>
-    <description>Recent content in Consistency. Sustainability. Purpose on Alessandro Baffa&#39;s weblog</description>
+    <description>Recent content in Hi! I am Alessandro on Alessandro Baffa&#39;s weblog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Who controls the past controls the future. Who controls the present controls the past</title>
+      <title>Speed training: 800m intervals at 10k Pace</title>
       <link>//localhost:1313/posts/controls-the-past/</link>
-      <pubDate>Thu, 07 Jun 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 13 Feb 2025 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/posts/controls-the-past/</guid>
-      <description>&lt;h2 id=&#34;he-moved-over-to-the-window&#34;&gt;He moved over to the window&lt;/h2&gt;&#xA;&lt;p&gt;Since about that time, war had been literally continuous, though strictly speaking it had not always been the same war. For several months during his childhood there had been confused street fighting in London itself, some of which he remembered vividly.&lt;/p&gt;&#xA;&lt;p&gt;Inside the flat a fruity voice was reading out a list of figures which had something to do with the production of pig iron. The voice came from an oblong metal plaque like a dulled mirror which formed part of the surface of the right-hand wall. Winston turned a switch and the voice sank somewhat, though the words were still distinguishable. The instrument (the telescreen, it was called) could be dimmed) but there was no way of shutting it off completely.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:1313/images/map-post-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;strava-embed-placeholder&#34; data-embed-type=&#34;activity&#34; data-embed-id=&#34;13613789658&#34; data-style=&#34;standard&#34; data-from-embed=&#34;false&#34;&gt;&lt;/div&gt;&lt;script src=&#34;https://strava-embeds.com/embed.js&#34;&gt;&lt;/script&gt;</description>
     </item>
     <item>
       <title>About</title>
       <link>//localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/about/</guid>
-      <description>&lt;h2 id=&#34;italy&#34;&gt;Italy&lt;/h2&gt;&#xA;&lt;p&gt;I was born in Italy and I lived there until I got my &lt;strong&gt;Master Degree in Computer Science&lt;/strong&gt; at Politecnico di Milano.&lt;/p&gt;&#xA;&lt;h2 id=&#34;france&#34;&gt;France&lt;/h2&gt;&#xA;&lt;p&gt;I moved to Southern France, on the beautiful French Riviera, right after my master degree and I lived there for ~8 years. Here, I started to do some running, achieving twice a half-marathon (&lt;a href=&#34;https://www.nicesemimarathon.com/2025/AN/&#34;&gt;Semi-Marathon International de Nice&lt;/a&gt; and the &lt;a href=&#34;https://www.finishers.com/course/courir-pour-une-fleur&#34;&gt;Courir Pour Une Fleur&lt;/a&gt; in Antibes). But I have no track of the timing..&lt;/p&gt;</description>
+      <description>&lt;p&gt;I was born in Italy and lived there until I earned my Master’s degree in Computer Science from Politecnico di Milano.&lt;/p&gt;&#xA;&lt;p&gt;After graduation, I worked as a software engineer for a year before moving to the beautiful French Riviera in southern France. There, I spent eight years working for one of the world’s leading technology providers in the travel industry.&lt;/p&gt;&#xA;&lt;p&gt;After getting married, we decided to settle in Tokyo, Japan, where I have been living since 2017. We now have a wonderful little child who already speaks Japanese better than I do!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

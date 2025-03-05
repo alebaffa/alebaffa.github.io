@@ -3,22 +3,12 @@ title: 'About'
 url: "/about/"
 image: images/me-runner.jpeg
 ---
+I was born in Italy and lived there until I earned my Master’s degree in Computer Science from Politecnico di Milano.
 
-## Italy
+After graduation, I worked as a software engineer for a year before moving to the beautiful French Riviera in southern France. There, I spent eight years working for one of the world’s leading technology providers in the travel industry.
 
-I was born in Italy and I lived there until I got my **Master Degree in Computer Science** at Politecnico di Milano.
+After getting married, we decided to settle in Tokyo, Japan, where I have been living since 2017. We now have a wonderful little child who already speaks Japanese better than I do!
 
-## France
+In Tokyo, I have worked across various fields—from web development to IoT and blockchain—while continuing my career as a software engineer.
 
-I moved to Southern France, on the beautiful French Riviera, right after my master degree and I lived there for ~8 years. Here, I started to do some running, achieving twice a half-marathon ([Semi-Marathon International de Nice](https://www.nicesemimarathon.com/2025/AN/) and the [Courir Pour Une Fleur](https://www.finishers.com/course/courir-pour-une-fleur) in Antibes). But I have no track of the timing..
-
-Then for a while, due to a painful knee, I stopped any physical activity.
-
-## Japan
-
-I currently live in Tokyo where, in 2024, I decided to get back in shape and run again. Precisely on March 2024 I went back to a 10K race where I managed to stay below 1h. Then, on January 2025, I tried again a half-marathon race achieving a nice 2hrs 02mins. 
-
-
-## Consistency. Sustainability. Purpose.
-After a year of consistent effort, mastering the balance between my 9-to-5 job, workouts, and family responsibilities, I’ve reached what is likely the best fitness level of my life, at 42. My goals now are to stay strong, continue improving my running without compromising time with my family, and fully embrace the incredible mental clarity and resilience that running brings.
-And, of course, try my first marathon in 2026 (which one to be decided).
+Beyond work, I am passionate about photography and using technology to make the world a better place. In 2024, after a long break, I returned to running and am now training for a marathon in 2026.

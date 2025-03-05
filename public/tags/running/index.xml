@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Consistent action creates consistent results on Alessandro Baffa&#39;s weblog</title>
-    <link>//localhost:1313/posts/</link>
-    <description>Recent content in Consistent action creates consistent results on Alessandro Baffa&#39;s weblog</description>
+    <title>Running on Alessandro Baffa&#39;s weblog</title>
+    <link>//localhost:1313/tags/running/</link>
+    <description>Recent content in Running on Alessandro Baffa&#39;s weblog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 13 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/running/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Speed training: 800m intervals at 10k Pace</title>
       <link>//localhost:1313/posts/controls-the-past/</link>
