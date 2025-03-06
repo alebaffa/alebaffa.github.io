@@ -59,6 +59,21 @@
         line-height: 58px; } }
   .summary .summary-description {
     line-height: 1.5; }
-.custom {
+
+.content img {
+  margin: 10px 0 10px 0;
+  max-width: 90%;
+  height: auto;
+}
+
+.content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+    margin-bottom: 0px;
+  padding: 0;
+  margin-bottom: 20px;
+  text-align: justify;
+}.custom {
     background: red;
 }

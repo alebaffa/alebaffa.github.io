@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <div class="intro">
+    <h1>{{ .Title }}</h1>
+    {{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
+  </div>
+  {{ .Content }}
+  {{ $paginator := .Paginate (where .Pages "Type" "posts" ) }}
+  {{ range $paginator.Pages }}
+    {{ .Render "summary" }}
+  {{ end }}
+  {{ partial "paginator" . }}
+{{ end }}

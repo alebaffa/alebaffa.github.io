@@ -8,6 +8,10 @@ pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsUseClasses = true
 
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
 [module]
   [module.hugoVersion]
     extended = true
@@ -34,6 +38,8 @@ pygmentsUseClasses = true
   fontFamilyHeading = "Poppins"
   fontFamilyParagraph = "Helvetica"
   fontFamilyMonospace = "monospace"
+  runningQuote = "Running is the greatest metaphor for life, because you get out of it what you put into it."
+  techQuote = "The best way to predict the future is to invent it."
 
 # markdown config settings https://gohugo.io/getting-started/configuration-markup/#goldmark
 [markup]
@@ -50,17 +56,22 @@ pygmentsUseClasses = true
     url = '/'
     weight = 1
   [[menu.main]]
-    name = "Blog"
-    identifier = "blog"
+    identifier = "running"
+    name = "Running"
+    url = "/tags/running/"
     weight = 2
+  [[menu.main]]
+    identifier = "tech"
+    name = "Tech"
+    url = "/tags/tech/"
+    weight = 3
+  [[menu.main]]
+    name = "All"
+    identifier = "blog"
+    weight = 4
     url = "/posts/"
   [[menu.main]]
     name = "About"
     identifier = "about"
-    weight = 3
+    weight = 5
     url = "/About/"
-  [[menu.main]]
-    name = "Tags"
-    identifier = "tags"
-    weight = 4
-    url = "/tags/"
