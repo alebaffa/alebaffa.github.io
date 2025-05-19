@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Learning on Alessandro Baffa&#39;s weblog</title>
+    <link>//localhost:1313/tags/learning/</link>
+    <description>Recent content in Learning on Alessandro Baffa&#39;s weblog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>日本語勉強 - Personal recommendations for Japanese learners</title>
+      <link>//localhost:1313/posts/japanese-learning/</link>
+      <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/japanese-learning/</guid>
+      <description>&lt;p&gt;This is a list of resources that is working well for my Japanese studies.&lt;/p&gt;&#xA;&lt;h2 id=&#34;reading&#34;&gt;Reading&lt;/h2&gt;&#xA;&lt;p&gt;You need to read until you destroy the visual and mental barrier of kanji. Until you don&amp;rsquo;t reach that point, your eyes will naturally tend to skip the entire content to pass to something else you can read without effort. So, force your mind to stop and read it all until your brain will stop making antibodies for kanji.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

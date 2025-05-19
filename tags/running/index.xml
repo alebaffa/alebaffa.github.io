@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Running on Alessandro Baffa&#39;s weblog</title>
+    <link>//localhost:1313/tags/running/</link>
+    <description>Recent content in Running on Alessandro Baffa&#39;s weblog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/running/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Speed training: 800m intervals at 10k Pace</title>
+      <link>//localhost:1313/posts/800m-intervals-10pace/</link>
+      <pubDate>Thu, 13 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/800m-intervals-10pace/</guid>
+      <description>&lt;h2 id=&#34;map&#34;&gt;Map&lt;/h2&gt;&#xA;&lt;p&gt;For this type of training, the approximately 1.5 km stretch of straight road in front of the Tokyo Imperial Palace is an excellent location.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:1313/images/map-post-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;data&#34;&gt;Data&lt;/h2&gt;&#xA;&lt;img src=&#34;//localhost:1313/images/post-2.png&#34; style=&#34;max-width:90%&#34;/&gt;&#xA;&lt;p&gt;After running ~2 km at around 6’00″/km, I completed 4x800m intervals at a pace between 4’58” and 5’29″/km, which is supposedly my 10K race pace. The final 3x200m intervals were faster, ranging from 4’40” to 4’58″/km, and were done on the hill on my way back from the front of the Imperial Palace to Kojimachi.&#xA;My heart rate remained mostly in Zone 2, which is a good sign.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
