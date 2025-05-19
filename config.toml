@@ -12,6 +12,10 @@ pygmentsUseClasses = true
   tag = "tags"
   category = "categories"
 
+[outputs]
+  home = ['html']
+  section = ['html']
+
 [module]
   [module.hugoVersion]
     extended = true

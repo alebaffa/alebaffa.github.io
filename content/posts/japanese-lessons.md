@@ -4,9 +4,9 @@ date: 2021-09-12
 author: alebaffa
 slug: japanese-learning
 featured: false
-draft: true
+draft: false
 tags:
-  - life
+  - learning
 description: Tips for learning Japanese language
 ---
 

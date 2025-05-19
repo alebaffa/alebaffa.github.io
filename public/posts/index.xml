@@ -6,21 +6,21 @@
     <description>Recent content in Computer Science is no more about computers than Astronomy is about telescopes on Alessandro Baffa&#39;s weblog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Mar 2025 10:56:52 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 13 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Something Tech</title>
-      <link>//localhost:1313/posts/something-tech/</link>
-      <pubDate>Thu, 06 Mar 2025 10:56:52 +0900</pubDate>
-      <guid>//localhost:1313/posts/something-tech/</guid>
-      <description>&lt;p&gt;This is a test&lt;/p&gt;</description>
-    </item>
     <item>
       <title>Speed training: 800m intervals at 10k Pace</title>
       <link>//localhost:1313/posts/800m-intervals-10pace/</link>
       <pubDate>Thu, 13 Feb 2025 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/posts/800m-intervals-10pace/</guid>
-      <description>&lt;h2 id=&#34;map&#34;&gt;Map&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:1313/images/map-post-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;data&#34;&gt;Data&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:1313/images/post-2.png&#34; alt=&#34;&#34;&gt;&#xA;For this type of training, the approximately 1.5 km stretch of straight road in front of the Tokyo Imperial Palace is an excellent location.&lt;/p&gt;&#xA;&lt;p&gt;After running 2.5 km at around 6’00″/km, I completed 4x 800m intervals at a pace between 4’58” and 5’29″/km, which is supposedly my 10K race pace. The final 3x 200m intervals were faster, ranging from 4’40” to 4’58″/km, and were done on the hill on my way back from the front of the Imperial Palace to Kojimachi.&#xA;My heart rate remained mostly in Zone 2, which is a good sign.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;map&#34;&gt;Map&lt;/h2&gt;&#xA;&lt;p&gt;For this type of training, the approximately 1.5 km stretch of straight road in front of the Tokyo Imperial Palace is an excellent location.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:1313/images/map-post-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;data&#34;&gt;Data&lt;/h2&gt;&#xA;&lt;img src=&#34;//localhost:1313/images/post-2.png&#34; style=&#34;max-width:90%&#34;/&gt;&#xA;&lt;p&gt;After running ~2 km at around 6’00″/km, I completed 4x800m intervals at a pace between 4’58” and 5’29″/km, which is supposedly my 10K race pace. The final 3x200m intervals were faster, ranging from 4’40” to 4’58″/km, and were done on the hill on my way back from the front of the Imperial Palace to Kojimachi.&#xA;My heart rate remained mostly in Zone 2, which is a good sign.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>日本語勉強 - Personal recommendations for Japanese learners</title>
+      <link>//localhost:1313/posts/japanese-learning/</link>
+      <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/japanese-learning/</guid>
+      <description>&lt;p&gt;This is a list of resources that is working well for my Japanese studies.&lt;/p&gt;&#xA;&lt;h2 id=&#34;reading&#34;&gt;Reading&lt;/h2&gt;&#xA;&lt;p&gt;You need to read until you destroy the visual and mental barrier of kanji. Until you don&amp;rsquo;t reach that point, your eyes will naturally tend to skip the entire content to pass to something else you can read without effort. So, force your mind to stop and read it all until your brain will stop making antibodies for kanji.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
