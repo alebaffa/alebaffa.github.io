@@ -1,0 +1,21 @@
+baseURL = "https://alebaffa.github.io/"
+languageCode = "en"
+title = "My Blog"
+
+[params]
+  authorName = "Alessandro Baffa"
+  authorBio = "Software engineer. I write about things I find interesting."
+  theme = "slate"
+
+[pagination]
+  pagerSize = 5
+
+[taxonomies]
+  tag = "tags"
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

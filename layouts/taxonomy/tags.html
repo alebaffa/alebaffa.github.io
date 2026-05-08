@@ -1,0 +1,17 @@
+{{ define "title" }}Tags | {{ .Site.Title }}{{ end }}
+
+{{ define "content" }}
+<article class="post-full">
+  <a href="{{ "/" | relURL }}" class="post-back">&larr; Home</a>
+  <header class="post-header">
+    <h1 class="post-title">Tags</h1>
+  </header>
+  <div class="post-body">
+    <nav class="tag-menu">
+      {{ range .Site.Taxonomies.tags.Alphabetical }}
+      <a href="{{ .Page.RelPermalink }}" class="tag-chip">#{{ .Page.Title }} ({{ .Count }})</a>
+      {{ end }}
+    </nav>
+  </div>
+</article>
+{{ end }}

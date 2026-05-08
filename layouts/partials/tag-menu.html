@@ -1,0 +1,9 @@
+{{ $allTags := .Site.Taxonomies.tags }}
+{{ if $allTags }}
+<nav class="tag-menu">
+  <a href="{{ "/" | relURL }}" class="tag-chip {{ if .IsHome }}tag-chip--active{{ end }}">All</a>
+  {{ range $allTags.Alphabetical }}
+  <a href="{{ .Page.RelPermalink }}" class="tag-chip {{ if eq $.Page.Title .Page.Title }}tag-chip--active{{ end }}">#{{ .Page.Title }}</a>
+  {{ end }}
+</nav>
+{{ end }}

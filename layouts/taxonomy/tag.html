@@ -1,0 +1,40 @@
+{{ define "title" }}Posts tagged #{{ .Title }} | {{ .Site.Title }}{{ end }}
+
+{{ define "content" }}
+<section class="about">
+  <h1 class="about-name">{{ .Site.Params.authorName }}</h1>
+  <p class="about-bio">{{ .Site.Params.authorBio }}</p>
+</section>
+
+<hr class="divider">
+
+{{ partial "tag-menu.html" . }}
+
+<section class="posts-list">
+  <p class="filter-note">Showing posts tagged <strong>#{{ .Title }}</strong> &mdash; <a href="{{ "/" | relURL }}">clear filter</a></p>
+
+  {{ $paginator := .Paginate .Pages }}
+  {{ range $paginator.Pages }}
+  <a href="{{ .RelPermalink }}" class="post-row">
+    <span class="post-row-title">{{ .Title }}</span>
+    <span class="post-row-date">
+      {{ .Date.Format "Jan 2, 2006" }}
+    </span>
+  </a>
+  {{ else }}
+  <p class="empty-state">No posts yet.</p>
+  {{ end }}
+
+  {{ if gt $paginator.TotalPages 1 }}
+  <nav class="pagination">
+    {{ if $paginator.HasPrev }}
+    <a href="{{ $paginator.Prev.URL }}">&larr;</a>
+    {{ end }}
+    <span>{{ $paginator.PageNumber }} / {{ $paginator.TotalPages }}</span>
+    {{ if $paginator.HasNext }}
+    <a href="{{ $paginator.Next.URL }}">&rarr;</a>
+    {{ end }}
+  </nav>
+  {{ end }}
+</section>
+{{ end }}

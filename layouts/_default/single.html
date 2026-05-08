@@ -1,0 +1,21 @@
+{{ define "title" }}{{ .Title }}{{ end }}
+
+{{ define "content" }}
+<article class="post-full">
+  <a href="{{ "/" | relURL }}" class="post-back">&larr; Home</a>
+
+  <header class="post-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+    <div class="post-meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+      {{ range .Params.tags }}
+      <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/" class="tag">#{{ . }}</a>
+      {{ end }}
+    </div>
+  </header>
+
+  <div class="post-body">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}
